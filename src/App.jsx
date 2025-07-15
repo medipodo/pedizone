@@ -45,7 +45,7 @@ const translations = {
     hero: {
       title: 'PediZone',
       subtitle: 'Gelişmiş Ayak Bakım Formülü',
-      description: 'Podologların beklentileriyle geliştirilen, klinik olarak test edilmiş ayak sağlığı ürünleri. Mantar enfeksiyonları, kötü koku, çatlaklar ve nasırlara karşı etkili çözümler sunar.',
+      description: 'Podologların beklentileriyle geliştirilen, klinik olarak test edilmiş ayak sağlığı ürünleri. Tırnak ve Ayak Mantarları, Kötü Koku, Topuk Çatlakları ve Nasırlara karşı etkili çözümler sunar.',
       cta: 'Ürünleri İncele',
       podologyRecommended: 'Podologlar Tarafından Önerilen',
       extendedDescription: 'Ayak sağlığı problemleri günlük yaşam kalitenizi olumsuz etkileyebilir. PediZone ürün serisi, ayak mantarı, tırnak mantarı, kötü koku, çatlaklar ve nasırlar gibi yaygın sorunlara karşı bilimsel olarak formüle edilmiş çözümler sunar.'
@@ -55,7 +55,7 @@ const translations = {
       subtitle: 'Profesyonel ayak sağlığı için geliştirilmiş kapsamlı ürün serisi',
       serum: {
         name: 'PediZone 50 Ml Mantar Karşıtı Ayak Ve Tırnak Serumu',
-        description: 'Beta Hidroksit Asit (BHA) ve Salisilik Asit ile formüle edilmiş, ölü deri hücrelerini etkili şekilde temizler. Çay Ağacı, Kekik ve Lavanta yağlarının sinerjik karışımı ile güçlendirilmiştir.',
+        description: 'Beta Hidroksit Asit (BHA) ve Salisilik Asit ile formüle edilmiş, sağlıksız dokuları etkili şekilde temizler. Çay Ağacı, Kekik ve Lavanta yağlarının sinerjik karışımı ile güçlendirilmiştir.',
         features: ['Antifungal etki', 'Günlük kullanım', 'Hızla emilir', 'Doğal aktif bileşenler'],
         benefits: ['Mantar enfeksiyonlarını önler', 'Tırnak sağlığını destekler', 'Antibakteriyel koruma', 'Deri yenilenmesini hızlandırır'],
         usage: 'Temiz ve kuru ayaklara günde 2 kez uygulayın. Etkilenen bölgeye damlatarak masaj yapın.'
@@ -104,7 +104,7 @@ const translations = {
     },
     about: {
       title: 'Hakkımızda',
-      description: 'PediZone®, ayak sağlığı alanında podologların beklentileriyle geliştirilen profesyonel ürün serisidir. Türkiye\'de DENEME formüle edilen ürünlerimiz, en yüksek kalite standartlarında üretilmektedir.',
+      description: 'PediZone®, ayak sağlığı alanında podologların beklentileriyle geliştirilen profesyonel ürün serisidir. Türkiye\'de formüle edilen ürünlerimiz, en yüksek kalite standartlarında üretilmektedir.',
       mission: 'Misyonumuz, ayak sağlığı sorunlarına etkili ve güvenli çözümler sunarak, insanların yaşam kalitesini artırmaktır.',
       vision: 'Vizyonumuz, ayak sağlığı alanında Türkiye\'nin önde gelen markası olmak ve uluslararası pazarda tanınan bir marka haline gelmektir.',
       values: 'Kalite, güvenilirlik ve müşteri memnuniyeti temel değerlerimizdir.'
