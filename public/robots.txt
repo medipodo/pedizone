@@ -1,16 +1,2 @@
 User-agent: *
-Allow: /
-
-# Sitemap
-Sitemap: https://pedizone.com/sitemap.xml
-
-# Crawl-delay
-Crawl-delay: 1
-
-# Disallow admin areas (if any in future)
-# Disallow: /admin/
-
-# Allow all search engines to crawl the site
-# This site contains information about PediZone foot health products
-# Developed by dermatology experts for professional foot care
-
+Disallow: /
