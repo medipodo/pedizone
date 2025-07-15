@@ -104,7 +104,7 @@ const translations = {
     },
     about: {
       title: 'Hakkımızda',
-      description: 'PediZone®, ayak sağlığı alanında podologların beklentileriyle geliştirilen profesyonel ürün serisidir. Türkiye\'de formüle edilen ürünlerimiz, en yüksek kalite standartlarında üretilmektedir.',
+      description: 'PediZone®, ayak sağlığı alanında podologların beklentileriyle geliştirilen profesyonel ürün serisidir. Türkiye\'de DENEME formüle edilen ürünlerimiz, en yüksek kalite standartlarında üretilmektedir.',
       mission: 'Misyonumuz, ayak sağlığı sorunlarına etkili ve güvenli çözümler sunarak, insanların yaşam kalitesini artırmaktır.',
       vision: 'Vizyonumuz, ayak sağlığı alanında Türkiye\'nin önde gelen markası olmak ve uluslararası pazarda tanınan bir marka haline gelmektir.',
       values: 'Kalite, güvenilirlik ve müşteri memnuniyeti temel değerlerimizdir.'
