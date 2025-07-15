@@ -797,7 +797,7 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {t.footProblems.problems.map((problem, index) => (
               <div key={index} className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-md transition-shadow">
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden bg-white shadow-md">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-white shadow-md">
                   <img 
                     src={problem.image} 
                     alt={problem.title}
