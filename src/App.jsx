@@ -716,7 +716,7 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Classic Variant */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="h-64 bg-gray-100 flex items-center justify-center p-4">
+              <div className="h-80 bg-gray-100 flex items-center justify-center p-4">
                 <img 
                   src={productImage1} 
                   alt="PediZone Classic" 
