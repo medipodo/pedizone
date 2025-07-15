@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://pedizone.com/</loc>
+    <lastmod>2025-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://pedizone.com/?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pedizone.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pedizone.com/?lang=ar"/>
+  </url>
+
+  <!-- Products Section -->
+  <url>
+    <loc>https://pedizone.com/#products</loc>
+    <lastmod>2025-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://pedizone.com/?lang=tr#products"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pedizone.com/?lang=en#products"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pedizone.com/?lang=ar#products"/>
+  </url>
+
+  <!-- About Section -->
+  <url>
+    <loc>https://pedizone.com/#about</loc>
+    <lastmod>2025-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://pedizone.com/?lang=tr#about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pedizone.com/?lang=en#about"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pedizone.com/?lang=ar#about"/>
+  </url>
+
+  <!-- Contact Section -->
+  <url>
+    <loc>https://pedizone.com/#contact</loc>
+    <lastmod>2025-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://pedizone.com/?lang=tr#contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pedizone.com/?lang=en#contact"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pedizone.com/?lang=ar#contact"/>
+  </url>
+
+</urlset>
+
