@@ -45,7 +45,7 @@ function App() {
         title: 'Ürünlerimiz',
         subtitle: 'PediZone® 50ml Serum Varyantları',
         classic: {
-          name: 'PediZone® Classic',
+          name: 'PediZone® 50 Ml Serum',
           description: 'Günlük ayak bakımı için ideal formül',
           features: [
             'Mantar karşıtı etki',
@@ -55,7 +55,7 @@ function App() {
           ]
         },
         intensive: {
-          name: 'PediZone® Intensive',
+          name: 'PediZone® 50 Ml Serum',
           description: 'Yoğun bakım gerektiren ayaklar için',
           features: [
             'Güçlü mantar karşıtı etki',
@@ -65,12 +65,12 @@ function App() {
           ]
         },
         sensitive: {
-          name: 'PediZone® Sensitive',
-          description: 'Hassas ciltler için özel formül',
+          name: 'PediZone® 50 Ml Serum',
+          description: 'Kadın Erkek Farketmeksizin',
           features: [
-            'Hassas cilt dostu',
+            'Cilt dostu',
             'Yumuşak formül',
-            'Hipoalerjenik',
+            'Haricen kullanım için',
             'Günlük kullanım'
           ]
         }
