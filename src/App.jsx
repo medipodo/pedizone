@@ -168,7 +168,7 @@ function App() {
             rating: 5
           },
           {
-            name: 'Dr. Fatma Özkan',
+            name: 'Fatma Özkan',
             title: 'Podolog',
             text: 'Klinik pratiğimde sıkça önerdiğim güvenilir bir çözüm.',
             rating: 5
