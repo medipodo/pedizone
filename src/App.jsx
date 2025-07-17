@@ -150,7 +150,7 @@ function App() {
         subtitle: 'Müşterilerimizin deneyimleri',
         reviews: [
           {
-            name: 'Dr. Mehmet Yılmaz',
+            name: 'Mehmet Yılmaz',
             title: 'Podolog',
             text: 'Hastalarıma güvenle önerdiğim etkili bir ürün. Sonuçları gerçekten tatmin edici.',
             rating: 5
