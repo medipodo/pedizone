@@ -35,7 +35,7 @@ function App() {
       },
       features: {
         clinicalTest: 'Klinik Test',
-        clinicalTestDesc: 'Laboratuvar testlerinde kanıtlanmış etkinlik',
+        clinicalTestDesc: 'Uzman görüşleriyle uyumlu içerikler.',
         podologyApproved: 'Podolog Onaylı',
         podologyApprovedDesc: 'Ayak sağlığı uzmanları tarafından önerilen',
         naturalIngredients: 'Doğal İçerikler',
