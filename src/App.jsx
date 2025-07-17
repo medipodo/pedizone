@@ -152,7 +152,7 @@ function App() {
           {
             name: 'Gamze Başaran',
             title: 'Podolog',
-            text: 'Tokat'ta Podoloji Merkezimde hastalarıma güvenle önerdiğim etkili bir ürün. Sonuçları gerçekten tatmin edici.',
+            text: 'Tokat da Podoloji Merkezimde hastalarıma güvenle önerdiğim etkili bir ürün. Sonuçları gerçekten tatmin edici.',
             rating: 5
           },
           {
