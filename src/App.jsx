@@ -150,9 +150,9 @@ function App() {
         subtitle: 'Müşterilerimizin deneyimleri',
         reviews: [
           {
-            name: 'Mehmet Yılmaz',
+            name: 'Gamze Başaran',
             title: 'Podolog',
-            text: 'Hastalarıma güvenle önerdiğim etkili bir ürün. Sonuçları gerçekten tatmin edici.',
+            text: 'Tokat'ta Podoloji Merkezimde hastalarıma güvenle önerdiğim etkili bir ürün. Sonuçları gerçekten tatmin edici.',
             rating: 5
           },
           {
