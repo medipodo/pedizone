@@ -16,6 +16,11 @@ import footCallus from './assets/foot-callus-problem.jpg'
 import footCrack from './assets/foot-crack-problem.jpg'
 import footOdor from './assets/foot-odor-problem.jpg'
 
+// Blog görselleri
+import blogImage1 from './assets/blog/ayak-mantari-tedavi.webp'
+import blogImage2 from './assets/blog/tirnak-mantari-cesitleri.jpg'
+import blogImage3 from './assets/blog/pedizone-serum-kullanimi.jpg'
+
 function App() {
   const [currentLang, setCurrentLang] = useState('tr')
 
@@ -198,19 +203,22 @@ function App() {
             title: 'Ayak Mantarı Nedir, Neden Olur?',
             excerpt: 'Ayak mantarı, özellikle ayak parmak aralarında oluşan ve kaşıntı, kızarıklık, kötü koku gibi belirtilerle kendini gösteren bulaşıcı bir cilt enfeksiyonudur.',
             readTime: '5 dakika',
-            link: '/blog/ayak-mantari-nedir'
+            link: '/blog/ayak-mantari-nedir',
+            image: blogImage1
           },
           {
             title: 'Tırnak Mantarı Çeşitleri Nelerdir?',
             excerpt: 'Tırnak mantarı, hem estetik görünümü bozan hem de ciddi rahatsızlıklara yol açabilen yaygın bir enfeksiyondur.',
             readTime: '6 dakika',
-            link: '/blog/tirnak-mantari-cesitleri'
+            link: '/blog/tirnak-mantari-cesitleri',
+            image: blogImage2
           },
           {
             title: 'Mantar İçin Serum Kullanmanın Önemi',
             excerpt: 'Mantar enfeksiyonlarında doğru ürünle yapılan topikal tedavi, iyileşme sürecini doğrudan etkiler.',
             readTime: '7 dakika',
-            link: '/blog/serum-kullanim-onemi'
+            link: '/blog/serum-kullanim-onemi',
+            image: blogImage3
           }
         ]
       },
@@ -415,19 +423,22 @@ function App() {
             title: 'What is Foot Fungus, Why Does it Occur?',
             excerpt: 'Foot fungus is a contagious skin infection that occurs especially between the toes and manifests itself with symptoms such as itching, redness, and bad odor.',
             readTime: '5 minutes',
-            link: '/blog/ayak-mantari-nedir'
+            link: '/blog/ayak-mantari-nedir',
+            image: blogImage1
           },
           {
             title: 'What are the Types of Nail Fungus?',
             excerpt: 'Nail fungus is a common infection that both spoils the aesthetic appearance and can lead to serious discomfort.',
             readTime: '6 minutes',
-            link: '/blog/tirnak-mantari-cesitleri'
+            link: '/blog/tirnak-mantari-cesitleri',
+            image: blogImage2
           },
           {
             title: 'The Importance of Using Serum for Fungus',
             excerpt: 'Topical treatment with the right product in fungal infections directly affects the healing process.',
             readTime: '7 minutes',
-            link: '/blog/serum-kullanim-onemi'
+            link: '/blog/serum-kullanim-onemi',
+            image: blogImage3
           }
         ]
       },
@@ -632,19 +643,22 @@ function App() {
             title: 'ما هي فطريات القدم، لماذا تحدث؟',
             excerpt: 'فطريات القدم هي عدوى جلدية معدية تحدث خاصة بين أصابع القدم وتظهر بأعراض مثل الحكة والاحمرار والرائحة الكريهة.',
             readTime: '5 دقائق',
-            link: '/blog/ayak-mantari-nedir'
+            link: '/blog/ayak-mantari-nedir',
+            image: blogImage1
           },
           {
             title: 'ما هي أنواع فطريات الأظافر؟',
             excerpt: 'فطريات الأظافر هي عدوى شائعة تفسد المظهر الجمالي ويمكن أن تؤدي إلى إزعاج خطير.',
             readTime: '6 دقائق',
-            link: '/blog/tirnak-mantari-cesitleri'
+            link: '/blog/tirnak-mantari-cesitleri',
+            image: blogImage2
           },
           {
             title: 'أهمية استخدام المصل للفطريات',
             excerpt: 'العلاج الموضعي بالمنتج المناسب في العدوى الفطرية يؤثر مباشرة على عملية الشفاء.',
             readTime: '7 دقائق',
-            link: '/blog/serum-kullanim-onemi'
+            link: '/blog/serum-kullanim-onemi',
+            image: blogImage3
           }
         ]
       },
@@ -974,19 +988,28 @@ function App() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {t.blog.articles.map((article, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{article.title}</h3>
-                <p className="text-gray-600 mb-4 line-clamp-3">{article.excerpt}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">⏱️ {article.readTime}</span>
-                  <a 
-                    href={article.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-red-600 hover:text-red-700 font-medium text-sm"
-                  >
-                    {t.blog.readMore} →
-                  </a>
+              <div key={index} className="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="h-48 bg-gray-200">
+                  <img 
+                    src={article.image} 
+                    alt={article.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{article.title}</h3>
+                  <p className="text-gray-600 mb-4 line-clamp-3">{article.excerpt}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-500">⏱️ {article.readTime}</span>
+                    <a 
+                      href={article.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-red-600 hover:text-red-700 font-medium text-sm"
+                    >
+                      {t.blog.readMore} →
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
