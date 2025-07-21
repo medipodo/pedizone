@@ -25,7 +25,8 @@ function App() {
         home: 'Ana Sayfa',
         products: 'Ürünler',
         about: 'Hakkımızda',
-        contact: 'İletişim'
+        contact: 'İletişim',
+        blog: 'Blog'
       },
       hero: {
         title: 'PediZone®',
