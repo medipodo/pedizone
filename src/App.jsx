@@ -216,7 +216,8 @@ function App() {
         home: 'Home',
         products: 'Products',
         about: 'About',
-        contact: 'Contact'
+        contact: 'Contact',
+        blog: 'Blog'  
       },
       hero: {
         title: 'PediZone®',
@@ -406,7 +407,8 @@ function App() {
         home: 'الرئيسية',
         products: 'المنتجات',
         about: 'حولنا',
-        contact: 'اتصل بنا'
+        contact: 'اتصل بنا',
+        blog: 'مدونة'  
       },
       hero: {
         title: 'PediZone®',
