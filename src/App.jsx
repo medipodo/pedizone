@@ -26,6 +26,7 @@ function App() {
         products: 'Ürünler',
         about: 'Hakkımızda',
         contact: 'İletişim'
+        <a href="/blog/" className="nav-link">Blog</a>
       },
       hero: {
         title: 'PediZone®',
