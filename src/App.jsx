@@ -614,21 +614,26 @@ function App() {
               <span className="text-2xl font-bold text-red-600">PediZone<sup className="text-xs">®</sup></span>
             </div>
             
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-8">
-                <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-red-600 px-3 py-2 text-sm font-medium transition-colors">
-                  {t.nav.home}
-                </button>
-                <button onClick={() => scrollToSection('products')} className="text-gray-700 hover:text-red-600 px-3 py-2 text-sm font-medium transition-colors">
-                  {t.nav.products}
-                </button>
-                <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-red-600 px-3 py-2 text-sm font-medium transition-colors">
-                  {t.nav.about}
-                </button>
-                <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-red-600 px-3 py-2 text-sm font-medium transition-colors">
-                  {t.nav.contact}
-                </button>
-              </div>
+<div className="hidden md:block">
+  <div className="ml-10 flex items-baseline space-x-8">
+    <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-red-600 px-3 py-2 text-sm font-medium transition-colors">
+      {t.nav.home}
+    </button>
+    <button onClick={() => scrollToSection('products')} className="text-gray-700 hover:text-red-600 px-3 py-2 text-sm font-medium transition-colors">
+      {t.nav.products}
+    </button>
+    <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-red-600 px-3 py-2 text-sm font-medium transition-colors">
+      {t.nav.about}
+    </button>
+    <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-red-600 px-3 py-2 text-sm font-medium transition-colors">
+      {t.nav.contact}
+    </button>
+    <a href="/blog/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-red-600 px-3 py-2 text-sm font-medium transition-colors">
+      {t.nav.blog}
+    </a>
+  </div>
+</div>
+
             </div>
 
             <div className="flex items-center space-x-2">
