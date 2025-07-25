@@ -34,9 +34,9 @@ function App() {
         blog: 'Blog'
       },
       hero: {
-        title: 'PediZone®',
-        subtitle: 'Gelişmiş Ayak Bakım Formülü',
-        description: 'Podologların beklentileriyle geliştirilen',
+        title: 'Advanced Foot Care Formula',
+        subtitle: 'PediZone®',
+        description: 'Podologların Tercihi',
         cta: 'Ürünleri İncele'
       },
       features: {
@@ -49,7 +49,7 @@ function App() {
       },
       products: {
         title: 'Ürünlerimiz',
-        subtitle: 'PediZone® 50ml Serum Varyantları',
+        subtitle: 'PediZone® Ayak Bakım Ürünleri',
         classic: {
           name: 'PediZone® 50 Ml Serum',
           description: 'Günlük ayak bakımı için ideal formül',
