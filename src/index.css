@@ -1,31 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Yaygın Ayak Sorunları ve Kullanım Talimatları için özel grid düzeltmesi */
-@media (min-width: 1024px) {
-  /* Ayak sorunları bölümü - 4 sütun yan yana */
-  .footproblems-grid {
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 2rem !important;
-  }
-  
-  /* Kullanım talimatları bölümü - 4 sütun yan yana */
-  .usage-grid {
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 2rem !important;
-  }
-}
-
-@media (max-width: 1023px) {
-  /* Mobil ve tablet için alt alta */
-  .footproblems-grid,
-  .usage-grid {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 1.5rem !important;
-  }
-}
-
