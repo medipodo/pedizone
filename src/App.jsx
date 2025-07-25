@@ -61,8 +61,8 @@ function App() {
           ]
         },
         intensive: {
-          name: 'PediZone® 50 Ml Serum',
-          description: 'Yoğun bakım gerektiren ayaklar için',
+          name: 'PediZone® 200 Ml Ayak Temizleme Köpüğü',
+          description: 'Koku ve Bakteri Karşıtı',
           features: [
             'Güçlü mantar karşıtı etki',
             'Derin temizlik',
@@ -281,7 +281,7 @@ function App() {
           ]
         },
         intensive: {
-          name: 'PediZone® Intensive',
+          name: 'PediZone® 50 Ml Foot and Nail Serum',
           description: 'For feet requiring intensive care',
           features: [
             'Strong antifungal effect',
@@ -291,7 +291,7 @@ function App() {
           ]
         },
         sensitive: {
-          name: 'PediZone® Sensitive',
+          name: 'PediZone® 200 Ml Foot Cleansing Foam',
           description: 'Special formula for sensitive skin',
           features: [
             'Sensitive skin friendly',
@@ -394,7 +394,7 @@ function App() {
             rating: 5
           },
           {
-            name: 'Dr. Fatma Özkan',
+            name: 'Fatma Özkan',
             title: 'Podologist',
             text: 'A reliable solution I frequently recommend in my clinical practice.',
             rating: 5
