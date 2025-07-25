@@ -3,7 +3,7 @@ import './App.css'
 
 // Gerçek ürün görselleri
 import productImage1 from './assets/IMG_7570.jpeg'
-import productImage2 from './assets/IMG_7571.png'
+import productImage2 from './assets/pedizone foam.png'
 import productImage3 from './assets/IMG_7572.jpeg'
 import productImage4 from './assets/IMG_7574.jpeg'
 import productImage5 from './assets/IMG_7575.png'
