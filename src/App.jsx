@@ -271,7 +271,7 @@ function App() {
         title: 'Our Products',
         subtitle: 'PediZone® 50ml Serum Variants',
         classic: {
-          name: 'PediZone® Classic',
+          name: 'PediZone® 50 Ml Foot and Nail Serum',
           description: 'Ideal formula for daily foot care',
           features: [
             'Antifungal effect',
@@ -281,7 +281,7 @@ function App() {
           ]
         },
         intensive: {
-          name: 'PediZone® 50 Ml Foot and Nail Serum',
+          name: 'PediZone® 50 Ml Foot Foam',
           description: 'For feet requiring intensive care',
           features: [
             'Strong antifungal effect',
