@@ -892,7 +892,7 @@ function App() {
             <p className="text-xl text-gray-600">{t.footProblems.subtitle}</p>
           </div>
           
-          <div className="footproblems-grid">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {t.footProblems.problems.map((problem, index) => (
               <div key={index} className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-md transition-shadow">
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-white shadow-md">
@@ -918,7 +918,7 @@ function App() {
             <p className="text-xl text-gray-600">{t.usage.subtitle}</p>
           </div>
           
-          <div className="usage-grid">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {t.usage.steps.map((step, index) => (
               <div key={index} className="text-center">
                 <div className="w-20 h-20 bg-red-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
