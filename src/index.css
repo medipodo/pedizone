@@ -1,38 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Yaygın Ayak Sorunları - Zorla yan yana */
-.foot-problems-container {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  justify-content: space-between !important;
-  gap: 2rem !important;
-}
-
-.foot-problems-container > div {
-  flex: 1 1 calc(25% - 1.5rem) !important;
-  min-width: 200px !important;
-}
-
-/* Kullanım Talimatları - Zorla yan yana */
-.usage-instructions-container {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  justify-content: space-between !important;
-  gap: 2rem !important;
-}
-
-.usage-instructions-container > div {
-  flex: 1 1 calc(25% - 1.5rem) !important;
-  min-width: 200px !important;
-}
-
-/* Mobilde alt alta */
-@media (max-width: 768px) {
-  .foot-problems-container > div,
-  .usage-instructions-container > div {
-    flex: 1 1 100% !important;
-  }
-}
-
