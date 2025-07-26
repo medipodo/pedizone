@@ -52,52 +52,76 @@
 }
 
 /* Yaygın Ayak Problemleri - Görselleri %25 küçült */
-.foot-problems-section img {
+.foot-problems-section .grid > div img {
   width: 75% !important;
   height: auto !important;
-  max-width: 150px !important;
+  max-width: 120px !important;
   margin: 0 auto !important;
   display: block !important;
 }
 
-/* Müşteri Yorumları - 3-3 yan yana düzen */
-.testimonials-grid {
+/* Yaygın Ayak Problemleri - Grid düzeni */
+.foot-problems-section .grid {
   display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 1.5rem !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 2rem !important;
 }
 
 @media (max-width: 1024px) {
-  .testimonials-grid {
+  .foot-problems-section .grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media (max-width: 640px) {
-  .testimonials-grid {
+  .foot-problems-section .grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Müşteri Yorumları - 3-3 yan yana düzen */
+.testimonials-section .grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 2rem !important;
+}
+
+@media (max-width: 1024px) {
+  .testimonials-section .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonials-section .grid {
     grid-template-columns: 1fr !important;
   }
 }
 
 /* Müşteri yorumu kartları için stil */
 .testimonial-card {
-  background: white;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-  height: fit-content;
+  background: white !important;
+  border-radius: 12px !important;
+  padding: 1.5rem !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+  transition: all 0.3s ease !important;
+  height: fit-content !important;
 }
 
 .testimonial-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transform: translateY(-5px) !important;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
 }
 
-/* Yıldızlar için sarı renk */
-.testimonial-stars {
+/* Yıldızlar için sarı renk - ZORLA */
+.testimonials-section span {
   color: #fbbf24 !important;
-  font-size: 1.2rem;
+  font-size: 1.2rem !important;
+}
+
+/* Yıldızlar için alternatif seçici */
+.text-yellow-400 {
+  color: #fbbf24 !important;
 }
 
 /* Smooth scroll behavior */
