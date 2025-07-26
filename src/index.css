@@ -27,17 +27,260 @@
   }
 }
 
-/* Basit arka plan düzeltmeleri */
-.bg-gray-50 {
-  background-color: #f9fafb !important;
+/* Cipa Medikal Tarzı Renkler */
+:root {
+  --primary-blue: #4a90e2;
+  --primary-blue-dark: #357abd;
+  --primary-blue-light: #e8f4fd;
+  --accent-red: #dc3545;
+  --neutral-gray: #f8f9fa;
+  --text-dark: #2c3e50;
+  --text-light: #6c757d;
 }
 
-.bg-white {
+/* Body - Temiz Beyaz */
+body {
+  background-color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  color: var(--text-dark);
+}
+
+/* Hero Section - Mavi Gradient */
+.hero-section {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%) !important;
+  color: white !important;
+  padding: 4rem 0 !important;
+}
+
+.hero-section h1 {
+  color: white !important;
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 1rem !important;
+}
+
+.hero-section p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 1.2rem !important;
+}
+
+/* Navigation - Beyaz */
+nav {
   background-color: #ffffff !important;
+  border-bottom: 1px solid #e9ecef !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
 }
 
-/* Yıldızları sarı yap */
+/* Özellikler Bölümü - Açık Mavi */
+.features-section {
+  background-color: var(--primary-blue-light) !important;
+  padding: 3rem 0 !important;
+}
+
+.features-section .bg-white {
+  background-color: #ffffff !important;
+  border: 1px solid #dee2e6 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+  padding: 2rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.features-section .bg-white:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2) !important;
+}
+
+/* Ürünler Bölümü - Beyaz */
+#products {
+  background-color: #ffffff !important;
+  padding: 3rem 0 !important;
+}
+
+.product-card {
+  background-color: #ffffff !important;
+  border: 1px solid #dee2e6 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+  transition: all 0.3s ease !important;
+  overflow: hidden !important;
+}
+
+.product-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15) !important;
+  border-color: var(--primary-blue) !important;
+}
+
+/* Ayak Sorunları - Açık Gri */
+.foot-problems-section {
+  background-color: var(--neutral-gray) !important;
+  padding: 3rem 0 !important;
+}
+
+.bg-gray-50 {
+  background-color: #ffffff !important;
+  border: 1px solid #dee2e6 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+  padding: 1.5rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.bg-gray-50:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+
+/* Kullanım Talimatları - Beyaz */
+.usage-instructions {
+  background-color: #ffffff !important;
+  padding: 3rem 0 !important;
+}
+
+/* Müşteri Yorumları - Açık Mavi */
+.testimonials-section {
+  background-color: var(--primary-blue-light) !important;
+  padding: 3rem 0 !important;
+}
+
+.testimonials-section .bg-white {
+  background-color: #ffffff !important;
+  border: 1px solid #dee2e6 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+  padding: 2rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.testimonials-section .bg-white:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2) !important;
+}
+
+/* Sarı Yıldızlar */
 .text-yellow-400 {
-  color: #fbbf24 !important;
+  color: #ffc107 !important;
+}
+
+/* Blog Bölümü - Beyaz */
+.blog-section {
+  background-color: #ffffff !important;
+  padding: 3rem 0 !important;
+}
+
+.blog-section .bg-white {
+  background-color: #ffffff !important;
+  border: 1px solid #dee2e6 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+}
+
+.blog-section .bg-white:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15) !important;
+}
+
+/* Hakkımızda - Açık Gri */
+#about {
+  background-color: var(--neutral-gray) !important;
+  padding: 3rem 0 !important;
+}
+
+#about .bg-white {
+  background-color: #ffffff !important;
+  border: 1px solid #dee2e6 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+  padding: 2rem !important;
+}
+
+/* İletişim - Beyaz */
+#contact {
+  background-color: #ffffff !important;
+  padding: 3rem 0 !important;
+}
+
+#contact .bg-gray-50 {
+  background-color: #ffffff !important;
+  border: 1px solid #dee2e6 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+  padding: 2rem !important;
+  transition: all 0.3s ease !important;
+}
+
+#contact .bg-gray-50:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+
+/* Butonlar - Mavi */
+.bg-red-600 {
+  background-color: var(--primary-blue) !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+}
+
+.bg-red-600:hover {
+  background-color: var(--primary-blue-dark) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3) !important;
+}
+
+/* İkon Arka Planları */
+.bg-red-100 {
+  background-color: var(--primary-blue-light) !important;
+  border-radius: 8px !important;
+}
+
+/* Footer - Koyu Mavi */
+footer {
+  background-color: var(--text-dark) !important;
+  color: white !important;
+}
+
+/* Başlıklar */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-dark) !important;
+  font-weight: 600 !important;
+}
+
+h2 {
+  color: var(--primary-blue) !important;
+  font-size: 2rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* Paragraflar */
+p {
+  color: var(--text-light) !important;
+  line-height: 1.6 !important;
+}
+
+/* Temiz Gölgeler */
+.shadow-sm {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+}
+
+.shadow {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
 }
 
