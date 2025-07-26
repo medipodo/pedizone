@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import './App.css'
 
 // Gerçek ürün görselleri
 import productImage1 from './assets/IMG_7570.jpeg'
