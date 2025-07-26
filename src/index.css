@@ -91,24 +91,24 @@ nav {
   margin-bottom: 1rem !important;
 }
 
-/* Hero CTA Button - Beyaz ve Büyük */
+/* Hero CTA Button - Kırmızı Arka Plan, Beyaz Yazı */
 .hero-cta-button {
-  background: #ffffff !important;
-  color: #C41E3A !important;
+  background: #C41E3A !important;
+  color: #ffffff !important;
   border: 2px solid #C41E3A !important;
   font-size: 1.25rem !important;
   font-weight: 800 !important;
   padding: 1rem 2.5rem !important;
   border-radius: 12px !important;
-  box-shadow: 0 4px 15px rgba(196, 30, 58, 0.2) !important;
+  box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3) !important;
   transition: all 0.3s ease !important;
 }
 
 .hero-cta-button:hover {
-  background: #C41E3A !important;
+  background: #a01729 !important;
   color: #ffffff !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 8px 25px rgba(196, 30, 58, 0.3) !important;
+  box-shadow: 0 8px 25px rgba(196, 30, 58, 0.4) !important;
 }
 
 /* Ürünler Bölümü - Sıkı Düzen */
