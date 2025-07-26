@@ -2,18 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Modern Klinik Tema */
+/* Modern Web Sitesi Teması */
 :root {
-  --primary-red: #dc2626;
-  --primary-red-dark: #b91c1c;
-  --primary-red-light: #fef2f2;
-  --clinical-blue: #1e40af;
-  --clinical-blue-light: #eff6ff;
-  --neutral-50: #f9fafb;
-  --neutral-100: #f3f4f6;
-  --neutral-200: #e5e7eb;
-  --neutral-800: #1f2937;
-  --neutral-900: #111827;
+  --primary-red: #e53e3e;
+  --primary-red-dark: #c53030;
+  --primary-red-light: #fed7d7;
+  --accent-gold: #ffd700;
+  --accent-orange: #ff6b35;
+  --neutral-50: #f7fafc;
+  --neutral-100: #edf2f7;
+  --neutral-200: #e2e8f0;
+  --neutral-800: #2d3748;
+  --neutral-900: #1a202c;
+  --gradient-primary: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);
+  --gradient-secondary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 /* Grid sistemini zorla düzelt */
@@ -33,7 +35,6 @@
   }
 }
 
-/* Ürünler grid'ini düzelt */
 @media (min-width: 768px) {
   .grid.grid-cols-1.md\:grid-cols-3 {
     display: grid !important;
@@ -42,17 +43,19 @@
   }
 }
 
-/* Modern Klinik Arka Planlar */
+/* Modern Body */
 body {
-  background: linear-gradient(135deg, var(--neutral-50) 0%, #ffffff 100%);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
 }
 
-/* Hero Section - Klinik Gradient */
+/* Hero Section - Kırmızı Arka Plan */
 .hero-section {
-  background: linear-gradient(135deg, var(--primary-red-light) 0%, #ffffff 50%, var(--clinical-blue-light) 100%);
+  background: var(--gradient-primary) !important;
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .hero-section::before {
@@ -62,7 +65,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23dc2626' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M40 40c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm20 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   z-index: 0;
 }
 
@@ -71,215 +74,292 @@ body {
   z-index: 1;
 }
 
-/* Navigation - Klinik Beyaz */
+/* Hero Text Styling */
+.hero-section h1 {
+  color: white !important;
+  font-size: 3.5rem !important;
+  font-weight: 800 !important;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+  letter-spacing: -0.05em !important;
+}
+
+.hero-section p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 1.25rem !important;
+  font-weight: 500 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Navigation - Modern Glass */
 nav {
   background: rgba(255, 255, 255, 0.95) !important;
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--neutral-200);
+  backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Ürünler Bölümü - Klinik Gri */
+/* Modern Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-orange) 0%, #e53e3e 100%) !important;
+  color: white !important;
+  padding: 1rem 2rem !important;
+  border-radius: 50px !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  box-shadow: 0 10px 30px rgba(229, 62, 62, 0.4) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border: none !important;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px) scale(1.05) !important;
+  box-shadow: 0 20px 40px rgba(229, 62, 62, 0.6) !important;
+  background: linear-gradient(135deg, #ff6b35 0%, #c53030 100%) !important;
+}
+
+/* Features Section - Modern Cards */
+.features-section {
+  background: linear-gradient(135deg, #f7fafc 0%, #ffffff 100%) !important;
+  padding: 5rem 0 !important;
+}
+
+.features-section .bg-white {
+  background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%) !important;
+  border: 2px solid transparent !important;
+  border-radius: 20px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  padding: 2.5rem !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.features-section .bg-white::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.features-section .bg-white:hover {
+  transform: translateY(-10px) !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15) !important;
+  border-color: var(--primary-red) !important;
+}
+
+.features-section .bg-white:hover::before {
+  transform: scaleX(1);
+}
+
+/* Products Section - Modern Grid */
 #products {
-  background: var(--neutral-50) !important;
-  position: relative;
+  background: linear-gradient(135deg, #edf2f7 0%, #f7fafc 100%) !important;
+  padding: 5rem 0 !important;
 }
 
-#products::before {
+.product-card {
+  background: #ffffff !important;
+  border: 2px solid transparent !important;
+  border-radius: 24px !important;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+.product-card::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231e40af' fill-opacity='0.02'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E");
+  background: linear-gradient(135deg, rgba(229, 62, 62, 0.05) 0%, rgba(197, 48, 48, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-15px) scale(1.02) !important;
+  box-shadow: 0 30px 80px rgba(229, 62, 62, 0.2) !important;
+  border-color: var(--primary-red) !important;
+}
+
+.product-card:hover::before {
+  opacity: 1;
+}
+
+/* Testimonials Section - Modern Design */
+.testimonials-section {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%) !important;
+  padding: 5rem 0 !important;
+  position: relative !important;
+}
+
+.testimonials-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e53e3e' fill-opacity='0.1'%3E%3Cpath d='M30 30c0-8.3-6.7-15-15-15s-15 6.7-15 15 6.7 15 15 15 15-6.7 15-15zm15 0c0-8.3-6.7-15-15-15s-15 6.7-15 15 6.7 15 15 15 15-6.7 15-15z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   z-index: 0;
 }
 
-#products > * {
+.testimonials-section > * {
   position: relative;
   z-index: 1;
 }
 
-/* Ürün Kartları - Modern Klinik */
-.product-card {
-  background: #ffffff !important;
-  border: 1px solid var(--neutral-200) !important;
-  border-radius: 16px !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  overflow: hidden !important;
-}
-
-.product-card:hover {
-  transform: translateY(-8px) !important;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
-  border-color: var(--primary-red) !important;
-}
-
-/* Özellik Kartları - Klinik Stil */
-.features-section .bg-white {
-  background: #ffffff !important;
-  border: 1px solid var(--neutral-200) !important;
-  border-radius: 12px !important;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
-  transition: all 0.3s ease !important;
-}
-
-.features-section .bg-white:hover {
-  transform: translateY(-4px) !important;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
-}
-
-/* Ayak Sorunları - Klinik Beyaz */
-.bg-gray-50 {
-  background: #ffffff !important;
-  border: 1px solid var(--neutral-200) !important;
-  border-radius: 12px !important;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
-  transition: all 0.3s ease !important;
-}
-
-.bg-gray-50:hover {
-  transform: translateY(-4px) !important;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
-  border-color: var(--clinical-blue) !important;
-}
-
-/* Kullanım Talimatları - Klinik Gradient */
-.usage-instructions {
-  background: linear-gradient(135deg, var(--clinical-blue-light) 0%, #ffffff 100%) !important;
-}
-
-/* Testimonials - Klinik Gri */
-.testimonials-section {
-  background: var(--neutral-50) !important;
+.testimonials-section h2 {
+  color: white !important;
+  font-size: 2.5rem !important;
+  font-weight: 800 !important;
+  text-align: center !important;
+  margin-bottom: 3rem !important;
 }
 
 .testimonials-section .bg-white {
-  background: #ffffff !important;
-  border: 1px solid var(--neutral-200) !important;
-  border-radius: 12px !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
-  transition: all 0.3s ease !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%) !important;
+  border: 2px solid transparent !important;
+  border-radius: 20px !important;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  padding: 2rem !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.testimonials-section .bg-white::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: var(--gradient-primary);
+  border-radius: 22px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
 .testimonials-section .bg-white:hover {
-  transform: translateY(-4px) !important;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+  transform: translateY(-8px) scale(1.02) !important;
+  box-shadow: 0 25px 70px rgba(229, 62, 62, 0.3) !important;
 }
 
-/* Blog Kartları - Modern */
+.testimonials-section .bg-white:hover::before {
+  opacity: 1;
+}
+
+/* Sarı Yıldızlar */
+.testimonials-section .text-yellow-400,
+.testimonials-section [class*="star"] {
+  color: var(--accent-gold) !important;
+  font-size: 1.5rem !important;
+  text-shadow: 0 2px 4px rgba(255, 215, 0, 0.3) !important;
+}
+
+/* Yıldız karakterlerini değiştir */
+.testimonials-section .bg-white::after {
+  content: '★★★★★';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--accent-gold);
+  font-size: 1.2rem;
+  text-shadow: 0 2px 4px rgba(255, 215, 0, 0.3);
+}
+
+/* Blog Section - Modern Cards */
+.blog-section {
+  background: linear-gradient(135deg, #f7fafc 0%, #ffffff 100%) !important;
+  padding: 5rem 0 !important;
+}
+
 .blog-section .bg-white {
   background: #ffffff !important;
-  border: 1px solid var(--neutral-200) !important;
-  border-radius: 16px !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+  border: 2px solid transparent !important;
+  border-radius: 20px !important;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1) !important;
   overflow: hidden !important;
-  transition: all 0.3s ease !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
 .blog-section .bg-white:hover {
-  transform: translateY(-8px) !important;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1) !important;
-}
-
-/* Hakkımızda - Klinik Beyaz */
-#about {
-  background: var(--clinical-blue-light) !important;
-}
-
-#about .bg-white {
-  background: #ffffff !important;
-  border: 1px solid var(--neutral-200) !important;
-  border-radius: 16px !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
-}
-
-/* İletişim - Klinik Kartlar */
-#contact .bg-gray-50 {
-  background: #ffffff !important;
-  border: 1px solid var(--neutral-200) !important;
-  border-radius: 12px !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
-  transition: all 0.3s ease !important;
-}
-
-#contact .bg-gray-50:hover {
-  transform: translateY(-4px) !important;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+  transform: translateY(-12px) !important;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15) !important;
   border-color: var(--primary-red) !important;
 }
 
-/* Butonlar - Klinik Stil */
-button, .btn {
-  border-radius: 8px !important;
-  font-weight: 600 !important;
-  transition: all 0.3s ease !important;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
-}
-
-.bg-red-600 {
-  background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%) !important;
-}
-
-.bg-red-600:hover {
-  background: linear-gradient(135deg, var(--primary-red-dark) 0%, #991b1b 100%) !important;
-  transform: translateY(-2px) !important;
-  box-shadow: 0 10px 15px -3px rgba(220, 38, 38, 0.3) !important;
-}
-
-/* İkonlar - Klinik Renkler */
-.bg-red-100 {
-  background: var(--primary-red-light) !important;
-  border: 1px solid rgba(220, 38, 38, 0.1) !important;
-}
-
-/* Footer - Klinik Koyu */
+/* Footer - Modern Dark */
 footer {
-  background: linear-gradient(135deg, var(--neutral-900) 0%, var(--neutral-800) 100%) !important;
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%) !important;
+  color: white !important;
+  padding: 3rem 0 !important;
 }
 
-/* Tipografi İyileştirmeleri */
+/* Typography Enhancements */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700 !important;
+  font-weight: 800 !important;
   letter-spacing: -0.025em !important;
+  line-height: 1.2 !important;
 }
 
-.text-gray-600 {
-  color: #6b7280 !important;
+h2 {
+  font-size: 2.5rem !important;
+  background: var(--gradient-primary) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  margin-bottom: 1.5rem !important;
 }
 
-.text-gray-900 {
-  color: var(--neutral-900) !important;
+h3 {
+  font-size: 1.5rem !important;
+  color: var(--neutral-800) !important;
+  margin-bottom: 1rem !important;
 }
 
-/* Smooth Animations */
-* {
-  transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
+p {
+  color: #4a5568 !important;
+  font-size: 1.1rem !important;
+  line-height: 1.7 !important;
 }
 
-/* Responsive İyileştirmeler */
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 2rem 0 !important;
-  }
-  
-  .product-card {
-    margin-bottom: 1.5rem !important;
-  }
+/* Icon Styling */
+.bg-red-100 {
+  background: linear-gradient(135deg, var(--primary-red-light) 0%, #fed7d7 100%) !important;
+  border: 2px solid rgba(229, 62, 62, 0.2) !important;
+  border-radius: 16px !important;
+  padding: 1rem !important;
+  transition: all 0.3s ease !important;
 }
 
-/* Accessibility */
-button:focus, a:focus {
-  outline: 2px solid var(--primary-red) !important;
-  outline-offset: 2px !important;
+.bg-red-100:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 0 10px 30px rgba(229, 62, 62, 0.3) !important;
 }
 
-/* Loading Animation */
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(50px);
   }
   to {
     opacity: 1;
@@ -287,7 +367,62 @@ button:focus, a:focus {
   }
 }
 
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  h2 {
+    font-size: 2rem !important;
+  }
+  
+  .btn-primary {
+    padding: 0.8rem 1.5rem !important;
+    font-size: 1rem !important;
+  }
+}
+
+/* Accessibility */
+button:focus, a:focus {
+  outline: 3px solid var(--accent-gold) !important;
+  outline-offset: 2px !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-red-dark);
 }
 
