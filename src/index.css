@@ -183,41 +183,6 @@ nav {
   margin-bottom: 2rem !important;
 }
 
-/* Müşteri Yorumları - Kompakt */
-.testimonials-section {
-  background-color: #ffffff !important;
-  padding: 2rem 0 !important;
-}
-
-.testimonials-section h2 {
-  margin-bottom: 1rem !important;
-}
-
-.testimonials-section .text-center.mb-16 {
-  margin-bottom: 2rem !important;
-}
-
-.testimonials-section .bg-white {
-  background-color: #ffffff !important;
-  border: 1px solid #e5e7eb !important;
-  border-radius: 8px !important;
-  box-shadow: 0 4px 20px rgba(196, 30, 58, 0.1) !important;
-  padding: 1.5rem !important;
-  transition: all 0.3s ease !important;
-  margin-bottom: 1rem !important;
-}
-
-.testimonials-section .bg-white:hover {
-  transform: translateY(-3px) !important;
-  box-shadow: 0 8px 30px rgba(196, 30, 58, 0.15) !important;
-}
-
-/* Sarı Yıldızlar */
-.text-yellow-400 {
-  color: #fbbf24 !important;
-  font-size: 1.2rem !important;
-}
-
 /* Blog Bölümü - Kompakt */
 .blog-section {
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important;
