@@ -117,32 +117,6 @@ function App() {
           }
         ]
       },
-      usage: {
-        title: 'Kullanım Talimatları',
-        subtitle: '4 basit adımda etkili ayak bakımı',
-        steps: [
-          {
-            step: '1',
-            title: 'Temizlik',
-            description: 'Ayaklarınızı ılık suyla yıkayın ve iyice kurutun.'
-          },
-          {
-            step: '2',
-            title: 'Uygulama',
-            description: 'Ürünü etkilenen bölgeye uygun miktarda uygulayın.'
-          },
-          {
-            step: '3',
-            title: 'Masaj',
-            description: 'Dairesel hareketlerle nazikçe masaj yapın.'
-          },
-          {
-            step: '4',
-            title: 'Bekleme',
-            description: 'Ürünün emilmesini bekleyin, gerekirse tekrarlayın.'
-          }
-        ]
-      },
       testimonials: {
         title: 'Kullanıcı Yorumları',
         subtitle: 'Müşterilerimizin deneyimleri',
@@ -330,32 +304,6 @@ function App() {
             title: 'Nail Fungus',
             description: 'Nail fungus infections',
             image: footOdor
-          }
-        ]
-      },
-      usage: {
-        title: 'Usage Instructions',
-        subtitle: 'Effective foot care in 4 simple steps',
-        steps: [
-          {
-            step: '1',
-            title: 'Cleaning',
-            description: 'Wash your feet with warm water and dry thoroughly.'
-          },
-          {
-            step: '2',
-            title: 'Application',
-            description: 'Apply an appropriate amount of product to the affected area.'
-          },
-          {
-            step: '3',
-            title: 'Massage',
-            description: 'Gently massage in circular motions.'
-          },
-          {
-            step: '4',
-            title: 'Wait',
-            description: 'Wait for the product to absorb, repeat if necessary.'
           }
         ]
       },
@@ -549,32 +497,6 @@ function App() {
           }
         ]
       },
-      usage: {
-        title: 'تعليمات الاستخدام',
-        subtitle: 'رعاية فعالة للقدم في 4 خطوات بسيطة',
-        steps: [
-          {
-            step: '1',
-            title: 'التنظيف',
-            description: 'اغسل قدميك بالماء الدافئ وجففهما جيداً.'
-          },
-          {
-            step: '2',
-            title: 'التطبيق',
-            description: 'ضع كمية مناسبة من المنتج على المنطقة المصابة.'
-          },
-          {
-            step: '3',
-            title: 'التدليك',
-            description: 'دلك بلطف بحركات دائرية.'
-          },
-          {
-            step: '4',
-            title: 'الانتظار',
-            description: 'انتظر حتى يمتص المنتج، كرر إذا لزم الأمر.'
-          }
-        ]
-      },
       testimonials: {
         title: 'آراء المستخدمين',
         subtitle: 'تجارب عملائنا',
@@ -714,21 +636,24 @@ function App() {
             <div className="flex items-center space-x-2">
               <button 
                 onClick={() => setCurrentLang('tr')}
-                className={`px-2 py-1 text-sm rounded ${currentLang === 'tr' ? 'bg-red-600 text-white' : 'text-gray-600 hover:text-red-600'}`}
+                className={`px-3 py-2 text-sm rounded-md flex items-center space-x-1 ${currentLang === 'tr' ? 'bg-red-600 text-white' : 'text-gray-600 hover:text-red-600'}`}
               >
-                🇹🇷
+                <span className="hidden md:inline flag-icon flag-tr"></span>
+                <span className="md:hidden">🇹🇷</span>
               </button>
               <button 
                 onClick={() => setCurrentLang('en')}
-                className={`px-2 py-1 text-sm rounded ${currentLang === 'en' ? 'bg-red-600 text-white' : 'text-gray-600 hover:text-red-600'}`}
+                className={`px-3 py-2 text-sm rounded-md flex items-center space-x-1 ${currentLang === 'en' ? 'bg-red-600 text-white' : 'text-gray-600 hover:text-red-600'}`}
               >
-                🇬🇧
+                <span className="hidden md:inline flag-icon flag-en"></span>
+                <span className="md:hidden">🇬🇧</span>
               </button>
               <button 
                 onClick={() => setCurrentLang('ar')}
-                className={`px-2 py-1 text-sm rounded ${currentLang === 'ar' ? 'bg-red-600 text-white' : 'text-gray-600 hover:text-red-600'}`}
+                className={`px-3 py-2 text-sm rounded-md flex items-center space-x-1 ${currentLang === 'ar' ? 'bg-red-600 text-white' : 'text-gray-600 hover:text-red-600'}`}
               >
-                🇸🇦
+                <span className="hidden md:inline flag-icon flag-ar"></span>
+                <span className="md:hidden">🇸🇦</span>
               </button>
             </div>
           </div>
@@ -747,7 +672,7 @@ function App() {
             </p>
             <button 
               onClick={() => scrollToSection('products')}
-              className="bg-red-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-red-700 transition-colors shadow-lg"
+              className="bg-red-600 text-white px-10 py-4 rounded-lg text-xl font-bold hover:bg-red-700 transition-colors shadow-lg hero-cta-button"
             >
               {t.hero.cta}
             </button>
@@ -846,30 +771,8 @@ function App() {
         </div>
       </section>
 
-      {/* Usage Instructions */}
-      <section className="py-16 bg-white usage-instructions">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t.usage.title}</h2>
-            <p className="text-xl text-gray-600">{t.usage.subtitle}</p>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {t.usage.steps.map((step, index) => (
-              <div key={index} className="text-center p-6 bg-gray-50 rounded-lg">
-                <div className="w-16 h-16 bg-red-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                  {step.step}
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
-                <p className="text-gray-600 text-sm">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Why PediZone Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t.whyPedizone.title}</h2>
@@ -878,7 +781,7 @@ function App() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {t.whyPedizone.reasons.map((reason, index) => (
-              <div key={index} className="text-center p-6 bg-white rounded-lg shadow-md">
+              <div key={index} className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-md transition-shadow">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl text-red-600">
                     {index === 0 ? '🔬' : index === 1 ? '👨‍⚕️' : '🌿'}
@@ -893,7 +796,7 @@ function App() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-white testimonials-section">
+      <section className="py-16 bg-gray-50 testimonials-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t.testimonials.title}</h2>
@@ -922,7 +825,7 @@ function App() {
       </section>
 
       {/* Blog Section */}
-      <section className="py-16 bg-gray-50 blog-section">
+      <section className="py-16 bg-white blog-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t.blog.title}</h2>
@@ -952,7 +855,7 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 bg-white">
+      <section id="about" className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t.about.title}</h2>
@@ -961,17 +864,17 @@ function App() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
+            <div className="text-center p-6 bg-white rounded-lg shadow-md">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">{t.about.mission.title}</h3>
               <p className="text-gray-600">{t.about.mission.description}</p>
             </div>
             
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
+            <div className="text-center p-6 bg-white rounded-lg shadow-md">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">{t.about.vision.title}</h3>
               <p className="text-gray-600">{t.about.vision.description}</p>
             </div>
             
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
+            <div className="text-center p-6 bg-white rounded-lg shadow-md">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">{t.about.values.title}</h3>
               <p className="text-gray-600">{t.about.values.description}</p>
             </div>
@@ -980,7 +883,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 bg-gray-50">
+      <section id="contact" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t.contact.title}</h2>
@@ -989,7 +892,7 @@ function App() {
           
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center p-6 bg-white rounded-lg shadow-md">
+              <div className="text-center p-6 bg-gray-50 rounded-lg shadow-md">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">📍</span>
                 </div>
@@ -997,7 +900,7 @@ function App() {
                 <p className="text-gray-600 text-sm">{t.contact.addressText}</p>
               </div>
               
-              <div className="text-center p-6 bg-white rounded-lg shadow-md">
+              <div className="text-center p-6 bg-gray-50 rounded-lg shadow-md">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">📞</span>
                 </div>
@@ -1007,7 +910,7 @@ function App() {
                 </a>
               </div>
               
-              <div className="text-center p-6 bg-white rounded-lg shadow-md">
+              <div className="text-center p-6 bg-gray-50 rounded-lg shadow-md">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">📱</span>
                 </div>
