@@ -118,47 +118,7 @@ function App() {
         ]
       },
       testimonials: {
-        title: 'Kullanıcı Yorumları',
-        subtitle: 'Müşterilerimizin deneyimleri',
-        reviews: [
-          {
-            name: 'Gamze B.',
-            role: 'Podolog',
-            rating: 5,
-            comment: 'Podoloji Merkezimde hastalarıma güvenle önerdiğim etkili bir ürün. Sonuçları gerçekten tatmin edici.'
-          },
-          {
-            name: 'Ayşe K.',
-            role: 'Kullanıcı',
-            rating: 5,
-            comment: 'Yıllardır çektiğim ayak mantarı problemi nihayet çözüldü. Çok memnunum.'
-          },
-          {
-            name: 'Mustafa D.',
-            role: 'Kullanıcı',
-            rating: 5,
-            comment: 'Etkili ve hızlı sonuç veren bir ürün. Kesinlikle tavsiye ederim.'
-          },
-          {
-            name: 'Fatma Özkan',
-            role: 'Podolog',
-            rating: 5,
-            comment: 'Klinik pratiğimde sıkça önerdiğim güvenilir bir çözüm.'
-          },
-          {
-            name: 'Ahmet S.',
-            role: 'Kullanıcı',
-            rating: 5,
-            comment: 'Doğal içerikleri sayesinde hassas cildimde hiç problem yaşamadım.'
-          },
-          {
-            name: 'Zeynep M.',
-            role: 'Kullanıcı',
-            rating: 5,
-            comment: 'Kullanımı kolay ve etkili. Ayak sağlığım için vazgeçilmez oldu.'
-          }
-        ]
-      },
+
       blog: {
         title: 'Blog',
         subtitle: 'Ayak Sağlığı Rehberi ve Uzman Tavsiyeleri',
