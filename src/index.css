@@ -91,6 +91,26 @@ nav {
   margin-bottom: 1rem !important;
 }
 
+/* Hero CTA Button - Beyaz ve Büyük */
+.hero-cta-button {
+  background: #ffffff !important;
+  color: #C41E3A !important;
+  border: 2px solid #C41E3A !important;
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
+  padding: 1rem 2.5rem !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 15px rgba(196, 30, 58, 0.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+.hero-cta-button:hover {
+  background: #C41E3A !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(196, 30, 58, 0.3) !important;
+}
+
 /* Ürünler Bölümü - Sıkı Düzen */
 #products {
   background-color: #ffffff !important;
@@ -118,80 +138,6 @@ nav {
 .product-card:hover {
   transform: translateY(-5px) !important;
   box-shadow: 0 8px 30px rgba(196, 30, 58, 0.15) !important;
-}
-
-/* Kullanım Talimatları - Modern Numaralar */
-.usage-instructions {
-  background-color: #ffffff !important;
-  padding: 2rem 0 !important;
-}
-
-.usage-instructions h2 {
-  margin-bottom: 1rem !important;
-}
-
-.usage-instructions .text-center.mb-16 {
-  margin-bottom: 2rem !important;
-}
-
-/* Modern Step Numbers */
-.usage-instructions .bg-red-600 {
-  background: linear-gradient(135deg, #C41E3A 0%, #a01729 100%) !important;
-  width: 4rem !important;
-  height: 4rem !important;
-  border-radius: 50% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  margin: 0 auto 1rem auto !important;
-  font-size: 1.5rem !important;
-  font-weight: 800 !important;
-  color: white !important;
-  box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3) !important;
-  position: relative !important;
-}
-
-.usage-instructions .bg-red-600::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(135deg, #C41E3A 0%, #a01729 100%);
-  border-radius: 50%;
-  z-index: -1;
-  opacity: 0.3;
-}
-
-/* Step Cards - Kompakt */
-.usage-instructions .bg-gray-50 {
-  background-color: #ffffff !important;
-  border: 1px solid #e5e7eb !important;
-  border-radius: 12px !important;
-  box-shadow: 0 4px 20px rgba(196, 30, 58, 0.1) !important;
-  padding: 1.5rem !important;
-  transition: all 0.3s ease !important;
-  margin-bottom: 1rem !important;
-}
-
-.usage-instructions .bg-gray-50:hover {
-  transform: translateY(-3px) !important;
-  box-shadow: 0 8px 30px rgba(196, 30, 58, 0.15) !important;
-}
-
-.usage-instructions h3 {
-  font-size: 1.25rem !important;
-  font-weight: 700 !important;
-  color: #2c3e50 !important;
-  margin-bottom: 0.5rem !important;
-}
-
-.usage-instructions p {
-  font-size: 0.9rem !important;
-  color: #6b7280 !important;
-  line-height: 1.5 !important;
-  margin: 0 !important;
 }
 
 /* Ayak Sorunları - Kompakt */
@@ -419,6 +365,44 @@ p {
   margin-bottom: 0.5rem !important;
 }
 
+/* Flag Icons - Masaüstünde Bayraklar */
+.flag-icon {
+  width: 24px;
+  height: 16px;
+  border-radius: 3px;
+  display: inline-block;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.flag-tr {
+  background: linear-gradient(to right, #e30a17 0%, #e30a17 100%);
+  position: relative;
+}
+
+.flag-tr::after {
+  content: "🌙⭐";
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 8px;
+}
+
+.flag-en {
+  background: linear-gradient(to bottom, 
+    #012169 0%, #012169 33%, 
+    #ffffff 33%, #ffffff 66%, 
+    #c8102e 66%, #c8102e 100%);
+}
+
+.flag-ar {
+  background: linear-gradient(to right, 
+    #000000 0%, #000000 25%, 
+    #ffffff 25%, #ffffff 50%, 
+    #ce1126 50%, #ce1126 75%, 
+    #007a3d 75%, #007a3d 100%);
+}
+
 /* Mobile Optimizations */
 @media (max-width: 768px) {
   .hero-section {
@@ -438,15 +422,19 @@ p {
     padding-bottom: 1.5rem !important;
   }
   
-  .usage-instructions .bg-red-600 {
-    width: 3rem !important;
-    height: 3rem !important;
-    font-size: 1.25rem !important;
-  }
-  
   .px-4 {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
+  }
+  
+  .hero-cta-button {
+    font-size: 1.1rem !important;
+    padding: 0.875rem 2rem !important;
+  }
+  
+  /* Mobilde emoji bayraklar */
+  .flag-icon {
+    display: none !important;
   }
 }
 
