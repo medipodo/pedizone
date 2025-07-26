@@ -9,6 +9,18 @@ import productImage4 from './assets/IMG_7574.jpeg'
 import productImage5 from './assets/IMG_7575.png'
 import productImage6 from './assets/IMG_8135.jpeg'
 import productImage7 from './assets/IMG_8137.jpeg'
+function App() {
+  return (
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+      <div className="bg-white p-8 rounded-xl shadow-md text-center">
+        <h1 className="text-3xl font-bold text-blue-600 mb-4">Merhaba Tailwind!</h1>
+        <p className="text-gray-700">Tailwind CSS başarıyla çalışıyor.</p>
+      </div>
+    </div>
+  );
+}
+
+export default App;
 
 // Ayak sorunları görselleri
 import footFungus from './assets/foot-fungus-problem.jpg'
