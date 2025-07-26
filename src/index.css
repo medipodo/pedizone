@@ -27,41 +27,95 @@
   }
 }
 
-/* Kırmızı Tema Renkler */
+/* Eski Çalışmadaki Tema Renkleri */
 :root {
-  --primary-red: #dc2626;
-  --primary-red-dark: #b91c1c;
-  --primary-red-light: #fef2f2;
-  --accent-red: #ef4444;
-  --neutral-gray: #f9fafb;
-  --text-dark: #1f2937;
-  --text-light: #6b7280;
+  --radius: 0.625rem;
+  --background: oklch(1 0 0); /* Pure white */
+  --foreground: oklch(0.2 0 0); /* Dark gray for text */
+  --card: oklch(1 0 0); /* White cards */
+  --card-foreground: oklch(0.2 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0 0);
+  --primary: oklch(0.5 0.2 15); /* PediZone red */
+  --primary-foreground: oklch(1 0 0); /* White text on red */
+  --secondary: oklch(0.95 0 0); /* Light gray */
+  --secondary-foreground: oklch(0.2 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.5 0.2 15); /* PediZone red accent */
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.5 0.2 15); /* PediZone red ring */
+  --chart-1: oklch(0.5 0.2 15);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.5 0.2 15);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+/* PediZone Custom Styles */
+.pedizone-red {
+  color: #C41E3A !important;
+}
+
+.pedizone-bg-red {
+  background-color: #C41E3A !important;
+}
+
+.pedizone-border-red {
+  border-color: #C41E3A !important;
+}
+
+.clinical-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
+}
+
+.medical-shadow {
+  box-shadow: 0 4px 20px rgba(196, 30, 58, 0.1) !important;
+}
+
+.product-card {
+  transition: all 0.3s ease !important;
+  background-color: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 20px rgba(196, 30, 58, 0.1) !important;
+  overflow: hidden !important;
+}
+
+.product-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 8px 30px rgba(196, 30, 58, 0.15) !important;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%) !important;
+  padding: 4rem 0 !important;
+}
+
+.text-clinical {
+  color: #2c3e50 !important;
+}
+
+.bg-clinical-light {
+  background-color: #f8f9fa !important;
 }
 
 /* Body - Temiz Beyaz */
 body {
   background-color: #ffffff;
-  font-family: 'Arial', sans-serif;
-  color: var(--text-dark);
-}
-
-/* Hero Section - Kırmızı Gradient */
-.hero-section {
-  background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%) !important;
-  color: white !important;
-  padding: 4rem 0 !important;
-}
-
-.hero-section h1 {
-  color: white !important;
-  font-size: 2.5rem !important;
-  font-weight: 700 !important;
-  margin-bottom: 1rem !important;
-}
-
-.hero-section p {
-  color: rgba(255, 255, 255, 0.9) !important;
-  font-size: 1.2rem !important;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
 }
 
 /* Navigation - Beyaz */
@@ -71,30 +125,28 @@ nav {
   box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
 }
 
+/* Hero Section - Klinik Gradient */
+.hero-section h1 {
+  color: #C41E3A !important;
+  font-size: 3rem !important;
+  font-weight: 800 !important;
+  margin-bottom: 1rem !important;
+}
+
+.hero-section p {
+  color: #2c3e50 !important;
+  font-size: 1.2rem !important;
+}
+
 /* Ürünler Bölümü - Beyaz */
 #products {
   background-color: #ffffff !important;
   padding: 4rem 0 !important;
 }
 
-.product-card {
-  background-color: #ffffff !important;
-  border: 1px solid #e5e7eb !important;
-  border-radius: 8px !important;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
-  transition: all 0.3s ease !important;
-  overflow: hidden !important;
-}
-
-.product-card:hover {
-  transform: translateY(-4px) !important;
-  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15) !important;
-  border-color: var(--primary-red) !important;
-}
-
-/* Ayak Sorunları - Açık Gri */
+/* Ayak Sorunları - Klinik Açık */
 .foot-problems-section {
-  background-color: var(--neutral-gray) !important;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important;
   padding: 4rem 0 !important;
 }
 
@@ -102,14 +154,14 @@ nav {
   background-color: #ffffff !important;
   border: 1px solid #e5e7eb !important;
   border-radius: 8px !important;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+  box-shadow: 0 4px 20px rgba(196, 30, 58, 0.1) !important;
   padding: 1.5rem !important;
   transition: all 0.3s ease !important;
 }
 
 .bg-gray-50:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 30px rgba(196, 30, 58, 0.15) !important;
 }
 
 /* Kullanım Talimatları - Beyaz */
@@ -118,9 +170,9 @@ nav {
   padding: 4rem 0 !important;
 }
 
-/* Neden PediZone - Açık Gri */
+/* Neden PediZone - Klinik Gradient */
 .why-pedizone-section {
-  background-color: var(--neutral-gray) !important;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important;
   padding: 4rem 0 !important;
 }
 
@@ -134,14 +186,14 @@ nav {
   background-color: #ffffff !important;
   border: 1px solid #e5e7eb !important;
   border-radius: 8px !important;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+  box-shadow: 0 4px 20px rgba(196, 30, 58, 0.1) !important;
   padding: 1.5rem !important;
   transition: all 0.3s ease !important;
 }
 
 .testimonials-section .bg-white:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.1) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 30px rgba(196, 30, 58, 0.15) !important;
 }
 
 /* Sarı Yıldızlar */
@@ -149,9 +201,9 @@ nav {
   color: #fbbf24 !important;
 }
 
-/* Blog Bölümü - Açık Gri */
+/* Blog Bölümü - Klinik Gradient */
 .blog-section {
-  background-color: var(--neutral-gray) !important;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important;
   padding: 4rem 0 !important;
 }
 
@@ -159,14 +211,14 @@ nav {
   background-color: #ffffff !important;
   border: 1px solid #e5e7eb !important;
   border-radius: 8px !important;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+  box-shadow: 0 4px 20px rgba(196, 30, 58, 0.1) !important;
   overflow: hidden !important;
   transition: all 0.3s ease !important;
 }
 
 .blog-section .bg-white:hover {
-  transform: translateY(-4px) !important;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+  transform: translateY(-5px) !important;
+  box-shadow: 0 8px 30px rgba(196, 30, 58, 0.15) !important;
 }
 
 /* Hakkımızda - Beyaz */
@@ -176,16 +228,16 @@ nav {
 }
 
 #about .bg-gray-50 {
-  background-color: var(--neutral-gray) !important;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important;
   border: 1px solid #e5e7eb !important;
   border-radius: 8px !important;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+  box-shadow: 0 4px 20px rgba(196, 30, 58, 0.1) !important;
   padding: 1.5rem !important;
 }
 
-/* İletişim - Açık Gri */
+/* İletişim - Klinik Gradient */
 #contact {
-  background-color: var(--neutral-gray) !important;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important;
   padding: 4rem 0 !important;
 }
 
@@ -193,32 +245,32 @@ nav {
   background-color: #ffffff !important;
   border: 1px solid #e5e7eb !important;
   border-radius: 8px !important;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+  box-shadow: 0 4px 20px rgba(196, 30, 58, 0.1) !important;
   padding: 1.5rem !important;
   transition: all 0.3s ease !important;
 }
 
 #contact .bg-white:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 30px rgba(196, 30, 58, 0.15) !important;
 }
 
-/* Butonlar - Kırmızı */
+/* Butonlar - PediZone Kırmızı */
 .bg-red-600 {
-  background-color: var(--primary-red) !important;
+  background-color: #C41E3A !important;
   border-radius: 6px !important;
   transition: all 0.3s ease !important;
 }
 
 .bg-red-600:hover {
-  background-color: var(--primary-red-dark) !important;
+  background-color: #a01729 !important;
   transform: translateY(-1px) !important;
-  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(196, 30, 58, 0.3) !important;
 }
 
 /* İkon Arka Planları */
 .bg-red-100 {
-  background-color: var(--primary-red-light) !important;
+  background-color: #fef2f2 !important;
   border-radius: 8px !important;
 }
 
@@ -230,47 +282,77 @@ footer {
 
 /* Başlıklar */
 h1, h2, h3, h4, h5, h6 {
-  color: var(--text-dark) !important;
-  font-weight: 600 !important;
+  color: #2c3e50 !important;
+  font-weight: 700 !important;
 }
 
 h2 {
-  color: var(--primary-red) !important;
-  font-size: 2rem !important;
+  color: #C41E3A !important;
+  font-size: 2.5rem !important;
   margin-bottom: 1rem !important;
 }
 
 /* Paragraflar */
 p {
-  color: var(--text-light) !important;
+  color: #6b7280 !important;
   line-height: 1.6 !important;
 }
 
-/* Temiz Gölgeler */
+/* Klinik Gölgeler */
 .shadow-sm {
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05) !important;
+  box-shadow: 0 1px 2px rgba(196, 30, 58, 0.05) !important;
 }
 
 .shadow {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+  box-shadow: 0 4px 20px rgba(196, 30, 58, 0.1) !important;
 }
 
 .shadow-md {
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+  box-shadow: 0 4px 20px rgba(196, 30, 58, 0.1) !important;
 }
 
 .shadow-lg {
-  box-shadow: 0 10px 15px rgba(0,0,0,0.1) !important;
+  box-shadow: 0 8px 30px rgba(196, 30, 58, 0.15) !important;
+}
+
+/* Flag Icons */
+.flag-icon {
+  width: 24px;
+  height: 16px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.flag-tr {
+  background: linear-gradient(to right, #e30a17 0%, #e30a17 100%);
+  position: relative;
+}
+
+.flag-tr::after {
+  content: "🌙⭐";
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 8px;
+}
+
+.flag-en {
+  background: linear-gradient(to bottom, #012169 0%, #012169 33%, #ffffff 33%, #ffffff 66%, #c8102e 66%, #c8102e 100%);
+}
+
+.flag-ar {
+  background: linear-gradient(to right, #000000 0%, #000000 25%, #ffffff 25%, #ffffff 50%, #ce1126 50%, #ce1126 75%, #007a3d 75%, #007a3d 100%);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .hero-section h1 {
-    font-size: 2rem !important;
+    font-size: 2.5rem !important;
   }
   
   h2 {
-    font-size: 1.5rem !important;
+    font-size: 2rem !important;
   }
 }
 
