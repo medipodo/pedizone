@@ -41,11 +41,11 @@ function App() {
       },
       features: {
         clinicalTest: 'Klinik Test',
-        clinicalTestDesc: 'Uzman onaylı formül',
+        clinicalTestDesc: 'Uzman görüşleriyle uyumlu içerikler.',
         podologyApproved: 'Podolog Onaylı',
-        podologyApprovedDesc: 'Profesyonel tavsiye',
+        podologyApprovedDesc: 'Ayak sağlığı uzmanları tarafından önerilen',
         naturalIngredients: 'Doğal İçerikler',
-        naturalIngredientsDesc: 'Doğal içerikler'
+        naturalIngredientsDesc: 'Doğal ve güvenli aktif bileşenler'
       },
       products: {
         title: 'Ürünlerimiz',
@@ -254,24 +254,24 @@ function App() {
         blog: 'Blog'  
       },
       hero: {
-        title: 'Advanced Foot Care Formula',
-        subtitle: 'PediZone®',
-        description: 'Podologists\' Choice',
+        title: 'PediZone®',
+        subtitle: 'Advanced Foot Care Formula',
+        description: 'Developed with podologists\' expectations',
         cta: 'Explore Products'
       },
       features: {
         clinicalTest: 'Clinical Test',
-        clinicalTestDesc: 'Expert approved formula',
+        clinicalTestDesc: 'Proven effectiveness in laboratory tests',
         podologyApproved: 'Podologist Approved',
-        podologyApprovedDesc: 'Professional recommendation',
+        podologyApprovedDesc: 'Recommended by foot health specialists',
         naturalIngredients: 'Natural Ingredients',
-        naturalIngredientsDesc: 'Natural ingredients'
+        naturalIngredientsDesc: 'Natural and safe active components'
       },
       products: {
         title: 'Our Products',
-        subtitle: 'PediZone® Foot Care Products',
+        subtitle: 'PediZone® 50ml Serum Variants',
         classic: {
-          name: 'PediZone® 50 Ml Serum',
+          name: 'PediZone® 50 Ml Foot and Nail Serum',
           description: 'Ideal formula for daily foot care',
           features: [
             'Antifungal effect',
@@ -281,8 +281,8 @@ function App() {
           ]
         },
         intensive: {
-          name: 'PediZone® 200 Ml Foot Cleansing Foam',
-          description: 'Anti-Odor and Anti-Bacterial',
+          name: 'PediZone® 50 Ml Foot Foam',
+          description: 'For feet requiring intensive care',
           features: [
             'Strong antifungal effect',
             'Deep cleansing',
@@ -291,12 +291,12 @@ function App() {
           ]
         },
         sensitive: {
-          name: 'PediZone® 50 Ml Serum',
-          description: 'For Both Men and Women',
+          name: 'PediZone® 200 Ml Foot Cleansing Foam',
+          description: 'Special formula for sensitive skin',
           features: [
-            'Skin friendly',
+            'Sensitive skin friendly',
             'Gentle formula',
-            'For external use',
+            'Hypoallergenic',
             'Daily use'
           ]
         }
@@ -376,9 +376,9 @@ function App() {
         subtitle: 'Our customers\' experiences',
         reviews: [
           {
-            name: 'Gamze B.',
+            name: 'Dr. Mehmet Yılmaz',
             title: 'Podologist',
-            text: 'An effective product I confidently recommend to my patients at our Podology Center. Results are truly satisfying.',
+            text: 'An effective product I confidently recommend to my patients. Results are truly satisfying.',
             rating: 5
           },
           {
@@ -474,24 +474,24 @@ function App() {
         blog: 'مدونة'  
       },
       hero: {
-        title: 'تركيبة متقدمة لرعاية القدم',
-        subtitle: 'PediZone®',
-        description: 'اختيار أطباء الأقدام',
+        title: 'PediZone®',
+        subtitle: 'تركيبة متقدمة لعناية القدم',
+        description: 'تم تطويرها وفقاً لتوقعات أطباء الأقدام',
         cta: 'استكشف المنتجات'
       },
       features: {
         clinicalTest: 'اختبار سريري',
-        clinicalTestDesc: 'تركيبة معتمدة من الخبراء',
+        clinicalTestDesc: 'فعالية مثبتة في الاختبارات المعملية',
         podologyApproved: 'معتمد من طبيب الأقدام',
-        podologyApprovedDesc: 'توصية مهنية',
+        podologyApprovedDesc: 'موصى به من قبل متخصصي صحة القدم',
         naturalIngredients: 'مكونات طبيعية',
-        naturalIngredientsDesc: 'مكونات طبيعية'
+        naturalIngredientsDesc: 'مكونات نشطة طبيعية وآمنة'
       },
       products: {
         title: 'منتجاتنا',
-        subtitle: 'منتجات العناية بالقدم PediZone®',
+        subtitle: 'متغيرات مصل PediZone® 50 مل',
         classic: {
-          name: 'مصل PediZone® 50 مل',
+          name: 'PediZone® كلاسيك',
           description: 'تركيبة مثالية للعناية اليومية بالقدم',
           features: [
             'تأثير مضاد للفطريات',
@@ -501,8 +501,8 @@ function App() {
           ]
         },
         intensive: {
-          name: 'رغوة تنظيف القدم PediZone® 200 مل',
-          description: 'مضاد للرائحة والبكتيريا',
+          name: 'PediZone® مكثف',
+          description: 'للأقدام التي تتطلب عناية مكثفة',
           features: [
             'تأثير قوي مضاد للفطريات',
             'تنظيف عميق',
@@ -511,12 +511,12 @@ function App() {
           ]
         },
         sensitive: {
-          name: 'مصل PediZone® 50 مل',
-          description: 'للرجال والنساء',
+          name: 'PediZone® حساس',
+          description: 'تركيبة خاصة للبشرة الحساسة',
           features: [
-            'مناسب للبشرة',
+            'مناسب للبشرة الحساسة',
             'تركيبة لطيفة',
-            'للاستخدام الخارجي',
+            'مضاد للحساسية',
             'الاستخدام اليومي'
           ]
         }
@@ -596,9 +596,9 @@ function App() {
         subtitle: 'تجارب عملائنا',
         reviews: [
           {
-            name: 'جمزة ب.',
+            name: 'د. محمد يلماز',
             title: 'طبيب أقدام',
-            text: 'منتج فعال أوصي به بثقة لمرضاي في مركز طب الأقدام. النتائج مرضية حقاً.',
+            text: 'منتج فعال أوصي به بثقة لمرضاي. النتائج مرضية حقاً.',
             rating: 5
           },
           {
@@ -614,7 +614,7 @@ function App() {
             rating: 5
           },
           {
-            name: 'فاطمة أوزكان',
+            name: 'د. فاطمة أوزكان',
             title: 'طبيب أقدام',
             text: 'حل موثوق أوصي به كثيراً في ممارستي السريرية.',
             rating: 5
@@ -753,27 +753,30 @@ function App() {
         </div>
       </nav>
 
-      {/* Hero Section - PADDING AZALTILDI */}
+      {/* Hero Section */}
       <section id="home" className="pt-16 bg-gradient-to-br from-red-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
               {t.hero.title}
             </h1>
-            <p className="text-2xl md:text-3xl text-red-600 font-semibold mb-8">
-              {t.hero.subtitle} - {t.hero.description}
+            <p className="text-xl md:text-2xl text-gray-600 mb-4">
+              {t.hero.subtitle}
+            </p>
+            <p className="text-lg text-red-600 mb-8">
+              {t.hero.description}
             </p>
             <button 
               onClick={() => scrollToSection('products')}
-              className="bg-gradient-to-r from-red-600 to-red-700 text-white px-10 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-all transform hover:scale-105"
+              className="bg-red-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-red-700 transition-colors shadow-lg"
             >
               {t.hero.cta}
             </button>
           </div>
           
-          {/* Features - PADDING AZALTILDI */}
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all transform hover:scale-105">
+          {/* Features */}
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center p-6 bg-white rounded-lg shadow-md">
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🧪</span>
               </div>
@@ -781,7 +784,7 @@ function App() {
               <p className="text-gray-600">{t.features.clinicalTestDesc}</p>
             </div>
             
-            <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all transform hover:scale-105">
+            <div className="text-center p-6 bg-white rounded-lg shadow-md">
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">👨‍⚕️</span>
               </div>
@@ -789,7 +792,7 @@ function App() {
               <p className="text-gray-600">{t.features.podologyApprovedDesc}</p>
             </div>
             
-            <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all transform hover:scale-105">
+            <div className="text-center p-6 bg-white rounded-lg shadow-md">
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🌿</span>
               </div>
@@ -800,31 +803,31 @@ function App() {
         </div>
       </section>
 
-      {/* Products Section - ÜRÜN KARTLARI BÜYÜTÜLDÜ */}
-      <section id="products" className="py-16 bg-gray-50">
+      {/* Products Section */}
+      <section id="products" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t.products.title}</h2>
             <p className="text-xl text-gray-600">{t.products.subtitle}</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Classic Variant - BÜYÜTÜLDÜ */}
-            <div className="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:scale-105">
-              <div className="w-full h-80 bg-gray-100 flex items-center justify-center p-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Classic Variant */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="h-80 bg-gray-100 flex items-center justify-center p-4">
                 <img 
                   src={productImage1} 
                   alt="PediZone Classic" 
-                  className="product-image h-full w-auto object-contain transition-transform hover:scale-110"
+                  className="h-full w-auto object-contain"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{t.products.classic.name}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{t.products.classic.name}</h3>
                 <p className="text-gray-600 mb-4">{t.products.classic.description}</p>
                 <ul className="space-y-2">
                   {t.products.classic.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-sm text-gray-700">
-                      <span className="text-green-500 mr-2 font-bold">✓</span>
+                    <li key={index} className="flex items-center text-sm text-gray-600">
+                      <span className="text-green-500 mr-2">✓</span>
                       {feature}
                     </li>
                   ))}
@@ -832,22 +835,22 @@ function App() {
               </div>
             </div>
 
-            {/* Intensive Variant - BÜYÜTÜLDÜ */}
-            <div className="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:scale-105">
-              <div className="w-full h-80 bg-gray-100 flex items-center justify-center p-4">
+            {/* Intensive Variant */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="h-64 bg-gray-100 flex items-center justify-center p-4">
                 <img 
                   src={productImage2} 
                   alt="PediZone Intensive" 
-                  className="product-image h-full w-auto object-contain transition-transform hover:scale-110"
+                  className="h-full w-auto object-contain"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{t.products.intensive.name}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{t.products.intensive.name}</h3>
                 <p className="text-gray-600 mb-4">{t.products.intensive.description}</p>
                 <ul className="space-y-2">
                   {t.products.intensive.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-sm text-gray-700">
-                      <span className="text-green-500 mr-2 font-bold">✓</span>
+                    <li key={index} className="flex items-center text-sm text-gray-600">
+                      <span className="text-green-500 mr-2">✓</span>
                       {feature}
                     </li>
                   ))}
@@ -855,22 +858,22 @@ function App() {
               </div>
             </div>
 
-            {/* Sensitive Variant - BÜYÜTÜLDÜ */}
-            <div className="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:scale-105">
-              <div className="w-full h-80 bg-gray-100 flex items-center justify-center p-4">
+            {/* Sensitive Variant */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="h-64 bg-gray-100 flex items-center justify-center p-4">
                 <img 
                   src={productImage3} 
                   alt="PediZone Sensitive" 
-                  className="product-image h-full w-auto object-contain transition-transform hover:scale-110"
+                  className="h-full w-auto object-contain"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{t.products.sensitive.name}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{t.products.sensitive.name}</h3>
                 <p className="text-gray-600 mb-4">{t.products.sensitive.description}</p>
                 <ul className="space-y-2">
                   {t.products.sensitive.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-sm text-gray-700">
-                      <span className="text-green-500 mr-2 font-bold">✓</span>
+                    <li key={index} className="flex items-center text-sm text-gray-600">
+                      <span className="text-green-500 mr-2">✓</span>
                       {feature}
                     </li>
                   ))}
@@ -881,17 +884,17 @@ function App() {
         </div>
       </section>
 
-      {/* Foot Problems Section - PADDING AZALTILDI */}
-      <section className="py-16 bg-white">
+      {/* Foot Problems Section */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t.footProblems.title}</h2>
             <p className="text-xl text-gray-600">{t.footProblems.subtitle}</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {t.footProblems.problems.map((problem, index) => (
-              <div key={index} className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-md transition-all transform hover:scale-105">
+              <div key={index} className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-md transition-shadow">
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-white shadow-md">
                   <img 
                     src={problem.image} 
@@ -907,18 +910,18 @@ function App() {
         </div>
       </section>
 
-      {/* Usage Instructions - PADDING AZALTILDI */}
-      <section className="py-16 bg-gray-50">
+      {/* Usage Instructions */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t.usage.title}</h2>
             <p className="text-xl text-gray-600">{t.usage.subtitle}</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {t.usage.steps.map((step, index) => (
               <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-r from-red-600 to-red-700 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold shadow-lg">
+                <div className="w-20 h-20 bg-red-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                   {step.step}
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
@@ -929,17 +932,17 @@ function App() {
         </div>
       </section>
 
-      {/* Why PediZone Section - PADDING AZALTILDI */}
-      <section className="py-16 bg-white">
+      {/* Why PediZone Section */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t.whyPedizone.title}</h2>
             <p className="text-xl text-gray-600">{t.whyPedizone.subtitle}</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {t.whyPedizone.reasons.map((reason, index) => (
-              <div key={index} className="text-center p-8 bg-gray-50 rounded-lg hover:shadow-lg transition-all transform hover:scale-105">
+              <div key={index} className="text-center p-8 bg-gray-50 rounded-lg">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">{reason.title}</h3>
                 <p className="text-gray-600">{reason.description}</p>
               </div>
@@ -948,17 +951,17 @@ function App() {
         </div>
       </section>
 
-      {/* Testimonials - PADDING AZALTILDI */}
-      <section className="py-16 bg-gray-50">
+      {/* Testimonials */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t.testimonials.title}</h2>
             <p className="text-xl text-gray-600">{t.testimonials.subtitle}</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {t.testimonials.reviews.map((review, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all transform hover:scale-105">
+              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
                 <div className="flex items-center mb-4">
                   {[...Array(review.rating)].map((_, i) => (
                     <span key={i} className="text-yellow-400 text-lg">★</span>
@@ -975,17 +978,17 @@ function App() {
         </div>
       </section>
 
-      {/* Blog Section - PADDING AZALTILDI */}
-      <section className="py-16 bg-white">
+      {/* Blog Section */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t.blog.title}</h2>
             <p className="text-xl text-gray-600">{t.blog.subtitle}</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {t.blog.articles.map((article, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-all transform hover:scale-105">
+              <div key={index} className="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="h-48 bg-gray-200">
                   <img 
                     src={article.image} 
@@ -1017,7 +1020,7 @@ function App() {
               href="/blog/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-red-600 to-red-700 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:shadow-lg transition-all transform hover:scale-105"
+              className="bg-red-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-red-700 transition-colors shadow-lg"
             >
               {t.blog.viewAll}
             </a>
@@ -1025,16 +1028,16 @@ function App() {
         </div>
       </section>
 
-      {/* About Section - PADDING AZALTILDI */}
-      <section id="about" className="py-16 bg-gray-50">
+      {/* About Section */}
+      <section id="about" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t.about.title}</h2>
             <p className="text-xl text-gray-600">{t.about.subtitle}</p>
           </div>
           
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white p-8 rounded-lg mb-8 shadow-lg">
+            <div className="bg-white p-8 rounded-lg mb-8">
               <p className="text-lg text-gray-700 leading-relaxed mb-6">{t.about.content}</p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -1056,17 +1059,17 @@ function App() {
         </div>
       </section>
 
-      {/* Contact Section - PADDING AZALTILDI */}
-      <section id="contact" className="py-16 bg-white">
+      {/* Contact Section */}
+      <section id="contact" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t.contact.title}</h2>
             <p className="text-xl text-gray-600">{t.contact.subtitle}</p>
           </div>
           
           <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-all transform hover:scale-105">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center p-6 bg-gray-50 rounded-lg shadow-md">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">📍</span>
                 </div>
@@ -1074,7 +1077,7 @@ function App() {
                 <p className="text-gray-600">{t.contact.addressText}</p>
               </div>
               
-              <div className="text-center p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-all transform hover:scale-105">
+              <div className="text-center p-6 bg-gray-50 rounded-lg shadow-md">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">📞</span>
                 </div>
@@ -1084,7 +1087,7 @@ function App() {
                 </a>
               </div>
               
-              <div className="text-center p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-all transform hover:scale-105">
+              <div className="text-center p-6 bg-gray-50 rounded-lg shadow-md">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">📱</span>
                 </div>
@@ -1117,4 +1120,3 @@ function App() {
 }
 
 export default App
-
