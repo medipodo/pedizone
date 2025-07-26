@@ -1,50 +1,293 @@
-/* Modern Yorum Kartı */
-.review-card {
-  background-color: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Klinik Tema */
+:root {
+  --primary-red: #dc2626;
+  --primary-red-dark: #b91c1c;
+  --primary-red-light: #fef2f2;
+  --clinical-blue: #1e40af;
+  --clinical-blue-light: #eff6ff;
+  --neutral-50: #f9fafb;
+  --neutral-100: #f3f4f6;
+  --neutral-200: #e5e7eb;
+  --neutral-800: #1f2937;
+  --neutral-900: #111827;
 }
 
-.review-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+/* Grid sistemini zorla düzelt */
+@media (min-width: 640px) {
+  .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem !important;
+  }
 }
 
-/* Yıldızlar (Google tarzı sarı) */
-.review-stars {
-  display: flex;
-  gap: 0.25rem;
+@media (min-width: 1024px) {
+  .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 2rem !important;
+  }
 }
 
-.review-stars svg {
-  width: 20px;
-  height: 20px;
-  fill: #facc15; /* Google'daki sarı yıldız rengi */
-  transition: transform 0.2s ease;
+/* Ürünler grid'ini düzelt */
+@media (min-width: 768px) {
+  .grid.grid-cols-1.md\:grid-cols-3 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2rem !important;
+  }
 }
 
-.review-stars svg:hover {
-  transform: scale(1.2);
+/* Modern Klinik Arka Planlar */
+body {
+  background: linear-gradient(135deg, var(--neutral-50) 0%, #ffffff 100%);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-.review-stars svg.inactive {
-  fill: #e5e7eb;
+/* Hero Section - Klinik Gradient */
+.hero-section {
+  background: linear-gradient(135deg, var(--primary-red-light) 0%, #ffffff 50%, var(--clinical-blue-light) 100%);
+  position: relative;
+  overflow: hidden;
 }
 
-/* Yorum metni */
-.review-card p {
-  color: #374151;
-  font-size: 1rem;
-  line-height: 1.5rem;
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23dc2626' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  z-index: 0;
 }
 
-/* Kullanıcı adı */
-.review-card h4 {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #111827;
-  margin-bottom: 0.25rem;
+.hero-section > * {
+  position: relative;
+  z-index: 1;
 }
+
+/* Navigation - Klinik Beyaz */
+nav {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+/* Ürünler Bölümü - Klinik Gri */
+#products {
+  background: var(--neutral-50) !important;
+  position: relative;
+}
+
+#products::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231e40af' fill-opacity='0.02'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E");
+  z-index: 0;
+}
+
+#products > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ürün Kartları - Modern Klinik */
+.product-card {
+  background: #ffffff !important;
+  border: 1px solid var(--neutral-200) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  overflow: hidden !important;
+}
+
+.product-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  border-color: var(--primary-red) !important;
+}
+
+/* Özellik Kartları - Klinik Stil */
+.features-section .bg-white {
+  background: #ffffff !important;
+  border: 1px solid var(--neutral-200) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.features-section .bg-white:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Ayak Sorunları - Klinik Beyaz */
+.bg-gray-50 {
+  background: #ffffff !important;
+  border: 1px solid var(--neutral-200) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.bg-gray-50:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+  border-color: var(--clinical-blue) !important;
+}
+
+/* Kullanım Talimatları - Klinik Gradient */
+.usage-instructions {
+  background: linear-gradient(135deg, var(--clinical-blue-light) 0%, #ffffff 100%) !important;
+}
+
+/* Testimonials - Klinik Gri */
+.testimonials-section {
+  background: var(--neutral-50) !important;
+}
+
+.testimonials-section .bg-white {
+  background: #ffffff !important;
+  border: 1px solid var(--neutral-200) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.testimonials-section .bg-white:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Blog Kartları - Modern */
+.blog-section .bg-white {
+  background: #ffffff !important;
+  border: 1px solid var(--neutral-200) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+}
+
+.blog-section .bg-white:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Hakkımızda - Klinik Beyaz */
+#about {
+  background: var(--clinical-blue-light) !important;
+}
+
+#about .bg-white {
+  background: #ffffff !important;
+  border: 1px solid var(--neutral-200) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* İletişim - Klinik Kartlar */
+#contact .bg-gray-50 {
+  background: #ffffff !important;
+  border: 1px solid var(--neutral-200) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+#contact .bg-gray-50:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+  border-color: var(--primary-red) !important;
+}
+
+/* Butonlar - Klinik Stil */
+button, .btn {
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+.bg-red-600 {
+  background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%) !important;
+}
+
+.bg-red-600:hover {
+  background: linear-gradient(135deg, var(--primary-red-dark) 0%, #991b1b 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 15px -3px rgba(220, 38, 38, 0.3) !important;
+}
+
+/* İkonlar - Klinik Renkler */
+.bg-red-100 {
+  background: var(--primary-red-light) !important;
+  border: 1px solid rgba(220, 38, 38, 0.1) !important;
+}
+
+/* Footer - Klinik Koyu */
+footer {
+  background: linear-gradient(135deg, var(--neutral-900) 0%, var(--neutral-800) 100%) !important;
+}
+
+/* Tipografi İyileştirmeleri */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700 !important;
+  letter-spacing: -0.025em !important;
+}
+
+.text-gray-600 {
+  color: #6b7280 !important;
+}
+
+.text-gray-900 {
+  color: var(--neutral-900) !important;
+}
+
+/* Smooth Animations */
+* {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* Responsive İyileştirmeler */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 0 !important;
+  }
+  
+  .product-card {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+/* Accessibility */
+button:focus, a:focus {
+  outline: 2px solid var(--primary-red) !important;
+  outline-offset: 2px !important;
+}
+
+/* Loading Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
