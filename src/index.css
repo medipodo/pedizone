@@ -2,438 +2,216 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Grid sistemini düzelt */
-@media (min-width: 640px) {
-  .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 2rem !important;
-  }
-}
-
-@media (min-width: 1024px) {
-  .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 {
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 2rem !important;
-  }
-}
-
-@media (min-width: 768px) {
-  .grid.grid-cols-1.md\:grid-cols-3 {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 2rem !important;
-  }
-}
-
-/* Eski Tema Renkleri */
-:root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.2 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0 0);
-  --primary: oklch(0.5 0.2 15);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.95 0 0);
-  --secondary-foreground: oklch(0.2 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.5 0.2 15);
-  --accent-foreground: oklch(1 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.5 0.2 15);
-}
-
-/* PediZone Custom Styles */
-.pedizone-red {
-  color: #C41E3A !important;
-}
-
-.pedizone-bg-red {
-  background-color: #C41E3A !important;
-}
-
-/* Body - Temiz Beyaz */
-body {
-  background-color: #ffffff;
-  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #2c3e50;
-}
-
-/* Navigation - Beyaz */
-nav {
-  background-color: #ffffff !important;
-  border-bottom: 1px solid #e5e7eb !important;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
-}
-
-/* Hero Section - Kompakt ve Sıkı */
-.hero-section {
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%) !important;
-  padding: 2rem 0 !important;
-}
-
-.hero-section h1 {
-  color: #C41E3A !important;
-  font-size: 2rem !important;
-  font-weight: 800 !important;
-  margin-bottom: 0.5rem !important;
-  line-height: 1.2 !important;
-}
-
-.hero-section p {
-  color: #2c3e50 !important;
-  font-size: 1rem !important;
-  margin-bottom: 1rem !important;
-}
-
-/* Hero CTA Button - Kırmızı Arka Plan, Beyaz Yazı */
-.hero-cta-button {
-  background: #C41E3A !important;
-  color: #ffffff !important;
-  border: 2px solid #C41E3A !important;
-  font-size: 1.25rem !important;
-  font-weight: 800 !important;
-  padding: 1rem 2.5rem !important;
-  border-radius: 12px !important;
-  box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3) !important;
-  transition: all 0.3s ease !important;
-}
-
-.hero-cta-button:hover {
-  background: #a01729 !important;
-  color: #ffffff !important;
-  transform: translateY(-2px) !important;
-  box-shadow: 0 8px 25px rgba(196, 30, 58, 0.4) !important;
-}
-
-/* Ürünler Bölümü - Sıkı Düzen */
-#products {
-  background-color: #ffffff !important;
-  padding: 2rem 0 !important;
-}
-
-#products h2 {
-  margin-bottom: 1rem !important;
-}
-
-#products .text-center.mb-16 {
-  margin-bottom: 2rem !important;
-}
-
+/* Ürün kartları için özel stiller */
 .product-card {
-  background-color: #ffffff !important;
-  border: 1px solid #e5e7eb !important;
-  border-radius: 8px !important;
-  box-shadow: 0 4px 20px rgba(196, 30, 58, 0.1) !important;
-  overflow: hidden !important;
-  transition: all 0.3s ease !important;
-  margin-bottom: 1rem !important;
+  transition: all 0.3s ease;
 }
 
 .product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Görsel optimizasyonu */
+.product-image {
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive grid iyileştirmesi */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Hero section padding azaltma */
+.hero-section {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+/* Özellik kartları spacing */
+.features-section {
+  padding: 2rem 0 !important;
+}
+
+.features-grid {
+  gap: 1.5rem !important;
+}
+
+/* Yaygın Ayak Problemleri - Görselleri %25 küçült */
+.foot-problems-section .grid > div img {
+  width: 75% !important;
+  height: auto !important;
+  max-width: 120px !important;
+  margin: 0 auto !important;
+  display: block !important;
+}
+
+/* Yaygın Ayak Problemleri - Grid düzeni */
+.foot-problems-section .grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 2rem !important;
+}
+
+@media (max-width: 1024px) {
+  .foot-problems-section .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .foot-problems-section .grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Müşteri Yorumları - 3-3 yan yana düzen */
+.testimonials-section .grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 2rem !important;
+}
+
+@media (max-width: 1024px) {
+  .testimonials-section .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonials-section .grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Müşteri yorumu kartları için stil */
+.testimonial-card {
+  background: white !important;
+  border-radius: 12px !important;
+  padding: 1.5rem !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+  transition: all 0.3s ease !important;
+  height: fit-content !important;
+}
+
+.testimonial-card:hover {
   transform: translateY(-5px) !important;
-  box-shadow: 0 8px 30px rgba(196, 30, 58, 0.15) !important;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
 }
 
-/* Ayak Sorunları - Kompakt */
-.foot-problems-section {
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important;
-  padding: 2rem 0 !important;
-}
-
-.foot-problems-section h2 {
-  margin-bottom: 1rem !important;
-}
-
-.foot-problems-section .text-center.mb-16 {
-  margin-bottom: 2rem !important;
-}
-
-.bg-gray-50 {
-  background-color: #ffffff !important;
-  border: 1px solid #e5e7eb !important;
-  border-radius: 8px !important;
-  box-shadow: 0 4px 20px rgba(196, 30, 58, 0.1) !important;
-  padding: 1.5rem !important;
-  transition: all 0.3s ease !important;
-  margin-bottom: 1rem !important;
-}
-
-.bg-gray-50:hover {
-  transform: translateY(-3px) !important;
-  box-shadow: 0 8px 30px rgba(196, 30, 58, 0.15) !important;
-}
-
-/* Neden PediZone - Kompakt */
-.why-pedizone-section {
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important;
-  padding: 2rem 0 !important;
-}
-
-.why-pedizone-section h2 {
-  margin-bottom: 1rem !important;
-}
-
-.why-pedizone-section .text-center.mb-16 {
-  margin-bottom: 2rem !important;
-}
-
-/* Müşteri Yorumları - Kompakt */
-.testimonials-section {
-  background-color: #ffffff !important;
-  padding: 2rem 0 !important;
-}
-
-.testimonials-section h2 {
-  margin-bottom: 1rem !important;
-}
-
-.testimonials-section .text-center.mb-16 {
-  margin-bottom: 2rem !important;
-}
-
-.testimonials-section .bg-white {
-  background-color: #ffffff !important;
-  border: 1px solid #e5e7eb !important;
-  border-radius: 8px !important;
-  box-shadow: 0 4px 20px rgba(196, 30, 58, 0.1) !important;
-  padding: 1.5rem !important;
-  transition: all 0.3s ease !important;
-  margin-bottom: 1rem !important;
-}
-
-.testimonials-section .bg-white:hover {
-  transform: translateY(-3px) !important;
-  box-shadow: 0 8px 30px rgba(196, 30, 58, 0.15) !important;
-}
-
-/* Sarı Yıldızlar */
-.text-yellow-400 {
+/* Yıldızlar için sarı renk - ZORLA */
+.testimonials-section span {
   color: #fbbf24 !important;
   font-size: 1.2rem !important;
 }
 
-/* Blog Bölümü - Kompakt */
-.blog-section {
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important;
-  padding: 2rem 0 !important;
+/* Yıldızlar için alternatif seçici */
+.text-yellow-400 {
+  color: #fbbf24 !important;
 }
 
-.blog-section h2 {
-  margin-bottom: 1rem !important;
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
 }
 
-.blog-section .text-center.mb-16 {
-  margin-bottom: 2rem !important;
+/* Button hover effects */
+button {
+  transition: all 0.3s ease;
 }
 
-.blog-section .bg-white {
-  background-color: #ffffff !important;
-  border: 1px solid #e5e7eb !important;
-  border-radius: 8px !important;
-  box-shadow: 0 4px 20px rgba(196, 30, 58, 0.1) !important;
-  overflow: hidden !important;
-  transition: all 0.3s ease !important;
-  margin-bottom: 1rem !important;
+/* Card hover animations */
+.hover\:scale-105:hover {
+  transform: scale(1.05);
 }
 
-.blog-section .bg-white:hover {
-  transform: translateY(-5px) !important;
-  box-shadow: 0 8px 30px rgba(196, 30, 58, 0.15) !important;
+/* Gradient text effect */
+.gradient-text {
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* Hakkımızda - Kompakt */
-#about {
-  background-color: #ffffff !important;
-  padding: 2rem 0 !important;
+/* Loading animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-#about h2 {
-  margin-bottom: 1rem !important;
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
 }
 
-#about .text-center.mb-16 {
-  margin-bottom: 2rem !important;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-#about .bg-gray-50 {
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important;
-  border: 1px solid #e5e7eb !important;
-  border-radius: 8px !important;
-  box-shadow: 0 4px 20px rgba(196, 30, 58, 0.1) !important;
-  padding: 1.5rem !important;
-  margin-bottom: 1rem !important;
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
 
-/* İletişim - Kompakt */
-#contact {
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important;
-  padding: 2rem 0 !important;
+::-webkit-scrollbar-thumb {
+  background: #dc2626;
+  border-radius: 4px;
 }
 
-#contact h2 {
-  margin-bottom: 1rem !important;
+::-webkit-scrollbar-thumb:hover {
+  background: #b91c1c;
 }
 
-#contact .text-center.mb-16 {
-  margin-bottom: 2rem !important;
-}
-
-#contact .bg-white {
-  background-color: #ffffff !important;
-  border: 1px solid #e5e7eb !important;
-  border-radius: 8px !important;
-  box-shadow: 0 4px 20px rgba(196, 30, 58, 0.1) !important;
-  padding: 1.5rem !important;
-  transition: all 0.3s ease !important;
-  margin-bottom: 1rem !important;
-}
-
-#contact .bg-white:hover {
-  transform: translateY(-3px) !important;
-  box-shadow: 0 8px 30px rgba(196, 30, 58, 0.15) !important;
-}
-
-/* Butonlar - PediZone Kırmızı */
-.bg-red-600 {
-  background: linear-gradient(135deg, #C41E3A 0%, #a01729 100%) !important;
-  border-radius: 8px !important;
-  transition: all 0.3s ease !important;
-  padding: 0.75rem 1.5rem !important;
-  font-weight: 600 !important;
-}
-
-.bg-red-600:hover {
-  background: linear-gradient(135deg, #a01729 0%, #8b1426 100%) !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3) !important;
-}
-
-/* İkon Arka Planları */
-.bg-red-100 {
-  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%) !important;
-  border-radius: 12px !important;
-  padding: 1rem !important;
-  box-shadow: 0 2px 10px rgba(196, 30, 58, 0.1) !important;
-}
-
-/* Footer - Koyu Gri */
-footer {
-  background-color: #111827 !important;
-  color: white !important;
-  padding: 2rem 0 !important;
-}
-
-/* Başlıklar */
-h1, h2, h3, h4, h5, h6 {
-  color: #2c3e50 !important;
-  font-weight: 700 !important;
-}
-
-h2 {
-  color: #C41E3A !important;
-  font-size: 2rem !important;
-  margin-bottom: 1rem !important;
-}
-
-/* Paragraflar */
-p {
-  color: #6b7280 !important;
-  line-height: 1.6 !important;
-}
-
-/* Genel Spacing Düzeltmeleri */
-.py-16 {
-  padding-top: 2rem !important;
-  padding-bottom: 2rem !important;
-}
-
-.mb-16 {
-  margin-bottom: 2rem !important;
-}
-
-.mb-8 {
-  margin-bottom: 1rem !important;
-}
-
-.mb-4 {
-  margin-bottom: 0.5rem !important;
-}
-
-/* Flag Icons - Masaüstünde Bayraklar */
-.flag-icon {
-  width: 24px;
-  height: 16px;
-  border-radius: 3px;
-  display: inline-block;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-}
-
-.flag-tr {
-  background: linear-gradient(to right, #e30a17 0%, #e30a17 100%);
-  position: relative;
-}
-
-.flag-tr::after {
-  content: "🌙⭐";
-  position: absolute;
-  left: 2px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 8px;
-}
-
-.flag-en {
-  background: linear-gradient(to bottom, 
-    #012169 0%, #012169 33%, 
-    #ffffff 33%, #ffffff 66%, 
-    #c8102e 66%, #c8102e 100%);
-}
-
-.flag-ar {
-  background: linear-gradient(to right, 
-    #000000 0%, #000000 25%, 
-    #ffffff 25%, #ffffff 50%, 
-    #ce1126 50%, #ce1126 75%, 
-    #007a3d 75%, #007a3d 100%);
-}
-
-/* Mobile Optimizations */
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 1.5rem 0 !important;
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .text-5xl {
+    font-size: 2.5rem !important;
   }
   
-  .hero-section h1 {
-    font-size: 1.75rem !important;
+  .text-6xl {
+    font-size: 3rem !important;
   }
   
-  h2 {
-    font-size: 1.5rem !important;
+  .py-12 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
   }
   
   .py-16 {
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
   }
-  
-  .px-4 {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
-  
-  .hero-cta-button {
-    font-size: 1.1rem !important;
-    padding: 0.875rem 2rem !important;
-  }
-  
-  /* Mobilde emoji bayraklar */
-  .flag-icon {
+}
+
+/* Focus states for accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid #dc2626;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
     display: none !important;
   }
 }
