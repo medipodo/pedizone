@@ -196,8 +196,6 @@ function App() {
       blog: {
         title: 'Blog',
         subtitle: 'Ayak Sağlığı Rehberi ve Uzman Tavsiyeleri',
-        viewAll: 'Tüm Yazıları Görüntüle',
-        readMore: 'Devamını Oku',
         articles: [
           {
             title: 'Ayak Mantarı Nedir, Neden Olur?',
@@ -307,7 +305,7 @@ function App() {
         reasons: [
           {
             title: 'Clinical Tests',
-            description: 'Tested and proven effectiveness in laboratory environment'
+            description: 'Laboratory tested and proven effectiveness'
           },
           {
             title: 'Podologist Approval',
@@ -315,7 +313,7 @@ function App() {
           },
           {
             title: 'Natural Ingredients',
-            description: 'Prepared with natural and safe active components'
+            description: 'Prepared with natural and safe active ingredients'
           }
         ]
       },
@@ -330,7 +328,7 @@ function App() {
           },
           {
             title: 'Callus and Thickening',
-            description: 'Thick skin layer on the sole',
+            description: 'Thick skin layer on the sole of the foot',
             image: footCallus
           },
           {
@@ -340,7 +338,7 @@ function App() {
           },
           {
             title: 'Nail Fungus',
-            description: 'Nail fungal infections',
+            description: 'Nail fungus infections',
             image: footFungus
           }
         ]
@@ -357,7 +355,7 @@ function App() {
           {
             step: '2',
             title: 'Application',
-            description: 'Apply appropriate amount to affected area.'
+            description: 'Apply the product to the affected area in appropriate amount.'
           },
           {
             step: '3',
@@ -366,8 +364,8 @@ function App() {
           },
           {
             step: '4',
-            title: 'Waiting',
-            description: 'Wait for absorption, repeat if necessary.'
+            title: 'Wait',
+            description: 'Wait for the product to absorb, repeat if necessary.'
           }
         ]
       },
@@ -376,39 +374,39 @@ function App() {
         subtitle: 'Our customers\' experiences',
         reviews: [
           {
-            name: 'Dr. Mehmet Yılmaz',
+            name: 'Gamze B.',
             title: 'Podologist',
-            text: 'An effective product I confidently recommend to my patients. Results are truly satisfying.',
+            text: 'An effective product that I confidently recommend to my patients at our Podology Center. The results are truly satisfying.',
             rating: 5
           },
           {
             name: 'Ayşe K.',
             title: 'User',
-            text: 'My foot fungus problem that I suffered for years is finally solved. Very satisfied.',
+            text: 'My foot fungus problem that I\'ve been suffering from for years has finally been solved. I\'m very satisfied.',
             rating: 5
           },
           {
             name: 'Mustafa D.',
             title: 'User',
-            text: 'Effective and fast-acting product. Definitely recommend.',
+            text: 'An effective and fast-acting product. I definitely recommend it.',
             rating: 5
           },
           {
             name: 'Fatma Özkan',
             title: 'Podologist',
-            text: 'A reliable solution I frequently recommend in my clinical practice.',
+            text: 'A reliable solution that I frequently recommend in my clinical practice.',
             rating: 5
           },
           {
             name: 'Ahmet S.',
             title: 'User',
-            text: 'Thanks to natural ingredients, I had no problems with my sensitive skin.',
+            text: 'Thanks to its natural ingredients, I haven\'t experienced any problems on my sensitive skin.',
             rating: 5
           },
           {
             name: 'Zeynep M.',
             title: 'User',
-            text: 'Easy to use and effective. Became indispensable for my foot health.',
+            text: 'Easy to use and effective. It has become indispensable for my foot health.',
             rating: 5
           }
         ]
@@ -416,28 +414,26 @@ function App() {
       blog: {
         title: 'Blog',
         subtitle: 'Foot Health Guide and Expert Advice',
-        viewAll: 'View All Articles',
-        readMore: 'Read More',
         articles: [
           {
-            title: 'What is Foot Fungus, Why Does it Occur?',
+            title: 'What is Foot Fungus, Why Does It Occur?',
             excerpt: 'Foot fungus is a contagious skin infection that occurs especially between the toes and manifests itself with symptoms such as itching, redness, and bad odor.',
             readTime: '5 minutes',
-            link: '/blog/ayak-mantari-nedir',
+            link: '/blog/what-is-foot-fungus',
             image: blogImage1
           },
           {
-            title: 'What are the Types of Nail Fungus?',
+            title: 'What Are the Types of Nail Fungus?',
             excerpt: 'Nail fungus is a common infection that both spoils the aesthetic appearance and can lead to serious discomfort.',
             readTime: '6 minutes',
-            link: '/blog/tirnak-mantari-cesitleri',
+            link: '/blog/nail-fungus-types',
             image: blogImage2
           },
           {
             title: 'The Importance of Using Serum for Fungus',
             excerpt: 'Topical treatment with the right product in fungal infections directly affects the healing process.',
             readTime: '7 minutes',
-            link: '/blog/serum-kullanim-onemi',
+            link: '/blog/importance-of-serum-use',
             image: blogImage3
           }
         ]
@@ -445,9 +441,9 @@ function App() {
       about: {
         title: 'About Us',
         subtitle: 'We are here for your foot health',
-        content: 'PediZone® works to protect and improve our customers\' foot health with innovative products developed by our expert team in the field of foot health. Our formulas, shaped by podologists\' expectations, are produced to the highest quality standards.',
+        content: 'PediZone® works to protect and improve users\' foot health with innovative products we develop with our expert team in the field of foot health. Our formulas, shaped by podologists\' expectations, are produced to the highest quality standards.',
         mission: 'Our mission is to provide effective and safe solutions for everyone to have healthy feet.',
-        vision: 'Our vision is to be Turkey\'s leading brand in foot health.',
+        vision: 'Our vision is to be Turkey\'s leading brand in the field of foot health.',
         values: 'Our values: Quality, reliability, customer satisfaction and continuous improvement.'
       },
       contact: {
@@ -461,7 +457,7 @@ function App() {
         instagramText: '@pediz0ne'
       },
       footer: {
-        company: 'Medipodo Medical Health Services Ind. And Trade Ltd. Co.',
+        company: 'Medipodo Medical Health Services Ind. And Trade. Ltd. Co.',
         rights: 'All rights reserved.'
       }
     },
@@ -471,11 +467,11 @@ function App() {
         products: 'المنتجات',
         about: 'حولنا',
         contact: 'اتصل بنا',
-        blog: 'مدونة'  
+        blog: 'المدونة'
       },
       hero: {
         title: 'PediZone®',
-        subtitle: 'تركيبة متقدمة لعناية القدم',
+        subtitle: 'تركيبة متقدمة لرعاية القدم',
         description: 'تم تطويرها وفقاً لتوقعات أطباء الأقدام',
         cta: 'استكشف المنتجات'
       },
@@ -485,39 +481,39 @@ function App() {
         podologyApproved: 'معتمد من طبيب الأقدام',
         podologyApprovedDesc: 'موصى به من قبل متخصصي صحة القدم',
         naturalIngredients: 'مكونات طبيعية',
-        naturalIngredientsDesc: 'مكونات نشطة طبيعية وآمنة'
+        naturalIngredientsDesc: 'مكونات فعالة طبيعية وآمنة'
       },
       products: {
         title: 'منتجاتنا',
         subtitle: 'متغيرات مصل PediZone® 50 مل',
         classic: {
-          name: 'PediZone® كلاسيك',
+          name: 'مصل PediZone® 50 مل للقدم والأظافر',
           description: 'تركيبة مثالية للعناية اليومية بالقدم',
           features: [
             'تأثير مضاد للفطريات',
-            'الاستخدام اليومي',
+            'للاستخدام اليومي',
             'امتصاص سريع',
             'مكونات طبيعية'
           ]
         },
         intensive: {
-          name: 'PediZone® مكثف',
+          name: 'رغوة PediZone® 50 مل للقدم',
           description: 'للأقدام التي تتطلب عناية مكثفة',
           features: [
             'تأثير قوي مضاد للفطريات',
             'تنظيف عميق',
             'تركيبة ترميمية',
-            'عناية مهنية'
+            'رعاية مهنية'
           ]
         },
         sensitive: {
-          name: 'PediZone® حساس',
+          name: 'رغوة تنظيف القدم PediZone® 200 مل',
           description: 'تركيبة خاصة للبشرة الحساسة',
           features: [
-            'مناسب للبشرة الحساسة',
+            'صديق للبشرة الحساسة',
             'تركيبة لطيفة',
             'مضاد للحساسية',
-            'الاستخدام اليومي'
+            'للاستخدام اليومي'
           ]
         }
       },
@@ -527,7 +523,7 @@ function App() {
         reasons: [
           {
             title: 'اختبارات سريرية',
-            description: 'فعالية مختبرة ومثبتة في البيئة المعملية'
+            description: 'تم اختباره في المختبر وثبتت فعاليته'
           },
           {
             title: 'موافقة طبيب الأقدام',
@@ -535,7 +531,7 @@ function App() {
           },
           {
             title: 'مكونات طبيعية',
-            description: 'محضرة بمكونات نشطة طبيعية وآمنة'
+            description: 'محضر بمكونات فعالة طبيعية وآمنة'
           }
         ]
       },
@@ -560,7 +556,7 @@ function App() {
           },
           {
             title: 'فطريات الأظافر',
-            description: 'التهابات فطرية في الأظافر',
+            description: 'عدوى فطريات الأظافر',
             image: footFungus
           }
         ]
@@ -577,7 +573,7 @@ function App() {
           {
             step: '2',
             title: 'التطبيق',
-            description: 'ضع كمية مناسبة على المنطقة المصابة.'
+            description: 'ضع المنتج على المنطقة المصابة بالكمية المناسبة.'
           },
           {
             step: '3',
@@ -587,24 +583,24 @@ function App() {
           {
             step: '4',
             title: 'الانتظار',
-            description: 'انتظر حتى الامتصاص، كرر إذا لزم الأمر.'
+            description: 'انتظر حتى يمتص المنتج، كرر إذا لزم الأمر.'
           }
         ]
       },
       testimonials: {
-        title: 'آراء المستخدمين',
+        title: 'مراجعات المستخدمين',
         subtitle: 'تجارب عملائنا',
         reviews: [
           {
-            name: 'د. محمد يلماز',
+            name: 'جمزة ب.',
             title: 'طبيب أقدام',
-            text: 'منتج فعال أوصي به بثقة لمرضاي. النتائج مرضية حقاً.',
+            text: 'منتج فعال أوصي به بثقة لمرضاي في مركز طب الأقدام لدينا. النتائج مرضية حقاً.',
             rating: 5
           },
           {
             name: 'عائشة ك.',
             title: 'مستخدم',
-            text: 'مشكلة فطريات القدم التي عانيت منها لسنوات حُلت أخيراً. راضية جداً.',
+            text: 'تم حل مشكلة فطريات القدم التي كنت أعاني منها لسنوات أخيراً. أنا راضية جداً.',
             rating: 5
           },
           {
@@ -614,7 +610,7 @@ function App() {
             rating: 5
           },
           {
-            name: 'د. فاطمة أوزكان',
+            name: 'فاطمة أوزكان',
             title: 'طبيب أقدام',
             text: 'حل موثوق أوصي به كثيراً في ممارستي السريرية.',
             rating: 5
@@ -622,7 +618,7 @@ function App() {
           {
             name: 'أحمد س.',
             title: 'مستخدم',
-            text: 'بفضل المكونات الطبيعية، لم أواجه أي مشاكل مع بشرتي الحساسة.',
+            text: 'بفضل مكوناته الطبيعية، لم أواجه أي مشاكل على بشرتي الحساسة.',
             rating: 5
           },
           {
@@ -634,30 +630,28 @@ function App() {
         ]
       },
       blog: {
-        title: 'مدونة',
+        title: 'المدونة',
         subtitle: 'دليل صحة القدم ونصائح الخبراء',
-        viewAll: 'عرض جميع المقالات',
-        readMore: 'اقرأ المزيد',
         articles: [
           {
             title: 'ما هي فطريات القدم، لماذا تحدث؟',
             excerpt: 'فطريات القدم هي عدوى جلدية معدية تحدث خاصة بين أصابع القدم وتظهر بأعراض مثل الحكة والاحمرار والرائحة الكريهة.',
             readTime: '5 دقائق',
-            link: '/blog/ayak-mantari-nedir',
+            link: '/blog/what-is-foot-fungus-ar',
             image: blogImage1
           },
           {
             title: 'ما هي أنواع فطريات الأظافر؟',
             excerpt: 'فطريات الأظافر هي عدوى شائعة تفسد المظهر الجمالي ويمكن أن تؤدي إلى إزعاج خطير.',
             readTime: '6 دقائق',
-            link: '/blog/tirnak-mantari-cesitleri',
+            link: '/blog/nail-fungus-types-ar',
             image: blogImage2
           },
           {
             title: 'أهمية استخدام المصل للفطريات',
             excerpt: 'العلاج الموضعي بالمنتج المناسب في العدوى الفطرية يؤثر مباشرة على عملية الشفاء.',
             readTime: '7 دقائق',
-            link: '/blog/serum-kullanim-onemi',
+            link: '/blog/importance-of-serum-use-ar',
             image: blogImage3
           }
         ]
@@ -665,10 +659,10 @@ function App() {
       about: {
         title: 'حولنا',
         subtitle: 'نحن هنا من أجل صحة قدميك',
-        content: 'تعمل PediZone® على حماية وتحسين صحة أقدام عملائنا بمنتجات مبتكرة طورها فريقنا المتخصص في مجال صحة القدم. تركيباتنا، المشكلة وفقاً لتوقعات أطباء الأقدام، يتم إنتاجها وفقاً لأعلى معايير الجودة.',
+        content: 'تعمل PediZone® على حماية وتحسين صحة أقدام المستخدمين بمنتجات مبتكرة نطورها مع فريقنا الخبير في مجال صحة القدم. تركيباتنا، المشكلة وفقاً لتوقعات أطباء الأقدام، يتم إنتاجها وفقاً لأعلى معايير الجودة.',
         mission: 'مهمتنا هي توفير حلول فعالة وآمنة لكل شخص ليحصل على أقدام صحية.',
         vision: 'رؤيتنا هي أن نكون العلامة التجارية الرائدة في تركيا في مجال صحة القدم.',
-        values: 'قيمنا: الجودة، الموثوقية، رضا العملاء والتحسين المستمر.'
+        values: 'قيمنا: الجودة والموثوقية ورضا العملاء والتحسين المستمر.'
       },
       contact: {
         title: 'اتصل بنا',
@@ -681,7 +675,7 @@ function App() {
         instagramText: '@pediz0ne'
       },
       footer: {
-        company: 'شركة ميديبودو للخدمات الصحية الطبية والتجارة المحدودة',
+        company: 'شركة ميديبودو للخدمات الصحية الطبية الصناعية والتجارية المحدودة',
         rights: 'جميع الحقوق محفوظة.'
       }
     }
@@ -697,7 +691,7 @@ function App() {
   }
 
   return (
-    <div className={`min-h-screen bg-white ${currentLang === 'ar' ? 'rtl' : 'ltr'}`}>
+    <div className="min-h-screen bg-white" dir={currentLang === 'ar' ? 'rtl' : 'ltr'}>
       {/* Navigation */}
       <nav className="bg-white shadow-lg fixed w-full top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -720,9 +714,6 @@ function App() {
                 <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-red-600 px-3 py-2 text-sm font-medium transition-colors">
                   {t.nav.contact}
                 </button>
-                <a href="/blog/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-red-600 px-3 py-2 text-sm font-medium transition-colors">
-                  {t.nav.blog}
-                </a>
               </div>
             </div>
 
@@ -754,17 +745,14 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-16 bg-gradient-to-br from-red-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section id="home" className="pt-16 bg-gradient-to-br from-red-50 to-white hero-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
               {t.hero.title}
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-4">
-              {t.hero.subtitle}
-            </p>
-            <p className="text-lg text-red-600 mb-8">
-              {t.hero.description}
+            <p className="text-xl md:text-2xl text-red-600 font-semibold mb-8">
+              {t.hero.subtitle} - {t.hero.description}
             </p>
             <button 
               onClick={() => scrollToSection('products')}
@@ -775,7 +763,7 @@ function App() {
           </div>
           
           {/* Features */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 features-section">
             <div className="text-center p-6 bg-white rounded-lg shadow-md">
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🧪</span>
@@ -804,7 +792,7 @@ function App() {
       </section>
 
       {/* Products Section */}
-      <section id="products" className="py-20 bg-gray-50">
+      <section id="products" className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t.products.title}</h2>
@@ -813,12 +801,12 @@ function App() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Classic Variant */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="h-80 bg-gray-100 flex items-center justify-center p-4">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow product-card">
+              <div className="h-64 bg-gray-100 flex items-center justify-center p-4">
                 <img 
                   src={productImage1} 
-                  alt="PediZone Classic" 
-                  className="h-full w-auto object-contain"
+                  alt="PediZone® 50 Ml Serum"
+                  className="w-full h-full object-contain product-image"
                 />
               </div>
               <div className="p-6">
@@ -836,12 +824,12 @@ function App() {
             </div>
 
             {/* Intensive Variant */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow product-card">
               <div className="h-64 bg-gray-100 flex items-center justify-center p-4">
                 <img 
                   src={productImage2} 
-                  alt="PediZone Intensive" 
-                  className="h-full w-auto object-contain"
+                  alt="PediZone® 200 Ml Ayak Temizleme Köpüğü"
+                  className="w-full h-full object-contain product-image"
                 />
               </div>
               <div className="p-6">
@@ -859,12 +847,12 @@ function App() {
             </div>
 
             {/* Sensitive Variant */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow product-card">
               <div className="h-64 bg-gray-100 flex items-center justify-center p-4">
                 <img 
                   src={productImage3} 
-                  alt="PediZone Sensitive" 
-                  className="h-full w-auto object-contain"
+                  alt="PediZone® 50 Ml Serum"
+                  className="w-full h-full object-contain product-image"
                 />
               </div>
               <div className="p-6">
@@ -885,14 +873,14 @@ function App() {
       </section>
 
       {/* Foot Problems Section */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t.footProblems.title}</h2>
             <p className="text-xl text-gray-600">{t.footProblems.subtitle}</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {t.footProblems.problems.map((problem, index) => (
               <div key={index} className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-md transition-shadow">
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-white shadow-md">
@@ -911,21 +899,21 @@ function App() {
       </section>
 
       {/* Usage Instructions */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t.usage.title}</h2>
             <p className="text-xl text-gray-600">{t.usage.subtitle}</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {t.usage.steps.map((step, index) => (
               <div key={index} className="text-center">
                 <div className="w-20 h-20 bg-red-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                   {step.step}
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+                <p className="text-gray-600 text-sm">{step.description}</p>
               </div>
             ))}
           </div>
@@ -933,7 +921,7 @@ function App() {
       </section>
 
       {/* Why PediZone Section */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t.whyPedizone.title}</h2>
@@ -942,17 +930,22 @@ function App() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {t.whyPedizone.reasons.map((reason, index) => (
-              <div key={index} className="text-center p-8 bg-gray-50 rounded-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{reason.title}</h3>
-                <p className="text-gray-600">{reason.description}</p>
+              <div key={index} className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-md transition-shadow">
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl text-red-600">
+                    {index === 0 ? '🔬' : index === 1 ? '👨‍⚕️' : '🌿'}
+                  </span>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{reason.title}</h3>
+                <p className="text-gray-600 text-sm">{reason.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 bg-gray-50">
+      {/* Testimonials Section */}
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t.testimonials.title}</h2>
@@ -961,14 +954,14 @@ function App() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {t.testimonials.reviews.map((review, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+              <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                 <div className="flex items-center mb-4">
                   {[...Array(review.rating)].map((_, i) => (
                     <span key={i} className="text-yellow-400 text-lg">★</span>
                   ))}
                 </div>
                 <p className="text-gray-600 mb-4 italic">"{review.text}"</p>
-                <div>
+                <div className="border-t pt-4">
                   <p className="font-semibold text-gray-900">{review.name}</p>
                   <p className="text-sm text-gray-500">{review.title}</p>
                 </div>
@@ -979,7 +972,7 @@ function App() {
       </section>
 
       {/* Blog Section */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t.blog.title}</h2>
@@ -988,8 +981,8 @@ function App() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {t.blog.articles.map((article, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="h-48 bg-gray-200">
+              <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="h-48 bg-gray-100">
                   <img 
                     src={article.image} 
                     alt={article.title}
@@ -997,39 +990,23 @@ function App() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{article.title}</h3>
-                  <p className="text-gray-600 mb-4 line-clamp-3">{article.excerpt}</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{article.title}</h3>
+                  <p className="text-gray-600 text-sm mb-4">{article.excerpt}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500">⏱️ {article.readTime}</span>
-                    <a 
-                      href={article.link} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-red-600 hover:text-red-700 font-medium text-sm"
-                    >
-                      {t.blog.readMore} →
+                    <span className="text-xs text-gray-500">⏱️ {article.readTime}</span>
+                    <a href={article.link} className="text-red-600 hover:text-red-700 text-sm font-medium">
+                      Devamını Oku →
                     </a>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-          
-          <div className="text-center">
-            <a 
-              href="/blog/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-red-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-red-700 transition-colors shadow-lg"
-            >
-              {t.blog.viewAll}
-            </a>
-          </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-gray-50">
+      <section id="about" className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t.about.title}</h2>
@@ -1037,21 +1014,23 @@ function App() {
           </div>
           
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white p-8 rounded-lg mb-8">
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">{t.about.content}</p>
+            <div className="bg-white p-8 rounded-lg shadow-md mb-8">
+              <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                {t.about.content}
+              </p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center">
                   <h3 className="text-lg font-semibold text-red-600 mb-2">Misyon</h3>
-                  <p className="text-gray-600">{t.about.mission}</p>
+                  <p className="text-gray-600 text-sm">{t.about.mission}</p>
                 </div>
                 <div className="text-center">
                   <h3 className="text-lg font-semibold text-red-600 mb-2">Vizyon</h3>
-                  <p className="text-gray-600">{t.about.vision}</p>
+                  <p className="text-gray-600 text-sm">{t.about.vision}</p>
                 </div>
                 <div className="text-center">
                   <h3 className="text-lg font-semibold text-red-600 mb-2">Değerler</h3>
-                  <p className="text-gray-600">{t.about.values}</p>
+                  <p className="text-gray-600 text-sm">{t.about.values}</p>
                 </div>
               </div>
             </div>
@@ -1060,7 +1039,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white">
+      <section id="contact" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t.contact.title}</h2>
@@ -1074,7 +1053,7 @@ function App() {
                   <span className="text-2xl">📍</span>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{t.contact.address}</h3>
-                <p className="text-gray-600">{t.contact.addressText}</p>
+                <p className="text-gray-600 text-sm">{t.contact.addressText}</p>
               </div>
               
               <div className="text-center p-6 bg-gray-50 rounded-lg shadow-md">
@@ -1082,7 +1061,7 @@ function App() {
                   <span className="text-2xl">📞</span>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{t.contact.phone}</h3>
-                <a href={`tel:${t.contact.phoneText}`} className="text-red-600 hover:text-red-700">
+                <a href={`tel:${t.contact.phoneText}`} className="text-red-600 hover:text-red-700 text-sm">
                   {t.contact.phoneText}
                 </a>
               </div>
@@ -1092,12 +1071,7 @@ function App() {
                   <span className="text-2xl">📱</span>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{t.contact.instagram}</h3>
-                <a 
-                  href="https://www.instagram.com/pediz0ne" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-red-600 hover:text-red-700"
-                >
+                <a href={`https://instagram.com/${t.contact.instagramText.replace('@', '')}`} target="_blank" rel="noopener noreferrer" className="text-red-600 hover:text-red-700 text-sm">
                   {t.contact.instagramText}
                 </a>
               </div>
@@ -1120,3 +1094,4 @@ function App() {
 }
 
 export default App
+
