@@ -62,10 +62,10 @@
 /* Body - Temiz Beyaz */
 body {
   background-color: #ffffff;
-}
+} 
 
 /* Ürünleri İncele Butonu - BEYAZ YAZI */
-.bg-white.text-red-600 {
+.bg-white.text-white-600 {
   background-color: #C41E3A !important;
   color: #ffffff !important;
   font-weight: 800 !important;
