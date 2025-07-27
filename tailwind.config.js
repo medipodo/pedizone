@@ -8,5 +8,7 @@ export default {
     extend: {},
   },
   plugins: [],
+  <p class="text-white">Ürünleri İncele</p>
+
 }
 
