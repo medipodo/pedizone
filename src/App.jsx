@@ -513,16 +513,11 @@ ${formData.message}
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div 
-              className="flex items-center space-x-3 cursor-pointer" 
+              className="flex items-center cursor-pointer" 
               onClick={scrollToTop}
             >
-              <img 
-                src={pedizoneLogo} 
-                alt="PediZone Logo" 
-                className="w-12 h-12 object-contain"
-              />
               <span className="pedizone-logo text-3xl text-white relative">
-                Pedizon<span className="relative">e<span className="absolute -top-2 -right-1 text-red-200 text-xs">®</span></span>
+                Pedizone<span className="relative text-red-200 text-lg ml-1">®</span>
               </span>
             </div>
 
@@ -576,22 +571,22 @@ ${formData.message}
               </div>
               
               {/* Language Selector - Mobile (Compact) */}
-              <div className="md:hidden flex items-center space-x-1">
+              <div className="md:hidden flex items-center space-x-2">
                 <button
                   onClick={() => setCurrentLang('tr')}
-                  className={`w-8 h-6 rounded text-xs flex items-center justify-center ${currentLang === 'tr' ? 'bg-white/20' : 'bg-transparent'}`}
+                  className={`w-10 h-8 rounded text-sm flex items-center justify-center transition-colors ${currentLang === 'tr' ? 'bg-white/20' : 'bg-transparent hover:bg-white/10'}`}
                 >
                   🇹🇷
                 </button>
                 <button
                   onClick={() => setCurrentLang('en')}
-                  className={`w-8 h-6 rounded text-xs flex items-center justify-center ${currentLang === 'en' ? 'bg-white/20' : 'bg-transparent'}`}
+                  className={`w-10 h-8 rounded text-sm flex items-center justify-center transition-colors ${currentLang === 'en' ? 'bg-white/20' : 'bg-transparent hover:bg-white/10'}`}
                 >
                   🇺🇸
                 </button>
                 <button
                   onClick={() => setCurrentLang('ar')}
-                  className={`w-8 h-6 rounded text-xs flex items-center justify-center ${currentLang === 'ar' ? 'bg-white/20' : 'bg-transparent'}`}
+                  className={`w-10 h-8 rounded text-sm flex items-center justify-center transition-colors ${currentLang === 'ar' ? 'bg-white/20' : 'bg-transparent hover:bg-white/10'}`}
                 >
                   🇸🇦
                 </button>
@@ -602,9 +597,9 @@ ${formData.message}
                 variant="ghost"
                 size="sm"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden text-white hover:bg-red-700 p-2"
+                className="md:hidden text-white hover:bg-red-700 p-3"
               >
-                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </Button>
             </div>
           </div>
@@ -655,7 +650,7 @@ ${formData.message}
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="pedizone-hero-bg pedizone-section">
+      <section id="home" className="pedizone-hero-bg pedizone-section hero-section">
         <div className="pedizone-container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
