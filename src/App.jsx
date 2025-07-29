@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button.jsx'
 import { Card, CardContent } from '@/components/ui/card.jsx'
 import { Badge } from '@/components/ui/badge.jsx'
-import { CheckCircle, Phone, Mail, MapPin, Star, Award, Shield, Users } from 'lucide-react'
+import { CheckCircle, Phone, Mail, MapPin, Star, Award, Shield, Users, Menu, X } from 'lucide-react'
 import './App.css'
 
 // Ürün görselleri
@@ -22,6 +22,58 @@ import footOdor from './assets/foot-odor-problem.jpg'
 
 function App() {
   const [currentLang, setCurrentLang] = useState('tr')
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  
+  // Form states
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  // Handle form input changes
+  const handleInputChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    
+    try {
+      // Create mailto link
+      const subject = encodeURIComponent('PediZone İletişim Formu')
+      const body = encodeURIComponent(`
+Ad Soyad: ${formData.name}
+E-posta: ${formData.email}
+
+Mesaj:
+${formData.message}
+      `)
+      
+      const mailtoLink = `mailto:info@pedizone.com?subject=${subject}&body=${body}`
+      window.location.href = mailtoLink
+      
+      // Reset form
+      setFormData({ name: '', email: '', message: '' })
+      alert('E-posta uygulamanız açılacak. Mesajınızı gönderebilirsiniz.')
+    } catch (error) {
+      alert('Bir hata oluştu. Lütfen tekrar deneyin.')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
 
   const content = {
     tr: {
@@ -33,22 +85,11 @@ function App() {
         contact: 'İletişim'
       },
       hero: {
-        badge: 'Podolog Onaylı',
         title: 'Profesyonel Ayak Bakım Çözümleri',
         subtitle: 'PediZone®',
         description: 'Ayak sağlığı uzmanları tarafından geliştirilen, klinik testlerle kanıtlanmış etkili formüller ile ayaklarınızın sağlığını koruyun.',
         cta: 'Ürünleri Keşfedin',
         ctaSecondary: 'Uzman Desteği'
-      },
-      stats: {
-        customers: '50.000+',
-        customersLabel: 'Memnun Müşteri',
-        specialists: '200+',
-        specialistsLabel: 'Podolog Ortağı',
-        experience: '10+',
-        experienceLabel: 'Yıl Deneyim',
-        products: '15+',
-        productsLabel: 'Ürün Çeşidi'
       },
       products: {
         title: 'Ürün Portföyümüz',
@@ -155,7 +196,10 @@ function App() {
         <div className="pedizone-container">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
-            <div className="flex items-center space-x-3">
+            <div 
+              className="flex items-center space-x-3 cursor-pointer" 
+              onClick={scrollToTop}
+            >
               <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
                 <span className="text-red-600 font-bold text-xl">P</span>
               </div>
@@ -164,7 +208,7 @@ function App() {
               </span>
             </div>
 
-            {/* Navigation */}
+            {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8">
               <a href="#home" className="text-white hover:text-red-200 font-medium transition-colors">
                 {t.nav.home}
@@ -183,7 +227,7 @@ function App() {
               </a>
             </nav>
 
-            {/* Language Selector */}
+            {/* Mobile Menu Button & Language Selector */}
             <div className="flex items-center space-x-2">
               <Button
                 variant={currentLang === 'tr' ? 'secondary' : 'ghost'}
@@ -193,8 +237,61 @@ function App() {
               >
                 🇹🇷 TR
               </Button>
+              
+              {/* Mobile Menu Button */}
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="md:hidden text-white hover:bg-red-700"
+              >
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </Button>
             </div>
           </div>
+
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="md:hidden bg-red-700 border-t border-red-500">
+              <nav className="py-4 space-y-2">
+                <a 
+                  href="#home" 
+                  className="block px-4 py-2 text-white hover:bg-red-600 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {t.nav.home}
+                </a>
+                <a 
+                  href="#products" 
+                  className="block px-4 py-2 text-white hover:bg-red-600 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {t.nav.products}
+                </a>
+                <a 
+                  href="#solutions" 
+                  className="block px-4 py-2 text-white hover:bg-red-600 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {t.nav.solutions}
+                </a>
+                <a 
+                  href="#about" 
+                  className="block px-4 py-2 text-white hover:bg-red-600 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {t.nav.about}
+                </a>
+                <a 
+                  href="#contact" 
+                  className="block px-4 py-2 text-white hover:bg-red-600 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {t.nav.contact}
+                </a>
+              </nav>
+            </div>
+          )}
         </div>
       </header>
 
@@ -203,10 +300,6 @@ function App() {
         <div className="pedizone-container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <Badge className="bg-red-100 text-red-700 hover:bg-red-200">
-                {t.hero.badge}
-              </Badge>
-              
               <div className="space-y-4">
                 <h1 className="pedizone-heading text-5xl lg:text-6xl text-gray-900">
                   {t.hero.title}
@@ -242,30 +335,6 @@ function App() {
                   className="rounded-2xl shadow-lg transform -rotate-3 hover:rotate-0 transition-transform duration-300 mt-8"
                 />
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="bg-white py-16">
-        <div className="pedizone-container">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-red-600 mb-2">{t.stats.customers}</div>
-              <div className="text-gray-600">{t.stats.customersLabel}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-red-600 mb-2">{t.stats.specialists}</div>
-              <div className="text-gray-600">{t.stats.specialistsLabel}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-red-600 mb-2">{t.stats.experience}</div>
-              <div className="text-gray-600">{t.stats.experienceLabel}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-red-600 mb-2">{t.stats.products}</div>
-              <div className="text-gray-600">{t.stats.productsLabel}</div>
             </div>
           </div>
         </div>
@@ -454,13 +523,17 @@ function App() {
                 Bize Ulaşın
               </h3>
               
-              <div className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Ad Soyad
                   </label>
                   <input 
                     type="text" 
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent"
                     placeholder="Adınızı girin"
                   />
@@ -472,6 +545,10 @@ function App() {
                   </label>
                   <input 
                     type="email" 
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent"
                     placeholder="E-posta adresinizi girin"
                   />
@@ -483,15 +560,23 @@ function App() {
                   </label>
                   <textarea 
                     rows={4}
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent"
                     placeholder="Mesajınızı yazın"
                   ></textarea>
                 </div>
                 
-                <Button className="w-full pedizone-button">
-                  Mesaj Gönder
+                <Button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className="w-full pedizone-button"
+                >
+                  {isSubmitting ? 'Gönderiliyor...' : 'Mesaj Gönder'}
                 </Button>
-              </div>
+              </form>
             </Card>
           </div>
         </div>
