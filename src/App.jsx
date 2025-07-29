@@ -5,12 +5,12 @@ import { Badge } from '@/components/ui/badge.jsx'
 import { CheckCircle, Phone, Mail, MapPin, Star, Award, Shield, Users, Menu, X } from 'lucide-react'
 import './App.css'
 
-// Ürün görselleri
-import productSerum from './assets/IMG_7570.jpeg'
+// Ürün görselleri - Optimize edilmiş WebP formatları
+import productSerum from './assets/IMG_7570_optimized.webp'
 import productFoam from './assets/pedizone_foam.png'
-import productSerum2 from './assets/IMG_7572.jpeg'
-import productSerum3 from './assets/IMG_7574.jpeg'
-import productSerum4 from './assets/IMG_7575.png'
+import productSerum2 from './assets/IMG_7572_optimized.webp'
+import productSerum3 from './assets/IMG_7574_optimized.webp'
+import productSerum4 from './assets/IMG_7575_optimized.webp'
 import productBox1 from './assets/IMG_8135.jpeg'
 import productBox2 from './assets/IMG_8137.jpeg'
 
@@ -682,11 +682,14 @@ ${formData.message}
                   src={productSerum} 
                   alt="PediZone Serum" 
                   className="rounded-2xl shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300"
+                  fetchpriority="high"
+                  loading="eager"
                 />
                 <img 
                   src={productFoam} 
                   alt="PediZone Köpük" 
                   className="rounded-2xl shadow-lg transform -rotate-3 hover:rotate-0 transition-transform duration-300 mt-8"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -720,6 +723,7 @@ ${formData.message}
                     src={product.image} 
                     alt={product.name}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                 </div>
                 
@@ -771,6 +775,7 @@ ${formData.message}
                       src={solution.image} 
                       alt={solution.title}
                       className="w-full h-48 md:h-full object-cover rounded-xl"
+                      loading="lazy"
                     />
                   </div>
                   
@@ -853,6 +858,7 @@ ${formData.message}
                     src={post.image} 
                     alt={post.title}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                   <div className="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                     {post.readTime}
