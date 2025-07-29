@@ -20,6 +20,14 @@ import footCallus from './assets/foot-callus-problem.jpg'
 import footCrack from './assets/foot-crack-problem.jpg'
 import footOdor from './assets/foot-odor-problem.jpg'
 
+// Logo
+import pedizoneLogo from './assets/pedizone-logo.png'
+
+// Blog görselleri
+import blogAyakMantari from './assets/ayak-mantari-tedavi.webp'
+import blogTirnakMantari from './assets/tirnak-mantari-cesitleri.jpg'
+import blogSerumKullanimi from './assets/pedizone-serum-kullanimi.jpg'
+
 function App() {
   const [currentLang, setCurrentLang] = useState('tr')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -174,6 +182,36 @@ ${formData.message}
           }
         ]
       },
+      blog: {
+        title: 'PediZone Blog',
+        subtitle: 'Ayak sağlığı rehberi ve uzman tavsiyeleri',
+        posts: [
+          {
+            id: 'ayak-mantari-nedir',
+            title: 'Ayak Mantarı Nedir, Neden Olur?',
+            excerpt: 'Ayak mantarı, özellikle ayak parmak aralarında oluşan ve kaşıntı, kızarıklık, kötü koku gibi belirtilerle kendini gösteren bulaşıcı bir cilt enfeksiyonudur.',
+            image: blogAyakMantari,
+            readTime: '5 dakika',
+            tags: ['ayak mantarı', 'ayak sağlığı', 'podoloji', 'tedavi']
+          },
+          {
+            id: 'tirnak-mantari-cesitleri',
+            title: 'Tırnak Mantarı Çeşitleri Nelerdir?',
+            excerpt: 'Tırnak mantarı, hem estetik görünümü bozan hem de ciddi rahatsızlıklara yol açabilen yaygın bir enfeksiyondur. Onikomikoz olarak bilinen bu hastalığın farklı çeşitleri bulunmaktadır.',
+            image: blogTirnakMantari,
+            readTime: '6 dakika',
+            tags: ['tırnak mantarı', 'onikomikoz', 'tırnak hastalıkları', 'podoloji']
+          },
+          {
+            id: 'serum-kullanim-onemi',
+            title: 'Mantar İçin Serum Kullanmanın Önemi',
+            excerpt: 'Mantar enfeksiyonlarında doğru ürünle yapılan topikal tedavi, iyileşme sürecini doğrudan etkiler. PediZone 50 Ml Serum ile serum formundaki ürünlerin avantajlarını keşfedin.',
+            image: blogSerumKullanimi,
+            readTime: '7 dakika',
+            tags: ['mantar serumu', 'PediZone', 'topikal tedavi', 'ayak bakımı']
+          }
+        ]
+      },
       contact: {
         title: 'İletişime Geçin',
         subtitle: 'Sorularınız için buradayız',
@@ -280,6 +318,36 @@ ${formData.message}
             icon: Users,
             title: 'Expert Support',
             description: 'You can get support from our expert team 7/24 and get your questions answered.'
+          }
+        ]
+      },
+      blog: {
+        title: 'PediZone Blog',
+        subtitle: 'Foot health guide and expert advice',
+        posts: [
+          {
+            id: 'ayak-mantari-nedir',
+            title: 'What is Foot Fungus and Why Does it Occur?',
+            excerpt: 'Foot fungus is a contagious skin infection that occurs especially between the toes and manifests itself with symptoms such as itching, redness, and bad odor.',
+            image: blogAyakMantari,
+            readTime: '5 minutes',
+            tags: ['foot fungus', 'foot health', 'podology', 'treatment']
+          },
+          {
+            id: 'tirnak-mantari-cesitleri',
+            title: 'What are the Types of Nail Fungus?',
+            excerpt: 'Nail fungus is a common infection that both spoils the aesthetic appearance and can lead to serious discomfort. This disease, known as onychomycosis, has different types.',
+            image: blogTirnakMantari,
+            readTime: '6 minutes',
+            tags: ['nail fungus', 'onychomycosis', 'nail diseases', 'podology']
+          },
+          {
+            id: 'serum-kullanim-onemi',
+            title: 'The Importance of Using Serum for Fungus',
+            excerpt: 'Topical treatment with the right product in fungal infections directly affects the healing process. Discover the advantages of serum-form products with PediZone 50 Ml Serum.',
+            image: blogSerumKullanimi,
+            readTime: '7 minutes',
+            tags: ['fungus serum', 'PediZone', 'topical treatment', 'foot care']
           }
         ]
       },
@@ -392,6 +460,36 @@ ${formData.message}
           }
         ]
       },
+      blog: {
+        title: 'مدونة PediZone',
+        subtitle: 'دليل صحة القدم ونصائح الخبراء',
+        posts: [
+          {
+            id: 'ayak-mantari-nedir',
+            title: 'ما هو فطر القدم ولماذا يحدث؟',
+            excerpt: 'فطر القدم هو عدوى جلدية معدية تحدث خاصة بين أصابع القدم وتظهر بأعراض مثل الحكة والاحمرار والرائحة الكريهة.',
+            image: blogAyakMantari,
+            readTime: '5 دقائق',
+            tags: ['فطر القدم', 'صحة القدم', 'طب الأقدام', 'العلاج']
+          },
+          {
+            id: 'tirnak-mantari-cesitleri',
+            title: 'ما هي أنواع فطر الأظافر؟',
+            excerpt: 'فطر الأظافر هو عدوى شائعة تفسد المظهر الجمالي ويمكن أن تؤدي إلى مضايقات خطيرة. هذا المرض المعروف باسم فطار الأظافر له أنواع مختلفة.',
+            image: blogTirnakMantari,
+            readTime: '6 دقائق',
+            tags: ['فطر الأظافر', 'فطار الأظافر', 'أمراض الأظافر', 'طب الأقدام']
+          },
+          {
+            id: 'serum-kullanim-onemi',
+            title: 'أهمية استخدام المصل للفطريات',
+            excerpt: 'العلاج الموضعي بالمنتج المناسب في العدوى الفطرية يؤثر مباشرة على عملية الشفاء. اكتشف مزايا المنتجات في شكل مصل مع PediZone 50 مل مصل.',
+            image: blogSerumKullanimi,
+            readTime: '7 دقائق',
+            tags: ['مصل الفطريات', 'PediZone', 'العلاج الموضعي', 'عناية القدم']
+          }
+        ]
+      },
       contact: {
         title: 'تواصل معنا',
         subtitle: 'نحن هنا لأسئلتك',
@@ -418,11 +516,13 @@ ${formData.message}
               className="flex items-center space-x-3 cursor-pointer" 
               onClick={scrollToTop}
             >
-              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                <span className="text-red-600 font-bold text-xl">P</span>
-              </div>
-              <span className="pedizone-logo text-3xl text-white">
-                Pedizone<span className="text-red-200 text-lg">®</span>
+              <img 
+                src={pedizoneLogo} 
+                alt="PediZone Logo" 
+                className="w-12 h-12 object-contain"
+              />
+              <span className="pedizone-logo text-3xl text-white relative">
+                Pedizon<span className="relative">e<span className="absolute -top-2 -right-1 text-red-200 text-xs">®</span></span>
               </span>
             </div>
 
@@ -732,6 +832,61 @@ ${formData.message}
                     </p>
                   </div>
                 </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Section */}
+      <section id="blog" className="pedizone-section bg-white">
+        <div className="pedizone-container">
+          <div className="text-center mb-16">
+            <h2 className="pedizone-heading text-4xl text-gray-900 mb-4">
+              {t.blog.title}
+            </h2>
+            <p className="pedizone-text text-xl text-gray-600 max-w-3xl mx-auto">
+              {t.blog.subtitle}
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            {t.blog.posts.map((post, index) => (
+              <Card key={index} className="pedizone-card group hover:shadow-2xl transition-all duration-300">
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={post.image} 
+                    alt={post.title}
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    {post.readTime}
+                  </div>
+                </div>
+                
+                <CardContent className="p-6">
+                  <h3 className="pedizone-heading text-xl text-gray-900 mb-3 line-clamp-2">
+                    {post.title}
+                  </h3>
+                  <p className="pedizone-text text-gray-600 mb-4 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {post.tags.slice(0, 3).map((tag, tagIndex) => (
+                      <Badge key={tagIndex} variant="secondary" className="text-xs">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                  
+                  <Button 
+                    className="w-full pedizone-button group-hover:bg-red-700 transition-colors"
+                    onClick={() => window.open(`/blog/${post.id}.html`, '_blank')}
+                  >
+                    Devamını Oku →
+                  </Button>
+                </CardContent>
               </Card>
             ))}
           </div>
