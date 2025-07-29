@@ -86,8 +86,8 @@ ${formData.message}
       },
       hero: {
         title: 'Profesyonel Ayak Bakım Çözümleri',
-        subtitle: 'PediZone®',
-        description: 'Ayak sağlığı uzmanları tarafından geliştirilen, klinik testlerle kanıtlanmış etkili formüller ile ayaklarınızın sağlığını koruyun.',
+        subtitle: 'Pedizone®',
+        description: 'Podologların önerileri ve beklentilerine yönelik hazırlanan etkili ayak bakım ürünleri',
         cta: 'Ürünleri Keşfedin',
         ctaSecondary: 'Uzman Desteği'
       },
@@ -195,8 +195,8 @@ ${formData.message}
       },
       hero: {
         title: 'Professional Foot Care Solutions',
-        subtitle: 'PediZone®',
-        description: 'Protect your foot health with effective formulas developed by foot health specialists and proven by clinical tests.',
+        subtitle: 'Pedizone®',
+        description: 'Effective foot care products prepared according to podologists\' recommendations and expectations',
         cta: 'Explore Products',
         ctaSecondary: 'Expert Support'
       },
@@ -304,8 +304,8 @@ ${formData.message}
       },
       hero: {
         title: 'حلول احترافية لعناية القدم',
-        subtitle: 'PediZone®',
-        description: 'احمِ صحة قدميك بالتركيبات الفعالة المطورة من قبل أخصائيي صحة القدم والمثبتة بالاختبارات السريرية.',
+        subtitle: 'Pedizone®',
+        description: 'منتجات عناية فعالة للقدم محضرة وفقاً لتوصيات وتوقعات أطباء الأقدام',
         cta: 'استكشف المنتجات',
         ctaSecondary: 'دعم الخبراء'
       },
@@ -422,7 +422,7 @@ ${formData.message}
                 <span className="text-red-600 font-bold text-xl">P</span>
               </div>
               <span className="pedizone-logo text-3xl text-white">
-                PediZone<span className="text-red-200 text-lg">®</span>
+                Pedizone<span className="text-red-200 text-lg">®</span>
               </span>
             </div>
 
@@ -447,8 +447,8 @@ ${formData.message}
 
             {/* Mobile Menu Button & Language Selector */}
             <div className="flex items-center space-x-2">
-              {/* Language Selector */}
-              <div className="flex items-center space-x-1">
+              {/* Language Selector - Desktop */}
+              <div className="hidden md:flex items-center space-x-1">
                 <Button
                   variant={currentLang === 'tr' ? 'secondary' : 'ghost'}
                   size="sm"
@@ -475,14 +475,36 @@ ${formData.message}
                 </Button>
               </div>
               
+              {/* Language Selector - Mobile (Compact) */}
+              <div className="md:hidden flex items-center space-x-1">
+                <button
+                  onClick={() => setCurrentLang('tr')}
+                  className={`w-8 h-6 rounded text-xs flex items-center justify-center ${currentLang === 'tr' ? 'bg-white/20' : 'bg-transparent'}`}
+                >
+                  🇹🇷
+                </button>
+                <button
+                  onClick={() => setCurrentLang('en')}
+                  className={`w-8 h-6 rounded text-xs flex items-center justify-center ${currentLang === 'en' ? 'bg-white/20' : 'bg-transparent'}`}
+                >
+                  🇺🇸
+                </button>
+                <button
+                  onClick={() => setCurrentLang('ar')}
+                  className={`w-8 h-6 rounded text-xs flex items-center justify-center ${currentLang === 'ar' ? 'bg-white/20' : 'bg-transparent'}`}
+                >
+                  🇸🇦
+                </button>
+              </div>
+              
               {/* Mobile Menu Button */}
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden text-white hover:bg-red-700"
+                className="md:hidden text-white hover:bg-red-700 p-2"
               >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </Button>
             </div>
           </div>
