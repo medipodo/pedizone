@@ -184,13 +184,231 @@ ${formData.message}
           instagram: '@pediz0ne'
         }
       }
+    },
+    en: {
+      nav: {
+        home: 'Home',
+        products: 'Products',
+        about: 'About',
+        solutions: 'Solutions',
+        contact: 'Contact'
+      },
+      hero: {
+        title: 'Professional Foot Care Solutions',
+        subtitle: 'PediZone®',
+        description: 'Protect your foot health with effective formulas developed by foot health specialists and proven by clinical tests.',
+        cta: 'Explore Products',
+        ctaSecondary: 'Expert Support'
+      },
+      products: {
+        title: 'Our Product Portfolio',
+        subtitle: 'Specially developed solutions for every foot problem',
+        items: [
+          {
+            name: 'PediZone® Antifungal Serum',
+            description: 'Special formula for foot and nail fungus',
+            features: ['Fast action', 'Natural content', 'Daily use', 'Podologist approved'],
+            image: productSerum,
+            badge: 'Most Popular'
+          },
+          {
+            name: 'PediZone® Cleansing Foam',
+            description: 'Deep cleansing and protection',
+            features: ['Antibacterial', 'Odor eliminator', 'Gentle formula', 'Daily care'],
+            image: productFoam,
+            badge: 'New'
+          },
+          {
+            name: 'PediZone® Care Serum',
+            description: 'General foot care and moisturizing',
+            features: ['Moisturizing', 'Repairing', 'Protective', 'All skin types'],
+            image: productSerum2,
+            badge: 'Recommended'
+          }
+        ]
+      },
+      solutions: {
+        title: 'Solutions for Foot Problems',
+        subtitle: 'Targeted treatment approaches developed with our expert team',
+        items: [
+          {
+            title: 'Fungal Infections',
+            description: 'Effective treatment solutions for foot and nail fungus',
+            image: footFungus,
+            solutions: ['Antifungal serum', 'Cleansing foam', 'Protective care']
+          },
+          {
+            title: 'Callus and Thickening',
+            description: 'Special formulas that soften hard skin layers',
+            image: footCallus,
+            solutions: ['Softening cream', 'Peeling serum', 'Moisturizer']
+          },
+          {
+            title: 'Cracks and Dryness',
+            description: 'Restorative care for dry and cracked feet',
+            image: footCrack,
+            solutions: ['Repair cream', 'Intensive moisturizer', 'Night care']
+          },
+          {
+            title: 'Odor and Sweating',
+            description: 'Solutions for excessive sweating and odor problems',
+            image: footOdor,
+            solutions: ['Deodorant serum', 'Antibacterial foam', 'Sweat preventer']
+          }
+        ]
+      },
+      about: {
+        title: 'Why PediZone®?',
+        subtitle: 'Your trusted solution partner in foot health',
+        features: [
+          {
+            icon: Award,
+            title: 'Podologist Approved',
+            description: 'All our products have been tested and approved by foot health specialists.'
+          },
+          {
+            icon: Shield,
+            title: 'Clinically Tested',
+            description: 'Formulas with proven effectiveness through laboratory tests.'
+          },
+          {
+            icon: Star,
+            title: 'Natural Ingredients',
+            description: 'Prepared with natural and safe active ingredients, minimum side effect risk.'
+          },
+          {
+            icon: Users,
+            title: 'Expert Support',
+            description: 'You can get support from our expert team 7/24 and get your questions answered.'
+          }
+        ]
+      },
+      contact: {
+        title: 'Get in Touch',
+        subtitle: 'We are here for your questions',
+        info: {
+          address: 'Bağlıca Mah. Mert Cad. No 4/2 Etimesgut ANKARA',
+          phone: '05068860326',
+          email: 'info@pedizone.com',
+          instagram: '@pediz0ne'
+        }
+      }
+    },
+    ar: {
+      nav: {
+        home: 'الرئيسية',
+        products: 'المنتجات',
+        about: 'حولنا',
+        solutions: 'الحلول',
+        contact: 'اتصل بنا'
+      },
+      hero: {
+        title: 'حلول احترافية لعناية القدم',
+        subtitle: 'PediZone®',
+        description: 'احمِ صحة قدميك بالتركيبات الفعالة المطورة من قبل أخصائيي صحة القدم والمثبتة بالاختبارات السريرية.',
+        cta: 'استكشف المنتجات',
+        ctaSecondary: 'دعم الخبراء'
+      },
+      products: {
+        title: 'محفظة منتجاتنا',
+        subtitle: 'حلول مطورة خصيصاً لكل مشكلة في القدم',
+        items: [
+          {
+            name: 'PediZone® مصل مضاد للفطريات',
+            description: 'تركيبة خاصة لفطريات القدم والأظافر',
+            features: ['فعالية سريعة', 'محتوى طبيعي', 'استخدام يومي', 'معتمد من أطباء الأقدام'],
+            image: productSerum,
+            badge: 'الأكثر شعبية'
+          },
+          {
+            name: 'PediZone® رغوة التنظيف',
+            description: 'تنظيف عميق وحماية',
+            features: ['مضاد للبكتيريا', 'مزيل الرائحة', 'تركيبة لطيفة', 'عناية يومية'],
+            image: productFoam,
+            badge: 'جديد'
+          },
+          {
+            name: 'PediZone® مصل العناية',
+            description: 'عناية عامة للقدم وترطيب',
+            features: ['مرطب', 'مصلح', 'واقي', 'جميع أنواع البشرة'],
+            image: productSerum2,
+            badge: 'موصى به'
+          }
+        ]
+      },
+      solutions: {
+        title: 'حلول لمشاكل القدم',
+        subtitle: 'نهج علاجية مستهدفة مطورة مع فريق الخبراء لدينا',
+        items: [
+          {
+            title: 'العدوى الفطرية',
+            description: 'حلول علاجية فعالة لفطريات القدم والأظافر',
+            image: footFungus,
+            solutions: ['مصل مضاد للفطريات', 'رغوة التنظيف', 'عناية واقية']
+          },
+          {
+            title: 'الكالو والسماكة',
+            description: 'تركيبات خاصة تنعم طبقات الجلد الصلبة',
+            image: footCallus,
+            solutions: ['كريم منعم', 'مصل التقشير', 'مرطب']
+          },
+          {
+            title: 'التشققات والجفاف',
+            description: 'عناية ترميمية للأقدام الجافة والمتشققة',
+            image: footCrack,
+            solutions: ['كريم الإصلاح', 'مرطب مكثف', 'عناية ليلية']
+          },
+          {
+            title: 'الرائحة والتعرق',
+            description: 'حلول للتعرق المفرط ومشاكل الرائحة',
+            image: footOdor,
+            solutions: ['مصل مزيل العرق', 'رغوة مضادة للبكتيريا', 'مانع التعرق']
+          }
+        ]
+      },
+      about: {
+        title: 'لماذا PediZone®؟',
+        subtitle: 'شريكك الموثوق في صحة القدم',
+        features: [
+          {
+            icon: Award,
+            title: 'معتمد من أطباء الأقدام',
+            description: 'جميع منتجاتنا تم اختبارها واعتمادها من قبل أخصائيي صحة القدم.'
+          },
+          {
+            icon: Shield,
+            title: 'مختبر سريرياً',
+            description: 'تركيبات ذات فعالية مثبتة من خلال الاختبارات المعملية.'
+          },
+          {
+            icon: Star,
+            title: 'مكونات طبيعية',
+            description: 'محضرة بمكونات فعالة طبيعية وآمنة، مخاطر آثار جانبية قليلة.'
+          },
+          {
+            icon: Users,
+            title: 'دعم الخبراء',
+            description: 'يمكنك الحصول على الدعم من فريق الخبراء لدينا 7/24 والحصول على إجابات لأسئلتك.'
+          }
+        ]
+      },
+      contact: {
+        title: 'تواصل معنا',
+        subtitle: 'نحن هنا لأسئلتك',
+        info: {
+          address: 'Bağlıca Mah. Mert Cad. No 4/2 Etimesgut ANKARA',
+          phone: '05068860326',
+          email: 'info@pedizone.com',
+          instagram: '@pediz0ne'
+        }
+      }
     }
   }
 
   const t = content[currentLang]
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50" dir={currentLang === 'ar' ? 'rtl' : 'ltr'}>
       {/* Header */}
       <header className="pedizone-gradient shadow-xl sticky top-0 z-50">
         <div className="pedizone-container">
@@ -204,7 +422,7 @@ ${formData.message}
                 <span className="text-red-600 font-bold text-xl">P</span>
               </div>
               <span className="pedizone-logo text-3xl text-white">
-                PediZone<span className="text-red-200">®</span>
+                PediZone<span className="text-red-200 text-lg">®</span>
               </span>
             </div>
 
@@ -229,14 +447,33 @@ ${formData.message}
 
             {/* Mobile Menu Button & Language Selector */}
             <div className="flex items-center space-x-2">
-              <Button
-                variant={currentLang === 'tr' ? 'secondary' : 'ghost'}
-                size="sm"
-                onClick={() => setCurrentLang('tr')}
-                className="text-white border-white/20"
-              >
-                🇹🇷 TR
-              </Button>
+              {/* Language Selector */}
+              <div className="flex items-center space-x-1">
+                <Button
+                  variant={currentLang === 'tr' ? 'secondary' : 'ghost'}
+                  size="sm"
+                  onClick={() => setCurrentLang('tr')}
+                  className="text-white border-white/20 hover:bg-red-700"
+                >
+                  🇹🇷 TR
+                </Button>
+                <Button
+                  variant={currentLang === 'en' ? 'secondary' : 'ghost'}
+                  size="sm"
+                  onClick={() => setCurrentLang('en')}
+                  className="text-white border-white/20 hover:bg-red-700"
+                >
+                  🇺🇸 EN
+                </Button>
+                <Button
+                  variant={currentLang === 'ar' ? 'secondary' : 'ghost'}
+                  size="sm"
+                  onClick={() => setCurrentLang('ar')}
+                  className="text-white border-white/20 hover:bg-red-700"
+                >
+                  🇸🇦 AR
+                </Button>
+              </div>
               
               {/* Mobile Menu Button */}
               <Button
