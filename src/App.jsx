@@ -118,7 +118,7 @@ ${formData.message}
             badge: 'Yeni'
           },
           {
-            name: 'PediZone® Bakım Serumu',
+            name: 'PediZone® %15 Üreli Yoğun Nemlendirici Krem',
             description: 'Genel ayak bakımı ve nemlendirme',
             features: ['Nemlendirici', 'Onarıcı', 'Koruyucu', 'Tüm cilt tipleri'],
             image: productSerum2,
