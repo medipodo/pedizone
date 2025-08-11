@@ -172,3 +172,127 @@
     background: linear-gradient(135deg, #fef2f2 0%, #ffffff 50%, #f9fafb 100%);
   }
 }
+
+
+/* Mobil Optimizasyon İyileştirmeleri */
+@layer components {
+  /* Responsive görsel optimizasyonu */
+  .responsive-image {
+    @apply w-full h-auto object-cover;
+  }
+  
+  /* Mobil için özel grid düzenlemeleri */
+  .mobile-grid-fix {
+    @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+  }
+  
+  /* Solutions section mobil düzeltmesi */
+  .solutions-mobile-fix {
+    @apply flex-col md:flex-row;
+  }
+  
+  .solutions-image-fix {
+    @apply w-full md:w-1/3 h-48 md:h-full;
+  }
+  
+  .solutions-content-fix {
+    @apply w-full md:w-2/3;
+  }
+  
+  /* Hero section mobil düzeltmesi */
+  .hero-mobile-grid {
+    @apply grid-cols-2 md:grid-cols-3 gap-3 md:gap-4;
+  }
+  
+  /* Blog kartları mobil düzeltmesi */
+  .blog-mobile-grid {
+    @apply grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+  }
+  
+  /* Mobil menü iyileştirmeleri */
+  .mobile-menu-item {
+    @apply py-3 px-4 text-base font-medium;
+  }
+  
+  /* Mobil form iyileştirmeleri */
+  .mobile-form-input {
+    @apply text-base; /* iOS zoom önleme */
+  }
+  
+  /* Mobil buton iyileştirmeleri */
+  .mobile-button-fix {
+    @apply min-h-[48px] text-base;
+  }
+  
+  /* Mobil spacing iyileştirmeleri */
+  .mobile-section-padding {
+    @apply py-12 md:py-20;
+  }
+  
+  /* Mobil typography iyileştirmeleri */
+  .mobile-heading-fix {
+    @apply text-2xl md:text-4xl;
+  }
+  
+  .mobile-subheading-fix {
+    @apply text-lg md:text-xl;
+  }
+  
+  /* Touch target iyileştirmeleri */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  /* Mobil navigation iyileştirmeleri */
+  .mobile-nav-fix {
+    @apply text-sm md:text-base;
+  }
+}
+
+/* Responsive breakpoint iyileştirmeleri */
+@media (max-width: 768px) {
+  .pedizone-section {
+    @apply py-12 px-4;
+  }
+  
+  .pedizone-container {
+    @apply px-4;
+  }
+  
+  .pedizone-card {
+    @apply p-6;
+  }
+  
+  /* Mobil için özel düzenlemeler */
+  .mobile-only {
+    @apply block md:hidden;
+  }
+  
+  .desktop-only {
+    @apply hidden md:block;
+  }
+  
+  /* Mobil görsel düzeltmeleri */
+  .mobile-image-container {
+    @apply aspect-square overflow-hidden rounded-xl;
+  }
+  
+  .mobile-image {
+    @apply w-full h-full object-cover;
+  }
+}
+
+/* Tablet optimizasyonu */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tablet-grid-fix {
+    @apply grid-cols-2;
+  }
+}
+
+/* Büyük ekran optimizasyonu */
+@media (min-width: 1024px) {
+  .desktop-grid-fix {
+    @apply grid-cols-3;
+  }
+}
+
