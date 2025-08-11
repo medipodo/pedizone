@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { ArrowLeft, CheckCircle, Mail, Phone, MapPin } from 'lucide-react'
 import { Button } from './ui/button'
@@ -13,6 +13,11 @@ import productSerum2 from '../assets/IMG_7572_optimized.webp'
 const ProductDetail = () => {
   const { productId } = useParams()
   const navigate = useNavigate()
+
+  // Sayfa yüklendiğinde scroll pozisyonunu en üste getir
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [productId])
 
   // Product data
   const products = {
@@ -36,7 +41,6 @@ const ProductDetail = () => {
         'Vitamin E - Antioksidan koruma'
       ],
       usage: 'Temiz ve kuru ayaklara günde 2 kez uygulayın. Etkilenen bölgeye ince bir tabaka halinde sürün ve masaj yapın. Düzenli kullanımda 2-4 hafta içinde sonuç alabilirsiniz.',
-      price: '₺299',
       volume: '50ml'
     },
     'temizleme-kopugu': {
@@ -59,7 +63,6 @@ const ProductDetail = () => {
         'Panthenol - Cilt onarıcı'
       ],
       usage: 'Islak ayaklara köpük halinde uygulayın. 1-2 dakika masaj yapın ve bol suyla durulayın. Günde 1-2 kez kullanabilirsiniz.',
-      price: '₺199',
       volume: '200ml'
     },
     'bakim-serumu': {
@@ -82,7 +85,6 @@ const ProductDetail = () => {
         'Glycerin - Nem tutucu'
       ],
       usage: 'Temiz ayaklara gece yatmadan önce uygulayın. Özellikle topuk ve çatlak bölgelere odaklanın. Düzenli kullanımda cildin yumuşaklığını hissedeceksiniz.',
-      price: '₺249',
       volume: '150ml'
     }
   }
@@ -158,8 +160,7 @@ const ProductDetail = () => {
                 {product.description}
               </p>
               
-              <div className="flex items-center space-x-4 mb-6">
-                <span className="text-3xl font-bold text-red-600">{product.price}</span>
+              <div className="mb-6">
                 <span className="text-lg text-gray-500">({product.volume})</span>
               </div>
             </div>

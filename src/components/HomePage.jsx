@@ -204,6 +204,292 @@ const HomePage = () => {
           messagePlaceholder: 'Mesajınızı yazın'
         }
       }
+    },
+    en: {
+      nav: {
+        home: 'Home',
+        products: 'Products',
+        solutions: 'Solutions',
+        about: 'About',
+        contact: 'Contact'
+      },
+      hero: {
+        badge: 'Podologist Approved',
+        title: 'Professional Foot Care Solutions',
+        brand: 'Pedizone®',
+        subtitle: 'Effective foot care products prepared according to podologists\' recommendations and expectations',
+        cta1: 'Explore Products',
+        cta2: 'Expert Support'
+      },
+      products: {
+        title: 'Our Product Portfolio',
+        subtitle: 'Specially developed solutions for every foot problem',
+        items: [
+          {
+            id: 'mantar-karsiti-serum',
+            name: 'PediZone® Antifungal Serum',
+            description: 'Special formula for foot and nail fungus',
+            image: productSerum,
+            badge: 'Most Popular',
+            features: ['Fast acting', 'Natural content', 'Daily use', 'Podologist approved']
+          },
+          {
+            id: 'temizleme-kopugu',
+            name: 'PediZone® Cleansing Foam',
+            description: 'Deep cleansing and protection',
+            image: productFoam,
+            badge: 'New',
+            features: ['Antibacterial', 'Odor eliminating', 'Gentle formula', 'Daily care']
+          },
+          {
+            id: 'bakim-serumu',
+            name: 'PediZone® Care Serum',
+            description: 'General foot care and moisturizing',
+            image: productSerum2,
+            badge: 'Recommended',
+            features: ['Moisturizing', 'Repairing', 'Protective', 'All skin types']
+          }
+        ]
+      },
+      solutions: {
+        title: 'Solutions for Foot Problems',
+        subtitle: 'Targeted treatment approaches developed with our expert team',
+        items: [
+          {
+            title: 'Fungal Infections',
+            description: 'Effective treatment solutions for foot and nail fungus',
+            features: ['Antifungal serum', 'Cleansing foam', 'Protective care'],
+            image: solutionImage1
+          },
+          {
+            title: 'Callus and Thickening',
+            description: 'Special formulas that soften hard skin layers',
+            features: ['Softening cream', 'Peeling serum', 'Moisturizer'],
+            image: solutionImage2
+          },
+          {
+            title: 'Cracks and Dryness',
+            description: 'Restorative care for dry and cracked feet',
+            features: ['Repair cream', 'Intensive moisturizer', 'Night care'],
+            image: solutionImage3
+          },
+          {
+            title: 'Odor and Sweating',
+            description: 'Solutions for excessive sweating and odor problems',
+            features: ['Deodorant serum', 'Antibacterial foam', 'Anti-perspirant'],
+            image: solutionImage4
+          }
+        ]
+      },
+      about: {
+        title: 'Why PediZone®?',
+        subtitle: 'Your reliable solution partner in foot health',
+        items: [
+          {
+            title: 'Podologist Approved',
+            description: 'All our products have been tested and approved by foot health specialists.'
+          },
+          {
+            title: 'Clinically Tested',
+            description: 'Formulas with proven effectiveness through laboratory testing.'
+          },
+          {
+            title: 'Natural Ingredients',
+            description: 'Prepared with natural and safe active ingredients, minimal risk of side effects.'
+          },
+          {
+            title: 'Expert Support',
+            description: 'You can get support from our expert team 24/7 and get answers to your questions.'
+          }
+        ]
+      },
+      blog: {
+        title: 'PediZone Blog',
+        subtitle: 'Foot health guide and expert advice',
+        items: [
+          {
+            title: 'What is Foot Fungus, Why Does It Occur?',
+            excerpt: 'Foot fungus is a contagious skin infection that occurs especially between the toes and manifests itself with symptoms such as itching, redness, and bad odor.',
+            readTime: '5 min',
+            tags: ['foot fungus', 'foot health', 'podology'],
+            image: blogAyakMantari
+          },
+          {
+            title: 'What are the Types of Nail Fungus?',
+            excerpt: 'Nail fungus is a common infection that both spoils the aesthetic appearance and can lead to serious discomfort. This disease, known as onychomycosis, has different types.',
+            readTime: '6 min',
+            tags: ['nail fungus', 'onychomycosis', 'nail diseases'],
+            image: blogTirnakMantari
+          },
+          {
+            title: 'The Importance of Using Serum for Fungus',
+            excerpt: 'Topical treatment with the right product in fungal infections directly affects the healing process. Discover the advantages of serum-form products with PediZone 50 Ml Serum.',
+            readTime: '7 min',
+            tags: ['fungus serum', 'PediZone', 'topical treatment'],
+            image: blogSerumKullanimi
+          }
+        ]
+      },
+      contact: {
+        title: 'Get in Touch',
+        subtitle: 'We are here for your questions',
+        address: 'Bağlıca Mah. Mert Cad. No 4/2 Etimesgut ANKARA',
+        phone: '05068860326',
+        email: 'info@pedizone.com',
+        form: {
+          title: 'Contact Us',
+          name: 'Full Name',
+          email: 'Email',
+          message: 'Message',
+          submit: 'Send Message',
+          namePlaceholder: 'Enter your name',
+          emailPlaceholder: 'Enter your email address',
+          messagePlaceholder: 'Write your message'
+        }
+      }
+    },
+    ar: {
+      nav: {
+        home: 'الرئيسية',
+        products: 'المنتجات',
+        solutions: 'الحلول',
+        about: 'حولنا',
+        contact: 'اتصل بنا'
+      },
+      hero: {
+        badge: 'معتمد من أطباء الأقدام',
+        title: 'حلول احترافية لرعاية القدم',
+        brand: 'بيديزون®',
+        subtitle: 'منتجات فعالة لرعاية القدم معدة وفقاً لتوصيات وتوقعات أطباء الأقدام',
+        cta1: 'استكشف المنتجات',
+        cta2: 'دعم الخبراء'
+      },
+      products: {
+        title: 'محفظة منتجاتنا',
+        subtitle: 'حلول مطورة خصيصاً لكل مشكلة في القدم',
+        items: [
+          {
+            id: 'mantar-karsiti-serum',
+            name: 'بيديزون® مصل مضاد للفطريات',
+            description: 'تركيبة خاصة لفطريات القدم والأظافر',
+            image: productSerum,
+            badge: 'الأكثر شعبية',
+            features: ['سريع المفعول', 'محتوى طبيعي', 'للاستخدام اليومي', 'معتمد من أطباء الأقدام']
+          },
+          {
+            id: 'temizleme-kopugu',
+            name: 'بيديزون® رغوة التنظيف',
+            description: 'تنظيف عميق وحماية',
+            image: productFoam,
+            badge: 'جديد',
+            features: ['مضاد للبكتيريا', 'مزيل للرائحة', 'تركيبة لطيفة', 'رعاية يومية']
+          },
+          {
+            id: 'bakim-serumu',
+            name: 'بيديزون® مصل العناية',
+            description: 'رعاية عامة للقدم وترطيب',
+            image: productSerum2,
+            badge: 'موصى به',
+            features: ['مرطب', 'مصلح', 'واقي', 'لجميع أنواع البشرة']
+          }
+        ]
+      },
+      solutions: {
+        title: 'حلول لمشاكل القدم',
+        subtitle: 'نهج علاجية مستهدفة طورها فريق خبرائنا',
+        items: [
+          {
+            title: 'العدوى الفطرية',
+            description: 'حلول علاجية فعالة لفطريات القدم والأظافر',
+            features: ['مصل مضاد للفطريات', 'رغوة التنظيف', 'رعاية واقية'],
+            image: solutionImage1
+          },
+          {
+            title: 'الكالو والسماكة',
+            description: 'تركيبات خاصة تنعم طبقات الجلد الصلبة',
+            features: ['كريم منعم', 'مصل التقشير', 'مرطب'],
+            image: solutionImage2
+          },
+          {
+            title: 'التشققات والجفاف',
+            description: 'رعاية ترميمية للأقدام الجافة والمتشققة',
+            features: ['كريم الإصلاح', 'مرطب مكثف', 'رعاية ليلية'],
+            image: solutionImage3
+          },
+          {
+            title: 'الرائحة والتعرق',
+            description: 'حلول لمشاكل التعرق المفرط والرائحة',
+            features: ['مصل مزيل العرق', 'رغوة مضادة للبكتيريا', 'مضاد للتعرق'],
+            image: solutionImage4
+          }
+        ]
+      },
+      about: {
+        title: 'لماذا بيديزون®؟',
+        subtitle: 'شريكك الموثوق في صحة القدم',
+        items: [
+          {
+            title: 'معتمد من أطباء الأقدام',
+            description: 'جميع منتجاتنا تم اختبارها واعتمادها من قبل أخصائيي صحة القدم.'
+          },
+          {
+            title: 'مختبر سريرياً',
+            description: 'تركيبات ذات فعالية مثبتة من خلال الاختبارات المعملية.'
+          },
+          {
+            title: 'مكونات طبيعية',
+            description: 'معدة بمكونات فعالة طبيعية وآمنة، مخاطر آثار جانبية قليلة.'
+          },
+          {
+            title: 'دعم الخبراء',
+            description: 'يمكنك الحصول على الدعم من فريق خبرائنا على مدار الساعة والحصول على إجابات لأسئلتك.'
+          }
+        ]
+      },
+      blog: {
+        title: 'مدونة بيديزون',
+        subtitle: 'دليل صحة القدم ونصائح الخبراء',
+        items: [
+          {
+            title: 'ما هي فطريات القدم، لماذا تحدث؟',
+            excerpt: 'فطريات القدم هي عدوى جلدية معدية تحدث خاصة بين أصابع القدم وتظهر بأعراض مثل الحكة والاحمرار والرائحة الكريهة.',
+            readTime: '5 دقائق',
+            tags: ['فطريات القدم', 'صحة القدم', 'طب الأقدام'],
+            image: blogAyakMantari
+          },
+          {
+            title: 'ما هي أنواع فطريات الأظافر؟',
+            excerpt: 'فطريات الأظافر هي عدوى شائعة تفسد المظهر الجمالي ويمكن أن تؤدي إلى إزعاج خطير. هذا المرض المعروف باسم فطار الأظافر له أنواع مختلفة.',
+            readTime: '6 دقائق',
+            tags: ['فطريات الأظافر', 'فطار الأظافر', 'أمراض الأظافر'],
+            image: blogTirnakMantari
+          },
+          {
+            title: 'أهمية استخدام المصل للفطريات',
+            excerpt: 'العلاج الموضعي بالمنتج المناسب في العدوى الفطرية يؤثر مباشرة على عملية الشفاء. اكتشف مزايا المنتجات في شكل مصل مع بيديزون 50 مل.',
+            readTime: '7 دقائق',
+            tags: ['مصل الفطريات', 'بيديزون', 'العلاج الموضعي'],
+            image: blogSerumKullanimi
+          }
+        ]
+      },
+      contact: {
+        title: 'تواصل معنا',
+        subtitle: 'نحن هنا لأسئلتك',
+        address: 'Bağlıca Mah. Mert Cad. No 4/2 Etimesgut ANKARA',
+        phone: '05068860326',
+        email: 'info@pedizone.com',
+        form: {
+          title: 'اتصل بنا',
+          name: 'الاسم الكامل',
+          email: 'البريد الإلكتروني',
+          message: 'الرسالة',
+          submit: 'إرسال الرسالة',
+          namePlaceholder: 'أدخل اسمك',
+          emailPlaceholder: 'أدخل عنوان بريدك الإلكتروني',
+          messagePlaceholder: 'اكتب رسالتك'
+        }
+      }
     }
   }
 
