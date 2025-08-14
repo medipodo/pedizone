@@ -7,8 +7,8 @@ import { Badge } from './ui/badge'
 
 // Import images
 import productSerum from '../assets/IMG_7571_optimized.webp'
-import productFoam from '../assets/IMG_7570_optimized.webp'
-import productSerum2 from '../assets/IMG_7572_optimized.webp'
+import productFoam from '../assets/Pedizone Foot Foam.jpg'
+import productSerum2 from '../assets/pedizone-urea-cream.jpg'
 import solutionImage1 from '../assets/ayak-mantari-tedavi.webp'
 import solutionImage2 from '../assets/foot-callus-problem.jpg'
 import solutionImage3 from '../assets/foot-crack-problem.jpg'
@@ -89,7 +89,7 @@ const HomePage = () => {
           },
           {
             id: 'temizleme-kopugu',
-            name: 'PediZone® Temizleme Köpüğü',
+            name: 'PediZone® Ayak Temizleme Köpüğü',
             description: 'Derinlemesine temizlik ve koruma',
             image: productFoam,
             badge: 'Yeni',
@@ -97,7 +97,7 @@ const HomePage = () => {
           },
           {
             id: 'bakim-serumu',
-            name: 'PediZone® Bakım Serumu',
+            name: 'PediZone® %15 Üreli Çatlak Topuk ve Ayak Kremi',
             description: 'Genel ayak bakımı ve nemlendirme',
             image: productSerum2,
             badge: 'Önerilen',
@@ -235,7 +235,7 @@ const HomePage = () => {
           },
           {
             id: 'temizleme-kopugu',
-            name: 'PediZone® Cleansing Foam',
+            name: 'PediZone® Foot Cleansing Foam',
             description: 'Deep cleansing and protection',
             image: productFoam,
             badge: 'New',
@@ -243,7 +243,7 @@ const HomePage = () => {
           },
           {
             id: 'bakim-serumu',
-            name: 'PediZone® Care Serum',
+            name: 'PediZone® 15% Urea Cracked Heel and Foot Cream',
             description: 'General foot care and moisturizing',
             image: productSerum2,
             badge: 'Recommended',
@@ -378,7 +378,7 @@ const HomePage = () => {
           },
           {
             id: 'temizleme-kopugu',
-            name: 'بيديزون® رغوة التنظيف',
+            name: 'بيديزون® رغوة تنظيف القدم',
             description: 'تنظيف عميق وحماية',
             image: productFoam,
             badge: 'جديد',
@@ -386,7 +386,7 @@ const HomePage = () => {
           },
           {
             id: 'bakim-serumu',
-            name: 'بيديزون® مصل العناية',
+            name: 'بيديزون® كريم القدم والكعب المتشقق بـ 15% يوريا',
             description: 'رعاية عامة للقدم وترطيب',
             image: productSerum2,
             badge: 'موصى به',

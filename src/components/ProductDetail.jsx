@@ -7,8 +7,8 @@ import { Card, CardContent } from './ui/card'
 
 // Import product images
 import productSerum from '../assets/IMG_7571_optimized.webp'
-import productFoam from '../assets/IMG_7570_optimized.webp'
-import productSerum2 from '../assets/IMG_7572_optimized.webp'
+import productFoam from '../assets/Pedizone Foot Foam.jpg'
+import productSerum2 from '../assets/pedizone-urea-cream.jpg'
 
 const ProductDetail = () => {
   const { productId } = useParams()
@@ -45,7 +45,7 @@ const ProductDetail = () => {
     },
     'temizleme-kopugu': {
       id: 'temizleme-kopugu',
-      name: 'PediZone® Temizleme Köpüğü',
+      name: 'PediZone® Ayak Temizleme Köpüğü',
       description: 'Derinlemesine temizlik ve koruma',
       image: productFoam,
       badge: 'Yeni',
@@ -67,7 +67,7 @@ const ProductDetail = () => {
     },
     'bakim-serumu': {
       id: 'bakim-serumu',
-      name: 'PediZone® Bakım Serumu',
+      name: 'PediZone® %15 Üreli Çatlak Topuk ve Ayak Kremi',
       description: 'Genel ayak bakımı ve nemlendirme',
       image: productSerum2,
       badge: 'Önerilen',
