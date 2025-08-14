@@ -77,7 +77,7 @@ const ProductDetail = () => {
         'Koruyucu',
         'Tüm cilt tipleri'
       ],
-      detailedDescription: 'PediZone® Bakım Serumu, %15 Urea içeriği ile yoğun nemlendirme sağlar. Çatlak ve kuru ayaklar için ideal olan bu serum, cildi yumuşatır ve esnek tutar.',
+      detailedDescription: 'PediZone® %15 Üreli Çatlak Topuk ve Ayak Kremi, %15 Urea içeriği ile yoğun nemlendirme sağlar. Çatlak ve kuru ayaklar için ideal olan bu krem, cildi yumuşatır ve esnek tutar.',
       ingredients: [
         '%15 Urea - Yoğun nemlendirme',
         'Shea Butter - Besleyici ve koruyucu',
