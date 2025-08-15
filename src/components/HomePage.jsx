@@ -19,7 +19,7 @@ import blogSerumKullanimi from '../assets/pedizone-serum-kullanimi.jpg'
 
 // Import slide images
 import slide1Podolog from '../assets/slide-1-podolog.jpg'
-import slide2Foam from '../assets/slide-2-foam-updated.png'
+import slide2Foam from '../assets/slide-2-foam.jpg'
 import slide3Cream from '../assets/slide-3-cream.jpg'
 import slide4CrackedHeels from '../assets/slide-4-cracked-heels.jpg'
 
@@ -1192,13 +1192,12 @@ const HomePage = () => {
                     ></textarea>
                   </div>
                   
-                  <Button 
-                    type="submit" 
-                    className="w-full pedizone-button"
-                    disabled={isSubmitting}
+                  <a 
+                    href={`mailto:info@pedizone.com?subject=İletişim Formu - ${formData.name}&body=Ad Soyad: ${formData.name}%0D%0AE-posta: ${formData.email}%0D%0A%0D%0AMesaj:%0D%0A${formData.message}`}
+                    className="w-full pedizone-button inline-flex items-center justify-center px-4 py-3 rounded-xl font-medium transition-colors"
                   >
-                    {isSubmitting ? 'Gönderiliyor...' : t.contact.form.submit}
-                  </Button>
+                    {t.contact.form.submit}
+                  </a>
                 </form>
               </CardContent>
             </Card>
