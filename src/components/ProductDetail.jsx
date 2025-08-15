@@ -321,13 +321,6 @@ const ProductDetail = () => {
                       </div>
                     </div>
                   </div>
-
-                  <div className="bg-gray-50 p-4 rounded-xl">
-                    <h4 className="font-medium text-gray-900 mb-2">Çalışma Saatleri</h4>
-                    <p className="text-sm text-gray-600">Pazartesi - Cuma: 09:00 - 18:00</p>
-                    <p className="text-sm text-gray-600">Cumartesi: 09:00 - 16:00</p>
-                    <p className="text-sm text-gray-600">Pazar: Kapalı</p>
-                  </div>
                 </div>
               </div>
             </CardContent>

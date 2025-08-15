@@ -19,7 +19,7 @@ import blogSerumKullanimi from '../assets/pedizone-serum-kullanimi.jpg'
 
 // Import slide images
 import slide1Podolog from '../assets/slide-1-podolog.jpg'
-import slide2Foam from '../assets/slide-2-foam.jpg'
+import slide2Foam from '../assets/slide-2-foam-updated.png'
 import slide3Cream from '../assets/slide-3-cream.jpg'
 import slide4CrackedHeels from '../assets/slide-4-cracked-heels.jpg'
 
@@ -58,15 +58,16 @@ const HomePage = () => {
     {
       image: slide1Podolog,
       title: {
-        tr: 'Uzman Podolog Muayenesi',
-        en: 'Expert Podologist Examination',
-        ar: 'فحص أخصائي الأقدام'
+        tr: 'Podologların Önerdiği',
+        en: 'Recommended by Podologists',
+        ar: 'موصى به من قبل أطباء الأقدام'
       },
       description: {
-        tr: 'Deneyimli podologlarımız ile ayak sağlığınızı güvenle teslim edin.',
-        en: 'Trust your foot health with our experienced podologists.',
-        ar: 'ثق في صحة قدميك مع أخصائيي الأقدام ذوي الخبرة لدينا.'
-      }
+        tr: 'Podologların beklentilerine yönelik hazırladığımız ayak bakım ürünlerimiz',
+        en: 'Our foot care products prepared according to podologists\' expectations',
+        ar: 'منتجات العناية بالأقدام التي أعددناها وفقاً لتوقعات أطباء الأقدام'
+      },
+      link: '/products'
     },
     {
       image: slide2Foam,
@@ -79,7 +80,8 @@ const HomePage = () => {
         tr: 'Derinlemesine temizlik ve koruma için özel formül köpük.',
         en: 'Special formula foam for deep cleansing and protection.',
         ar: 'رغوة بتركيبة خاصة للتنظيف العميق والحماية.'
-      }
+      },
+      link: '/product/foam'
     },
     {
       image: slide3Cream,
@@ -92,7 +94,8 @@ const HomePage = () => {
         tr: 'Çatlak topuk ve kuru ayaklar için yoğun nemlendirici bakım.',
         en: 'Intensive moisturizing care for cracked heels and dry feet.',
         ar: 'عناية مرطبة مكثفة للكعوب المتشققة والأقدام الجافة.'
-      }
+      },
+      link: '/product/cream'
     },
     {
       image: slide4CrackedHeels,
@@ -105,7 +108,8 @@ const HomePage = () => {
         tr: 'Etkili formül ile çatlak topuklarınızı onarın ve koruyun.',
         en: 'Repair and protect your cracked heels with effective formula.',
         ar: 'أصلح واحم كعوبك المتشققة بتركيبة فعالة.'
-      }
+      },
+      link: '/product/cream'
     }
   ]
 
@@ -120,6 +124,18 @@ const HomePage = () => {
 
   const goToSlide = (index) => {
     setCurrentSlide(index)
+  }
+
+  const handleSlideClick = (slide) => {
+    if (slide.link) {
+      if (slide.link === '/products') {
+        // İlk slide için tüm ürünlere git
+        window.open('/products', '_blank')
+      } else {
+        // Diğer slide'lar için ilgili ürün sayfasına git
+        window.open(slide.link, '_blank')
+      }
+    }
   }
 
   // Auto-play effect
@@ -166,7 +182,7 @@ const HomePage = () => {
         contact: 'İletişim'
       },
       hero: {
-        badge: 'Podolog Onaylı',
+        badge: 'Podologların Tavsiyesi',
         title: 'Profesyonel Ayak Bakım Çözümleri',
         brand: 'Pedizone®',
         subtitle: 'Podologların önerileri ve beklentilerine yönelik hazırlanan etkili ayak bakım ürünleri',
@@ -238,7 +254,7 @@ const HomePage = () => {
         subtitle: 'Ayak sağlığında güvenilir çözüm ortağınız',
         items: [
           {
-            title: 'Podolog Onaylı',
+            title: 'Podologların Tavsiyesi',
             description: 'Tüm ürünlerimiz ayak sağlığı uzmanları tarafından test edilmiş ve onaylanmıştır.'
           },
           {
@@ -799,6 +815,92 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Slide Section */}
+      <section className="pedizone-section bg-white">
+        <div className="pedizone-container">
+          <div className="text-center mb-12">
+            <h2 className="pedizone-heading text-4xl text-gray-900 mb-4">
+              {currentLang === 'tr' ? 'Profesyonel Ayak Bakımı' : 
+               currentLang === 'en' ? 'Professional Foot Care' : 
+               'العناية المهنية بالأقدام'}
+            </h2>
+            <p className="pedizone-text text-xl text-gray-600">
+              {currentLang === 'tr' ? 'Uzman podologlarımızla ayak sağlığınızı koruyun' : 
+               currentLang === 'en' ? 'Protect your foot health with our expert podologists' : 
+               'احم صحة قدميك مع أخصائيي الأقدام الخبراء لدينا'}
+            </p>
+          </div>
+
+          <div className="relative max-w-5xl mx-auto">
+            <div className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+              {/* Slides */}
+              {slides.map((slide, index) => (
+                <div
+                  key={index}
+                  className={`absolute inset-0 transition-opacity duration-500 cursor-pointer ${
+                    index === currentSlide ? 'opacity-100' : 'opacity-0'
+                  }`}
+                  onClick={() => handleSlideClick(slide)}
+                >
+                  <img
+                    src={slide.image}
+                    alt={slide.title[currentLang]}
+                    className="w-full h-full object-cover"
+                    loading={index === 0 ? 'eager' : 'lazy'}
+                  />
+                  
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                  
+                  {/* Content */}
+                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 text-white">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3">
+                      {slide.title[currentLang]}
+                    </h3>
+                    <p className="text-sm sm:text-base md:text-lg opacity-90 max-w-2xl">
+                      {slide.description[currentLang]}
+                    </p>
+                  </div>
+                </div>
+              ))}
+
+              {/* Navigation Buttons */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-red-600 p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+                aria-label={currentLang === 'tr' ? 'Önceki slide' : currentLang === 'en' ? 'Previous slide' : 'الشريحة السابقة'}
+              >
+                <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6" />
+              </button>
+
+              <button
+                onClick={nextSlide}
+                className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-red-600 p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+                aria-label={currentLang === 'tr' ? 'Sonraki slide' : currentLang === 'en' ? 'Next slide' : 'الشريحة التالية'}
+              >
+                <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6" />
+              </button>
+            </div>
+
+            {/* Indicators */}
+            <div className="flex justify-center mt-6 space-x-3">
+              {slides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+                    index === currentSlide
+                      ? 'bg-red-600 scale-125'
+                      : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
+                  aria-label={`${index + 1}. ${currentLang === 'tr' ? 'slide\'a git' : currentLang === 'en' ? 'Go to slide' : 'انتقل إلى الشريحة'}`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Products Section */}
       <section id="products" className="pedizone-section bg-white">
         <div className="pedizone-container">
@@ -933,108 +1035,6 @@ const HomePage = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Slide Section */}
-      <section className="pedizone-section bg-white">
-        <div className="pedizone-container">
-          <div className="text-center mb-12">
-            <h2 className="pedizone-heading text-4xl text-gray-900 mb-4">
-              {currentLang === 'tr' ? 'Profesyonel Ayak Bakımı' : 
-               currentLang === 'en' ? 'Professional Foot Care' : 
-               'العناية المهنية بالأقدام'}
-            </h2>
-            <p className="pedizone-text text-xl text-gray-600">
-              {currentLang === 'tr' ? 'Uzman podologlarımızla ayak sağlığınızı koruyun' : 
-               currentLang === 'en' ? 'Protect your foot health with our expert podologists' : 
-               'احم صحة قدميك مع أخصائيي الأقدام الخبراء لدينا'}
-            </p>
-          </div>
-
-          <div className="relative max-w-5xl mx-auto">
-            <div className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-              {/* Slides */}
-              {slides.map((slide, index) => (
-                <div
-                  key={index}
-                  className={`absolute inset-0 transition-opacity duration-500 ${
-                    index === currentSlide ? 'opacity-100' : 'opacity-0'
-                  }`}
-                >
-                  <img
-                    src={slide.image}
-                    alt={slide.title[currentLang]}
-                    className="w-full h-full object-cover"
-                    loading={index === 0 ? 'eager' : 'lazy'}
-                  />
-                  
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                  
-                  {/* Content */}
-                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 text-white">
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3">
-                      {slide.title[currentLang]}
-                    </h3>
-                    <p className="text-sm sm:text-base md:text-lg opacity-90 max-w-2xl">
-                      {slide.description[currentLang]}
-                    </p>
-                  </div>
-                </div>
-              ))}
-
-              {/* Navigation Buttons */}
-              <button
-                onClick={prevSlide}
-                className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-red-600 p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
-                aria-label={currentLang === 'tr' ? 'Önceki slide' : currentLang === 'en' ? 'Previous slide' : 'الشريحة السابقة'}
-              >
-                <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6" />
-              </button>
-
-              <button
-                onClick={nextSlide}
-                className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-red-600 p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
-                aria-label={currentLang === 'tr' ? 'Sonraki slide' : currentLang === 'en' ? 'Next slide' : 'الشريحة التالية'}
-              >
-                <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6" />
-              </button>
-            </div>
-
-            {/* Indicators */}
-            <div className="flex justify-center mt-6 space-x-3">
-              {slides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide
-                      ? 'bg-red-600 scale-125'
-                      : 'bg-gray-300 hover:bg-gray-400'
-                  }`}
-                  aria-label={`${index + 1}. ${currentLang === 'tr' ? 'slide\'a git' : currentLang === 'en' ? 'Go to slide' : 'انتقل إلى الشريحة'}`}
-                />
-              ))}
-            </div>
-
-            {/* Auto-play Toggle */}
-            <div className="flex justify-center mt-6">
-              <button
-                onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-                className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-all duration-300 text-sm sm:text-base ${
-                  isAutoPlaying
-                    ? 'bg-green-600 hover:bg-green-700 text-white'
-                    : 'bg-red-600 hover:bg-red-700 text-white'
-                }`}
-              >
-                {isAutoPlaying 
-                  ? (currentLang === 'tr' ? 'Otomatik Durdur' : currentLang === 'en' ? 'Stop Auto' : 'إيقاف التلقائي')
-                  : (currentLang === 'tr' ? 'Otomatik Oynat' : currentLang === 'en' ? 'Auto Play' : 'تشغيل تلقائي')
-                }
-              </button>
-            </div>
           </div>
         </div>
       </section>
