@@ -53,15 +53,15 @@
                 
                 <!-- Language Selector -->
                 <div class="flex items-center space-x-2">
-                    <button class="flex items-center space-x-1 px-3 py-2 rounded-lg bg-white/20 transition-colors">
+                    <button onclick="changeLanguage('tr')" class="flex items-center space-x-1 px-3 py-2 rounded-lg bg-white/20 transition-colors" id="lang-tr">
                         <span class="text-lg">🇹🇷</span>
                         <span class="text-sm">TR</span>
                     </button>
-                    <button class="flex items-center space-x-1 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors">
+                    <button onclick="changeLanguage('en')" class="flex items-center space-x-1 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors" id="lang-en">
                         <span class="text-lg">🇺🇸</span>
                         <span class="text-sm">EN</span>
                     </button>
-                    <button class="flex items-center space-x-1 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors">
+                    <button onclick="changeLanguage('ar')" class="flex items-center space-x-1 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors" id="lang-ar">
                         <span class="text-lg">🇸🇦</span>
                         <span class="text-sm">AR</span>
                     </button>
@@ -69,6 +69,13 @@
             </div>
         </div>
     </header>
+
+    <script>
+        function changeLanguage(lang) {
+            // Ana sayfaya dil parametresi ile yönlendir
+            window.location.href = `/?lang=${lang}#blog`;
+        }
+    </script>
 
     <!-- Breadcrumb -->
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">

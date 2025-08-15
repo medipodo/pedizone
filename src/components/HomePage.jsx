@@ -67,7 +67,7 @@ const HomePage = () => {
         en: 'Our foot care products prepared according to podologists\' expectations',
         ar: 'منتجات العناية بالأقدام التي أعددناها وفقاً لتوقعات أطباء الأقدام'
       },
-      link: '/products'
+      link: '#products'
     },
     {
       image: slide2Foam,
@@ -81,7 +81,7 @@ const HomePage = () => {
         en: 'Special formula foam for deep cleansing and protection.',
         ar: 'رغوة بتركيبة خاصة للتنظيف العميق والحماية.'
       },
-      link: '/product/foam'
+      link: '/product/temizleme-kopugu'
     },
     {
       image: slide3Cream,
@@ -95,7 +95,7 @@ const HomePage = () => {
         en: 'Intensive moisturizing care for cracked heels and dry feet.',
         ar: 'عناية مرطبة مكثفة للكعوب المتشققة والأقدام الجافة.'
       },
-      link: '/product/cream'
+      link: '/product/bakim-serumu'
     },
     {
       image: slide4CrackedHeels,
@@ -109,7 +109,7 @@ const HomePage = () => {
         en: 'Repair and protect your cracked heels with effective formula.',
         ar: 'أصلح واحم كعوبك المتشققة بتركيبة فعالة.'
       },
-      link: '/product/cream'
+      link: '/product/bakim-serumu'
     }
   ]
 
@@ -128,11 +128,11 @@ const HomePage = () => {
 
   const handleSlideClick = (slide) => {
     if (slide.link) {
-      if (slide.link === '/products') {
-        // İlk slide için tüm ürünlere git
-        window.open('/products', '_blank')
+      if (slide.link === '#products') {
+        // İlk slide için ürünler bölümüne scroll yap
+        scrollToProducts()
       } else {
-        // Diğer slide'lar için ilgili ürün sayfasına git
+        // Diğer slide'lar için ilgili ürün sayfasına git (yeni sekmede)
         window.open(slide.link, '_blank')
       }
     }
@@ -1192,12 +1192,17 @@ const HomePage = () => {
                     ></textarea>
                   </div>
                   
-                  <a 
-                    href={`mailto:info@pedizone.com?subject=İletişim Formu - ${formData.name}&body=Ad Soyad: ${formData.name}%0D%0AE-posta: ${formData.email}%0D%0A%0D%0AMesaj:%0D%0A${formData.message}`}
-                    className="w-full pedizone-button inline-flex items-center justify-center px-4 py-3 rounded-xl font-medium transition-colors"
+                  <Button 
+                    type="button"
+                    className="w-full pedizone-button"
+                    onClick={() => {
+                      const subject = encodeURIComponent(`İletişim Formu - ${formData.name}`)
+                      const body = encodeURIComponent(`Ad Soyad: ${formData.name}\nE-posta: ${formData.email}\n\nMesaj:\n${formData.message}`)
+                      window.location.href = `mailto:info@pedizone.com?subject=${subject}&body=${body}`
+                    }}
                   >
                     {t.contact.form.submit}
-                  </a>
+                  </Button>
                 </form>
               </CardContent>
             </Card>
