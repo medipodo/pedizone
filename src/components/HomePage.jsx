@@ -122,12 +122,14 @@ const HomePage = () => {
   useEffect(() => {
     let interval
     if (isAutoPlaying) {
-      interval = setInterval(nextSlide, 4000)
+      interval = setInterval(() => {
+        setCurrentSlide(prev => (prev + 1) % slides.length)
+      }, 4000)
     }
     return () => {
       if (interval) clearInterval(interval)
     }
-  }, [isAutoPlaying])
+  }, [isAutoPlaying, slides.length])
 
   // Handle form input changes
   const handleInputChange = (e) => {
