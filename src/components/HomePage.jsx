@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Menu, X, ChevronLeft, ChevronRight } from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Menu, X } from 'lucide-react'
 import { Button } from './ui/button'
 import { Card, CardContent } from './ui/card'
 import { Badge } from './ui/badge'
@@ -114,28 +114,8 @@ const HomePage = () => {
   ]
 
   // Slide functions
-  const nextSlide = () => {
-    setCurrentSlide(prev => (prev + 1) % slides.length)
-  }
-
-  const prevSlide = () => {
-    setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length)
-  }
-
   const goToSlide = (index) => {
     setCurrentSlide(index)
-  }
-
-  const handleSlideClick = (slide) => {
-    if (slide.link) {
-      if (slide.link === '#products') {
-        // İlk slide için ürünler bölümüne scroll yap
-        scrollToProducts()
-      } else {
-        // Diğer slide'lar için ilgili ürün sayfasına git (yeni sekmede)
-        window.open(slide.link, '_blank')
-      }
-    }
   }
 
   // Auto-play effect
@@ -837,49 +817,18 @@ const HomePage = () => {
               {slides.map((slide, index) => (
                 <div
                   key={index}
-                  className={`absolute inset-0 transition-opacity duration-500 cursor-pointer ${
+                  className={`absolute inset-0 transition-opacity duration-500 ${
                     index === currentSlide ? 'opacity-100' : 'opacity-0'
                   }`}
-                  onClick={() => handleSlideClick(slide)}
                 >
                   <img
                     src={slide.image}
-                    alt={slide.title[currentLang]}
+                    alt={`Slide ${index + 1}`}
                     className="w-full h-full object-cover"
                     loading={index === 0 ? 'eager' : 'lazy'}
                   />
-                  
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                  
-                  {/* Content */}
-                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 text-white">
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3">
-                      {slide.title[currentLang]}
-                    </h3>
-                    <p className="text-sm sm:text-base md:text-lg opacity-90 max-w-2xl">
-                      {slide.description[currentLang]}
-                    </p>
-                  </div>
                 </div>
               ))}
-
-              {/* Navigation Buttons */}
-              <button
-                onClick={prevSlide}
-                className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-red-600 p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
-                aria-label={currentLang === 'tr' ? 'Önceki slide' : currentLang === 'en' ? 'Previous slide' : 'الشريحة السابقة'}
-              >
-                <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6" />
-              </button>
-
-              <button
-                onClick={nextSlide}
-                className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-red-600 p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
-                aria-label={currentLang === 'tr' ? 'Sonraki slide' : currentLang === 'en' ? 'Next slide' : 'الشريحة التالية'}
-              >
-                <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6" />
-              </button>
             </div>
 
             {/* Indicators */}
@@ -893,7 +842,7 @@ const HomePage = () => {
                       ? 'bg-red-600 scale-125'
                       : 'bg-gray-300 hover:bg-gray-400'
                   }`}
-                  aria-label={`${index + 1}. ${currentLang === 'tr' ? 'slide\'a git' : currentLang === 'en' ? 'Go to slide' : 'انتقل إلى الشريحة'}`}
+                  aria-label={`${index + 1}. slide'a git`}
                 />
               ))}
             </div>
