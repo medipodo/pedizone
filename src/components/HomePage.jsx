@@ -7,8 +7,8 @@ import { Badge } from './ui/badge'
 
 // Import images
 import productSerum from '../assets/IMG_7571_optimized.webp'
-import productFoam from '../assets/Pedizone Foot Foam.jpg'
-import productSerum2 from '../assets/pedizone-urea-cream.jpg'
+import productFoam from '../assets/Pedizone-Foot-Foam-optimized.png'
+import productSerum2 from '../assets/pedizone-urea-cream-optimized.png'
 import solutionImage1 from '../assets/ayak-mantari-tedavi.webp'
 import solutionImage2 from '../assets/foot-callus-problem.jpg'
 import solutionImage3 from '../assets/foot-crack-problem.jpg'
@@ -18,10 +18,10 @@ import blogTirnakMantari from '../assets/tirnak-mantari-cesitleri.jpg'
 import blogSerumKullanimi from '../assets/pedizone-serum-kullanimi.jpg'
 
 // Import slide images
-import slide1Podolog from '../assets/slide-1-podolog.jpg'
-import slide2Foam from '../assets/slide-2-foam.jpg'
-import slide3Cream from '../assets/slide-3-cream.jpg'
-import slide4CrackedHeels from '../assets/slide-4-cracked-heels.jpg'
+import slide1Podolog from '../assets/slide-1-podolog-optimized.png'
+import slide2Foam from '../assets/slide-2-foam-optimized.png'
+import slide3Cream from '../assets/slide-3-cream-optimized.png'
+import slide4CrackedHeels from '../assets/slide-4-cracked-heels-optimized.png'
 
 const HomePage = () => {
   const navigate = useNavigate()
@@ -828,6 +828,7 @@ const HomePage = () => {
                     alt={`Slide ${index + 1}`}
                     className="w-full h-full object-cover"
                     loading={index === 0 ? 'eager' : 'lazy'}
+                    fetchPriority={index === 0 ? 'high' : 'low'}
                   />
                 </div>
               ))}
