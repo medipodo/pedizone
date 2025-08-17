@@ -157,7 +157,7 @@
   }
   
   .pedizone-section.hero-section {
-    @apply py-8 px-4;
+    @apply py-4 px-4 md:py-6 lg:py-8;
   }
   
   .pedizone-container {

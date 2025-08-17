@@ -736,9 +736,9 @@ const HomePage = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="hero-section bg-gray-50">
+      <section id="home" className="hero-section bg-gray-50 min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh] flex items-center">
         <div className="pedizone-container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center py-8 lg:py-12">
             <div className="space-y-8">
               <div className="space-y-6">
                 <Badge className="bg-red-100 text-red-800 px-4 py-2 text-sm font-medium">
