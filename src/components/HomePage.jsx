@@ -9,11 +9,11 @@ import { Badge } from './ui/badge'
 import productSerum from '../assets/IMG_7571_optimized.webp'
 import productFoam from '../assets/Pedizone-Foot-Foam-optimized.png'
 import productSerum2 from '../assets/pedizone-urea-cream-optimized.png'
-import solutionImage1 from '../assets/ayak-mantari-tedavi.webp'
-import solutionImage2 from '../assets/foot-callus-problem.jpg'
+import solutionImage1 from '../assets/ayak-mantari-tedavi-optimized.png'
+import solutionImage2 from '../assets/foot-callus-problem-optimized.png'
 import solutionImage3 from '../assets/foot-crack-problem.jpg'
 import solutionImage4 from '../assets/foot-odor-problem.jpg'
-import blogAyakMantari from '../assets/ayak-mantari-tedavi.webp'
+import blogAyakMantari from '../assets/ayak-mantari-tedavi-optimized.png'
 import blogTirnakMantari from '../assets/tirnak-mantari-cesitleri.jpg'
 import blogSerumKullanimi from '../assets/pedizone-serum-kullanimi.jpg'
 
@@ -778,18 +778,24 @@ const HomePage = () => {
                   className="rounded-2xl shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300"
                   fetchpriority="high"
                   loading="eager"
+                  width="400"
+                  height="400"
                 />
                 <img 
                   src={productFoam} 
                   alt="PediZone Köpük" 
                   className="rounded-2xl shadow-lg transform -rotate-3 hover:rotate-0 transition-transform duration-300 mt-8 md:mt-0"
                   loading="lazy"
+                  width="400"
+                  height="400"
                 />
                 <img 
                   src={productSerum2} 
                   alt="PediZone Bakım Serumu" 
                   className="rounded-2xl shadow-lg transform rotate-2 hover:rotate-0 transition-transform duration-300 col-span-2 md:col-span-1 mt-4 md:mt-8"
                   loading="lazy"
+                  width="400"
+                  height="400"
                 />
               </div>
             </div>
@@ -814,7 +820,7 @@ const HomePage = () => {
           </div>
 
           <div className="relative max-w-5xl mx-auto">
-            <div className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl" style={{aspectRatio: '21/9'}}>
               {/* Slides */}
               {slides.map((slide, index) => (
                 <div
@@ -829,6 +835,8 @@ const HomePage = () => {
                     className="w-full h-full object-cover"
                     loading={index === 0 ? 'eager' : 'lazy'}
                     fetchPriority={index === 0 ? 'high' : 'low'}
+                    width="1200"
+                    height="500"
                   />
                 </div>
               ))}
