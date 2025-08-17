@@ -806,13 +806,13 @@ const HomePage = () => {
       {/* Slide Section */}
       <section className="pedizone-section bg-white">
         <div className="pedizone-container">
-          <div className="text-center mb-12">
-            <h2 className="pedizone-heading text-4xl text-gray-900 mb-4">
+          <div className="text-center mb-6 md:mb-12">
+            <h2 className="pedizone-heading text-3xl md:text-4xl text-gray-900 mb-4">
               {currentLang === 'tr' ? 'Profesyonel Ayak Bakımı' : 
                currentLang === 'en' ? 'Professional Foot Care' : 
                'العناية المهنية بالأقدام'}
             </h2>
-            <p className="pedizone-text text-xl text-gray-600">
+            <p className="pedizone-text text-lg md:text-xl text-gray-600">
               {currentLang === 'tr' ? 'Uzman podologlarımızla ayak sağlığınızı koruyun' : 
                currentLang === 'en' ? 'Protect your foot health with our expert podologists' : 
                'احم صحة قدميك مع أخصائيي الأقدام الخبراء لدينا'}
@@ -820,7 +820,7 @@ const HomePage = () => {
           </div>
 
           <div className="relative max-w-5xl mx-auto">
-            <div className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl" style={{aspectRatio: '21/9'}}>
+            <div className="relative h-48 sm:h-64 md:h-80 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl" style={{aspectRatio: '21/9'}}>
               {/* Slides */}
               {slides.map((slide, index) => (
                 <div
@@ -843,7 +843,7 @@ const HomePage = () => {
             </div>
 
             {/* Indicators */}
-            <div className="flex justify-center mt-6 space-x-3">
+            <div className="flex justify-center mt-4 md:mt-6 space-x-3">
               {slides.map((_, index) => (
                 <button
                   key={index}
