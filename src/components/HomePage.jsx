@@ -18,9 +18,9 @@ import blogTirnakMantari from '../assets/tirnak-mantari-cesitleri.jpg'
 import blogSerumKullanimi from '../assets/pedizone-serum-kullanimi.jpg'
 
 // Import slide images
-import slide1 from '../assets/slide-1-podolog-ultra-optimized.png'
-import slide2 from '../assets/slide-2-foam-ultra-optimized.png'
-import slide3 from '../assets/slide-3-cream-ultra-optimized.png'
+import slide1 from '../assets/slide-1-podolog-new.png'
+import slide2 from '../assets/slide-2-foot-care-collection.png'
+import slide3 from '../assets/slide-3-foam-usage.png'
 import slide4 from '../assets/slide-4-cracked-heels-ultra-optimized.png'
 
 const HomePage = () => {
@@ -72,30 +72,30 @@ const HomePage = () => {
     {
       image: slide2,
       title: {
+        tr: 'PediZone® Ürün Koleksiyonu',
+        en: 'PediZone® Product Collection',
+        ar: 'مجموعة منتجات PediZone®'
+      },
+      description: {
+        tr: 'Ayak bakımı için geliştirilmiş komple ürün serisi.',
+        en: 'Complete product series developed for foot care.',
+        ar: 'سلسلة منتجات كاملة مطورة للعناية بالأقدام.'
+      },
+      link: '#products'
+    },
+    {
+      image: slide3,
+      title: {
         tr: 'PediZone® Temizleme Köpüğü',
         en: 'PediZone® Cleansing Foam',
         ar: 'رغوة التنظيف PediZone®'
       },
       description: {
-        tr: 'Derinlemesine temizlik ve koruma için özel formül köpük.',
-        en: 'Special formula foam for deep cleansing and protection.',
-        ar: 'رغوة بتركيبة خاصة للتنظيف العميق والحماية.'
+        tr: 'Günlük ayak temizliği için etkili köpük formülü.',
+        en: 'Effective foam formula for daily foot cleansing.',
+        ar: 'تركيبة رغوة فعالة لتنظيف القدمين اليومي.'
       },
       link: '/product/temizleme-kopugu'
-    },
-    {
-      image: slide3,
-      title: {
-        tr: 'PediZone® %15 Üreli Krem',
-        en: 'PediZone® 15% Urea Cream',
-        ar: 'كريم اليوريا 15% PediZone®'
-      },
-      description: {
-        tr: 'Çatlak topuk ve kuru ayaklar için yoğun nemlendirici bakım.',
-        en: 'Intensive moisturizing care for cracked heels and dry feet.',
-        ar: 'عناية مرطبة مكثفة للكعوب المتشققة والأقدام الجافة.'
-      },
-      link: '/product/bakim-serumu'
     },
     {
       image: slide4,
@@ -819,8 +819,8 @@ const HomePage = () => {
             </p>
           </div>
 
-          <div className="relative max-w-5xl mx-auto">
-            <div className="relative h-40 sm:h-48 md:h-56 lg:h-64 rounded-2xl overflow-hidden shadow-2xl" style={{aspectRatio: '16/9'}}>
+          <div className="relative w-full">
+            <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 rounded-2xl overflow-hidden shadow-2xl" style={{aspectRatio: '16/9'}}>
               {/* Slides */}
               {slides.map((slide, index) => (
                 <div
