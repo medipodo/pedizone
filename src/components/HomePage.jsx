@@ -19,7 +19,7 @@ import blogSerumKullanimi from '../assets/pedizone-serum-kullanimi.jpg'
 
 // Import slide images
 import slide1 from '../assets/slide-1-podolog-new.png'
-import slide2 from '../assets/slide-2-foot-care-collection.png'
+import slide2 from '../assets/slide-2-foot-care-fixed.png'
 import slide3 from '../assets/slide-3-foam-usage.png'
 import slide4 from '../assets/slide-4-cracked-heels-ultra-optimized.png'
 
@@ -804,8 +804,8 @@ const HomePage = () => {
       </section>
 
       {/* Slide Section */}
-      <section className="pedizone-section bg-white">
-        <div className="pedizone-container">
+      <section className="bg-white py-12 md:py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-6 md:mb-12">
             <h2 className="pedizone-heading text-3xl md:text-4xl text-gray-900 mb-4">
               {currentLang === 'tr' ? 'Profesyonel Ayak Bakımı' : 
@@ -819,7 +819,7 @@ const HomePage = () => {
             </p>
           </div>
 
-          <div className="relative w-full">
+          <div className="relative">
             <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 rounded-2xl overflow-hidden shadow-2xl" style={{aspectRatio: '16/9'}}>
               {/* Slides */}
               {slides.map((slide, index) => (
