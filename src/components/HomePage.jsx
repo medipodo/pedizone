@@ -18,10 +18,10 @@ import blogTirnakMantari from '../assets/tirnak-mantari-cesitleri.jpg'
 import blogSerumKullanimi from '../assets/pedizone-serum-kullanimi.jpg'
 
 // Import slide images
-import slide1Podolog from '../assets/slide-1-podolog-optimized.png'
-import slide2Foam from '../assets/slide-2-foam-optimized.png'
-import slide3Cream from '../assets/slide-3-cream-optimized.png'
-import slide4CrackedHeels from '../assets/slide-4-cracked-heels-optimized.png'
+import slide1 from '../assets/slide-1-podolog-ultra-optimized.png'
+import slide2 from '../assets/slide-2-foam-ultra-optimized.png'
+import slide3 from '../assets/slide-3-cream-ultra-optimized.png'
+import slide4 from '../assets/slide-4-cracked-heels-ultra-optimized.png'
 
 const HomePage = () => {
   const navigate = useNavigate()
@@ -820,7 +820,7 @@ const HomePage = () => {
           </div>
 
           <div className="relative max-w-5xl mx-auto">
-            <div className="relative h-48 sm:h-64 md:h-80 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl" style={{aspectRatio: '21/9'}}>
+            <div className="relative h-40 sm:h-48 md:h-56 lg:h-64 rounded-2xl overflow-hidden shadow-2xl" style={{aspectRatio: '16/9'}}>
               {/* Slides */}
               {slides.map((slide, index) => (
                 <div
