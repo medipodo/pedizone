@@ -19,7 +19,6 @@ import blogSerumKullanimi from '../assets/pedizone-serum-kullanimi.jpg'
 
 // Import slide images
 import slide1 from '../assets/slide-1-podolog-new.png'
-import slide2 from '../assets/slide-2-foot-care-fixed.png'
 import slide3 from '../assets/slide-3-foam-usage.png'
 import slide4 from '../assets/slide-4-cracked-heels-ultra-optimized.png'
 
@@ -66,20 +65,6 @@ const HomePage = () => {
         tr: 'Podologların beklentilerine yönelik hazırladığımız ayak bakım ürünlerimiz',
         en: 'Our foot care products prepared according to podologists\' expectations',
         ar: 'منتجات العناية بالأقدام التي أعددناها وفقاً لتوقعات أطباء الأقدام'
-      },
-      link: '#products'
-    },
-    {
-      image: slide2,
-      title: {
-        tr: 'PediZone® Ürün Koleksiyonu',
-        en: 'PediZone® Product Collection',
-        ar: 'مجموعة منتجات PediZone®'
-      },
-      description: {
-        tr: 'Ayak bakımı için geliştirilmiş komple ürün serisi.',
-        en: 'Complete product series developed for foot care.',
-        ar: 'سلسلة منتجات كاملة مطورة للعناية بالأقدام.'
       },
       link: '#products'
     },
