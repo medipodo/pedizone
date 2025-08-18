@@ -56,7 +56,7 @@ const HomePage = () => {
   // Slide data
   const slides = [
     {
-      image: slide1Podolog,
+      image: slide1,
       title: {
         tr: 'Podologların Önerdiği',
         en: 'Recommended by Podologists',
@@ -70,7 +70,7 @@ const HomePage = () => {
       link: '#products'
     },
     {
-      image: slide2Foam,
+      image: slide2,
       title: {
         tr: 'PediZone® Temizleme Köpüğü',
         en: 'PediZone® Cleansing Foam',
@@ -84,7 +84,7 @@ const HomePage = () => {
       link: '/product/temizleme-kopugu'
     },
     {
-      image: slide3Cream,
+      image: slide3,
       title: {
         tr: 'PediZone® %15 Üreli Krem',
         en: 'PediZone® 15% Urea Cream',
@@ -98,7 +98,7 @@ const HomePage = () => {
       link: '/product/bakim-serumu'
     },
     {
-      image: slide4CrackedHeels,
+      image: slide4,
       title: {
         tr: 'Çatlak Topuk Tedavisi',
         en: 'Cracked Heel Treatment',
