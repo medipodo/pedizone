@@ -8,7 +8,7 @@ import { Badge } from './ui/badge'
 // Import images
 import productSerum from '../assets/IMG_7571_optimized.webp'
 import productFoam from '../assets/Pedizone-Foot-Foam-optimized.png'
-import productSerum2 from '../assets/pedizone-urea-cream-optimized.png'
+import productSerum2 from '../assets/pedizone-urea-cream-new.png'
 import solutionImage1 from '../assets/ayak-mantari-tedavi-optimized.png'
 import solutionImage2 from '../assets/foot-callus-problem-optimized.png'
 import solutionImage3 from '../assets/foot-crack-problem.jpg'
