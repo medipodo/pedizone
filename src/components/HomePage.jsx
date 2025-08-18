@@ -790,7 +790,7 @@ const HomePage = () => {
 
       {/* Slide Section */}
       <section className="bg-white py-12 md:py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-6 md:mb-12">
             <h2 className="pedizone-heading text-3xl md:text-4xl text-gray-900 mb-4">
               {currentLang === 'tr' ? 'Profesyonel Ayak Bakımı' : 
@@ -804,8 +804,8 @@ const HomePage = () => {
             </p>
           </div>
 
-          <div className="relative">
-            <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 rounded-2xl overflow-hidden shadow-2xl" style={{aspectRatio: '16/9'}}>
+          <div className="relative mx-auto max-w-5xl">
+            <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 rounded-2xl overflow-hidden shadow-2xl mx-auto" style={{aspectRatio: '16/9'}}>
               {/* Slides */}
               {slides.map((slide, index) => (
                 <div

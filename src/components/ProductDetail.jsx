@@ -8,7 +8,7 @@ import { Card, CardContent } from './ui/card'
 // Import product images
 import productSerum from '../assets/IMG_7571_optimized.webp'
 import productFoam from '../assets/Pedizone Foot Foam.jpg'
-import productSerum2 from '../assets/pedizone-urea-cream.jpg'
+import productSerum2 from '../assets/pedizone-urea-cream-new.png'
 
 const ProductDetail = () => {
   const { productId } = useParams()
