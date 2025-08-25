@@ -2,8 +2,6 @@ backend:
   name: github
   repo: medipodo/pedizone
   branch: main
-  base_url: https://api.netlify.com
-  auth_endpoint: auth
 
 media_folder: "public/blog/images"
 public_folder: "/blog/images"
