@@ -2,6 +2,9 @@ backend:
   name: github
   repo: medipodo/pedizone
   branch: main
+  auth_type: implicit
+  base_url: https://github.com
+  auth_endpoint: login/oauth/authorize
 
 media_folder: "public/blog/images"
 public_folder: "/blog/images"
@@ -23,15 +26,4 @@ collections:
       - {label: "SEO Başlık", name: "seo_title", widget: "string", required: false}
       - {label: "SEO Açıklama", name: "seo_description", widget: "text", required: false}
       - {label: "Yayında", name: "published", widget: "boolean", default: true}
-
-  - name: "pages"
-    label: "Sayfalar"
-    files:
-      - label: "Blog Ana Sayfa"
-        name: "blog_index"
-        file: "public/blog/index.html"
-        fields:
-          - {label: "Sayfa Başlığı", name: "title", widget: "string"}
-          - {label: "Açıklama", name: "description", widget: "text"}
-          - {label: "İçerik", name: "body", widget: "markdown"}
 
