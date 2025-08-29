@@ -243,6 +243,14 @@ const HomePage = () => {
         subtitle: 'Ayak sağlığı rehberi ve uzman tavsiyeleri',
         items: [
           {
+            title: 'Medikal Ayak Bakımı Nedir?',
+            excerpt: 'Medikal ayak bakımı; hijyenik koşullarda, medikal cihazlar ve profesyonel ürünler kullanılarak podologlar tarafından yapılan, ayak ve tırnak sağlığını korumaya yönelik uygulamalardır.',
+            readTime: '8 dakika',
+            tags: ['medikal ayak bakımı', 'podolog', 'ayak sağlığı'],
+            image: blogAyakMantari,
+            link: '/blog/medikal-ayak-bakimi-nedir.html'
+          },
+          {
             title: 'Ayak Mantarı Nedir, Neden Olur?',
             excerpt: 'Ayak mantarı, özellikle ayak parmak aralarında oluşan ve kaşıntı, kızarıklık, kötü koku gibi belirtilerle kendini gösteren bulaşıcı bir cilt enfeksiyonudur.',
             readTime: '5 dakika',
@@ -389,6 +397,13 @@ const HomePage = () => {
         subtitle: 'Foot health guide and expert advice',
         items: [
           {
+            title: 'What is Medical Foot Care?',
+            excerpt: 'Medical foot care is the application of foot and nail health care performed by podologists using medical devices and professional products in hygienic conditions.',
+            readTime: '8 min',
+            tags: ['medical foot care', 'podologist', 'foot health'],
+            image: blogAyakMantari
+          },
+          {
             title: 'What is Foot Fungus, Why Does It Occur?',
             excerpt: 'Foot fungus is a contagious skin infection that occurs especially between the toes and manifests itself with symptoms such as itching, redness, and bad odor.',
             readTime: '5 min',
@@ -531,6 +546,13 @@ const HomePage = () => {
         title: 'مدونة بيديزون',
         subtitle: 'دليل صحة القدم ونصائح الخبراء',
         items: [
+          {
+            title: 'ما هي العناية الطبية بالقدم؟',
+            excerpt: 'العناية الطبية بالقدم هي تطبيق العناية بصحة القدم والأظافر التي يقوم بها أطباء الأقدام باستخدام الأجهزة الطبية والمنتجات المهنية في ظروف صحية.',
+            readTime: '8 دقائق',
+            tags: ['العناية الطبية بالقدم', 'طبيب الأقدام', 'صحة القدم'],
+            image: blogAyakMantari
+          },
           {
             title: 'ما هي فطريات القدم، لماذا تحدث؟',
             excerpt: 'فطريات القدم هي عدوى جلدية معدية تحدث خاصة بين أصابع القدم وتظهر بأعراض مثل الحكة والاحمرار والرائحة الكريهة.',
