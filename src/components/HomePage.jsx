@@ -13,9 +13,10 @@ import solutionImage1 from '../assets/ayak-mantari-tedavi-optimized.png'
 import solutionImage2 from '../assets/foot-callus-problem-optimized.png'
 import solutionImage3 from '../assets/foot-crack-problem.jpg'
 import solutionImage4 from '../assets/foot-odor-problem.jpg'
-import blogAyakMantari from '../assets/ayak-mantari-tedavi-optimized.png'
+import blogAyakMantari from '../assets/blog/ayak-mantari-yeni.jpg'
 import blogTirnakMantari from '../assets/tirnak-mantari-cesitleri.jpg'
 import blogSerumKullanimi from '../assets/pedizone-serum-kullanimi.jpg'
+import blogMedikalAyakBakimi from '../assets/blog/medikal-ayak-bakimi.jpg'
 
 // Import slide images
 import slide1 from '../assets/slide-1-podolog-new.png'
@@ -247,7 +248,7 @@ const HomePage = () => {
             excerpt: 'Medikal ayak bakımı; hijyenik koşullarda, medikal cihazlar ve profesyonel ürünler kullanılarak podologlar tarafından yapılan, ayak ve tırnak sağlığını korumaya yönelik uygulamalardır.',
             readTime: '8 dakika',
             tags: ['medikal ayak bakımı', 'podolog', 'ayak sağlığı'],
-            image: blogAyakMantari,
+            image: blogMedikalAyakBakimi,
             link: '/blog/medikal-ayak-bakimi-nedir.html'
           },
           {
@@ -401,7 +402,7 @@ const HomePage = () => {
             excerpt: 'Medical foot care is the application of foot and nail health care performed by podologists using medical devices and professional products in hygienic conditions.',
             readTime: '8 min',
             tags: ['medical foot care', 'podologist', 'foot health'],
-            image: blogAyakMantari
+            image: blogMedikalAyakBakimi
           },
           {
             title: 'What is Foot Fungus, Why Does It Occur?',
@@ -551,7 +552,7 @@ const HomePage = () => {
             excerpt: 'العناية الطبية بالقدم هي تطبيق العناية بصحة القدم والأظافر التي يقوم بها أطباء الأقدام باستخدام الأجهزة الطبية والمنتجات المهنية في ظروف صحية.',
             readTime: '8 دقائق',
             tags: ['العناية الطبية بالقدم', 'طبيب الأقدام', 'صحة القدم'],
-            image: blogAyakMantari
+            image: blogMedikalAyakBakimi
           },
           {
             title: 'ما هي فطريات القدم، لماذا تحدث؟',
