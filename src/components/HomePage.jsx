@@ -812,9 +812,9 @@ const HomePage = () => {
       </section>
 
       {/* Slide Section */}
-      <section className="bg-white py-12 md:py-16 lg:py-20">
+      <section className="bg-white py-6 md:py-8 lg:py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-6 md:mb-12">
+          <div className="text-center mb-4 md:mb-6">
             <h2 className="pedizone-heading text-3xl md:text-4xl text-gray-900 mb-4">
               {currentLang === 'tr' ? 'Profesyonel Ayak Bakımı' : 
                currentLang === 'en' ? 'Professional Foot Care' : 
@@ -872,7 +872,7 @@ const HomePage = () => {
       {/* Products Section */}
       <section id="products" className="pedizone-section bg-white">
         <div className="pedizone-container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="pedizone-heading text-4xl text-gray-900 mb-4">
               {t.products.title}
             </h2>
@@ -932,7 +932,7 @@ const HomePage = () => {
       {/* Solutions Section */}
       <section id="solutions" className="pedizone-section bg-white">
         <div className="pedizone-container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="pedizone-heading text-4xl text-gray-900 mb-4">
               {t.solutions.title}
             </h2>
@@ -981,7 +981,7 @@ const HomePage = () => {
       {/* About Section */}
       <section id="about" className="pedizone-section bg-gray-50">
         <div className="pedizone-container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="pedizone-heading text-4xl text-gray-900 mb-4">
               {t.about.title}
             </h2>
@@ -1010,7 +1010,7 @@ const HomePage = () => {
       {/* Blog Section */}
       <section id="blog" className="pedizone-section bg-white">
         <div className="pedizone-container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="pedizone-heading text-4xl text-gray-900 mb-4">
               {t.blog.title}
             </h2>
@@ -1070,7 +1070,7 @@ const HomePage = () => {
       {/* Contact Section */}
       <section id="contact" className="pedizone-section bg-gray-50">
         <div className="pedizone-container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="pedizone-heading text-4xl text-gray-900 mb-4">
               {t.contact.title}
             </h2>
