@@ -163,7 +163,7 @@ const HomePage = () => {
         items: [
           {
             id: 'mantar-karsiti-serum',
-            name: 'PediZone® Mantar Karşıtı Serum',
+            name: 'PediZone® Foot and Nail Care Serum',
             description: 'Ayak ve tırnak mantarı için özel formül',
             image: productSerum,
             badge: 'En Popüler',
@@ -269,9 +269,9 @@ const HomePage = () => {
           },
           {
             title: 'Mantar İçin Serum Kullanmanın Önemi',
-            excerpt: 'Mantar enfeksiyonlarında doğru ürünle yapılan topikal tedavi, iyileşme sürecini doğrudan etkiler. PediZone 50 Ml Serum ile serum formundaki ürünlerin avantajlarını keşfedin.',
+            excerpt: 'Mantar enfeksiyonlarında doğru ürünle yapılan topikal tedavi, iyileşme sürecini doğrudan etkiler. PediZone® Foot and Nail Care Serum ile serum formundaki ürünlerin avantajlarını keşfedin.',
             readTime: '7 dakika',
-            tags: ['mantar serumu', 'PediZone', 'topikal tedavi'],
+            tags: ['foot care serum', 'PediZone', 'topikal tedavi'],
             image: blogSerumKullanimi,
             link: '/blog/serum-kullanim-onemi.html'
           }
@@ -420,7 +420,7 @@ const HomePage = () => {
           },
           {
             title: 'The Importance of Using Serum for Fungus',
-            excerpt: 'Topical treatment with the right product in fungal infections directly affects the healing process. Discover the advantages of serum-form products with PediZone 50 Ml Serum.',
+            excerpt: 'Topical treatment with the right product in fungal infections directly affects the healing process. Discover the advantages of serum-form products with PediZone® Foot and Nail Care Serum.',
             readTime: '7 min',
             tags: ['fungus serum', 'PediZone', 'topical treatment'],
             image: blogSerumKullanimi
