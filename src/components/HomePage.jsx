@@ -164,7 +164,7 @@ const HomePage = () => {
           {
             id: 'mantar-karsiti-serum',
             name: 'PediZone® Foot and Nail Care Serum',
-            description: 'Ayak ve tırnak mantarı için özel formül',
+            description: 'Ayak ve tırnak bakımı için etkili formül',
             image: productSerum,
             badge: 'En Popüler',
             features: ['Hızlı etki', 'Doğal içerik', 'Günlük kullanım', 'Podolog onaylı']

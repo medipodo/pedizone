@@ -23,8 +23,8 @@ const ProductDetail = () => {
   const products = {
     'mantar-karsiti-serum': {
       id: 'mantar-karsiti-serum',
-      name: 'PediZone® Mantar Karşıtı Serum',
-      description: 'Ayak ve tırnak mantarı için özel formül',
+      name: 'PediZone® Foot and Nail Care Serum',
+      description: 'Ayak ve tırnak bakımı için etkili formül',
       image: productSerum,
       badge: 'En Popüler',
       features: [
@@ -33,7 +33,7 @@ const ProductDetail = () => {
         'Günlük kullanım',
         'Podolog onaylı'
       ],
-      detailedDescription: 'PediZone® Mantar Karşıtı Serum, ayak ve tırnak mantarı problemlerine karşı geliştirilmiş etkili bir çözümdür. Doğal aktif bileşenleri sayesinde mantarla mücadele ederken cildi besler ve korur.',
+      detailedDescription: 'Ayaklarımız gün boyu ayakkabı içinde kalan, nem ve sürtünmeye maruz kalan bölgelerimizdir. Bu durum zamanla ayaklarda kötü kokuya, tırnaklarda mat görünüme ve ciltte yıpranmaya yol açabilir. Düzenli bakım, hem sağlıklı hem de ferah bir his için oldukça önemlidir. PediZone® Foot and Nail Care Serum, ayak ve tırnakların daha bakımlı görünümünü desteklemek üzere özel olarak geliştirilmiştir.\n\nSerumun içeriğinde bulunan doğal aktif bileşenler, cildi beslemeye ve korumaya yardımcı olur. Düzenli kullanımda ayak ve tırnakların doğal yapısını destekler, kötü kokuların azalmasına katkı sağlar ve ferah bir his verir. Böylece ayaklarınız gün boyu rahat ve bakımlı kalır.\n\nGünlük ayak bakım rutininize PediZone® Foot and Nail Care Serum\'u dahil etmek oldukça kolaydır. Öncelikle ayaklarınızı temizleyip iyice kurulayın. Ardından birkaç damla serumu tırnaklarınıza ve çevresine uygulayın, hafifçe masaj yaparak emilmesini sağlayın. Düzenli kullanım, ayak bakımınızın bir parçası haline geldiğinde etkili sonuçlar almanıza yardımcı olacaktır.\n\nUzmanlar, sağlıklı ayaklar için haftada birkaç kez peeling veya ayak banyosu yapmayı, sonrasında ise nemlendirici ve bakım ürünleri kullanmayı önermektedir. PediZone® Serum, bu rutini tamamlayan güçlü bir bakım desteği sunar. Düzenli bakım ile hem tırnaklarınız hem de cildiniz daha sağlıklı bir görünüme kavuşur.\n\nUnutmayın, ayak sağlığı günlük yaşam konforunun önemli bir parçasıdır. PediZone® ile ayak ve tırnaklarınıza düzenli bakım yaparak ferah, sağlıklı ve bakımlı hissetmenin keyfini çıkarabilirsiniz.',
       ingredients: [
         'Tea Tree Oil - Doğal antifungal etki',
         'Urea - Nemlendirici ve yumuşatıcı',
