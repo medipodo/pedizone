@@ -33,7 +33,35 @@ const ProductDetail = () => {
         'Günlük kullanım',
         'Podolog onaylı'
       ],
-      detailedDescription: 'Ayaklarımız gün boyu ayakkabı içinde kalan, nem ve sürtünmeye maruz kalan bölgelerimizdir. Bu durum zamanla ayaklarda kötü kokuya, tırnaklarda mat görünüme ve ciltte yıpranmaya yol açabilir. Düzenli bakım, hem sağlıklı hem de ferah bir his için oldukça önemlidir. PediZone® Foot and Nail Care Serum, ayak ve tırnakların daha bakımlı görünümünü desteklemek üzere özel olarak geliştirilmiştir.\n\nSerumun içeriğinde bulunan doğal aktif bileşenler, cildi beslemeye ve korumaya yardımcı olur. Düzenli kullanımda ayak ve tırnakların doğal yapısını destekler, kötü kokuların azalmasına katkı sağlar ve ferah bir his verir. Böylece ayaklarınız gün boyu rahat ve bakımlı kalır.\n\nGünlük ayak bakım rutininize PediZone® Foot and Nail Care Serum\'u dahil etmek oldukça kolaydır. Öncelikle ayaklarınızı temizleyip iyice kurulayın. Ardından birkaç damla serumu tırnaklarınıza ve çevresine uygulayın, hafifçe masaj yaparak emilmesini sağlayın. Düzenli kullanım, ayak bakımınızın bir parçası haline geldiğinde etkili sonuçlar almanıza yardımcı olacaktır.\n\nUzmanlar, sağlıklı ayaklar için haftada birkaç kez peeling veya ayak banyosu yapmayı, sonrasında ise nemlendirici ve bakım ürünleri kullanmayı önermektedir. PediZone® Serum, bu rutini tamamlayan güçlü bir bakım desteği sunar. Düzenli bakım ile hem tırnaklarınız hem de cildiniz daha sağlıklı bir görünüme kavuşur.\n\nUnutmayın, ayak sağlığı günlük yaşam konforunun önemli bir parçasıdır. PediZone® ile ayak ve tırnaklarınıza düzenli bakım yaparak ferah, sağlıklı ve bakımlı hissetmenin keyfini çıkarabilirsiniz.',
+      detailedDescription: `
+        <div style="line-height: 1.7;">
+          <h3 style="font-size: 1.25rem; font-weight: 600; color: #1f2937; margin-bottom: 1rem; margin-top: 1.5rem;">Ayak Bakımının Önemi</h3>
+          <p style="margin-bottom: 1rem; color: #4b5563;">Ayaklarımız gün boyu ayakkabı içinde kalan, nem ve sürtünmeye maruz kalan bölgelerimizdir. Bu durum zamanla ayaklarda kötü kokuya, tırnaklarda mat görünüme ve ciltte yıpranmaya yol açabilir. Düzenli bakım, hem sağlıklı hem de ferah bir his için oldukça önemlidir.</p>
+          
+          <p style="margin-bottom: 1rem; color: #4b5563;"><strong style="color: #dc2626;">PediZone® Foot and Nail Care Serum</strong>, ayak ve tırnakların daha bakımlı görünümünü desteklemek üzere özel olarak geliştirilmiştir.</p>
+
+          <h3 style="font-size: 1.25rem; font-weight: 600; color: #1f2937; margin-bottom: 1rem; margin-top: 1.5rem;">Etkili Formül</h3>
+          <p style="margin-bottom: 1rem; color: #4b5563;">Serumun içeriğinde bulunan doğal aktif bileşenler, cildi beslemeye ve korumaya yardımcı olur. Düzenli kullanımda ayak ve tırnakların doğal yapısını destekler, kötü kokuların azalmasına katkı sağlar ve ferah bir his verir. Böylece ayaklarınız gün boyu rahat ve bakımlı kalır.</p>
+
+          <h3 style="font-size: 1.25rem; font-weight: 600; color: #1f2937; margin-bottom: 1rem; margin-top: 1.5rem;">Nasıl Kullanılır?</h3>
+          <p style="margin-bottom: 0.75rem; color: #4b5563;">Günlük ayak bakım rutininize PediZone® Foot and Nail Care Serum'u dahil etmek oldukça kolaydır:</p>
+          <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #4b5563;">
+            <li style="margin-bottom: 0.5rem;">Öncelikle ayaklarınızı temizleyip iyice kurulayın</li>
+            <li style="margin-bottom: 0.5rem;">Birkaç damla serumu tırnaklarınıza ve çevresine uygulayın</li>
+            <li style="margin-bottom: 0.5rem;">Hafifçe masaj yaparak emilmesini sağlayın</li>
+          </ul>
+          <p style="margin-bottom: 1rem; color: #4b5563;">Düzenli kullanım, ayak bakımınızın bir parçası haline geldiğinde etkili sonuçlar almanıza yardımcı olacaktır.</p>
+
+          <h3 style="font-size: 1.25rem; font-weight: 600; color: #1f2937; margin-bottom: 1rem; margin-top: 1.5rem;">Uzman Önerileri</h3>
+          <p style="margin-bottom: 1rem; color: #4b5563;">Uzmanlar, sağlıklı ayaklar için haftada birkaç kez peeling veya ayak banyosu yapmayı, sonrasında ise nemlendirici ve bakım ürünleri kullanmayı önermektedir. PediZone® Serum, bu rutini tamamlayan güçlü bir bakım desteği sunar.</p>
+          
+          <p style="margin-bottom: 1.5rem; color: #4b5563;">Düzenli bakım ile hem tırnaklarınız hem de cildiniz daha sağlıklı bir görünüme kavuşur.</p>
+
+          <div style="background-color: #fef3f2; border-left: 4px solid #dc2626; padding: 1rem; margin-top: 1.5rem; border-radius: 0.375rem;">
+            <p style="margin: 0; color: #7c2d12; font-style: italic;"><strong>Unutmayın:</strong> Ayak sağlığı günlük yaşam konforunun önemli bir parçasıdır. PediZone® ile ayak ve tırnaklarınıza düzenli bakım yaparak ferah, sağlıklı ve bakımlı hissetmenin keyfini çıkarabilirsiniz.</p>
+          </div>
+        </div>
+      `,
       ingredients: [
         'Tea Tree Oil - Doğal antifungal etki',
         'Urea - Nemlendirici ve yumuşatıcı',
@@ -185,9 +213,10 @@ const ProductDetail = () => {
               <h3 className="pedizone-heading text-2xl text-gray-900 mb-4">
                 Ürün Açıklaması
               </h3>
-              <p className="text-gray-700 leading-relaxed">
-                {product.detailedDescription}
-              </p>
+              <div 
+                className="text-gray-700 leading-relaxed product-description-content"
+                dangerouslySetInnerHTML={{ __html: product.detailedDescription }}
+              />
             </div>
 
             {/* Ingredients */}
