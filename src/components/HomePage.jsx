@@ -7,7 +7,7 @@ import { Badge } from './ui/badge'
 
 // Import images
 import productSerum from '../assets/IMG_7571_optimized.webp'
-import productFoam from '../assets/Pedizone-Foot-Foam-optimized.png'
+import productFoam from '../assets/pedizone-foot-foam-new.jpg'
 import productSerum2 from '../assets/pedizone-urea-cream-new.png'
 import solutionImage1 from '../assets/ayak-mantari-tedavi-optimized.png'
 import solutionImage2 from '../assets/foot-callus-problem-optimized.png'
@@ -17,6 +17,8 @@ import blogAyakMantari from '../assets/blog/ayak-mantari-yeni.jpg'
 import blogTirnakMantari from '../assets/tirnak-mantari-cesitleri.jpg'
 import blogSerumKullanimi from '../assets/pedizone-serum-kullanimi.jpg'
 import blogMedikalAyakBakimi from '../assets/blog/medikal-ayak-bakimi.jpg'
+import blogAyakKokusu from '../assets/blog/ayak-kokusu-blog.jpg'
+import blogAyakHijyeni from '../assets/blog/ayak-hijyeni-blog.jpg'
 
 // Import slide images
 import slide1 from '../assets/slide-1-podolog-new.png'
@@ -274,6 +276,22 @@ const HomePage = () => {
             tags: ['foot care serum', 'PediZone', 'topikal tedavi'],
             image: blogSerumKullanimi,
             link: '/blog/serum-kullanim-onemi.html'
+          },
+          {
+            title: 'Ayak Kokusu Neden Olur? Çözümleri Nelerdir?',
+            excerpt: 'Ayak kokusu, günlük yaşamda en sık karşılaşılan ama çoğu zaman dile getirilmeyen sorunlardan biridir. Terleme, bakteriler ve uygun olmayan ayakkabı seçimi gibi faktörlerin etkisiyle oluşur.',
+            readTime: '6 dakika',
+            tags: ['ayak kokusu', 'ayak hijyeni', 'ayak sağlığı'],
+            image: blogAyakKokusu,
+            link: '/blog/ayak-kokusu-nedenleri.html'
+          },
+          {
+            title: 'Ayak Hijyeni ve Bakım İpuçları',
+            excerpt: 'Ayaklarımız gün boyu vücudumuzun yükünü taşır ve sağlığımız için kritik öneme sahiptir. Düzenli ayak hijyeni, mantar, nasır ve enfeksiyonlara karşı koruyucu bir etkendir.',
+            readTime: '5 dakika',
+            tags: ['ayak hijyeni', 'ayak bakımı', 'podolog tavsiyeleri'],
+            image: blogAyakHijyeni,
+            link: '/blog/ayak-hijyeni-ipuclari.html'
           }
         ]
       },
@@ -753,15 +771,15 @@ const HomePage = () => {
                   {t.hero.badge}
                 </Badge>
                 
-                <h1 className="pedizone-heading text-5xl lg:text-6xl text-gray-900 leading-tight">
+                <h1 className="pedizone-heading text-6xl lg:text-7xl xl:text-8xl text-gray-900 leading-tight">
                   {t.hero.title}
                 </h1>
                 
                 <div className="space-y-2">
-                  <h2 className="text-4xl font-bold text-red-600">
+                  <h2 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-red-600">
                     {t.hero.brand}
                   </h2>
-                  <p className="pedizone-text text-xl text-gray-600 max-w-lg">
+                  <p className="pedizone-text text-xl lg:text-2xl xl:text-3xl text-gray-600 max-w-2xl">
                     {t.hero.subtitle}
                   </p>
                 </div>
@@ -872,11 +890,11 @@ const HomePage = () => {
       {/* Products Section */}
       <section id="products" className="pedizone-section bg-white">
         <div className="pedizone-container">
-          <div className="text-center mb-8">
-            <h2 className="pedizone-heading text-4xl text-gray-900 mb-4">
+          <div className="text-center mb-12">
+            <h2 className="pedizone-heading text-5xl lg:text-6xl xl:text-7xl text-gray-900 mb-6">
               {t.products.title}
             </h2>
-            <p className="pedizone-text text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="pedizone-text text-2xl lg:text-3xl xl:text-4xl text-gray-600 max-w-4xl mx-auto">
               {t.products.subtitle}
             </p>
           </div>
@@ -932,11 +950,11 @@ const HomePage = () => {
       {/* Solutions Section */}
       <section id="solutions" className="pedizone-section bg-white">
         <div className="pedizone-container">
-          <div className="text-center mb-8">
-            <h2 className="pedizone-heading text-4xl text-gray-900 mb-4">
+          <div className="text-center mb-12">
+            <h2 className="pedizone-heading text-5xl lg:text-6xl xl:text-7xl text-gray-900 mb-6">
               {t.solutions.title}
             </h2>
-            <p className="pedizone-text text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="pedizone-text text-2xl lg:text-3xl xl:text-4xl text-gray-600 max-w-4xl mx-auto">
               {t.solutions.subtitle}
             </p>
           </div>
