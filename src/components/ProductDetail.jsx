@@ -157,7 +157,7 @@ const ProductDetail = () => {
       </header>
 
       {/* Product Detail Content */}
-      <div className="pedizone-container py-12">
+      <div className="pedizone-container py-12 pt-24 lg:pt-32">
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Product Image */}
           <div className="space-y-6">
