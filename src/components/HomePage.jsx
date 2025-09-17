@@ -8,6 +8,7 @@ import { Badge } from './ui/badge'
 // Import images
 import productSerum from '../assets/IMG_7571_optimized.webp'
 import productFoam from '../assets/pedizone-foot-foam-new.jpg'
+import productFoamPortfolio from '../assets/pedizone-foot-foam-product.jpg'
 import productSerum2 from '../assets/pedizone-urea-cream-new.png'
 import solutionImage1 from '../assets/ayak-mantari-tedavi-optimized.png'
 import solutionImage2 from '../assets/foot-callus-problem-optimized.png'
@@ -175,7 +176,7 @@ const HomePage = () => {
             id: 'temizleme-kopugu',
             name: 'PediZone® Ayak Temizleme Köpüğü',
             description: 'Derinlemesine temizlik ve koruma',
-            image: productFoam,
+            image: productFoamPortfolio,
             badge: 'Yeni',
             features: ['Antibakteriyel', 'Koku giderici', 'Yumuşak formül', 'Günlük bakım']
           },
@@ -345,7 +346,7 @@ const HomePage = () => {
             id: 'temizleme-kopugu',
             name: 'PediZone® Foot Cleansing Foam',
             description: 'Deep cleansing and protection',
-            image: productFoam,
+            image: productFoamPortfolio,
             badge: 'New',
             features: ['Antibacterial', 'Odor eliminating', 'Gentle formula', 'Daily care']
           },
@@ -495,7 +496,7 @@ const HomePage = () => {
             id: 'temizleme-kopugu',
             name: 'بيديزون® رغوة تنظيف القدم',
             description: 'تنظيف عميق وحماية',
-            image: productFoam,
+            image: productFoamPortfolio,
             badge: 'جديد',
             features: ['مضاد للبكتيريا', 'مزيل للرائحة', 'تركيبة لطيفة', 'رعاية يومية']
           },
