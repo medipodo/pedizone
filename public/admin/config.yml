@@ -2,9 +2,6 @@ backend:
   name: github
   repo: medipodo/pedizone
   branch: main
-  auth_type: implicit
-  base_url: https://github.com
-  auth_endpoint: login/oauth/authorize
 
 media_folder: "public/blog/images"
 public_folder: "/blog/images"
