@@ -10,6 +10,12 @@ import productSerum from '../assets/IMG_7571_optimized.webp'
 import productFoam from '../assets/pedizone-foot-foam-product.jpg'
 import productSerum2 from '../assets/pedizone-urea-cream-new.png'
 
+// Import additional product images for serum
+import serumSalicylicAcid from '../assets/products/pedizone-serum-salisilik-asit-tanitim.jpg'
+import serumBoxDetail from '../assets/products/pedizone-50ml-serum-kutu-detay.jpg'
+import treatmentBeforeAfter from '../assets/products/pedizone-mantar-tedavi-oncesi-sonrasi.jpg'
+import podologistApplication from '../assets/products/pedizone-podolog-uygulama-klinik.jpg'
+
 const ProductDetail = () => {
   const { productId } = useParams()
   const navigate = useNavigate()
@@ -40,8 +46,18 @@ const ProductDetail = () => {
           
           <p style="margin-bottom: 1rem; color: #4b5563;"><strong style="color: #dc2626;">PediZone® Foot and Nail Care Serum</strong>, ayak ve tırnakların daha bakımlı görünümünü desteklemek üzere özel olarak geliştirilmiştir.</p>
 
+          <div style="text-align: center; margin: 2rem 0;">
+            <img src="/src/assets/products/pedizone-serum-salisilik-asit-tanitim.jpg" alt="PediZone Serum Salisilik Asit İçeriği" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" />
+            <p style="margin-top: 0.5rem; color: #6b7280; font-size: 0.875rem; font-style: italic;">Salisilik asit içeriği ile etkili ayak ve tırnak bakımı</p>
+          </div>
+
           <h3 style="font-size: 1.25rem; font-weight: 600; color: #1f2937; margin-bottom: 1rem; margin-top: 1.5rem;">Etkili Formül</h3>
           <p style="margin-bottom: 1rem; color: #4b5563;">Serumun içeriğinde bulunan doğal aktif bileşenler, cildi beslemeye ve korumaya yardımcı olur. Düzenli kullanımda ayak ve tırnakların doğal yapısını destekler, kötü kokuların azalmasına katkı sağlar ve ferah bir his verir. Böylece ayaklarınız gün boyu rahat ve bakımlı kalır.</p>
+
+          <div style="text-align: center; margin: 2rem 0;">
+            <img src="/src/assets/products/pedizone-50ml-serum-kutu-detay.jpg" alt="PediZone 50ml Serum Kutu Detayı" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" />
+            <p style="margin-top: 0.5rem; color: #6b7280; font-size: 0.875rem; font-style: italic;">50ml hacimli pratik kullanım için tasarlanmış ambalaj</p>
+          </div>
 
           <h3 style="font-size: 1.25rem; font-weight: 600; color: #1f2937; margin-bottom: 1rem; margin-top: 1.5rem;">Nasıl Kullanılır?</h3>
           <p style="margin-bottom: 0.75rem; color: #4b5563;">Günlük ayak bakım rutininize PediZone® Foot and Nail Care Serum'u dahil etmek oldukça kolaydır:</p>
@@ -52,8 +68,21 @@ const ProductDetail = () => {
           </ul>
           <p style="margin-bottom: 1rem; color: #4b5563;">Düzenli kullanım, ayak bakımınızın bir parçası haline geldiğinde etkili sonuçlar almanıza yardımcı olacaktır.</p>
 
+          <h3 style="font-size: 1.25rem; font-weight: 600; color: #1f2937; margin-bottom: 1rem; margin-top: 1.5rem;">Tedavi Etkinliği</h3>
+          <p style="margin-bottom: 1rem; color: #4b5563;">PediZone® Serum'un etkinliği klinik gözlemlerle kanıtlanmıştır. Düzenli kullanımda tırnak mantarı ve ayak problemlerinde belirgin iyileşme görülmektedir.</p>
+          
+          <div style="text-align: center; margin: 2rem 0;">
+            <img src="/src/assets/products/pedizone-mantar-tedavi-oncesi-sonrasi.jpg" alt="PediZone Mantar Tedavisi Öncesi Sonrası" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" />
+            <p style="margin-top: 0.5rem; color: #6b7280; font-size: 0.875rem; font-style: italic;">Tedavi öncesi ve sonrası karşılaştırması - Görünür iyileşme</p>
+          </div>
+
           <h3 style="font-size: 1.25rem; font-weight: 600; color: #1f2937; margin-bottom: 1rem; margin-top: 1.5rem;">Uzman Önerileri</h3>
           <p style="margin-bottom: 1rem; color: #4b5563;">Uzmanlar, sağlıklı ayaklar için haftada birkaç kez peeling veya ayak banyosu yapmayı, sonrasında ise nemlendirici ve bakım ürünleri kullanmayı önermektedir. PediZone® Serum, bu rutini tamamlayan güçlü bir bakım desteği sunar.</p>
+          
+          <div style="text-align: center; margin: 2rem 0;">
+            <img src="/src/assets/products/pedizone-podolog-uygulama-klinik.jpg" alt="PediZone Podolog Uygulama Klinik" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" />
+            <p style="margin-top: 0.5rem; color: #6b7280; font-size: 0.875rem; font-style: italic;">Podolog tarafından profesyonel uygulama</p>
+          </div>
           
           <p style="margin-bottom: 1.5rem; color: #4b5563;">Düzenli bakım ile hem tırnaklarınız hem de cildiniz daha sağlıklı bir görünüme kavuşur.</p>
 
