@@ -56,7 +56,7 @@ const ProductDetail = () => {
 
           <div style={{textAlign: 'center', margin: '2rem 0'}}>
             <img src={serumBoxDetail} alt="PediZone 50ml Serum Kutu Detayı" style={{maxWidth: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'}} />
-            <p style={{marginTop: '0.5rem', color: '#6b7280', fontSize: '0.875rem', fontStyle: 'italic'}}>50ml hacimli pratik kullanım için tasarlanmış ambalaj</p>
+            <p style={{marginTop: '0.5rem', color: '#6b7280', fontSize: '0.875rem', fontStyle: 'italic'}}>50ml kişiye özel kilitli kapak ile güvenli ambalaj</p>
           </div>
 
           <h3 style={{fontSize: '1.25rem', fontWeight: 600, color: '#1f2937', marginBottom: '1rem', marginTop: '1.5rem'}}>Nasıl Kullanılır?</h3>
@@ -73,7 +73,7 @@ const ProductDetail = () => {
           
           <div style={{textAlign: 'center', margin: '2rem 0'}}>
             <img src={treatmentBeforeAfter} alt="PediZone Mantar Tedavisi Öncesi Sonrası" style={{maxWidth: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'}} />
-            <p style={{marginTop: '0.5rem', color: '#6b7280', fontSize: '0.875rem', fontStyle: 'italic'}}>Tedavi öncesi ve sonrası karşılaştırması - Görünür iyileşme</p>
+            <p style={{marginTop: '0.5rem', color: '#6b7280', fontSize: '0.875rem', fontStyle: 'italic'}}>Pedizone Serum düzenli kullanımda gözle görülür ilerleme</p>
           </div>
 
           <h3 style={{fontSize: '1.25rem', fontWeight: 600, color: '#1f2937', marginBottom: '1rem', marginTop: '1.5rem'}}>Uzman Önerileri</h3>
