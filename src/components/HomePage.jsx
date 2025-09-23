@@ -150,6 +150,7 @@ const HomePage = () => {
         products: 'Ürünler',
         solutions: 'Çözümler',
         about: 'Hakkımızda',
+        certificates: 'Sertifikalar',
         contact: 'İletişim'
       },
       hero: {
@@ -320,6 +321,7 @@ const HomePage = () => {
         products: 'Products',
         solutions: 'Solutions',
         about: 'About',
+        certificates: 'Certificates',
         contact: 'Contact'
       },
       hero: {
@@ -470,6 +472,7 @@ const HomePage = () => {
         products: 'المنتجات',
         solutions: 'الحلول',
         about: 'حولنا',
+        certificates: 'الشهادات',
         contact: 'اتصل بنا'
       },
       hero: {
@@ -639,6 +642,7 @@ const HomePage = () => {
               <a href="#products" className="text-white hover:text-red-200 transition-colors">{t.nav.products}</a>
               <a href="#solutions" className="text-white hover:text-red-200 transition-colors">{t.nav.solutions}</a>
               <a href="#about" className="text-white hover:text-red-200 transition-colors">{t.nav.about}</a>
+              <a href="/sertifikalar" className="text-white hover:text-red-200 transition-colors">{t.nav.certificates}</a>
               <a href="#contact" className="text-white hover:text-red-200 transition-colors">{t.nav.contact}</a>
             </nav>
 
@@ -748,6 +752,13 @@ const HomePage = () => {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {t.nav.about}
+                </a>
+                <a 
+                  href="/sertifikalar" 
+                  className="text-white hover:text-red-200 transition-colors py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {t.nav.certificates}
                 </a>
                 <a 
                   href="#contact" 
