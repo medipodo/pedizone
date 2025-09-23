@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
-import { ArrowLeft, ExternalLink, Calendar, Building, FileText, CheckCircle } from 'lucide-react'
+import { ArrowLeft, ExternalLink, Calendar, Building, FileText, CheckCircle, X } from 'lucide-react'
 import { Button } from './ui/button'
 import { Card, CardContent } from './ui/card'
 import { Badge } from './ui/badge'
 
 // Import certificate images
-import deneyRaporu from '../assets/documents/pedizone-deney-sonuclari.jpg'
-import klinikTest from '../assets/documents/pedizone-klinik-test-sonuclari.jpg'
-import testSonuclari from '../assets/documents/pedizone-test-sonuclari.jpg'
-import mikrobiyoloji from '../assets/documents/pedizone-test-sonuclari-mikribiyoloji.jpg'
-import uygunlukRaporu from '../assets/documents/ilovepdf_merged_page-0005.jpg'
+import mikrobiyolojikAnalizRaporuSeo from '../assets/documents/pedizone-mikrobiyolojik-analiz-raporu-seo.png'
+import klinikTestSonuclariSeo from '../assets/documents/pedizone-klinik-test-sonuclari-seo.png'
+import laboratuvarTestSonuclariSeo from '../assets/documents/pedizone-laboratuvar-test-sonuclari-seo.png'
+import mikrobiyolojiUygunlukRaporuSeo from '../assets/documents/pedizone-mikrobiyoloji-uygunluk-raporu-seo.png'
+import urunUygunlukBelgesiSeo from '../assets/documents/pedizone-urun-uygunluk-belgesi-seo.png'
 
 const Certificates = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null)
@@ -24,7 +24,7 @@ const Certificates = () => {
       date: "16.09.2025",
       type: "Mikrobiyolojik Test",
       description: "Ürünün zararlı mikroorganizmalar (bakteri, maya, küf) içermediği ve mikrobiyolojik açıdan tamamen güvenli olduğu kanıtlanmıştır.",
-      image: deneyRaporu,
+      image: mikrobiyolojikAnalizRaporuSeo,
       reportNumber: "25-BYT-000890",
       status: "Uygun",
       highlights: [
@@ -44,7 +44,7 @@ const Certificates = () => {
       date: "16.09.2025",
       type: "Klinik Analiz",
       description: "Ürünün klinik koşullarda test edilmiş ve güvenlik standartlarına uygun olduğu doğrulanmıştır.",
-      image: klinikTest,
+      image: klinikTestSonuclariSeo,
       reportNumber: "25-BYT-000890",
       status: "Başarılı",
       highlights: [
@@ -62,7 +62,7 @@ const Certificates = () => {
       date: "16.09.2025",
       type: "Laboratuvar Analizi",
       description: "Ürünün kalite kontrol testlerinden başarıyla geçtiği ve standartlara uygun olduğu belgelenmiştir.",
-      image: testSonuclari,
+      image: laboratuvarTestSonuclariSeo,
       reportNumber: "25-BYT-000890",
       status: "Onaylandı",
       highlights: [
@@ -80,7 +80,7 @@ const Certificates = () => {
       date: "16.09.2025", 
       type: "Uygunluk Değerlendirmesi",
       description: "Kozmetik ürünlerin mikrobiyolojik kontrolüne ilişkin kılavuza göre uygunluk değerlendirmesi yapılmıştır.",
-      image: mikrobiyoloji,
+      image: mikrobiyolojiUygunlukRaporuSeo,
       reportNumber: "25-BYT-000890",
       status: "Uygun",
       highlights: [
@@ -98,7 +98,7 @@ const Certificates = () => {
       date: "16.09.2025",
       type: "Uygunluk Belgesi",
       description: "Ürünün tüm gerekli testlerden geçtiği ve piyasaya sürüm için uygun olduğu belgelenmiştir.",
-      image: uygunlukRaporu,
+      image: urunUygunlukBelgesiSeo,
       reportNumber: "25-BYT-000890", 
       status: "Onaylandı",
       highlights: [
@@ -111,7 +111,21 @@ const Certificates = () => {
   ]
 
   const openCertificate = (certificate) => {
-    setSelectedCertificate(certificate)
+    // Orijinal sertifika görselini yeni sekmede aç
+    const originalImages = {
+      1: '/pedizione-sertifika.jpg',
+      2: '/pedizione-sertifikaa.jpg', 
+      3: '/pedizione-sertifika-deney.jpg',
+      4: '/pedizione-sertifika-test.jpg',
+      5: '/pedizione-sertifika-test-byo.jpg'
+    }
+    
+    const originalImage = originalImages[certificate.id]
+    if (originalImage) {
+      window.open(originalImage, '_blank')
+    } else {
+      setSelectedCertificate(certificate)
+    }
   }
 
   const closeCertificate = () => {
@@ -136,25 +150,25 @@ const Certificates = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
       {/* Header */}
-      <div className="bg-white shadow-sm border-b">
+      <div className="bg-gradient-to-r from-red-600 via-red-700 to-red-800 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-20">
             <div className="flex items-center space-x-4">
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => window.history.back()}
-                className="flex items-center space-x-2 text-gray-600 hover:text-gray-900"
+                className="flex items-center space-x-2 text-white hover:text-red-100 hover:bg-red-600/20 transition-all duration-300 rounded-lg px-4 py-2"
               >
-                <ArrowLeft className="h-4 w-4" />
-                <span>Ana Sayfaya Dön</span>
+                <ArrowLeft className="h-5 w-5" />
+                <span className="font-medium">Ana Sayfaya Dön</span>
               </Button>
             </div>
             <div className="text-center">
-              <h1 className="text-2xl font-bold text-gray-900">Sertifikalarımız</h1>
-              <p className="text-sm text-gray-600">Test Sonuçları ve Kalite Belgeleri</p>
+              <h1 className="text-3xl font-bold text-white mb-1 tracking-tight">Sertifikalarımız</h1>
+              <p className="text-red-100 font-medium">Test Sonuçları ve Kalite Belgeleri</p>
             </div>
-            <div className="w-32"></div>
+            <div className="w-40"></div>
           </div>
         </div>
       </div>
