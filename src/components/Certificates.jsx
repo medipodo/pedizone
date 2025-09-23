@@ -5,11 +5,11 @@ import { Card, CardContent } from './ui/card'
 import { Badge } from './ui/badge'
 
 // Import certificate images
-import mikrobiyolojikAnalizRaporuSeo from '../assets/documents/pedizone-mikrobiyolojik-analiz-raporu-seo.png'
-import klinikTestSonuclariSeo from '../assets/documents/pedizone-klinik-test-sonuclari-seo.png'
-import laboratuvarTestSonuclariSeo from '../assets/documents/pedizone-laboratuvar-test-sonuclari-seo.png'
-import mikrobiyolojiUygunlukRaporuSeo from '../assets/documents/pedizone-mikrobiyoloji-uygunluk-raporu-seo.png'
-import urunUygunlukBelgesiSeo from '../assets/documents/pedizone-urun-uygunluk-belgesi-seo.png'
+import mikrobiyolojikAnalizRaporuSeo from '../../public/pedizione-sertifika-deney.jpg'
+import klinikTestSonuclariSeo from '../../public/pedizione-sertifika-test-byo.jpg'
+import laboratuvarTestSonuclariSeo from '../../public/pedizione-sertifika-test.jpg'
+import mikrobiyolojiUygunlukRaporuSeo from '../../public/pedizione-sertifika.jpg'
+import urunUygunlukBelgesiSeo from '../../public/pedizione-sertifikaa.jpg'
 
 const Certificates = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null)
@@ -113,11 +113,11 @@ const Certificates = () => {
   const openCertificate = (certificate) => {
     // Orijinal sertifika görselini yeni sekmede aç
     const originalImages = {
-      1: '/pedizione-sertifika.jpg',
-      2: '/pedizione-sertifikaa.jpg', 
-      3: '/pedizione-sertifika-deney.jpg',
-      4: '/pedizione-sertifika-test.jpg',
-      5: '/pedizione-sertifika-test-byo.jpg'
+      1: '/pedizione-sertifika-deney.jpg',
+      2: '/pedizione-sertifika-test-byo.jpg', 
+      3: '/pedizione-sertifika-test.jpg',
+      4: '/pedizione-sertifika.jpg',
+      5: '/pedizione-sertifikaa.jpg'
     }
     
     const originalImage = originalImages[certificate.id]
