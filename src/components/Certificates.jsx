@@ -5,11 +5,13 @@ import { Card, CardContent } from './ui/card'
 import { Badge } from './ui/badge'
 
 // Import certificate images
-import mikrobiyolojikAnalizRaporuSeo from '../assets/documents/pedizone-mikrobiyolojik-analiz-raporu-seo.png'
-import klinikTestSonuclariSeo from '../assets/documents/pedizone-klinik-test-sonuclari-seo.png'
-import laboratuvarTestSonuclariSeo from '../assets/documents/pedizone-laboratuvar-test-sonuclari-seo.png'
-import mikrobiyolojiUygunlukRaporuSeo from '../assets/documents/pedizone-mikrobiyoloji-uygunluk-raporu-seo.png'
-import urunUygunlukBelgesiSeo from '../assets/documents/pedizone-urun-uygunluk-belgesi-seo.png'
+import mikrobiyolojikAnalizRaporuSeo from '../assets/documents/pedizone-mikrobiyolojik-analiz-raporu-seo.jpg'
+import klinikTestSonuclariSeo from '../assets/documents/pedizone-klinik-test-sonuclari-seo.jpg'
+import laboratuvarTestSonuclariSeo from '../assets/documents/pedizone-laboratuvar-test-sonuclari-seo.jpg'
+import mikrobiyolojiUygunlukRaporuSeo from '../assets/documents/pedizone-mikrobiyoloji-uygunluk-raporu-seo.jpg'
+import urunUygunlukBelgesiSeo from '../assets/documents/pedizone-urun-uygunluk-belgesi-seo.jpg'
+import gs1BarkodSeo from '../assets/documents/pedizone-gs1-barkod-seo.jpg'
+import gs1Sertifika from '../assets/documents/pedizone-gs1-sertifika.jpg'
 
 const Certificates = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null)
@@ -107,6 +109,24 @@ const Certificates = () => {
         "Yasal gerekliliklere uygunluk",
         "Kalite güvencesi sağlandı"
       ]
+    },
+    {
+      id: 6,
+      title: "GS1 Türkiye Üyelik Lisansı",
+      product: "MEDİPODO MEDİKAL SAĞLIK HİZMETİ SANAYİ VE TİCARET LİMİTED ŞİRKETİ",
+      institution: "GS1 Türkiye",
+      date: "23.09.2025",
+      type: "Üyelik Belgesi",
+      description: "GS1 Türkiye Üyelik Lisansı, ürünlerimizin uluslararası standartlarda barkodlanmasını ve takibini sağlar.",
+      image: gs1BarkodSeo,
+      reportNumber: "8684936333511",
+      status: "Onaylandı",
+      highlights: [
+        "GS1 Şirket Ön Eki: 86849363335",
+        "Yasal Varlık Küresel Konum Numarası (GLN): 8684936333511",
+        "Uluslararası standartlarda ürün takibi",
+        "Tedarik zinciri verimliliği"
+      ]
     }
   ]
 
@@ -117,7 +137,8 @@ const Certificates = () => {
       2: '/pedizione-sertifikaa.jpg', 
       3: '/pedizione-sertifika-deney.jpg',
       4: '/pedizione-sertifika-test.jpg',
-      5: '/pedizione-sertifika-test-byo.jpg'
+      5: '/pedizione-sertifika-test-byo.jpg',
+      6: '/pedizione-gs1-sertifika.jpg'
     }
     
     const originalImage = originalImages[certificate.id]
