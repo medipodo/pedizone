@@ -5,11 +5,11 @@ import { Card, CardContent } from './ui/card'
 import { Badge } from './ui/badge'
 
 // Import certificate images
-import mikrobiyolojikAnalizRaporuSeo from '../assets/documents/pedizone-mikrobiyolojik-analiz-raporu-seo.png'
-import klinikTestSonuclariSeo from '../assets/documents/pedizone-klinik-test-sonuclari-seo.png'
-import laboratuvarTestSonuclariSeo from '../assets/documents/pedizone-laboratuvar-test-sonuclari-seo.png'
-import mikrobiyolojiUygunlukRaporuSeo from '../assets/documents/pedizone-mikrobiyoloji-uygunluk-raporu-seo.png'
-import urunUygunlukBelgesiSeo from '../assets/documents/pedizone-urun-uygunluk-belgesi-seo.png'
+import mikrobiyolojikAnalizRaporuSeo from '../assets/documents/pedizone-mikrobiyolojik-analiz-raporu-seo.jpg'
+import klinikTestSonuclariSeo from '../assets/documents/pedizone-klinik-test-sonuclari-seo.jpg'
+import laboratuvarTestSonuclariSeo from '../assets/documents/pedizone-laboratuvar-test-sonuclari-seo.jpg'
+import mikrobiyolojiUygunlukRaporuSeo from '../assets/documents/pedizone-mikrobiyoloji-uygunluk-raporu-seo.jpg'
+import urunUygunlukBelgesiSeo from '../assets/documents/pedizone-urun-uygunluk-belgesi-seo.jpg'
 
 const Certificates = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null)
@@ -205,7 +205,7 @@ const Certificates = () => {
                     alt={certificate.title}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+
                   <div className="absolute top-3 right-3">
                     <Badge className={`${getStatusColor(certificate.status)} font-medium`}>
                       <CheckCircle className="h-3 w-3 mr-1" />
