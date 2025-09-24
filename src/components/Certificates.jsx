@@ -12,6 +12,7 @@ import mikrobiyolojiUygunlukRaporuSeo from '../assets/documents/pedizone-mikrobi
 import urunUygunlukBelgesiSeo from '../assets/documents/pedizone-urun-uygunluk-belgesi-seo.jpg'
 import gs1BarkodSeo from '../assets/documents/pedizone-gs1-barkod-seo.jpg'
 import gs1Sertifika from '../assets/documents/pedizone-gs1-sertifika.jpg'
+import img2866Seo from '../assets/documents/pedizone-img-2866-seo.png'
 
 const Certificates = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null)
@@ -127,6 +128,24 @@ const Certificates = () => {
         "Uluslararası standartlarda ürün takibi",
         "Tedarik zinciri verimliliği"
       ]
+    },
+    {
+      id: 7,
+      title: "Ürün Uygunluk Belgesi (G1)",
+      product: "PediZone Intense Repair Foot Care Cream",
+      institution: "Biyo & Test Laboratuvarları",
+      date: "24.09.2025",
+      type: "Uygunluk Belgesi",
+      description: "Ürünün tüm gerekli testlerden geçtiği ve piyasaya sürüm için uygun olduğu belgelenmiştir. (G1)",
+      image: img2866Seo,
+      reportNumber: "25-BYT-000891",
+      status: "Onaylandı",
+      highlights: [
+        "Tüm testler başarıyla tamamlandı (G1)",
+        "Piyasaya sürüm onayı verildi (G1)",
+        "Yasal gerekliliklere uygunluk (G1)",
+        "Kalite güvencesi sağlandı (G1)"
+      ]
     }
   ]
 
@@ -138,7 +157,8 @@ const Certificates = () => {
       3: '/pedizione-sertifika-deney.jpg',
       4: '/pedizione-sertifika-test.jpg',
       5: '/pedizione-sertifika-test-byo.jpg',
-      6: '/pedizione-gs1-sertifika.jpg'
+      6: '/pedizione-gs1-sertifika.jpg',
+      7: '/pedizone-img-2866-seo.png'
     }
     
     const originalImage = originalImages[certificate.id]
