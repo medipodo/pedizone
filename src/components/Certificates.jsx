@@ -12,6 +12,7 @@ import mikrobiyolojiUygunlukRaporuSeo from '../assets/documents/pedizone-mikrobi
 import urunUygunlukBelgesiSeo from '../assets/documents/pedizone-urun-uygunluk-belgesi-seo.png'
 import gs1BarkodSeo from '../assets/documents/pedizone-gs1-barkod-seo.jpg'
 import gs1Sertifika from '../assets/documents/pedizone-gs1-sertifika.jpg'
+import gs1BarcodeCover from '../assets/documents/gs1-barcode-cover.jpeg'
 import img2866Seo from '../assets/documents/pedizone-img-2866-seo.png'
 
 const Certificates = () => {
@@ -119,7 +120,7 @@ const Certificates = () => {
       date: "23.09.2025",
       type: "Üyelik Belgesi",
       description: "GS1 Türkiye Üyelik Lisansı, ürünlerimizin uluslararası standartlarda barkodlanmasını ve takibini sağlar.",
-      image: gs1BarkodSeo,
+      image: gs1BarcodeCover,
       reportNumber: "8684936333511",
       status: "Onaylandı",
       highlights: [
@@ -127,24 +128,6 @@ const Certificates = () => {
         "Yasal Varlık Küresel Konum Numarası (GLN): 8684936333511",
         "Uluslararası standartlarda ürün takibi",
         "Tedarik zinciri verimliliği"
-      ]
-    },
-    {
-      id: 7,
-      title: "Ürün Uygunluk Belgesi (G1)",
-      product: "PediZone Intense Repair Foot Care Cream",
-      institution: "Biyo & Test Laboratuvarları",
-      date: "24.09.2025",
-      type: "Uygunluk Belgesi",
-      description: "Ürünün tüm gerekli testlerden geçtiği ve piyasaya sürüm için uygun olduğu belgelenmiştir. (G1)",
-      image: img2866Seo,
-      reportNumber: "25-BYT-000891",
-      status: "Onaylandı",
-      highlights: [
-        "Tüm testler başarıyla tamamlandı (G1)",
-        "Piyasaya sürüm onayı verildi (G1)",
-        "Yasal gerekliliklere uygunluk (G1)",
-        "Kalite güvencesi sağlandı (G1)"
       ]
     }
   ]
@@ -157,8 +140,7 @@ const Certificates = () => {
       3: '/pedizione-sertifika-deney.jpg',
       4: '/pedizione-sertifika-test.jpg',
       5: '/pedizione-sertifika-test-byo.jpg',
-      6: '/pedizione-gs1-sertifika.jpg',
-      7: '/pedizone-img-2866-seo.png'
+      6: '/gs1-membership-licence.jpeg'
     }
     
     const originalImage = originalImages[certificate.id]
