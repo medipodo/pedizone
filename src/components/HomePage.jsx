@@ -6,7 +6,7 @@ import { Card, CardContent } from './ui/card'
 import { Badge } from './ui/badge'
 
 // Import images
-import productSerum from '../assets/IMG_7571_optimized.webp'
+import productSerum from '../assets/pedizone-serum-new.jpg'
 import productFoam from '../assets/pedizone-foot-foam-new.jpg'
 import productFoamPortfolio from '../assets/pedizone-foot-foam-product.jpg'
 import productSerum2 from '../assets/pedizone-urea-cream-new.png'
