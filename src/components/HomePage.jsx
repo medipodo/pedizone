@@ -193,11 +193,11 @@ const HomePage = () => {
       },
       solutions: {
         title: 'Ayak Sorunlarına Çözümler',
-        subtitle: 'Uzman ekibimizle geliştirilen hedefli tedavi yaklaşımları',
+        subtitle: 'Uzman ekibimizle geliştirilen podoloji ürünleri',
         items: [
           {
             title: 'Mantar Enfeksiyonları',
-            description: 'Ayak ve tırnak mantarı için etkili tedavi çözümleri',
+            description: 'Ayak ve tırnak mantarı için etkili önleyici çözümler',
             features: ['Antifungal serum', 'Temizleme köpüğü', 'Koruyucu bakım'],
             image: solutionImage1
           },
