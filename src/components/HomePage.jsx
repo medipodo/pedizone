@@ -8,7 +8,7 @@ import { Badge } from './ui/badge'
 // Import images
 import productSerum from '../assets/pedizone-serum-new.jpg'
 import productFoam from '../assets/pedizone-foot-foam-new.jpg'
-import productFoamPortfolio from '../assets/pedizone-foot-foam-product.jpg'
+import productFoamPortfolio from '../assets/Foam-Pedizone-Kopuk.jpg'
 import productSerum2 from '../assets/pedizone-urea-cream-new.png'
 import solutionImage1 from '../assets/ayak-mantari-tedavi-optimized.png'
 import solutionImage2 from '../assets/foot-callus-problem-optimized.png'
@@ -646,6 +646,16 @@ const HomePage = () => {
               <a href="#contact" className="text-white hover:text-red-200 transition-colors">{t.nav.contact}</a>
             </nav>
 
+            {/* CRM Button */}
+            <a 
+              href="https://pedizone.xyz" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hidden md:inline-block bg-white text-red-600 px-4 py-2 rounded-lg font-semibold hover:bg-red-50 transition-colors"
+            >
+              CRM
+            </a>
+
             {/* Language Selector & Mobile Menu */}
             <div className="flex items-center space-x-4">
               {/* Desktop Language Selector */}
@@ -766,6 +776,15 @@ const HomePage = () => {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {t.nav.contact}
+                </a>
+                <a 
+                  href="https://pedizone.xyz" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white text-red-600 px-4 py-2 rounded-lg font-semibold hover:bg-red-50 transition-colors inline-block mt-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  CRM
                 </a>
               </nav>
             </div>
