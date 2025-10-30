@@ -1253,6 +1253,23 @@ const HomePage = () => {
           </div>
         </div>
       </footer>
+
+      {/* WhatsApp Floating Button */}
+      <a
+        href="https://wa.me/905068860326?text=Merhaba%2C%20PediZone%20ürünleri%20hakkında%20bilgi%20almak%20istiyorum."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
+        aria-label="WhatsApp ile iletişime geç"
+        data-testid="whatsapp-button"
+      >
+        <MessageCircle className="w-7 h-7" />
+        <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-900 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+          WhatsApp ile iletişime geç
+        </span>
+        {/* Pulse animation */}
+        <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-75"></span>
+      </a>
     </div>
   )
 }
