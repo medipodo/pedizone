@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Menu, X } from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Menu, X, MessageCircle } from 'lucide-react'
 import { Button } from './ui/button'
 import { Card, CardContent } from './ui/card'
 import { Badge } from './ui/badge'
