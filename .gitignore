@@ -77,4 +77,4 @@ agenthub/agents/youtube/db
 .cache/
 
 # Mobile development
-android-sdk/ 
+android-sdk/ pedizone_backup/.git/objects/pack/pack-6df3a4364c6d5ba24f74f240408900f71e62b3d5.pack
