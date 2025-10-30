@@ -1,0 +1,26 @@
+{
+  "dealers": [
+    {
+      "id": 1,
+      "name": "Örnek Podoloji Merkezi",
+      "city": "Niğde",
+      "address": "Örnek Caddesi No: 4",
+      "phone": "+90 XXX XXX XX XX",
+      "email": "info@ornek.com",
+      "lat": 37.9667,
+      "lng": 34.6833,
+      "isActive": true
+    },
+    {
+      "id": 2,
+      "name": "Demo Ayak Sağlığı Merkezi",
+      "city": "Ankara",
+      "address": "Bağlıca Mah. Demo Cad. No: 10",
+      "phone": "+90 506 886 0326",
+      "email": "info@pedizone.com",
+      "lat": 39.9334,
+      "lng": 32.8597,
+      "isActive": true
+    }
+  ]
+}

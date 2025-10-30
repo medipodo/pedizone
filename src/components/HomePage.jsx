@@ -150,6 +150,7 @@ const HomePage = () => {
         products: 'Ürünler',
         solutions: 'Çözümler',
         about: 'Hakkımızda',
+        dealers: 'Bayiler',
         certificates: 'Sertifikalar',
         contact: 'İletişim'
       },
@@ -642,6 +643,7 @@ const HomePage = () => {
               <a href="#products" className="text-white hover:text-red-200 transition-colors">{t.nav.products}</a>
               <a href="#solutions" className="text-white hover:text-red-200 transition-colors">{t.nav.solutions}</a>
               <a href="#about" className="text-white hover:text-red-200 transition-colors">{t.nav.about}</a>
+              <a href="/bayiler" className="text-white hover:text-red-200 transition-colors">{t.nav.dealers}</a>
               <a href="/sertifikalar" className="text-white hover:text-red-200 transition-colors">{t.nav.certificates}</a>
               <a href="#contact" className="text-white hover:text-red-200 transition-colors">{t.nav.contact}</a>
             </nav>
@@ -762,6 +764,13 @@ const HomePage = () => {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {t.nav.about}
+                </a>
+                <a 
+                  href="/bayiler" 
+                  className="text-white hover:text-red-200 transition-colors py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {t.nav.dealers}
                 </a>
                 <a 
                   href="/sertifikalar" 
@@ -1242,6 +1251,7 @@ const HomePage = () => {
               <a href="#products" className="text-red-200 hover:text-white transition-colors">Ürünler</a>
               <a href="#solutions" className="text-red-200 hover:text-white transition-colors">Çözümler</a>
               <a href="#about" className="text-red-200 hover:text-white transition-colors">Hakkımızda</a>
+              <a href="/bayiler" className="text-red-200 hover:text-white transition-colors">Bayiler</a>
               <a href="#contact" className="text-red-200 hover:text-white transition-colors">İletişim</a>
             </div>
             
