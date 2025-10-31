@@ -2,24 +2,24 @@
   "dealers": [
     {
       "id": 1,
-      "name": "Örnek Podoloji Merkezi",
-      "city": "Niğde",
-      "address": "Örnek Caddesi No: 4",
-      "phone": "+90 XXX XXX XX XX",
-      "email": "info@ornek.com",
-      "lat": 37.9667,
-      "lng": 34.6833,
+      "name": "Medipodo Podoloji Merkezi",
+      "city": "Ankara",
+      "address": "Bağlıca Mah. Mert Cad. No 4/2 3. Noter Karşısı Etimesgut",
+      "phone": "+90 545 656 9747",
+      "email": "medipodotr@gmail.com",
+      "lat": 39.897163,
+      "lng": 32.648102,
       "isActive": true
     },
     {
       "id": 2,
-      "name": "Demo Ayak Sağlığı Merkezi",
+      "name": "Podosis Ayak Bakım Merkezi",
       "city": "Ankara",
-      "address": "Bağlıca Mah. Demo Cad. No: 10",
-      "phone": "+90 506 886 0326",
+      "address": "Atakent Mah 1512 cad, ELVANKENT 104/D, 06796 Etimesgut",
+      "phone": "+90 543 543 0082",
       "email": "info@pedizone.com",
-      "lat": 39.9334,
-      "lng": 32.8597,
+      "lat": 39.955546,
+      "lng": 32.612111,
       "isActive": true
     }
   ]
