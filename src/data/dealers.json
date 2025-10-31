@@ -21,6 +21,16 @@
       "lat": 39.955546,
       "lng": 32.612111,
       "isActive": true
-    }
+    },
+        {
+      "id": 3,
+      "name": "OrtoMek Ortez-Protez Uygulama Merkezi",
+      "city": "Ankara",
+      "address": "Işınlar Mah. Ragıp Tüzün Cad. No 15/B Yenimahalle",
+      "phone": "+90 534 729 0182",
+      "email": "info@ortomek.com",
+      "lat": 39.961196,
+      "lng": 32.8159394,
+      "isActive": true
   ]
 }
