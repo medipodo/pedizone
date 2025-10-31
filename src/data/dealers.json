@@ -22,7 +22,7 @@
       "lng": 32.612111,
       "isActive": true
     },
-        {
+    {
       "id": 3,
       "name": "OrtoMek Ortez-Protez Uygulama Merkezi",
       "city": "Ankara",
@@ -32,5 +32,6 @@
       "lat": 39.961196,
       "lng": 32.8159394,
       "isActive": true
+    }
   ]
 }
