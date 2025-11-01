@@ -32,6 +32,17 @@
       "lat": 39.961196,
       "lng": 32.8159394,
       "isActive": true
+    },
+    {
+      "id": 4,
+      "name": "Yaşare KADER",
+      "city": "Antalya",
+      "address": "Hurma, 254. Sk. No:11 / B, 07130 Konyaaltı",
+      "phone": "0505 215 0028",
+      "email": "xxx",
+      "lat": 36.856421,
+      "lng": 30.6091082,
+      "isActive": true
     }
   ]
 }
