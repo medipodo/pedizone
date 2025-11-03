@@ -4,6 +4,8 @@ import { ArrowLeft, CheckCircle, Mail, Phone, MapPin } from 'lucide-react'
 import { Button } from './ui/button'
 import { Badge } from './ui/badge'
 import { Card, CardContent } from './ui/card'
+import Header from './Header'
+import Footer from './Footer'
 
 // Import product images
 import productSerum from '../assets/IMG_7571_optimized.webp'

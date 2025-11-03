@@ -3,6 +3,8 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import { MapPin, Phone, Mail, Navigation } from 'lucide-react'
 import { Card, CardContent } from './ui/card'
 import { Button } from './ui/button'
+import Header from './Header'
+import Footer from './Footer'
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
 import dealersData from '../data/dealers.json'
@@ -27,6 +29,7 @@ const redIcon = new L.Icon({
 
 const DealersMap = () => {
   const [selectedDealer, setSelectedDealer] = useState(null)
+  const [currentLang, setCurrentLang] = useState('tr')
   const dealers = dealersData.dealers.filter(d => d.isActive)
 
   // Turkey center coordinates
@@ -42,7 +45,10 @@ const DealersMap = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <Header currentLang={currentLang} setCurrentLang={setCurrentLang} showBackButton={true} />
+      
+      <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-gradient-to-r from-red-600 to-red-700 text-white py-16">
         <div className="pedizone-container">
@@ -209,6 +215,9 @@ const DealersMap = () => {
         </div>
       </div>
     </div>
+    
+    <Footer />
+    </>
   )
 }
 
