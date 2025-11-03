@@ -786,185 +786,186 @@ const HomePage = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="hero-section bg-gray-50 min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh] flex items-center">
-        <div className="pedizone-container">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center py-8 lg:py-12">
+      <section id="home" className="relative bg-gradient-to-br from-gray-50 via-white to-red-50 min-h-[85vh] flex items-center overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-red-500 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl"></div>
+        </div>
+
+        <div className="pedizone-container relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center py-16">
+            {/* Left Content */}
             <div className="space-y-8">
-              <div className="space-y-6">
-                <Badge className="bg-red-100 text-red-800 px-4 py-2 text-sm font-medium">
-                  {t.hero.badge}
-                </Badge>
-                
-                <h1 className="pedizone-heading text-6xl lg:text-7xl xl:text-8xl text-gray-900 leading-tight">
+              {/* Trust Badge */}
+              <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-red-100">
+                <CheckCircle className="w-4 h-4 text-green-500" />
+                <span className="text-sm font-medium text-gray-700">{t.hero.badge}</span>
+              </div>
+              
+              {/* Main Heading */}
+              <div className="space-y-4">
+                <h1 className="pedizone-heading text-4xl md:text-5xl lg:text-6xl text-gray-900 leading-tight">
                   {t.hero.title}
                 </h1>
                 
-                <div className="space-y-2">
-                  <h2 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-red-600">
-                    {t.hero.brand}
-                  </h2>
-                  <p className="pedizone-text text-xl lg:text-2xl xl:text-3xl text-gray-600 max-w-2xl">
-                    {t.hero.subtitle}
-                  </p>
-                </div>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-red-600">
+                  {t.hero.brand}
+                </h2>
+                
+                <p className="pedizone-text text-lg md:text-xl text-gray-600 max-w-xl">
+                  {t.hero.subtitle}
+                </p>
               </div>
 
+              {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="pedizone-button text-lg px-8 py-4" onClick={scrollToProducts}>
+                <Button 
+                  className="pedizone-button text-base px-6 py-6 shadow-lg hover:shadow-xl transition-all" 
+                  onClick={scrollToProducts}
+                >
                   {t.hero.cta1}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-                <Button variant="outline" className="text-lg px-8 py-4 border-red-600 text-red-600 hover:bg-red-50">
+                <Button 
+                  variant="outline" 
+                  className="text-base px-6 py-6 border-2 border-red-600 text-red-600 hover:bg-red-50 transition-all"
+                >
                   {t.hero.cta2}
                 </Button>
               </div>
-            </div>
 
-            <div className="relative">
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <img 
-                  src={productSerum} 
-                  alt="PediZone Serum" 
-                  className="rounded-2xl shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300"
-                  fetchpriority="high"
-                  loading="eager"
-                  width="400"
-                  height="400"
-                />
-                <img 
-                  src={productFoam} 
-                  alt="PediZone Köpük" 
-                  className="rounded-2xl shadow-lg transform -rotate-3 hover:rotate-0 transition-transform duration-300 mt-8 md:mt-0"
-                  loading="lazy"
-                  width="400"
-                  height="400"
-                />
-                <img 
-                  src={productSerum2} 
-                  alt="PediZone Bakım Serumu" 
-                  className="rounded-2xl shadow-lg transform rotate-2 hover:rotate-0 transition-transform duration-300 col-span-2 md:col-span-1 mt-4 md:mt-8"
-                  loading="lazy"
-                  width="400"
-                  height="400"
-                />
+              {/* Trust Indicators */}
+              <div className="flex flex-wrap gap-6 pt-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                    <CheckCircle className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-gray-900">Podolog Onaylı</div>
+                    <div className="text-sm text-gray-600">Uzman Tavsiyesi</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                    <CheckCircle className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-gray-900">Klinik Testli</div>
+                    <div className="text-sm text-gray-600">Güvenli Formül</div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Slide Section */}
-      <section className="bg-white py-6 md:py-8 lg:py-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-4 md:mb-6">
-            <h2 className="pedizone-heading text-3xl md:text-4xl text-gray-900 mb-4">
-              {currentLang === 'tr' ? 'Profesyonel Ayak Bakımı' : 
-               currentLang === 'en' ? 'Professional Foot Care' : 
-               'العناية المهنية بالأقدام'}
-            </h2>
-            <p className="pedizone-text text-lg md:text-xl text-gray-600">
-              {currentLang === 'tr' ? 'Uzman podologlarımızla ayak sağlığınızı koruyun' : 
-               currentLang === 'en' ? 'Protect your foot health with our expert podologists' : 
-               'احم صحة قدميك مع أخصائيي الأقدام الخبراء لدينا'}
-            </p>
-          </div>
-
-          <div className="relative mx-auto max-w-5xl">
-            <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 rounded-2xl overflow-hidden shadow-2xl mx-auto" style={{aspectRatio: '16/9'}}>
-              {/* Slides */}
-              {slides.map((slide, index) => (
-                <div
-                  key={index}
-                  className={`absolute inset-0 transition-opacity duration-500 ${
-                    index === currentSlide ? 'opacity-100' : 'opacity-0'
-                  }`}
-                >
-                  <img
-                    src={slide.image}
-                    alt={`Slide ${index + 1}`}
-                    className="w-full h-full object-cover"
-                    loading={index === 0 ? 'eager' : 'lazy'}
-                    fetchPriority={index === 0 ? 'high' : 'low'}
-                    width="1200"
-                    height="500"
+            {/* Right Content - Product Showcase */}
+            <div className="relative">
+              {/* Main Product Image */}
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-red-400 to-red-600 rounded-3xl transform rotate-3 opacity-10"></div>
+                <div className="relative bg-white rounded-3xl p-8 shadow-2xl">
+                  <img 
+                    src={productSerum} 
+                    alt="PediZone Serum" 
+                    className="w-full h-auto rounded-2xl"
+                    fetchpriority="high"
+                    loading="eager"
                   />
+                  {/* Floating Badge */}
+                  <div className="absolute -top-4 -right-4 bg-red-600 text-white px-6 py-3 rounded-full shadow-lg font-bold">
+                    En Popüler
+                  </div>
                 </div>
-              ))}
-            </div>
-
-            {/* Indicators */}
-            <div className="flex justify-center mt-4 md:mt-6 space-x-3">
-              {slides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide
-                      ? 'bg-red-600 scale-125'
-                      : 'bg-gray-300 hover:bg-gray-400'
-                  }`}
-                  aria-label={`${index + 1}. slide'a git`}
-                />
-              ))}
+                
+                {/* Secondary Products */}
+                <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl w-32 hover:scale-105 transition-transform">
+                  <img src={productFoam} alt="PediZone Köpük" className="w-full rounded-lg" loading="lazy" />
+                </div>
+                <div className="absolute -top-6 -right-12 bg-white rounded-2xl p-4 shadow-xl w-28 hover:scale-105 transition-transform hidden lg:block">
+                  <img src={productSerum2} alt="PediZone Krem" className="w-full rounded-lg" loading="lazy" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Products Section */}
-      <section id="products" className="pedizone-section bg-white">
+      <section id="products" className="py-20 bg-white">
         <div className="pedizone-container">
-          <div className="text-center mb-12">
-            <h2 className="pedizone-heading text-5xl lg:text-6xl xl:text-7xl text-gray-900 mb-6">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="inline-block bg-red-100 text-red-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              ÜRÜNLER
+            </div>
+            <h2 className="pedizone-heading text-4xl md:text-5xl text-gray-900 mb-4">
               {t.products.title}
             </h2>
-            <p className="pedizone-text text-2xl lg:text-3xl xl:text-4xl text-gray-600 max-w-4xl mx-auto">
+            <p className="pedizone-text text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               {t.products.subtitle}
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          {/* Products Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {t.products.items.map((product, index) => (
-              <Card key={index} className="pedizone-card relative overflow-hidden">
+              <Card 
+                key={index} 
+                className="group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-white to-gray-50"
+              >
+                {/* Badge */}
                 {product.badge && (
-                  <Badge className="absolute top-4 right-4 bg-red-600 text-white">
-                    {product.badge}
-                  </Badge>
+                  <div className="absolute top-4 right-4 z-10">
+                    <Badge className="bg-gradient-to-r from-red-600 to-red-700 text-white px-3 py-1 shadow-lg">
+                      {product.badge}
+                    </Badge>
+                  </div>
                 )}
                 
-                <div className="aspect-square mb-6 overflow-hidden rounded-xl">
+                {/* Image Container */}
+                <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-red-50 to-blue-50">
                   <img 
                     src={product.image} 
                     alt={product.name}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     loading="lazy"
                   />
+                  {/* Overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 
-                <CardContent className="p-0">
-                  <h3 className="pedizone-heading text-xl text-gray-900 mb-3">
+                <CardContent className="p-6">
+                  <h3 className="pedizone-heading text-xl font-bold text-gray-900 mb-3 group-hover:text-red-600 transition-colors">
                     {product.name}
                   </h3>
-                  <p className="pedizone-text text-gray-600 mb-4">
+                  <p className="pedizone-text text-gray-600 mb-6">
                     {product.description}
                   </p>
                   
+                  {/* Features */}
                   <div className="space-y-2 mb-6">
                     {product.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-green-500" />
-                        <span className="text-sm text-gray-600">{feature}</span>
+                      <div key={idx} className="flex items-center gap-2">
+                        <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                          <CheckCircle className="w-3 h-3 text-green-600" />
+                        </div>
+                        <span className="text-sm text-gray-700">{feature}</span>
                       </div>
                     ))}
                   </div>
                   
+                  {/* CTA Button */}
                   <Button 
-                    className="w-full pedizone-button"
+                    className="w-full pedizone-button group-hover:shadow-lg transition-all"
                     onClick={() => navigate(`/product/${product.id}`)}
                   >
                     Detayları İncele
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </CardContent>
+
+                {/* Decorative Element */}
+                <div className="absolute -bottom-2 -right-2 w-24 h-24 bg-gradient-to-br from-red-400 to-red-600 rounded-full opacity-10 group-hover:opacity-20 transition-opacity"></div>
               </Card>
             ))}
           </div>
@@ -972,47 +973,60 @@ const HomePage = () => {
       </section>
 
       {/* Solutions Section */}
-      <section id="solutions" className="pedizone-section bg-white">
+      <section id="solutions" className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="pedizone-container">
-          <div className="text-center mb-12">
-            <h2 className="pedizone-heading text-5xl lg:text-6xl xl:text-7xl text-gray-900 mb-6">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="inline-block bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              ÇÖZÜMLER
+            </div>
+            <h2 className="pedizone-heading text-4xl md:text-5xl text-gray-900 mb-4">
               {t.solutions.title}
             </h2>
-            <p className="pedizone-text text-2xl lg:text-3xl xl:text-4xl text-gray-600 max-w-4xl mx-auto">
+            <p className="pedizone-text text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               {t.solutions.subtitle}
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          {/* Solutions Grid */}
+          <div className="grid md:grid-cols-2 gap-8">
             {t.solutions.items.map((solution, index) => (
-              <Card key={index} className="pedizone-card">
-                <div className="flex flex-col md:flex-row gap-6">
-                  <div className="w-full md:w-1/3">
+              <Card 
+                key={index} 
+                className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-white"
+              >
+                <div className="flex flex-col">
+                  {/* Image */}
+                  <div className="relative h-64 overflow-hidden">
                     <img 
                       src={solution.image} 
                       alt={solution.title}
-                      className="w-full h-48 md:h-full object-cover rounded-xl"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                       loading="lazy"
                     />
-                  </div>
-                  
-                  <div className="w-full md:w-2/3">
-                    <h3 className="pedizone-heading text-xl text-gray-900 mb-3">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                    <h3 className="absolute bottom-4 left-6 pedizone-heading text-2xl text-white z-10">
                       {solution.title}
                     </h3>
-                    <p className="pedizone-text text-gray-600 mb-4">
+                  </div>
+                  
+                  {/* Content */}
+                  <CardContent className="p-6">
+                    <p className="pedizone-text text-gray-600 mb-6">
                       {solution.description}
                     </p>
                     
-                    <div className="space-y-2">
+                    <div className="space-y-3">
                       {solution.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center space-x-2">
-                          <CheckCircle className="w-4 h-4 text-green-500" />
-                          <span className="text-sm text-gray-600">{feature}</span>
+                        <div key={idx} className="flex items-center gap-3">
+                          <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                            <CheckCircle className="w-4 h-4 text-green-600" />
+                          </div>
+                          <span className="text-gray-700">{feature}</span>
                         </div>
                       ))}
                     </div>
-                  </div>
+                  </CardContent>
                 </div>
               </Card>
             ))}
@@ -1020,87 +1034,109 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="pedizone-section bg-gray-50">
+      {/* About/Why PediZone Section */}
+      <section id="about" className="py-20 bg-white">
         <div className="pedizone-container">
-          <div className="text-center mb-8">
-            <h2 className="pedizone-heading text-4xl text-gray-900 mb-4">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="pedizone-heading text-4xl md:text-5xl text-gray-900 mb-4">
               {t.about.title}
             </h2>
-            <p className="pedizone-text text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="pedizone-text text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               {t.about.subtitle}
             </p>
           </div>
 
+          {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {t.about.items.map((item, index) => (
-              <Card key={index} className="pedizone-card text-center">
-                <CardContent className="p-8">
-                  <h3 className="pedizone-heading text-xl text-gray-900 mb-4">
-                    {item.title}
-                  </h3>
-                  <p className="pedizone-text text-gray-600">
-                    {item.description}
-                  </p>
-                </CardContent>
-              </Card>
+              <div 
+                key={index} 
+                className="group text-center p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-white hover:from-red-50 hover:to-white border border-gray-100 hover:border-red-200 transition-all duration-300 hover:shadow-xl"
+              >
+                {/* Icon */}
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <CheckCircle className="w-8 h-8 text-white" />
+                </div>
+                
+                <h3 className="pedizone-heading text-xl text-gray-900 mb-3">
+                  {item.title}
+                </h3>
+                <p className="pedizone-text text-gray-600 text-sm leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Blog Section */}
-      <section id="blog" className="pedizone-section bg-white">
+      <section id="blog" className="py-20 bg-gray-50">
         <div className="pedizone-container">
-          <div className="text-center mb-8">
-            <h2 className="pedizone-heading text-4xl text-gray-900 mb-4">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="inline-block bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              BLOG
+            </div>
+            <h2 className="pedizone-heading text-4xl md:text-5xl text-gray-900 mb-4">
               {t.blog.title}
             </h2>
-            <p className="pedizone-text text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="pedizone-text text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               {t.blog.subtitle}
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          {/* Blog Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {t.blog.items.map((post, index) => (
-              <Card key={index} className="pedizone-card overflow-hidden">
-                <div className="aspect-video overflow-hidden">
+              <Card 
+                key={index} 
+                className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-white"
+              >
+                {/* Image */}
+                <div className="relative aspect-video overflow-hidden">
                   <img 
                     src={post.image} 
                     alt={post.title}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     loading="lazy"
                   />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-red-600 text-white px-3 py-1 rounded-full text-xs font-medium">
+                      {post.readTime}
+                    </span>
+                  </div>
                 </div>
                 
+                {/* Content */}
                 <CardContent className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-sm text-red-600 font-medium">{post.readTime}</span>
-                  </div>
-                  
-                  <h3 className="pedizone-heading text-lg text-gray-900 mb-3">
+                  <h3 className="pedizone-heading text-xl text-gray-900 mb-3 group-hover:text-red-600 transition-colors line-clamp-2">
                     {post.title}
                   </h3>
                   
-                  <p className="pedizone-text text-gray-600 mb-4 text-sm">
+                  <p className="pedizone-text text-gray-600 mb-4 text-sm line-clamp-3">
                     {post.excerpt}
                   </p>
                   
+                  {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {post.tags.map((tag, idx) => (
-                      <span key={idx} className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
-                        {tag}
+                      <span key={idx} className="text-xs bg-gray-100 text-gray-600 px-3 py-1 rounded-full">
+                        #{tag}
                       </span>
                     ))}
                   </div>
                   
+                  {/* Read More */}
                   <a 
                     href={post.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-red-600 hover:text-red-700 font-medium"
+                    className="inline-flex items-center gap-2 text-red-600 hover:text-red-700 font-medium group-hover:gap-3 transition-all"
                   >
-                    Devamını Oku →
+                    Devamını Oku
+                    <ArrowRight className="w-4 h-4" />
                   </a>
                 </CardContent>
               </Card>
@@ -1110,112 +1146,121 @@ const HomePage = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="pedizone-section bg-gray-50">
+      <section id="contact" className="py-20 bg-white">
         <div className="pedizone-container">
-          <div className="text-center mb-8">
-            <h2 className="pedizone-heading text-4xl text-gray-900 mb-4">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="inline-block bg-green-100 text-green-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              İLETİŞİM
+            </div>
+            <h2 className="pedizone-heading text-4xl md:text-5xl text-gray-900 mb-4">
               {t.contact.title}
             </h2>
-            <p className="pedizone-text text-xl text-gray-600">
+            <p className="pedizone-text text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               {t.contact.subtitle}
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Contact Info */}
             <div className="space-y-8">
               <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <MapPin className="w-6 h-6 text-red-600 mt-1 flex-shrink-0" />
+                {/* Phone */}
+                <div className="flex items-start gap-4 p-6 bg-gradient-to-br from-red-50 to-white rounded-2xl border border-red-100 hover:shadow-lg transition-shadow">
+                  <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-6 h-6 text-white" />
+                  </div>
                   <div>
-                    <h3 className="pedizone-heading text-lg text-gray-900 mb-2">Adres</h3>
-                    <p className="pedizone-text text-gray-600">{t.contact.address}</p>
+                    <h3 className="font-bold text-gray-900 mb-1">Telefon</h3>
+                    <a href="tel:+905068860326" className="text-red-600 hover:text-red-700 font-medium">
+                      +90 506 886 0326
+                    </a>
                   </div>
                 </div>
-                
-                <div className="flex items-start space-x-4">
-                  <Phone className="w-6 h-6 text-red-600 mt-1 flex-shrink-0" />
+
+                {/* Email */}
+                <div className="flex items-start gap-4 p-6 bg-gradient-to-br from-blue-50 to-white rounded-2xl border border-blue-100 hover:shadow-lg transition-shadow">
+                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-6 h-6 text-white" />
+                  </div>
                   <div>
-                    <h3 className="pedizone-heading text-lg text-gray-900 mb-2">Telefon</h3>
-                    <p className="pedizone-text text-gray-600">{t.contact.phone}</p>
+                    <h3 className="font-bold text-gray-900 mb-1">E-posta</h3>
+                    <a href="mailto:info@pedizone.com" className="text-blue-600 hover:text-blue-700 font-medium">
+                      info@pedizone.com
+                    </a>
                   </div>
                 </div>
-                
-                <div className="flex items-start space-x-4">
-                  <Mail className="w-6 h-6 text-red-600 mt-1 flex-shrink-0" />
+
+                {/* Address */}
+                <div className="flex items-start gap-4 p-6 bg-gradient-to-br from-green-50 to-white rounded-2xl border border-green-100 hover:shadow-lg transition-shadow">
+                  <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-white" />
+                  </div>
                   <div>
-                    <h3 className="pedizone-heading text-lg text-gray-900 mb-2">E-posta</h3>
-                    <p className="pedizone-text text-gray-600">{t.contact.email}</p>
+                    <h3 className="font-bold text-gray-900 mb-1">Adres</h3>
+                    <p className="text-gray-600">
+                      İstanbul, Türkiye
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <Card className="pedizone-card">
-              <CardContent className="p-8">
-                <h3 className="pedizone-heading text-xl text-gray-900 mb-6">
-                  {t.contact.form.title}
-                </h3>
-                
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t.contact.form.name}
-                    </label>
-                    <input 
-                      type="text" 
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                      placeholder={t.contact.form.namePlaceholder}
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t.contact.form.email}
-                    </label>
-                    <input 
-                      type="email" 
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                      placeholder={t.contact.form.emailPlaceholder}
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t.contact.form.message}
-                    </label>
-                    <textarea 
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      rows="4"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                      placeholder={t.contact.form.messagePlaceholder}
-                    ></textarea>
-                  </div>
-                  
-                  <Button 
-                    type="button"
-                    className="w-full pedizone-button"
-                    onClick={() => {
-                      const subject = encodeURIComponent(`İletişim Formu - ${formData.name}`)
-                      const body = encodeURIComponent(`Ad Soyad: ${formData.name}\nE-posta: ${formData.email}\n\nMesaj:\n${formData.message}`)
-                      window.location.href = `mailto:info@pedizone.com?subject=${subject}&body=${body}`
-                    }}
-                  >
-                    {t.contact.form.submit}
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+            {/* Contact Form */}
+            <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-200 shadow-lg">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    İsim Soyisim
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    E-posta
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Mesajınız
+                  </label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    rows="5"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all resize-none"
+                    required
+                  ></textarea>
+                </div>
+
+                <Button 
+                  type="submit" 
+                  className="w-full pedizone-button py-4 text-base shadow-lg hover:shadow-xl"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Gönderiliyor...' : 'Mesaj Gönder'}
+                  {!isSubmitting && <ArrowRight className="ml-2 w-5 h-5" />}
+                </Button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
