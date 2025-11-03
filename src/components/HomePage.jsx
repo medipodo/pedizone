@@ -654,30 +654,27 @@ const HomePage = () => {
               <div className="hidden lg:flex items-center space-x-2">
                 <button 
                   onClick={() => setCurrentLang('tr')}
-                  className={`flex items-center space-x-1 px-3 py-2 rounded-lg transition-colors ${
+                  className={`p-2 rounded-lg transition-colors ${
                     currentLang === 'tr' ? 'bg-white/20' : 'hover:bg-white/10'
                   }`}
                 >
-                  <span className="text-lg">🇹🇷</span>
-                  <span className="text-sm">TR</span>
+                  <span className="text-xl">🇹🇷</span>
                 </button>
                 <button 
                   onClick={() => setCurrentLang('en')}
-                  className={`flex items-center space-x-1 px-3 py-2 rounded-lg transition-colors ${
+                  className={`p-2 rounded-lg transition-colors ${
                     currentLang === 'en' ? 'bg-white/20' : 'hover:bg-white/10'
                   }`}
                 >
-                  <span className="text-lg">🇺🇸</span>
-                  <span className="text-sm">EN</span>
+                  <span className="text-xl">🇺🇸</span>
                 </button>
                 <button 
                   onClick={() => setCurrentLang('ar')}
-                  className={`flex items-center space-x-1 px-3 py-2 rounded-lg transition-colors ${
+                  className={`p-2 rounded-lg transition-colors ${
                     currentLang === 'ar' ? 'bg-white/20' : 'hover:bg-white/10'
                   }`}
                 >
-                  <span className="text-lg">🇸🇦</span>
-                  <span className="text-sm">AR</span>
+                  <span className="text-xl">🇸🇦</span>
                 </button>
               </div>
 
