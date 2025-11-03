@@ -786,12 +786,12 @@ const HomePage = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="hero-section bg-gradient-to-br from-gray-50 via-white to-red-50 py-1 md:py-2 lg:py-6">
+      <section id="home" className="hero-section bg-gradient-to-br from-gray-50 via-white to-red-50 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20">
         <div className="pedizone-container">
-          <div className="grid lg:grid-cols-2 gap-1 md:gap-2 lg:gap-4 items-center">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16 items-center">
             {/* Left Content */}
-            <div className="space-y-0.5 md:space-y-1 lg:space-y-2">
-              <div className="space-y-0.5 md:space-y-1 lg:space-y-1.5">
+            <div className="space-y-4 sm:space-y-5 md:space-y-6">
+              <div className="space-y-2 sm:space-y-3 md:space-y-4">
                 <Badge className="bg-red-100 text-red-800 px-4 py-2 text-sm font-medium">
                   {t.hero.badge}
                 </Badge>
@@ -885,10 +885,10 @@ const HomePage = () => {
       </section>
 
       {/* Products Section */}
-      <section id="products" className="py-2 md:py-3 lg:py-8 bg-white">
+      <section id="products" className="py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 bg-white">
         <div className="pedizone-container">
           {/* Section Header */}
-          <div className="text-center mb-1 md:mb-2 lg:mb-4">
+          <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-16">
             <div className="inline-block bg-red-100 text-red-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
               ÜRÜNLER
             </div>
@@ -967,10 +967,10 @@ const HomePage = () => {
       </section>
 
       {/* Solutions Section */}
-      <section id="solutions" className="py-2 md:py-3 lg:py-8 bg-gradient-to-br from-gray-50 to-white">
+      <section id="solutions" className="py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="pedizone-container">
           {/* Section Header */}
-          <div className="text-center mb-1 md:mb-2 lg:mb-4">
+          <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-16">
             <div className="inline-block bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
               ÇÖZÜMLER
             </div>
@@ -1029,10 +1029,10 @@ const HomePage = () => {
       </section>
 
       {/* About/Why PediZone Section */}
-      <section id="about" className="py-2 md:py-3 lg:py-8 bg-white">
+      <section id="about" className="py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 bg-white">
         <div className="pedizone-container">
           {/* Section Header */}
-          <div className="text-center mb-1 md:mb-2 lg:mb-4">
+          <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-16">
             <h2 className="pedizone-heading text-4xl md:text-5xl text-gray-900 mb-4">
               {t.about.title}
             </h2>
@@ -1066,10 +1066,10 @@ const HomePage = () => {
       </section>
 
       {/* Blog Section */}
-      <section id="blog" className="py-2 md:py-3 lg:py-8 bg-gray-50">
+      <section id="blog" className="py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 bg-gray-50">
         <div className="pedizone-container">
           {/* Section Header */}
-          <div className="text-center mb-1 md:mb-2 lg:mb-4">
+          <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-16">
             <div className="inline-block bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
               BLOG
             </div>
@@ -1140,10 +1140,10 @@ const HomePage = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-2 md:py-3 lg:py-8 bg-white">
+      <section id="contact" className="py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 bg-white">
         <div className="pedizone-container">
           {/* Section Header */}
-          <div className="text-center mb-1 md:mb-2 lg:mb-4">
+          <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-16">
             <div className="inline-block bg-green-100 text-green-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
               İLETİŞİM
             </div>
