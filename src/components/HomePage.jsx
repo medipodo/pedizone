@@ -786,12 +786,12 @@ const HomePage = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="hero-section bg-gradient-to-br from-gray-50 via-white to-red-50 py-12 lg:py-16">
+      <section id="home" className="hero-section bg-gradient-to-br from-gray-50 via-white to-red-50 py-8 lg:py-12">
         <div className="pedizone-container">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 items-center">
             {/* Left Content */}
-            <div className="space-y-6">
-              <div className="space-y-4">
+            <div className="space-y-4">
+              <div className="space-y-3">
                 <Badge className="bg-red-100 text-red-800 px-4 py-2 text-sm font-medium">
                   {t.hero.badge}
                 </Badge>
@@ -804,24 +804,24 @@ const HomePage = () => {
                   <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-red-600">
                     {t.hero.brand}
                   </h2>
-                  <p className="pedizone-text text-base lg:text-lg xl:text-xl text-gray-600 max-w-2xl">
+                  <p className="pedizone-text text-base lg:text-lg text-gray-600 max-w-2xl">
                     {t.hero.subtitle}
                   </p>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Button className="pedizone-button px-6 py-4" onClick={scrollToProducts}>
+              <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                <Button className="pedizone-button px-6 py-3" onClick={scrollToProducts}>
                   {t.hero.cta1}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-                <Button variant="outline" className="px-6 py-4 border-red-600 text-red-600 hover:bg-red-50">
+                <Button variant="outline" className="px-6 py-3 border-red-600 text-red-600 hover:bg-red-50">
                   {t.hero.cta2}
                 </Button>
               </div>
 
               {/* Trust Indicators Compact */}
-              <div className="flex flex-wrap gap-4 pt-2">
+              <div className="flex flex-wrap gap-3 pt-1">
                 <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-100">
                   <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
                     <CheckCircle className="w-4 h-4 text-green-600" />
@@ -872,10 +872,10 @@ const HomePage = () => {
       </section>
 
       {/* Products Section */}
-      <section id="products" className="py-20 bg-white">
+      <section id="products" className="py-12 lg:py-16 bg-white">
         <div className="pedizone-container">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <div className="inline-block bg-red-100 text-red-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
               ÜRÜNLER
             </div>
@@ -954,10 +954,10 @@ const HomePage = () => {
       </section>
 
       {/* Solutions Section */}
-      <section id="solutions" className="py-20 bg-gradient-to-br from-gray-50 to-white">
+      <section id="solutions" className="py-12 lg:py-16 bg-gradient-to-br from-gray-50 to-white">
         <div className="pedizone-container">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <div className="inline-block bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
               ÇÖZÜMLER
             </div>
@@ -1016,10 +1016,10 @@ const HomePage = () => {
       </section>
 
       {/* About/Why PediZone Section */}
-      <section id="about" className="py-20 bg-white">
+      <section id="about" className="py-12 lg:py-16 bg-white">
         <div className="pedizone-container">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <h2 className="pedizone-heading text-4xl md:text-5xl text-gray-900 mb-4">
               {t.about.title}
             </h2>
@@ -1053,10 +1053,10 @@ const HomePage = () => {
       </section>
 
       {/* Blog Section */}
-      <section id="blog" className="py-20 bg-gray-50">
+      <section id="blog" className="py-12 lg:py-16 bg-gray-50">
         <div className="pedizone-container">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <div className="inline-block bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
               BLOG
             </div>
@@ -1127,10 +1127,10 @@ const HomePage = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white">
+      <section id="contact" className="py-12 lg:py-16 bg-white">
         <div className="pedizone-container">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <div className="inline-block bg-green-100 text-green-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
               İLETİŞİM
             </div>
