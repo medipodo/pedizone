@@ -648,16 +648,6 @@ const HomePage = () => {
               <a href="#contact" className="text-white hover:text-red-200 transition-colors">{t.nav.contact}</a>
             </nav>
 
-            {/* CRM Button */}
-            <a 
-              href="https://pedizone.xyz" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hidden md:inline-block bg-white text-red-600 px-4 py-2 rounded-lg font-semibold hover:bg-red-50 transition-colors"
-            >
-              CRM
-            </a>
-
             {/* Language Selector & Mobile Menu */}
             <div className="flex items-center space-x-4">
               {/* Desktop Language Selector */}
@@ -785,15 +775,6 @@ const HomePage = () => {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {t.nav.contact}
-                </a>
-                <a 
-                  href="https://pedizone.xyz" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="bg-white text-red-600 px-4 py-2 rounded-lg font-semibold hover:bg-red-50 transition-colors inline-block mt-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  CRM
                 </a>
               </nav>
             </div>
@@ -1253,6 +1234,15 @@ const HomePage = () => {
               <a href="#about" className="text-red-200 hover:text-white transition-colors">Hakkımızda</a>
               <a href="/bayiler" className="text-red-200 hover:text-white transition-colors">Bayiler</a>
               <a href="#contact" className="text-red-200 hover:text-white transition-colors">İletişim</a>
+              <span className="text-red-400">•</span>
+              <a 
+                href="https://pedizone.xyz" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-red-200 hover:text-white transition-colors text-sm"
+              >
+                CRM Giriş
+              </a>
             </div>
             
             <div className="border-t border-red-400/30 pt-6">
