@@ -841,8 +841,12 @@ const HomePage = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-100">
-                  <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
-                    <span className="text-red-600 font-bold text-lg">℞</span>
+                  <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center overflow-hidden">
+                    <img 
+                      src="https://customer-assets.emergentagent.com/job_pedizone-polish/artifacts/xlcjr5cu_Ads%C4%B1z%20tasar%C4%B1m%20%2813%29%20%281%29.jpg" 
+                      alt="Eczane" 
+                      className="w-5 h-5 object-contain"
+                    />
                   </div>
                   <div>
                     <div className="text-xs font-bold text-gray-900">Seçili Eczanelerde</div>
