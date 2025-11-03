@@ -919,7 +919,7 @@ const HomePage = () => {
                 {/* Image Container */}
                 <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-red-50 to-blue-50">
                   <img 
-                    src={product.id === 'mantar-karsiti-serum' ? 'https://pedizone.com/assets/pedizone-serum-new-BHG1pNiG.jpg' : product.image} 
+                    src={product.id === 'mantar-karsiti-serum' ? 'https://customer-assets.emergentagent.com/job_pedizone-polish/artifacts/bsmddgbs_pedizone-serum.jpg' : product.image} 
                     alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     loading="lazy"
