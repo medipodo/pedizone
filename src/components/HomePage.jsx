@@ -786,107 +786,85 @@ const HomePage = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="relative bg-gradient-to-br from-white via-gray-50 to-red-50 py-16 md:py-20 overflow-hidden">
-        {/* Subtle Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-10 right-10 w-72 h-72 bg-red-500 rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-10 left-10 w-72 h-72 bg-blue-500 rounded-full filter blur-3xl"></div>
-        </div>
-
-        <div className="pedizone-container relative z-10">
+      <section id="home" className="hero-section bg-gradient-to-br from-gray-50 via-white to-red-50 py-12 lg:py-16">
+        <div className="pedizone-container">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Content */}
-            <div className="space-y-6 lg:pr-8">
-              {/* Trust Badge */}
-              <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md border border-red-100">
-                <CheckCircle className="w-4 h-4 text-green-500" />
-                <span className="text-sm font-semibold text-gray-700">{t.hero.badge}</span>
-              </div>
-              
-              {/* Main Heading */}
-              <div className="space-y-3">
-                <h1 className="pedizone-heading text-3xl md:text-4xl lg:text-5xl text-gray-900 leading-tight">
+            <div className="space-y-6">
+              <div className="space-y-4">
+                <Badge className="bg-red-100 text-red-800 px-4 py-2 text-sm font-medium">
+                  {t.hero.badge}
+                </Badge>
+                
+                <h1 className="pedizone-heading text-3xl lg:text-4xl xl:text-5xl text-gray-900 leading-tight">
                   {t.hero.title}
                 </h1>
                 
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent">
-                  {t.hero.brand}
-                </h2>
-                
-                <p className="pedizone-text text-base md:text-lg text-gray-600 leading-relaxed">
-                  {t.hero.subtitle}
-                </p>
+                <div className="space-y-2">
+                  <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-red-600">
+                    {t.hero.brand}
+                  </h2>
+                  <p className="pedizone-text text-base lg:text-lg xl:text-xl text-gray-600 max-w-2xl">
+                    {t.hero.subtitle}
+                  </p>
+                </div>
               </div>
 
-              {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button 
-                  className="pedizone-button px-6 py-5 shadow-lg hover:shadow-xl transition-all text-base" 
-                  onClick={scrollToProducts}
-                >
+                <Button className="pedizone-button px-6 py-4" onClick={scrollToProducts}>
                   {t.hero.cta1}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-                <Button 
-                  variant="outline" 
-                  className="px-6 py-5 border-2 border-red-600 text-red-600 hover:bg-red-50 transition-all text-base"
-                >
+                <Button variant="outline" className="px-6 py-4 border-red-600 text-red-600 hover:bg-red-50">
                   {t.hero.cta2}
                 </Button>
               </div>
 
-              {/* Trust Indicators - Compact */}
+              {/* Trust Indicators Compact */}
               <div className="flex flex-wrap gap-4 pt-2">
-                <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm">
+                <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-100">
                   <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
                     <CheckCircle className="w-4 h-4 text-green-600" />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-gray-900">Podolog Onaylı</div>
+                    <div className="text-xs font-bold text-gray-900">Podolog Onaylı</div>
                     <div className="text-xs text-gray-600">Uzman Tavsiyesi</div>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm">
+                <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-100">
                   <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
                     <CheckCircle className="w-4 h-4 text-blue-600" />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-gray-900">Klinik Testli</div>
+                    <div className="text-xs font-bold text-gray-900">Klinik Testli</div>
                     <div className="text-xs text-gray-600">Güvenli Formül</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Right Content - Compact Product Grid */}
+            {/* Right - 3 Products Grid */}
             <div className="relative">
-              {/* Main Product */}
-              <div className="relative bg-gradient-to-br from-white to-gray-100 rounded-3xl p-6 shadow-xl">
-                <div className="aspect-square max-w-md mx-auto relative">
-                  <img 
-                    src={productSerum} 
-                    alt="PediZone Serum" 
-                    className="w-full h-full object-contain"
-                    fetchpriority="high"
-                    loading="eager"
-                  />
-                  {/* Floating Badge */}
-                  <div className="absolute top-2 right-2 bg-red-600 text-white px-3 py-1 rounded-full shadow-lg text-xs font-bold">
-                    En Popüler
-                  </div>
-                </div>
-              </div>
-              
-              {/* Secondary Products - Compact Grid */}
-              <div className="grid grid-cols-2 gap-3 mt-4">
-                <div className="bg-white rounded-xl p-3 shadow-md hover:shadow-lg transition-shadow">
-                  <img src={productFoam} alt="PediZone Köpük" className="w-full rounded-lg" loading="lazy" />
-                  <p className="text-xs text-center text-gray-600 mt-2 font-medium">Temizleme Köpüğü</p>
-                </div>
-                <div className="bg-white rounded-xl p-3 shadow-md hover:shadow-lg transition-shadow">
-                  <img src={productSerum2} alt="PediZone Krem" className="w-full rounded-lg" loading="lazy" />
-                  <p className="text-xs text-center text-gray-600 mt-2 font-medium">Çatlak Topuk Kremi</p>
-                </div>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 lg:gap-4">
+                <img 
+                  src={productSerum} 
+                  alt="PediZone Serum" 
+                  className="rounded-2xl shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300 w-full"
+                  fetchpriority="high"
+                  loading="eager"
+                />
+                <img 
+                  src={productFoam} 
+                  alt="PediZone Köpük" 
+                  className="rounded-2xl shadow-lg transform -rotate-3 hover:rotate-0 transition-transform duration-300 mt-6 md:mt-0 w-full"
+                  loading="lazy"
+                />
+                <img 
+                  src={productSerum2} 
+                  alt="PediZone Bakım Serumu" 
+                  className="rounded-2xl shadow-lg transform rotate-2 hover:rotate-0 transition-transform duration-300 col-span-2 md:col-span-1 mt-3 md:mt-6 w-full"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
