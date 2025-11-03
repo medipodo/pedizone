@@ -1,8 +1,13 @@
 import React from 'react'
+import Header from './Header'
+import Footer from './Footer'
 
 const PrivacyPolicy = () => {
   return (
-    <div className="privacy-policy-container">
+    <>
+      <Header showBackButton={true} />
+      
+      <div className="privacy-policy-container">
       <div className="privacy-policy-content">
         <h1>Pedizone - Gizlilik Politikası</h1>
         <p className="last-updated"><strong>Son Güncelleme:</strong> 11/09/2025</p>
@@ -79,6 +84,9 @@ const PrivacyPolicy = () => {
         </section>
       </div>
     </div>
+    
+    <Footer />
+    </>
   )
 }
 

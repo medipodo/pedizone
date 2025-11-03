@@ -165,52 +165,35 @@ const ProductDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="pedizone-gradient text-white py-4">
-        <div className="pedizone-container">
-          <div className="flex items-center justify-between">
-            <Button 
-              variant="ghost" 
-              onClick={() => navigate('/')}
-              className="text-white hover:bg-white/20"
-            >
-              <ArrowLeft className="w-5 h-5 mr-2" />
-              Ana Sayfaya Dön
-            </Button>
-            
-            <div className="flex items-center space-x-3">
-              <span className="text-2xl font-bold">Pedizone</span>
-              <span className="text-sm">®</span>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Product Detail Content */}
-      <div className="pedizone-container py-12 pt-24 lg:pt-32">
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Product Image */}
-          <div className="space-y-6">
-            <div className="aspect-square overflow-hidden rounded-2xl bg-white shadow-lg">
-              <img 
-                src={product.image} 
-                alt={product.name}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            
-            {product.badge && (
-              <div className="text-center">
-                <Badge className="bg-red-600 text-white px-6 py-2 text-lg">
-                  {product.badge}
-                </Badge>
+    <>
+      <Header showBackButton={true} />
+      
+      <div className="min-h-screen bg-gray-50">
+        {/* Product Detail Content */}
+        <div className="pedizone-container py-8 lg:py-12">
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Left - Product Image (Sticky) */}
+            <div className="lg:col-span-1">
+              <div className="lg:sticky lg:top-24 space-y-4">
+                <div className="aspect-square overflow-hidden rounded-2xl bg-white shadow-lg relative">
+                  <img 
+                    src={product.image} 
+                    alt={product.name}
+                    className="w-full h-full object-cover"
+                  />
+                  {product.badge && (
+                    <div className="absolute top-4 right-4">
+                      <Badge className="bg-red-600 text-white px-4 py-2 text-sm">
+                        {product.badge}
+                      </Badge>
+                    </div>
+                  )}
+                </div>
               </div>
-            )}
-          </div>
+            </div>
 
-          {/* Product Info */}
-          <div className="space-y-8">
+            {/* Right - Product Info */}
+            <div className="lg:col-span-2 space-y-6">
             <div>
               <h1 className="pedizone-heading text-4xl text-gray-900 mb-4">
                 {product.name}
@@ -386,7 +369,10 @@ const ProductDetail = () => {
           </Card>
         </div>
       </div>
-    </div>
+      </div>
+      
+      <Footer />
+    </>
   )
 }
 

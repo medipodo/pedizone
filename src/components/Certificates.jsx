@@ -3,6 +3,8 @@ import { ArrowLeft, ExternalLink, Calendar, Building, FileText, CheckCircle, X }
 import { Button } from './ui/button'
 import { Card, CardContent } from './ui/card'
 import { Badge } from './ui/badge'
+import Header from './Header'
+import Footer from './Footer'
 
 // Import certificate images
 import mikrobiyolojikAnalizRaporuSeo from '../assets/documents/pedizone-mikrobiyolojik-analiz-raporu-seo.png'
@@ -171,30 +173,17 @@ const Certificates = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-red-600 via-red-700 to-red-800 shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            <div className="flex items-center space-x-4">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => window.history.back()}
-                className="flex items-center space-x-2 text-white hover:text-red-100 hover:bg-red-600/20 transition-all duration-300 rounded-lg px-4 py-2"
-              >
-                <ArrowLeft className="h-5 w-5" />
-                <span className="font-medium">Ana Sayfaya Dön</span>
-              </Button>
-            </div>
-            <div className="text-center">
-              <h1 className="text-3xl font-bold text-white mb-1 tracking-tight">Sertifikalarımız</h1>
-              <p className="text-red-100 font-medium">Test Sonuçları ve Kalite Belgeleri</p>
-            </div>
-            <div className="w-40"></div>
+    <>
+      <Header showBackButton={true} />
+      
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+        {/* Page Header */}
+        <div className="bg-gradient-to-r from-red-600 via-red-700 to-red-800 py-12">
+          <div className="pedizone-container text-center">
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">Sertifikalarımız</h1>
+            <p className="text-red-100 text-lg">Test Sonuçları ve Kalite Belgeleri</p>
           </div>
         </div>
-      </div>
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -406,7 +395,10 @@ const Certificates = () => {
           </div>
         </div>
       )}
-    </div>
+      </div>
+      
+      <Footer />
+    </>
   )
 }
 
