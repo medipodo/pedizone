@@ -1029,7 +1029,7 @@ const HomePage = () => {
       </section>
 
       {/* About/Why PediZone Section */}
-      <section id="about" className="py-6 sm:py-8 md:py-10 lg:py-12 xl:py-14 bg-white">
+      <section id="aboutclassName="py-6 sm:py-8 md:py-10 lg:py-12 xl:py-14 bg-white">
         <div className="pedizone-container">
           {/* Section Header */}
           <div className="text-center mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12">
@@ -1066,7 +1066,7 @@ const HomePage = () => {
       </section>
 
       {/* Blog Section */}
-      <section id="blog" className="py-6 sm:py-8 md:py-10 lg:py-12 xl:py-14 bg-gray-50">
+      <section id="blogclassName="py-6 sm:py-8 md:py-10 lg:py-12 xl:py-14 bg-gray-50
         <div className="pedizone-container">
           {/* Section Header */}
           <div className="text-center mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12">
@@ -1193,7 +1193,7 @@ const HomePage = () => {
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">Adres</h3>
                     <p className="text-gray-600">
-                      İstanbul, Türkiye
+                      Ankara, Türkiye
                     </p>
                   </div>
                 </div>
