@@ -654,27 +654,30 @@ const HomePage = () => {
               <div className="hidden lg:flex items-center space-x-2">
                 <button 
                   onClick={() => setCurrentLang('tr')}
-                  className={`p-2 rounded-lg transition-colors ${
-                    currentLang === 'tr' ? 'bg-white/20' : 'hover:bg-white/10'
+                  className={`p-3 rounded-lg transition-all duration-200 ${
+                    currentLang === 'tr' ? 'bg-white/20 scale-110' : 'hover:bg-white/10'
                   }`}
+                  aria-label="Türkçe"
                 >
-                  <span className="text-xl">🇹🇷</span>
+                  <span className="text-2xl">🇹🇷</span>
                 </button>
                 <button 
                   onClick={() => setCurrentLang('en')}
-                  className={`p-2 rounded-lg transition-colors ${
-                    currentLang === 'en' ? 'bg-white/20' : 'hover:bg-white/10'
+                  className={`p-3 rounded-lg transition-all duration-200 ${
+                    currentLang === 'en' ? 'bg-white/20 scale-110' : 'hover:bg-white/10'
                   }`}
+                  aria-label="English"
                 >
-                  <span className="text-xl">🇺🇸</span>
+                  <span className="text-2xl">🇺🇸</span>
                 </button>
                 <button 
                   onClick={() => setCurrentLang('ar')}
-                  className={`p-2 rounded-lg transition-colors ${
-                    currentLang === 'ar' ? 'bg-white/20' : 'hover:bg-white/10'
+                  className={`p-3 rounded-lg transition-all duration-200 ${
+                    currentLang === 'ar' ? 'bg-white/20 scale-110' : 'hover:bg-white/10'
                   }`}
+                  aria-label="العربية"
                 >
-                  <span className="text-xl">🇸🇦</span>
+                  <span className="text-2xl">🇸🇦</span>
                 </button>
               </div>
 
@@ -682,27 +685,30 @@ const HomePage = () => {
               <div className="lg:hidden flex items-center space-x-1">
                 <button 
                   onClick={() => setCurrentLang('tr')}
-                  className={`p-2 rounded-lg transition-colors ${
-                    currentLang === 'tr' ? 'bg-white/20' : 'hover:bg-white/10'
+                  className={`p-2 rounded-lg transition-all duration-200 ${
+                    currentLang === 'tr' ? 'bg-white/20 scale-110' : 'hover:bg-white/10'
                   }`}
+                  aria-label="Türkçe"
                 >
-                  <span className="text-xl">🇹🇷</span>
+                  <span className="text-2xl">🇹🇷</span>
                 </button>
                 <button 
                   onClick={() => setCurrentLang('en')}
-                  className={`p-2 rounded-lg transition-colors ${
-                    currentLang === 'en' ? 'bg-white/20' : 'hover:bg-white/10'
+                  className={`p-2 rounded-lg transition-all duration-200 ${
+                    currentLang === 'en' ? 'bg-white/20 scale-110' : 'hover:bg-white/10'
                   }`}
+                  aria-label="English"
                 >
-                  <span className="text-xl">🇺🇸</span>
+                  <span className="text-2xl">🇺🇸</span>
                 </button>
                 <button 
                   onClick={() => setCurrentLang('ar')}
-                  className={`p-2 rounded-lg transition-colors ${
-                    currentLang === 'ar' ? 'bg-white/20' : 'hover:bg-white/10'
+                  className={`p-2 rounded-lg transition-all duration-200 ${
+                    currentLang === 'ar' ? 'bg-white/20 scale-110' : 'hover:bg-white/10'
                   }`}
+                  aria-label="العربية"
                 >
-                  <span className="text-xl">🇸🇦</span>
+                  <span className="text-2xl">🇸🇦</span>
                 </button>
               </div>
 
