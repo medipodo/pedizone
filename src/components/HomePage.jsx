@@ -821,7 +821,7 @@ const HomePage = () => {
               </div>
 
               {/* Trust Indicators Compact */}
-              <div className="flex flex-wrap gap-3 pt-1">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-3 pt-1">
                 <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-100">
                   <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
                     <CheckCircle className="w-4 h-4 text-green-600" />
@@ -838,6 +838,15 @@ const HomePage = () => {
                   <div>
                     <div className="text-xs font-bold text-gray-900">Klinik Testli</div>
                     <div className="text-xs text-gray-600">Güvenli Formül</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-100">
+                  <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
+                    <span className="text-red-600 font-bold text-lg">℞</span>
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-gray-900">Seçili Eczanelerde</div>
+                    <div className="text-xs text-gray-600">Güvenli Satış</div>
                   </div>
                 </div>
               </div>
@@ -906,7 +915,7 @@ const HomePage = () => {
                 {/* Image Container */}
                 <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-red-50 to-blue-50">
                   <img 
-                    src={product.id === 'serum' ? 'https://pedizone.com/assets/pedizone-serum-new-BHG1pNiG.jpg' : product.image} 
+                    src={product.id === 'mantar-karsiti-serum' ? 'https://pedizone.com/assets/pedizone-serum-new-BHG1pNiG.jpg' : product.image} 
                     alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     loading="lazy"
