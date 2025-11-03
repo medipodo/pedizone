@@ -885,7 +885,7 @@ const HomePage = () => {
       </section>
 
       {/* Products Section */}
-      <section id="products" className="py-6 sm:py-8 md:py-10 lg:py-12 xl:py-14 bg-white">
+      <section id="products" className="py-2 sm:py-4 md:py-6 lg:py-8 xl:py-10 bg-white">
         <div className="pedizone-container">
           {/* Section Header */}
           <div className="text-center mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12">
@@ -967,7 +967,7 @@ const HomePage = () => {
       </section>
 
       {/* Solutions Section */}
-      <section id="solutions" className="py-6 sm:py-8 md:py-10 lg:py-12 xl:py-14 bg-gradient-to-br from-gray-50 to-white">
+      <section id="solutions" className="py-2 sm:py-4 md:py-6 lg:py-8 xl:py-10 bg-gradient-to-br from-gray-50 to-white">
         <div className="pedizone-container">
           {/* Section Header */}
           <div className="text-center mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12">
@@ -1029,7 +1029,7 @@ const HomePage = () => {
       </section>
 
       {/* About/Why PediZone Section */}
-      <section id="aboutclassName="py-6 sm:py-8 md:py-10 lg:py-12 xl:py-14 bg-white">
+      <section id="aboutclassName="py-2 sm:py-4 md:py-6 lg:py-8 xl:py-10 bg-white">
         <div className="pedizone-container">
           {/* Section Header */}
           <div className="text-center mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12">
@@ -1066,7 +1066,7 @@ const HomePage = () => {
       </section>
 
       {/* Blog Section */}
-      <section id="blogclassName="py-6 sm:py-8 md:py-10 lg:py-12 xl:py-14 bg-gray-50
+      <section id="blogclassName="py-2 sm:py-4 md:py-6 lg:py-8 xl:py-10 bg-gray-50
         <div className="pedizone-container">
           {/* Section Header */}
           <div className="text-center mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12">
@@ -1140,7 +1140,7 @@ const HomePage = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-6 sm:py-8 md:py-10 lg:py-12 xl:py-14 bg-white">
+      <section id="contact" className="py-2 sm:py-4 md:py-6 lg:py-8 xl:py-10 bg-white">
         <div className="pedizone-container">
           {/* Section Header */}
           <div className="text-center mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12">
