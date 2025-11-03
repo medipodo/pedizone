@@ -9,8 +9,7 @@ import { Badge } from './ui/badge'
 import productSerum from '../assets/pedizone-serum-new.jpg'
 import productFoam from '../assets/pedizone-foot-foam-new.jpg'
 import productFoamPortfolio from '../assets/Foam-Pedizone-Kopuk.jpg'
-// import productSerum2 from '../assets/pedizone-urea-cream-new.png'
-const productSerum2 = 'https://customer-assets.emergentagent.com/job_pedizone-polish/artifacts/h1qr1xk0_pedizone-%C3%A7atlaktopuk-kremi.jpg'
+import productSerum2 from '../assets/pedizone-urea-cream-new.png'
 import solutionImage1 from '../assets/ayak-mantari-tedavi-optimized.png'
 import solutionImage2 from '../assets/foot-callus-problem-optimized.png'
 import solutionImage3 from '../assets/foot-crack-problem.jpg'
@@ -874,7 +873,7 @@ const HomePage = () => {
                   loading="lazy"
                 />
                 <img 
-                  src={productSerum2} 
+                  src="https://customer-assets.emergentagent.com/job_pedizone-polish/artifacts/h1qr1xk0_pedizone-%C3%A7atlaktopuk-kremi.jpg" 
                   alt="PediZone Bakım Serumu" 
                   className="rounded-2xl shadow-lg transform rotate-2 hover:rotate-0 transition-transform duration-300 col-span-2 md:col-span-1 mt-3 md:mt-6 w-full"
                   loading="lazy"
