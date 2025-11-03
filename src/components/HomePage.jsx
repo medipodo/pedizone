@@ -654,30 +654,30 @@ const HomePage = () => {
               <div className="hidden lg:flex items-center space-x-2">
                 <button 
                   onClick={() => setCurrentLang('tr')}
-                  className={`p-3 rounded-lg transition-all duration-200 ${
-                    currentLang === 'tr' ? 'bg-white/20 scale-110' : 'hover:bg-white/10'
+                  className={`p-2 rounded-lg transition-all duration-200 ${
+                    currentLang === 'tr' ? 'bg-white/20 ring-2 ring-white' : 'hover:bg-white/10'
                   }`}
                   aria-label="Türkçe"
                 >
-                  <span className="text-2xl">🇹🇷</span>
+                  <img src="https://flagcdn.com/w40/tr.png" alt="TR" className="w-8 h-6" />
                 </button>
                 <button 
                   onClick={() => setCurrentLang('en')}
-                  className={`p-3 rounded-lg transition-all duration-200 ${
-                    currentLang === 'en' ? 'bg-white/20 scale-110' : 'hover:bg-white/10'
+                  className={`p-2 rounded-lg transition-all duration-200 ${
+                    currentLang === 'en' ? 'bg-white/20 ring-2 ring-white' : 'hover:bg-white/10'
                   }`}
                   aria-label="English"
                 >
-                  <span className="text-2xl">🇺🇸</span>
+                  <img src="https://flagcdn.com/w40/us.png" alt="EN" className="w-8 h-6" />
                 </button>
                 <button 
                   onClick={() => setCurrentLang('ar')}
-                  className={`p-3 rounded-lg transition-all duration-200 ${
-                    currentLang === 'ar' ? 'bg-white/20 scale-110' : 'hover:bg-white/10'
+                  className={`p-2 rounded-lg transition-all duration-200 ${
+                    currentLang === 'ar' ? 'bg-white/20 ring-2 ring-white' : 'hover:bg-white/10'
                   }`}
                   aria-label="العربية"
                 >
-                  <span className="text-2xl">🇸🇦</span>
+                  <img src="https://flagcdn.com/w40/sa.png" alt="AR" className="w-8 h-6" />
                 </button>
               </div>
 
@@ -686,29 +686,29 @@ const HomePage = () => {
                 <button 
                   onClick={() => setCurrentLang('tr')}
                   className={`p-2 rounded-lg transition-all duration-200 ${
-                    currentLang === 'tr' ? 'bg-white/20 scale-110' : 'hover:bg-white/10'
+                    currentLang === 'tr' ? 'bg-white/20 ring-2 ring-white' : 'hover:bg-white/10'
                   }`}
                   aria-label="Türkçe"
                 >
-                  <span className="text-2xl">🇹🇷</span>
+                  <img src="https://flagcdn.com/w40/tr.png" alt="TR" className="w-8 h-6" />
                 </button>
                 <button 
                   onClick={() => setCurrentLang('en')}
                   className={`p-2 rounded-lg transition-all duration-200 ${
-                    currentLang === 'en' ? 'bg-white/20 scale-110' : 'hover:bg-white/10'
+                    currentLang === 'en' ? 'bg-white/20 ring-2 ring-white' : 'hover:bg-white/10'
                   }`}
                   aria-label="English"
                 >
-                  <span className="text-2xl">🇺🇸</span>
+                  <img src="https://flagcdn.com/w40/us.png" alt="EN" className="w-8 h-6" />
                 </button>
                 <button 
                   onClick={() => setCurrentLang('ar')}
                   className={`p-2 rounded-lg transition-all duration-200 ${
-                    currentLang === 'ar' ? 'bg-white/20 scale-110' : 'hover:bg-white/10'
+                    currentLang === 'ar' ? 'bg-white/20 ring-2 ring-white' : 'hover:bg-white/10'
                   }`}
                   aria-label="العربية"
                 >
-                  <span className="text-2xl">🇸🇦</span>
+                  <img src="https://flagcdn.com/w40/sa.png" alt="AR" className="w-8 h-6" />
                 </button>
               </div>
 
