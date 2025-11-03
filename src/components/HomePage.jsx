@@ -6,8 +6,7 @@ import { Card, CardContent } from './ui/card'
 import { Badge } from './ui/badge'
 
 // Import images
-// const productSerum = '../assets/pedizone-serum-new.jpg'
-const productSerum = 'https://pedizone.com/assets/pedizone-serum-new-BHG1pNiG.jpg'
+import productSerum from '../assets/pedizone-serum-new.jpg'
 import productFoam from '../assets/pedizone-foot-foam-new.jpg'
 import productFoamPortfolio from '../assets/Foam-Pedizone-Kopuk.jpg'
 import productSerum2 from '../assets/pedizone-urea-cream-new.png'
@@ -907,7 +906,7 @@ const HomePage = () => {
                 {/* Image Container */}
                 <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-red-50 to-blue-50">
                   <img 
-                    src={product.image} 
+                    src={product.id === 'serum' ? 'https://pedizone.com/assets/pedizone-serum-new-BHG1pNiG.jpg' : product.image} 
                     alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     loading="lazy"
