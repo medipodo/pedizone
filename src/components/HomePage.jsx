@@ -301,7 +301,7 @@ const HomePage = () => {
       contact: {
         title: 'İletişime Geçin',
         subtitle: 'Sorularınız için buradayız',
-        address: 'Bağlıca Mah. Mert Cad. No 4/2 Ankara / Turkey',
+        address: 'Bağlıca Mah. Mert Cad. No 4/2 Ankara / Ankara, Turkey',
         phone: '05068860326',
         email: 'info@pedizone.com',
         form: {
@@ -1193,7 +1193,7 @@ const HomePage = () => {
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">Adres</h3>
                     <p className="text-gray-600">
-                      Turkey
+                      Ankara, Turkey
                     </p>
                   </div>
                 </div>
