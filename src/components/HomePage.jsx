@@ -1066,7 +1066,7 @@ const HomePage = () => {
       </section>
 
       {/* Blog Section */}
-      <section id="blogclassName="py-2 sm:py-4 md:py-6 lg:py-8 xl:py-10 bg-gray-50
+      <section id="blog" className="py-2 sm:py-4 md:py-6 lg:py-8 xl:py-10 bg-gray-50
         <div className="pedizone-container">
           {/* Section Header */}
           <div className="text-center mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12">
