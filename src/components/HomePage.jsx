@@ -1193,7 +1193,7 @@ const HomePage = () => {
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">Adres</h3>
                     <p className="text-gray-600">
-                      Ankara, Turkey
+                      Turkey
                     </p>
                   </div>
                 </div>
