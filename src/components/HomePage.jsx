@@ -1029,7 +1029,7 @@ const HomePage = () => {
       </section>
 
       {/* About/Why PediZone Section */}
-      <section id="aboutclassName="py-2 sm:py-4 md:py-6 lg:py-8 xl:py-10 bg-white">
+      <section id="about" className="py-2 sm:py-4 md:py-6 lg:py-8 xl:py-10 bg-white">
         <div className="pedizone-container">
           {/* Section Header */}
           <div className="text-center mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12">
