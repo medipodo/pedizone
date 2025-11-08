@@ -48,7 +48,7 @@ const DealersMap = () => {
     <>
       <Header currentLang={currentLang} setCurrentLang={setCurrentLang} showBackButton={true} />
       
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 pt-[72px]">
       {/* Header */}
       <div className="bg-gradient-to-r from-red-600 to-red-700 text-white py-16">
         <div className="pedizone-container">
@@ -67,8 +67,8 @@ const DealersMap = () => {
       <div className="pedizone-container py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Dealers List */}
-          <div className="lg:col-span-1">
-            <Card className="sticky top-4">
+          <div className="lg:col-span-1" style={{ zIndex: 10 }}>
+            <Card className="sticky top-[90px]">
               <CardContent className="p-6">
                 <h2 className="text-2xl font-bold mb-6 text-red-600">
                   Satış Noktaları ({dealers.length})
