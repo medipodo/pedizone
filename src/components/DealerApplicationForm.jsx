@@ -57,6 +57,7 @@ const DealerApplicationForm = () => {
         >
           {/* Netlify requires a hidden input for form identification */}
           <input type="hidden" name="form-name" value="dealer-application" />
+          <input type="hidden" name="email-to" value="medipodotr@gmail.com" />
 
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">

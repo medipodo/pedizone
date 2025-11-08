@@ -69,8 +69,6 @@ const DealersMap = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Dealers List */}
           <div className="lg:col-span-1" style={{ zIndex: 10 }}>
-            <DealerApplicationForm />
-            <div className="h-8"></div>
             <Card className="sticky top-[90px]">
               <CardContent className="p-6">
                 <h2 className="text-2xl font-bold mb-6 text-red-600">
@@ -190,6 +188,11 @@ const DealersMap = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+
+        {/* Dealer Application Form Section */}
+        <div className="mt-12">
+          <DealerApplicationForm />
         </div>
 
         {/* Instructions Section */}
