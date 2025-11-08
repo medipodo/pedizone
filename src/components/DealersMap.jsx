@@ -5,6 +5,7 @@ import { Card, CardContent } from './ui/card'
 import { Button } from './ui/button'
 import Header from './Header'
 import Footer from './Footer'
+import DealerApplicationForm from './DealerApplicationForm'
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
 import dealersData from '../data/dealers.json'
@@ -68,6 +69,8 @@ const DealersMap = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Dealers List */}
           <div className="lg:col-span-1" style={{ zIndex: 10 }}>
+            <DealerApplicationForm />
+            <div className="h-8"></div>
             <Card className="sticky top-[90px]">
               <CardContent className="p-6">
                 <h2 className="text-2xl font-bold mb-6 text-red-600">
