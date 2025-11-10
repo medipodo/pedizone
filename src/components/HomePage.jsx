@@ -41,7 +41,7 @@ const HomePage = () => {
     email: '',
     message: ''
   })
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  // Form submission state removed - now using direct mailto
 
   // Scroll to top function
   const scrollToTop = () => {
@@ -129,17 +129,21 @@ const HomePage = () => {
     }))
   }
 
-  // Handle form submission
-  const handleSubmit = async (e) => {
+  // Handle form submission - Open mail client
+  const handleSubmit = (e) => {
     e.preventDefault()
-    setIsSubmitting(true)
     
-    // Simulate form submission
-    setTimeout(() => {
-      alert('Mesajınız başarıyla gönderildi!')
-      setFormData({ name: '', email: '', message: '' })
-      setIsSubmitting(false)
-    }, 1000)
+    const subject = encodeURIComponent(`İletişim Formu - ${formData.name}`)
+    const body = encodeURIComponent(
+      `İsim: ${formData.name}\n` +
+      `E-posta: ${formData.email}\n\n` +
+      `Mesaj:\n${formData.message}`
+    )
+    
+    window.location.href = `mailto:info@pedizone.com?subject=${subject}&body=${body}`
+    
+    // Reset form
+    setFormData({ name: '', email: '', message: '' })
   }
 
   // Content translations
@@ -1248,10 +1252,9 @@ const HomePage = () => {
                 <Button 
                   type="submit" 
                   className="w-full pedizone-button py-4 text-base shadow-lg hover:shadow-xl"
-                  disabled={isSubmitting}
                 >
-                  {isSubmitting ? 'Gönderiliyor...' : 'Mesaj Gönder'}
-                  {!isSubmitting && <ArrowRight className="ml-2 w-5 h-5" />}
+                  Mesaj Gönder
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </form>
             </div>
