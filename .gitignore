@@ -107,3 +107,7 @@ pedizone_backup/.git/objects/pack/pack-6df3a4364c6d5ba24f74f240408900f71e62b3d5.
 # Environment files
 *.env
 *.env.*
+-e 
+# Environment files
+*.env
+*.env.*
