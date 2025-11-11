@@ -74,7 +74,7 @@ const DealersMap = () => {
                 <h2 className="text-2xl font-bold mb-6 text-red-600">
                   Satış Noktaları ({dealers.length})
                 </h2>
-                <div className="space-y-4 max-h-[600px] overflow-y-auto">
+                <div className="space-y-4">
                   {dealers.map((dealer) => (
                     <div
                       key={dealer.id}
