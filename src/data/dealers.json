@@ -43,8 +43,19 @@
       "lng": 32.8473816,
       "isActive": true
     },
-    {
+        {
       "id": 5,
+      "name": "Damla Eczanesi",
+      "city": "Antalya",
+      "address": "Şirinyalı Mah. Tekelioğlu Cad. No18/A Medicalpark Hastanesi Karşısı Lara",
+      "phone": "0242 324 3491",
+      "email": "eibisoglu@hotmail.com",
+      "lat": 36.85656,
+      "lng": 30.746258,
+      "isActive": true
+    },
+    {
+      "id": 6,
       "name": "Yaşare KADER",
       "city": "Antalya",
       "address": "Hurma, 254. Sk. No:11 / B, 07130 Konyaaltı",
