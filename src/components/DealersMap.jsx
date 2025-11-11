@@ -121,10 +121,10 @@ const DealersMap = () => {
           </div>
 
           {/* Map */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 sticky top-4" style={{ height: 'calc(100vh - 100px)' }}>
             <Card>
               <CardContent className="p-0">
-                <div className="h-[700px] rounded-lg overflow-hidden">
+                <div className="h-full rounded-lg overflow-hidden">
                   <MapContainer
                     center={turkeyCenter}
                     zoom={defaultZoom}
