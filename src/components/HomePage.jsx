@@ -883,7 +883,7 @@ const HomePage = () => {
                   alt="PediZone Bakım Serumu" 
                   className="rounded-2xl shadow-lg transform rotate-2 hover:rotate-0 transition-transform duration-300 col-span-2 md:col-span-1 mt-3 md:mt-6 w-full cursor-pointer hover:scale-105"
                   loading="lazy"
-                  onClick={() => navigate('/product/catlak-topuk-kremi')}
+                  onClick={() => navigate('/product/bakim-serumu')}
                 />
               </div>
             </div>

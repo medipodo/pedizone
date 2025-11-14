@@ -134,7 +134,7 @@ const ProductDetail = () => {
       id: 'bakim-serumu',
       name: 'PediZone® %15 Urea Intense Repair Cream',
       description: 'Onarıcı Ayak ve Çatlak Topuk Kremi – Profesyonel Podoloji Kullanımı İçin Geliştirilmiş Formül',
-      image: topukKremi,
+      image: topukKremiMain,
       badge: 'Önerilen',
       features: [
         '%15 Üre - Optimal keratolitik güç',
@@ -154,7 +154,7 @@ const ProductDetail = () => {
           </p>
 
           <div style={{textAlign: 'center', margin: '2.5rem 0'}}>
-            <img src={topukKremiMain} alt="PediZone %15 Urea Intense Repair Cream - Ürün Detay" style={{maxWidth: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'}} />
+            <img src={topukKremi} alt="PediZone %15 Urea Intense Repair Cream - Ürün Detay" style={{maxWidth: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'}} />
           </div>
 
           <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '2rem'}}>Profesyonel Etki Mekanizması</h3>
@@ -194,11 +194,6 @@ const ProductDetail = () => {
             </ul>
           </div>
 
-          <div style={{textAlign: 'center', margin: '3rem 0', backgroundColor: '#f9fafb', padding: '2rem', borderRadius: '12px'}}>
-            <img src={topukKremiIntense} alt="PediZone Çatlak Topuk Tedavisi - Öncesi ve Sonrası" style={{maxWidth: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)'}} />
-            <p style={{marginTop: '1rem', color: '#6b7280', fontSize: '0.875rem', fontStyle: 'italic'}}>Klinik kullanımda gözlemlenen sonuçlar</p>
-          </div>
-
           <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '2rem'}}>Podoloji ve Klinik Kullanım</h3>
           <p style={{marginBottom: '1rem', color: '#4b5563', fontWeight: 500}}>Klinik ve profesyonel uygulamalar:</p>
           <ul style={{marginLeft: '1.5rem', marginBottom: '1rem', color: '#4b5563'}}>
@@ -236,6 +231,11 @@ const ProductDetail = () => {
                 <span style={{color: '#4b5563'}}>Klinik çalışmalarla desteklenen kanıtlanmış sonuçlar</span>
               </div>
             </div>
+          </div>
+
+          <div style={{textAlign: 'center', margin: '3rem 0', backgroundColor: '#f9fafb', padding: '2rem', borderRadius: '12px'}}>
+            <img src={topukKremiIntense} alt="PediZone Çatlak Topuk Tedavisi - Öncesi ve Sonrası" style={{maxWidth: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)'}} />
+            <p style={{marginTop: '1rem', color: '#6b7280', fontSize: '0.875rem', fontStyle: 'italic'}}>Klinik kullanımda gözlemlenen sonuçlar</p>
           </div>
 
           <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '2rem'}}>Kullanım Alanları</h3>
