@@ -126,25 +126,163 @@ const ProductDetail = () => {
     },
     'bakim-serumu': {
       id: 'bakim-serumu',
-      name: 'PediZone® %15 Üreli Çatlak Topuk ve Ayak Kremi',
-      description: 'Genel ayak bakımı ve nemlendirme',
+      name: 'PediZone® %15 Urea Intense Repair Cream',
+      description: 'Onarıcı Ayak ve Çatlak Topuk Kremi – Profesyonel Podoloji Kullanımı İçin Geliştirilmiş Formül',
       image: productSerum2,
       badge: 'Önerilen',
       features: [
-        'Nemlendirici',
-        'Onarıcı',
-        'Koruyucu',
-        'Tüm cilt tipleri'
+        '%15 Üre - Optimal keratolitik güç',
+        'Hızlı emilen medikal formül',
+        'Bitkisel antifungal kompleks',
+        'Klinik olarak test edilmiş',
+        'Podolog onaylı'
       ],
-      detailedDescription: 'PediZone® %15 Üreli Çatlak Topuk ve Ayak Kremi, %15 Urea içeriği ile yoğun nemlendirme sağlar. Çatlak ve kuru ayaklar için ideal olan bu krem, cildi yumuşatır ve esnek tutar.',
+      detailedDescription: (
+        <div style={{lineHeight: 1.7}}>
+          <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '1.5rem'}}>🔬 Ürün Tanımı</h3>
+          <p style={{marginBottom: '1rem', color: '#4b5563'}}>
+            PediZone® %15 Ureli Intense Repair Cream, podolojik uygulamalar için geliştirilmiş, çatlak topuk ve ileri derecede kurumuş ayak cildi üzerinde yoğun onarım sağlayan profesyonel bakım kremidir.
+          </p>
+          <p style={{marginBottom: '1rem', color: '#4b5563'}}>
+            %15 üre, bitkisel kompleks ve derin nemlendirici ajanlarla formüle edilen bu özel karışım, hem tedavi sürecini destekler hem de uygulama sonrası iyileşmeyi hızlandırır.
+          </p>
+
+          <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '2rem'}}>⭐ Profesyonel Etki Mekanizması</h3>
+          
+          <div style={{marginBottom: '1.5rem'}}>
+            <h4 style={{fontSize: '1.125rem', fontWeight: 600, color: '#dc2626', marginBottom: '0.75rem'}}>1. %15 Üre – Keratolitik & Yenileyici Etki</h4>
+            <ul style={{marginLeft: '1.5rem', color: '#4b5563'}}>
+              <li style={{marginBottom: '0.5rem'}}>Cildin üst tabakasındaki sertleşmiş keratini yumuşatır.</li>
+              <li style={{marginBottom: '0.5rem'}}>Çatlak yüzeylerin "kapanmasını" kolaylaştırır.</li>
+              <li style={{marginBottom: '0.5rem'}}>Ölü derinin kontrollü ve hızlı şekilde uzaklaştırılmasına yardımcı olur.</li>
+              <li style={{marginBottom: '0.5rem'}}>Cildi nemli tutarak tekrar çatlamayı önler.</li>
+            </ul>
+          </div>
+
+          <div style={{marginBottom: '1.5rem'}}>
+            <h4 style={{fontSize: '1.125rem', fontWeight: 600, color: '#dc2626', marginBottom: '0.75rem'}}>2. Çay Ağacı Yağı – Antifungal & Antibakteriyel Koruma</h4>
+            <ul style={{marginLeft: '1.5rem', color: '#4b5563'}}>
+              <li style={{marginBottom: '0.5rem'}}>Ayak mantarı ve bakteri kaynaklı kokulara karşı koruyucu bir bariyer sağlar.</li>
+              <li style={{marginBottom: '0.5rem'}}>Klinik ortamlarda enfeksiyon riskinin azaltılmasına destek olur.</li>
+            </ul>
+          </div>
+
+          <div style={{marginBottom: '1.5rem'}}>
+            <h4 style={{fontSize: '1.125rem', fontWeight: 600, color: '#dc2626', marginBottom: '0.75rem'}}>3. Shea Butter & Avokado Yağı – Derin Besleyici Onarım</h4>
+            <ul style={{marginLeft: '1.5rem', color: '#4b5563'}}>
+              <li style={{marginBottom: '0.5rem'}}>Yoğun nem deposu oluşturarak cildi uzun süre yumuşak tutar.</li>
+              <li style={{marginBottom: '0.5rem'}}>Cilt bariyerini güçlendirir ve elastikiyeti artırır.</li>
+              <li style={{marginBottom: '0.5rem'}}>Mikro çatlakların daha hızlı toparlanmasına yardımcı olur.</li>
+            </ul>
+          </div>
+
+          <div style={{marginBottom: '1.5rem'}}>
+            <h4 style={{fontSize: '1.125rem', fontWeight: 600, color: '#dc2626', marginBottom: '0.75rem'}}>4. Glycerin – Nem Tutucu Etki</h4>
+            <ul style={{marginLeft: '1.5rem', color: '#4b5563'}}>
+              <li style={{marginBottom: '0.5rem'}}>Nem kaybını engeller, cildi gün boyu nemli bırakır.</li>
+              <li style={{marginBottom: '0.5rem'}}>Formülün cilde penetre olmasını kolaylaştırır.</li>
+            </ul>
+          </div>
+
+          <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '2rem'}}>🏥 Podoloji ve Klinik Kullanım İçin İdeal</h3>
+          <p style={{marginBottom: '1rem', color: '#4b5563', fontWeight: 500}}>Bu ürün:</p>
+          <ul style={{marginLeft: '1.5rem', marginBottom: '1rem', color: '#4b5563'}}>
+            <li style={{marginBottom: '0.5rem'}}>Ortoniksi uygulamaları sonrası topuk ve cilt bütünlüğünü destekler.</li>
+            <li style={{marginBottom: '0.5rem'}}>Nasır, çatlak topuk ve hiperkeratoz tedavilerinde onarımı hızlandırır.</li>
+            <li style={{marginBottom: '0.5rem'}}>Profesyonel ayak bakımı işlemlerinde işlem sonrası bakım ürünü olarak önerilir.</li>
+            <li style={{marginBottom: '0.5rem'}}>Mantar eğilimli ciltlerde koruyucu bakım sağlar.</li>
+          </ul>
+
+          <div style={{backgroundColor: '#fef2f2', border: '2px solid #dc2626', padding: '1.5rem', marginTop: '2rem', marginBottom: '2rem', borderRadius: '12px'}}>
+            <h3 style={{fontSize: '1.25rem', fontWeight: 700, color: '#dc2626', marginBottom: '1rem'}}>🆚 Rakiplerden Farkı Nedir? Neden Pedizone IRC?</h3>
+            <div style={{display: 'grid', gap: '0.5rem'}}>
+              <div style={{display: 'flex', alignItems: 'start'}}>
+                <span style={{color: '#16a34a', marginRight: '0.5rem', fontWeight: 'bold'}}>✔</span>
+                <span style={{color: '#4b5563'}}>%15 üre oranı optimal keratolitik güç</span>
+              </div>
+              <div style={{display: 'flex', alignItems: 'start'}}>
+                <span style={{color: '#16a34a', marginRight: '0.5rem', fontWeight: 'bold'}}>✔</span>
+                <span style={{color: '#4b5563'}}>Yağlı/yapışkan his bırakmayan hızlı emilen medikal formül</span>
+              </div>
+              <div style={{display: 'flex', alignItems: 'start'}}>
+                <span style={{color: '#16a34a', marginRight: '0.5rem', fontWeight: 'bold'}}>✔</span>
+                <span style={{color: '#4b5563'}}>Bitkisel antifungal kompleks sayesinde ekstra koruma</span>
+              </div>
+              <div style={{display: 'flex', alignItems: 'start'}}>
+                <span style={{color: '#16a34a', marginRight: '0.5rem', fontWeight: 'bold'}}>✔</span>
+                <span style={{color: '#4b5563'}}>Klinik olarak test edilmiş etkinlik</span>
+              </div>
+              <div style={{display: 'flex', alignItems: 'start'}}>
+                <span style={{color: '#16a34a', marginRight: '0.5rem', fontWeight: 'bold'}}>✔</span>
+                <span style={{color: '#4b5563'}}>Podologlar tarafından sahada kullanılan ve onaylanan formül</span>
+              </div>
+              <div style={{display: 'flex', alignItems: 'start'}}>
+                <span style={{color: '#16a34a', marginRight: '0.5rem', fontWeight: 'bold'}}>✔</span>
+                <span style={{color: '#4b5563'}}>Fotoğraflarla kanıtlanmış öncesi–sonrası etkileri</span>
+              </div>
+            </div>
+            <p style={{marginTop: '1rem', color: '#7c2d12', fontStyle: 'italic', fontSize: '0.875rem'}}>
+              Bunların hepsi bayi ikna sürecinde çok değerli maddeler.
+            </p>
+          </div>
+
+          <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '2rem'}}>📌 Kullanım Alanları</h3>
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '0.75rem', marginBottom: '1.5rem'}}>
+            <div style={{backgroundColor: '#f9fafb', padding: '1rem', borderRadius: '8px', border: '1px solid #e5e7eb'}}>
+              <span style={{color: '#4b5563', fontWeight: 500}}>• Çatlamış topuk</span>
+            </div>
+            <div style={{backgroundColor: '#f9fafb', padding: '1rem', borderRadius: '8px', border: '1px solid #e5e7eb'}}>
+              <span style={{color: '#4b5563', fontWeight: 500}}>• Aşırı kuru ayak cildi</span>
+            </div>
+            <div style={{backgroundColor: '#f9fafb', padding: '1rem', borderRadius: '8px', border: '1px solid #e5e7eb'}}>
+              <span style={{color: '#4b5563', fontWeight: 500}}>• Hiperkeratoz (kalınlaşmış cilt)</span>
+            </div>
+            <div style={{backgroundColor: '#f9fafb', padding: '1rem', borderRadius: '8px', border: '1px solid #e5e7eb'}}>
+              <span style={{color: '#4b5563', fontWeight: 500}}>• Nasır bakımı sonrası</span>
+            </div>
+            <div style={{backgroundColor: '#f9fafb', padding: '1rem', borderRadius: '8px', border: '1px solid #e5e7eb'}}>
+              <span style={{color: '#4b5563', fontWeight: 500}}>• Pedikür/medikal ayak bakımı sonrası</span>
+            </div>
+            <div style={{backgroundColor: '#f9fafb', padding: '1rem', borderRadius: '8px', border: '1px solid #e5e7eb'}}>
+              <span style={{color: '#4b5563', fontWeight: 500}}>• Mantar eğilimli ciltlerde bariyer güçlendirme</span>
+            </div>
+          </div>
+
+          <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '2rem'}}>🧴 Kullanım Şekli (Profesyonel + Ev Kullanımı)</h3>
+          <div style={{marginBottom: '1.5rem'}}>
+            <h4 style={{fontSize: '1.125rem', fontWeight: 600, color: '#dc2626', marginBottom: '0.75rem'}}>Profesyonel kullanım:</h4>
+            <p style={{color: '#4b5563', marginBottom: '1rem'}}>
+              İşlem sonrası temizlenmiş bölgeye ince tabaka halinde uygulanır. Masaj ile tamamen emdirilir.
+            </p>
+          </div>
+          <div style={{marginBottom: '1.5rem'}}>
+            <h4 style={{fontSize: '1.125rem', fontWeight: 600, color: '#dc2626', marginBottom: '0.75rem'}}>Ev bakımı:</h4>
+            <p style={{color: '#4b5563', marginBottom: '0.5rem'}}>
+              Geceleri temiz ve kuru ayaklara uygulanması önerilir.
+            </p>
+            <p style={{color: '#4b5563'}}>
+              Özellikle çatlak bölgelere yoğunlaştırılarak günlük kullanımda belirgin iyileşme sağlar.
+            </p>
+          </div>
+
+          <div style={{backgroundColor: '#dcfce7', borderLeft: '4px solid #16a34a', padding: '1.5rem', marginTop: '2rem', borderRadius: '8px'}}>
+            <h3 style={{fontSize: '1.25rem', fontWeight: 700, color: '#15803d', marginBottom: '0.75rem'}}>👣 Podolog Önerisi</h3>
+            <p style={{margin: 0, color: '#166534', fontStyle: 'italic'}}>
+              "%15 üre ve güçlü bitkisel kompleks içeren bu formül, hem çatlak topuklarda hem de yoğun kuruluk vakalarında hızlı sonuç verir. İşlem sonrası etkili bakım ürünü olarak güvenle kullanılabilir."
+            </p>
+          </div>
+        </div>
+      ),
       ingredients: [
-        '%15 Urea - Yoğun nemlendirme',
-        'Shea Butter - Besleyici ve koruyucu',
-        'Avocado Oil - Vitamin açısından zengin',
-        'Glycerin - Nem tutucu'
+        '%15 Urea - Keratolitik & yenileyici etki, yoğun nemlendirme',
+        'Tea Tree Oil (Çay Ağacı Yağı) - Antifungal & antibakteriyel koruma',
+        'Shea Butter - Derin besleyici onarım, cilt bariyeri güçlendirme',
+        'Avocado Oil (Avokado Yağı) - Vitamin açısından zengin, elastikiyet artırıcı',
+        'Glycerin - Nem tutucu, formül penetrasyon kolaylaştırıcı'
       ],
-      usage: 'Temiz ayaklara gece yatmadan önce uygulayın. Özellikle topuk ve çatlak bölgelere odaklanın. Düzenli kullanımda cildin yumuşaklığını hissedeceksiniz.',
-      volume: '150ml'
+      usage: 'Profesyonel Kullanım: İşlem sonrası temizlenmiş bölgeye ince tabaka halinde uygulayın ve masaj ile emdirin. Ev Kullanımı: Geceleri temiz ve kuru ayaklara uygulayın. Özellikle çatlak topuk ve kuru bölgelere odaklanın. Düzenli kullanımda belirgin iyileşme görürsünüz.',
+      volume: '150ml',
+      podologistRecommendation: '%15 üre ve güçlü bitkisel kompleks içeren bu formül, hem çatlak topuklarda hem de yoğun kuruluk vakalarında hızlı sonuç verir. İşlem sonrası etkili bakım ürünü olarak güvenle kullanılabilir. Ortoniksi, nasır ve hiperkeratoz tedavilerinde onarımı hızlandırır.'
     }
   }
 
@@ -263,9 +401,7 @@ const ProductDetail = () => {
                 Podolog Önerisi
               </h3>
               <p className="text-gray-700">
-                Bu ürün, ayak sağlığı uzmanları tarafından test edilmiş ve onaylanmıştır. 
-                Düzenli kullanımda etkili sonuçlar alabilirsiniz. Herhangi bir yan etki 
-                durumunda kullanımı bırakın ve uzmanınıza danışın.
+                {product.podologistRecommendation || 'Bu ürün, ayak sağlığı uzmanları tarafından test edilmiş ve onaylanmıştır. Düzenli kullanımda etkili sonuçlar alabilirsiniz. Herhangi bir yan etki durumunda kullanımı bırakın ve uzmanınıza danışın.'}
               </p>
             </div>
           </div>
