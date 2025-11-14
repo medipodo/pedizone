@@ -334,11 +334,11 @@ const ProductDetail = () => {
             {/* Left - Product Image (Sticky) */}
             <div className="lg:col-span-1">
               <div className="lg:sticky lg:top-24 space-y-4">
-                <div className="aspect-square overflow-hidden rounded-2xl bg-white shadow-lg relative">
+                <div className="overflow-hidden rounded-2xl bg-white shadow-lg relative">
                   <img 
                     src={product.image} 
                     alt={product.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto object-contain"
                   />
                   {product.badge && (
                     <div className="absolute top-4 right-4">
