@@ -866,21 +866,24 @@ const HomePage = () => {
                 <img 
                   src={productSerum} 
                   alt="PediZone Serum" 
-                  className="rounded-2xl shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300 w-full"
+                  className="rounded-2xl shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300 w-full cursor-pointer hover:scale-105"
                   fetchpriority="high"
                   loading="eager"
+                  onClick={() => navigate('/product/mantar-karsiti-serum')}
                 />
                 <img 
                   src={productFoam} 
                   alt="PediZone Köpük" 
-                  className="rounded-2xl shadow-lg transform -rotate-3 hover:rotate-0 transition-transform duration-300 mt-6 md:mt-0 w-full"
+                  className="rounded-2xl shadow-lg transform -rotate-3 hover:rotate-0 transition-transform duration-300 mt-6 md:mt-0 w-full cursor-pointer hover:scale-105"
                   loading="lazy"
+                  onClick={() => navigate('/product/temizleme-kopugu')}
                 />
                 <img 
                   src="https://customer-assets.emergentagent.com/job_pedizone-polish/artifacts/h1qr1xk0_pedizone-%C3%A7atlaktopuk-kremi.jpg" 
                   alt="PediZone Bakım Serumu" 
-                  className="rounded-2xl shadow-lg transform rotate-2 hover:rotate-0 transition-transform duration-300 col-span-2 md:col-span-1 mt-3 md:mt-6 w-full"
+                  className="rounded-2xl shadow-lg transform rotate-2 hover:rotate-0 transition-transform duration-300 col-span-2 md:col-span-1 mt-3 md:mt-6 w-full cursor-pointer hover:scale-105"
                   loading="lazy"
+                  onClick={() => navigate('/product/catlak-topuk-kremi')}
                 />
               </div>
             </div>
@@ -909,7 +912,8 @@ const HomePage = () => {
             {t.products.items.map((product, index) => (
               <Card 
                 key={index} 
-                className="group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-white to-gray-50"
+                className="group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-white to-gray-50 cursor-pointer"
+                onClick={() => navigate(`/product/${product.id}`)}
               >
                 {/* Badge */}
                 {product.badge && (
@@ -955,7 +959,10 @@ const HomePage = () => {
                   {/* CTA Button */}
                   <Button 
                     className="w-full pedizone-button group-hover:shadow-lg transition-all"
-                    onClick={() => navigate(`/product/${product.id}`)}
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      navigate(`/product/${product.id}`)
+                    }}
                   >
                     Detayları İncele
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
