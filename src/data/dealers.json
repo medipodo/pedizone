@@ -54,8 +54,19 @@
       "lng": 30.746258,
       "isActive": true
     },
-    {
+           {
       "id": 6,
+      "name": "Medpark Konya Tırnak Batması Ayak Sağlığı Merkezi",
+      "city": "Konya",
+      "address": "Konevi, Sait Paşa Cd No:9/1-2-3-4, 42040 Meram",
+      "phone": "0530 511 2442",
+      "web": "https://www.medparkkonya.com/",
+      "lat": 37.866825,
+      "lng": 32.487416,
+      "isActive": true
+    },
+    {
+      "id": 7,
       "name": "Yaşare KADER",
       "city": "Antalya",
       "address": "Hurma, 254. Sk. No:11 / B, 07130 Konyaaltı",
