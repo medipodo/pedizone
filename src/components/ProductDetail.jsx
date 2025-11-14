@@ -292,6 +292,145 @@ const ProductDetail = () => {
               "%15 üre ve güçlü bitkisel kompleks içeren bu formül, hem çatlak topuklarda hem de yoğun kuruluk vakalarında hızlı sonuç verir. İşlem sonrası etkili bakım ürünü olarak güvenle kullanılabilir."
             </p>
           </div>
+
+          {/* Müşteri Yorumları */}
+          <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '3rem'}}>Müşteri Deneyimleri</h3>
+          <div style={{backgroundColor: '#fffbeb', padding: '1.5rem', borderRadius: '12px', marginBottom: '1.5rem'}}>
+            <div style={{display: 'flex', alignItems: 'center', marginBottom: '1rem'}}>
+              <div style={{fontSize: '2rem', fontWeight: 700, color: '#dc2626', marginRight: '1rem'}}>4.8</div>
+              <div>
+                <div style={{color: '#f59e0b', fontSize: '1.25rem'}}>★★★★★</div>
+                <div style={{fontSize: '0.875rem', color: '#6b7280'}}>652 değerlendirme</div>
+              </div>
+            </div>
+          </div>
+
+          <div style={{display: 'grid', gap: '1rem', marginBottom: '2rem'}}>
+            <div style={{backgroundColor: '#fff', padding: '1.5rem', borderRadius: '12px', border: '1px solid #e5e7eb'}}>
+              <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: '0.75rem'}}>
+                <div style={{fontWeight: 600, color: '#1f2937'}}>Ayşe K.</div>
+                <div style={{color: '#f59e0b'}}>★★★★★</div>
+              </div>
+              <p style={{color: '#6b7280', fontSize: '0.875rem', marginBottom: '0.5rem', fontStyle: 'italic'}}>
+                "3 hafta içinde topuklarımdaki çatlaklar tamamen iyileşti. Artık rahatlıkla terlik giyebiliyorum. Kesinlikle tavsiye ederim!"
+              </p>
+              <div style={{fontSize: '0.75rem', color: '#9ca3af'}}>2 hafta önce</div>
+            </div>
+
+            <div style={{backgroundColor: '#fff', padding: '1.5rem', borderRadius: '12px', border: '1px solid #e5e7eb'}}>
+              <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: '0.75rem'}}>
+                <div style={{fontWeight: 600, color: '#1f2937'}}>Mehmet Y.</div>
+                <div style={{color: '#f59e0b'}}>★★★★★</div>
+              </div>
+              <p style={{color: '#6b7280', fontSize: '0.875rem', marginBottom: '0.5rem', fontStyle: 'italic'}}>
+                "Podologum tavsiye etti. Yapışkan değil, hızlı emiyor. Sonuçlardan çok memnunum. Her gece düzenli kullanıyorum."
+              </p>
+              <div style={{fontSize: '0.75rem', color: '#9ca3af'}}>1 ay önce</div>
+            </div>
+
+            <div style={{backgroundColor: '#fff', padding: '1.5rem', borderRadius: '12px', border: '1px solid #e5e7eb'}}>
+              <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: '0.75rem'}}>
+                <div style={{fontWeight: 600, color: '#1f2937'}}>Zeynep D.</div>
+                <div style={{color: '#f59e0b'}}>★★★★☆</div>
+              </div>
+              <p style={{color: '#6b7280', fontSize: '0.875rem', marginBottom: '0.5rem', fontStyle: 'italic'}}>
+                "Ürün çok iyi ama biraz pahalı. Yine de kalitesi fiyatını hak ediyor. Ayaklarım çok yumuşadı."
+              </p>
+              <div style={{fontSize: '0.75rem', color: '#9ca3af'}}>3 hafta önce</div>
+            </div>
+          </div>
+
+          {/* Sık Sorulan Sorular */}
+          <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '3rem'}}>Sık Sorulan Sorular</h3>
+          <div style={{display: 'grid', gap: '1rem', marginBottom: '2rem'}}>
+            <details style={{backgroundColor: '#fff', padding: '1.5rem', borderRadius: '12px', border: '1px solid #e5e7eb', cursor: 'pointer'}}>
+              <summary style={{fontWeight: 600, color: '#1f2937', marginBottom: '0.75rem'}}>Ne kadar sürede sonuç alırım?</summary>
+              <p style={{color: '#6b7280', marginTop: '0.75rem', paddingLeft: '1rem'}}>
+                Düzenli kullanımda 7-10 gün içinde ilk iyileşmeler gözlemlenir. İleri derecede çatlaklarda 3-4 haftalık kullanımda belirgin sonuçlar alınır.
+              </p>
+            </details>
+
+            <details style={{backgroundColor: '#fff', padding: '1.5rem', borderRadius: '12px', border: '1px solid #e5e7eb', cursor: 'pointer'}}>
+              <summary style={{fontWeight: 600, color: '#1f2937', marginBottom: '0.75rem'}}>Hassas cilde uygun mu?</summary>
+              <p style={{color: '#6b7280', marginTop: '0.75rem', paddingLeft: '1rem'}}>
+                Evet, dermatolojik olarak test edilmiştir. Ancak ilk kullanımda küçük bir alanda test yapmanız önerilir. Tahriş oluşursa kullanımı bırakın.
+              </p>
+            </details>
+
+            <details style={{backgroundColor: '#fff', padding: '1.5rem', borderRadius: '12px', border: '1px solid #e5e7eb', cursor: 'pointer'}}>
+              <summary style={{fontWeight: 600, color: '#1f2937', marginBottom: '0.75rem'}}>Hamileler kullanabilir mi?</summary>
+              <p style={{color: '#6b7280', marginTop: '0.75rem', paddingLeft: '1rem'}}>
+                Hamilelik ve emzirme döneminde kullanım öncesinde doktorunuza danışmanız önerilir. Topikal kullanım genellikle güvenlidir.
+              </p>
+            </details>
+
+            <details style={{backgroundColor: '#fff', padding: '1.5rem', borderRadius: '12px', border: '1px solid #e5e7eb', cursor: 'pointer'}}>
+              <summary style={{fontWeight: 600, color: '#1f2937', marginBottom: '0.75rem'}}>Günde kaç kez uygulanmalı?</summary>
+              <p style={{color: '#6b7280', marginTop: '0.75rem', paddingLeft: '1rem'}}>
+                Günde 1-2 kez uygulama yeterlidir. En iyi sonuç için gece uygulaması ve çorap giyilmesi önerilir.
+              </p>
+            </details>
+
+            <details style={{backgroundColor: '#fff', padding: '1.5rem', borderRadius: '12px', border: '1px solid #e5e7eb', cursor: 'pointer'}}>
+              <summary style={{fontWeight: 600, color: '#1f2937', marginBottom: '0.75rem'}}>Raf ömrü ne kadardır?</summary>
+              <p style={{color: '#6b7280', marginTop: '0.75rem', paddingLeft: '1rem'}}>
+                Açılmamış ürünün raf ömrü 3 yıldır. Açıldıktan sonra 12 ay içinde kullanılması önerilir. Oda sıcaklığında, güneş ışığından uzakta saklayınız.
+              </p>
+            </details>
+          </div>
+
+          {/* Güven Unsurları */}
+          <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '3rem'}}>Güven ve Sertifikalar</h3>
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '2rem'}}>
+            <div style={{backgroundColor: '#f0fdf4', padding: '1.5rem', borderRadius: '12px', textAlign: 'center', border: '2px solid #86efac'}}>
+              <div style={{fontSize: '2rem', marginBottom: '0.5rem'}}>✓</div>
+              <div style={{fontWeight: 600, color: '#166534', marginBottom: '0.25rem'}}>Podolog Onaylı</div>
+              <div style={{fontSize: '0.75rem', color: '#6b7280'}}>Profesyonel Kullanım</div>
+            </div>
+            <div style={{backgroundColor: '#eff6ff', padding: '1.5rem', borderRadius: '12px', textAlign: 'center', border: '2px solid #93c5fd'}}>
+              <div style={{fontSize: '2rem', marginBottom: '0.5rem'}}>✓</div>
+              <div style={{fontWeight: 600, color: '#1e40af', marginBottom: '0.25rem'}}>Dermatolojik Test</div>
+              <div style={{fontSize: '0.75rem', color: '#6b7280'}}>Klinik Onaylı</div>
+            </div>
+            <div style={{backgroundColor: '#fef3c7', padding: '1.5rem', borderRadius: '12px', textAlign: 'center', border: '2px solid #fde047'}}>
+              <div style={{fontSize: '2rem', marginBottom: '0.5rem'}}>✓</div>
+              <div style={{fontWeight: 600, color: '#92400e', marginBottom: '0.25rem'}}>Paraben Free</div>
+              <div style={{fontSize: '0.75rem', color: '#6b7280'}}>Güvenli Formül</div>
+            </div>
+          </div>
+
+          {/* Teknik Özellikler */}
+          <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '3rem'}}>Teknik Özellikler</h3>
+          <div style={{backgroundColor: '#fff', padding: '1.5rem', borderRadius: '12px', border: '1px solid #e5e7eb', marginBottom: '2rem'}}>
+            <table style={{width: '100%', borderCollapse: 'collapse'}}>
+              <tbody>
+                <tr style={{borderBottom: '1px solid #e5e7eb'}}>
+                  <td style={{padding: '0.75rem', fontWeight: 600, color: '#6b7280'}}>Ürün Hacmi</td>
+                  <td style={{padding: '0.75rem', color: '#1f2937'}}>150 ml</td>
+                </tr>
+                <tr style={{borderBottom: '1px solid #e5e7eb'}}>
+                  <td style={{padding: '0.75rem', fontWeight: 600, color: '#6b7280'}}>Ana İçerik</td>
+                  <td style={{padding: '0.75rem', color: '#1f2937'}}>%15 Urea, Tea Tree Oil, Shea Butter</td>
+                </tr>
+                <tr style={{borderBottom: '1px solid #e5e7eb'}}>
+                  <td style={{padding: '0.75rem', fontWeight: 600, color: '#6b7280'}}>Raf Ömrü</td>
+                  <td style={{padding: '0.75rem', color: '#1f2937'}}>3 yıl (açılmamış), 12 ay (açıldıktan sonra)</td>
+                </tr>
+                <tr style={{borderBottom: '1px solid #e5e7eb'}}>
+                  <td style={{padding: '0.75rem', fontWeight: 600, color: '#6b7280'}}>Saklama Koşulları</td>
+                  <td style={{padding: '0.75rem', color: '#1f2937'}}>Oda sıcaklığında, güneş ışığından uzakta</td>
+                </tr>
+                <tr style={{borderBottom: '1px solid #e5e7eb'}}>
+                  <td style={{padding: '0.75rem', fontWeight: 600, color: '#6b7280'}}>Üretim Yeri</td>
+                  <td style={{padding: '0.75rem', color: '#1f2937'}}>Türkiye</td>
+                </tr>
+                <tr>
+                  <td style={{padding: '0.75rem', fontWeight: 600, color: '#6b7280'}}>İçermez</td>
+                  <td style={{padding: '0.75rem', color: '#1f2937'}}>Paraben, Yapay Renklendirici</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       ),
       ingredients: [
@@ -424,6 +563,125 @@ const ProductDetail = () => {
               <p className="text-gray-700">
                 {product.podologistRecommendation || 'Bu ürün, ayak sağlığı uzmanları tarafından test edilmiş ve onaylanmıştır. Düzenli kullanımda etkili sonuçlar alabilirsiniz. Herhangi bir yan etki durumunda kullanımı bırakın ve uzmanınıza danışın.'}
               </p>
+            </div>
+          </div>
+        </div>
+
+        {/* İlgili Ürünler */}
+        <div className="pedizone-container py-8 lg:py-12 bg-gray-50">
+          <h2 className="pedizone-heading text-3xl text-gray-900 mb-8 text-center">
+            Bu Ürünle Birlikte Alınanlar
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Serum */}
+            <Card className="group hover:shadow-xl transition-all duration-300 cursor-pointer" onClick={() => navigate('/product/ayak-bakimi-serumu')}>
+              <CardContent className="p-6">
+                <div className="aspect-square mb-4 overflow-hidden rounded-lg bg-gray-100">
+                  <img 
+                    src={productSerum} 
+                    alt="PediZone Ayak Bakım Serumu"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">PediZone Ayak Bakım Serumu</h3>
+                <p className="text-sm text-gray-600 mb-3">Mantar tedavisi ve önleme</p>
+                <Badge className="bg-green-100 text-green-800">Komple Bakım</Badge>
+              </CardContent>
+            </Card>
+
+            {/* Foam */}
+            <Card className="group hover:shadow-xl transition-all duration-300 cursor-pointer" onClick={() => navigate('/product/ayak-bakimi-kopugu')}>
+              <CardContent className="p-6">
+                <div className="aspect-square mb-4 overflow-hidden rounded-lg bg-gray-100">
+                  <img 
+                    src={productFoam} 
+                    alt="PediZone Ayak Bakım Köpüğü"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">PediZone Ayak Bakım Köpüğü</h3>
+                <p className="text-sm text-gray-600 mb-3">Günlük temizlik ve ferahlık</p>
+                <Badge className="bg-blue-100 text-blue-800">Popüler</Badge>
+              </CardContent>
+            </Card>
+
+            {/* Komple Set */}
+            <Card className="group hover:shadow-xl transition-all duration-300 border-2 border-red-200">
+              <CardContent className="p-6">
+                <div className="aspect-square mb-4 overflow-hidden rounded-lg bg-gradient-to-br from-red-50 to-orange-50 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-4xl mb-2">🎁</div>
+                    <div className="font-bold text-red-600">Komple Set</div>
+                  </div>
+                </div>
+                <h3 className="font-semibold text-lg mb-2">PediZone Komple Bakım Seti</h3>
+                <p className="text-sm text-gray-600 mb-3">Serum + Krem + Köpük</p>
+                <Badge className="bg-red-600 text-white">%15 İndirim</Badge>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        {/* Satın Alma Bilgileri */}
+        <div className="pedizone-container py-8 lg:py-12">
+          <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-8 lg:p-12">
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <h2 className="pedizone-heading text-3xl text-gray-900 mb-4">
+                  Nereden Satın Alınır?
+                </h2>
+                <p className="text-gray-700 mb-6 text-lg">
+                  PediZone ürünlerine Türkiye genelindeki yetkili bayilerimizden ve online satış kanallarımızdan ulaşabilirsiniz.
+                </p>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-gray-700">Yetkili podoloji klinikleri</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-gray-700">Seçili eczaneler</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-gray-700">Online satış bayileri</span>
+                  </li>
+                </ul>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button 
+                    className="bg-red-600 hover:bg-red-700 text-white px-6 py-6 rounded-xl text-lg"
+                    onClick={() => navigate('/bayiler')}
+                  >
+                    <MapPin className="w-5 h-5 mr-2" />
+                    Bayi Bul
+                  </Button>
+                  <Button 
+                    variant="outline"
+                    className="border-2 border-red-600 text-red-600 hover:bg-red-50 px-6 py-6 rounded-xl text-lg"
+                    onClick={() => window.location.href = 'mailto:info@pedizone.com'}
+                  >
+                    <Mail className="w-5 h-5 mr-2" />
+                    İletişime Geç
+                  </Button>
+                </div>
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-lg">
+                <h3 className="font-bold text-xl mb-4 text-gray-900">Fiyat Bilgisi</h3>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center pb-3 border-b">
+                    <span className="text-gray-600">Tavsiye Edilen Satış Fiyatı</span>
+                    <span className="font-bold text-2xl text-red-600">₺450-550</span>
+                  </div>
+                  <p className="text-sm text-gray-500">
+                    * Fiyatlar bayiden bayiye değişiklik gösterebilir. Güncel fiyat için lütfen yetkili bayilerimizle iletişime geçin.
+                  </p>
+                  <div className="bg-green-50 p-4 rounded-lg mt-4">
+                    <p className="text-sm text-green-800 font-medium">
+                      💚 Komple set alımlarında %15 indirim fırsatı!
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
