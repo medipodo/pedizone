@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import { MapPin, Phone, Mail, Navigation } from 'lucide-react'
+import { MapPin, Phone, Mail, Navigation, MessageCircle } from 'lucide-react'
 import { Card, CardContent } from './ui/card'
 import { Button } from './ui/button'
 import Header from './Header'
 import Footer from './Footer'
-import DealerApplicationForm from './DealerApplicationForm'
+
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
 import dealersData from '../data/dealers.json'
@@ -190,9 +190,21 @@ const DealersMap = () => {
           </div>
         </div>
 
-        {/* Dealer Application Form Section */}
-        <div className="mt-12">
-          <DealerApplicationForm />
+        {/* Dealer Application WhatsApp Button Section */}
+        <div className="mt-12 text-center">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6">Bayilik Başvurusu</h2>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Bayilik başvurusu için aşağıdaki butona tıklayarak WhatsApp üzerinden bizimle iletişime geçebilirsiniz.
+          </p>
+          <a 
+            href="https://wa.me/905068860326?text=merhaba%20pedizone%20bayilik%20başvurusunda%20bulunmak%20istiyorum" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-green-500 hover:bg-green-600 transition-colors duration-200 transform hover:scale-105"
+          >
+            <MessageCircle className="w-6 h-6 mr-3" />
+            Bayilik Başvurusunda Bulun
+          </a>
         </div>
 
         {/* Instructions Section */}

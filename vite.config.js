@@ -11,4 +11,8 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  server: {
+    host: true,
+    allowedHosts: ['5173-idjbvhy3m9v8nnrxhghgc-d7dc5b48.manus-asia.computer', '5174-idjbvhy3m9v8nnrxhghgc-d7dc5b48.manus-asia.computer'],
+  },
 })
