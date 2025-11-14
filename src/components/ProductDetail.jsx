@@ -27,12 +27,10 @@ import topukKremi2 from '../assets/topuk-kremi-pedizone2.jpg'
 const ProductDetail = () => {
   const { productId } = useParams()
   const navigate = useNavigate()
-  const [selectedImage, setSelectedImage] = React.useState(0)
 
   // Sayfa yüklendiğinde scroll pozisyonunu en üste getir
   useEffect(() => {
     window.scrollTo(0, 0)
-    setSelectedImage(0) // Reset selected image when product changes
   }, [productId])
 
   // Product data
@@ -136,8 +134,7 @@ const ProductDetail = () => {
       id: 'bakim-serumu',
       name: 'PediZone® %15 Urea Intense Repair Cream',
       description: 'Onarıcı Ayak ve Çatlak Topuk Kremi – Profesyonel Podoloji Kullanımı İçin Geliştirilmiş Formül',
-      image: topukKremiMain,
-      gallery: [topukKremiMain, topukKremiIntense, topukKremi, topukKremi2],
+      image: topukKremi,
       badge: 'Önerilen',
       features: [
         '%15 Üre - Optimal keratolitik güç',
@@ -152,9 +149,13 @@ const ProductDetail = () => {
           <p style={{marginBottom: '1rem', color: '#4b5563'}}>
             PediZone® %15 Ureli Intense Repair Cream, podolojik uygulamalar için geliştirilmiş, çatlak topuk ve ileri derecede kurumuş ayak cildi üzerinde yoğun onarım sağlayan profesyonel bakım kremidir.
           </p>
-          <p style={{marginBottom: '1rem', color: '#4b5563'}}>
+          <p style={{marginBottom: '1.5rem', color: '#4b5563'}}>
             %15 üre, bitkisel kompleks ve derin nemlendirici ajanlarla formüle edilen bu özel karışım, hem tedavi sürecini destekler hem de uygulama sonrası iyileşmeyi hızlandırır.
           </p>
+
+          <div style={{textAlign: 'center', margin: '2.5rem 0'}}>
+            <img src={topukKremiMain} alt="PediZone %15 Urea Intense Repair Cream - Ürün Detay" style={{maxWidth: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'}} />
+          </div>
 
           <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '2rem'}}>Profesyonel Etki Mekanizması</h3>
           
@@ -191,6 +192,11 @@ const ProductDetail = () => {
               <li style={{marginBottom: '0.5rem'}}>Nem kaybını engeller, cildi gün boyu nemli bırakır.</li>
               <li style={{marginBottom: '0.5rem'}}>Formülün cilde penetre olmasını kolaylaştırır.</li>
             </ul>
+          </div>
+
+          <div style={{textAlign: 'center', margin: '3rem 0', backgroundColor: '#f9fafb', padding: '2rem', borderRadius: '12px'}}>
+            <img src={topukKremiIntense} alt="PediZone Çatlak Topuk Tedavisi - Öncesi ve Sonrası" style={{maxWidth: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)'}} />
+            <p style={{marginTop: '1rem', color: '#6b7280', fontSize: '0.875rem', fontStyle: 'italic'}}>Klinik kullanımda gözlemlenen sonuçlar</p>
           </div>
 
           <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '2rem'}}>Podoloji ve Klinik Kullanım</h3>
@@ -252,6 +258,10 @@ const ProductDetail = () => {
             <div style={{backgroundColor: '#f9fafb', padding: '1rem', borderRadius: '8px', border: '1px solid #e5e7eb'}}>
               <span style={{color: '#4b5563', fontWeight: 500}}>• Mantar eğilimli ciltlerde bariyer güçlendirme</span>
             </div>
+          </div>
+
+          <div style={{textAlign: 'center', margin: '2.5rem 0'}}>
+            <img src={topukKremi2} alt="PediZone Profesyonel Kullanım" style={{maxWidth: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'}} />
           </div>
 
           <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '2rem'}}>Kullanım Şekli</h3>
@@ -319,10 +329,9 @@ const ProductDetail = () => {
             {/* Left - Product Image (Sticky) */}
             <div className="lg:col-span-1">
               <div className="lg:sticky lg:top-24 space-y-4">
-                {/* Main Image */}
                 <div className="aspect-square overflow-hidden rounded-2xl bg-white shadow-lg relative">
                   <img 
-                    src={product.gallery ? product.gallery[selectedImage] : product.image} 
+                    src={product.image} 
                     alt={product.name}
                     className="w-full h-full object-cover"
                   />
@@ -334,29 +343,6 @@ const ProductDetail = () => {
                     </div>
                   )}
                 </div>
-                
-                {/* Thumbnail Gallery */}
-                {product.gallery && product.gallery.length > 1 && (
-                  <div className="grid grid-cols-4 gap-2">
-                    {product.gallery.map((img, index) => (
-                      <button
-                        key={index}
-                        onClick={() => setSelectedImage(index)}
-                        className={`aspect-square overflow-hidden rounded-lg border-2 transition-all ${
-                          selectedImage === index 
-                            ? 'border-red-600 shadow-md' 
-                            : 'border-gray-200 hover:border-gray-400'
-                        }`}
-                      >
-                        <img 
-                          src={img} 
-                          alt={`${product.name} - görsel ${index + 1}`}
-                          className="w-full h-full object-cover"
-                        />
-                      </button>
-                    ))}
-                  </div>
-                )}
               </div>
             </div>
 
