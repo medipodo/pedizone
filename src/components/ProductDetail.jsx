@@ -19,6 +19,7 @@ import treatmentBeforeAfter from '../assets/products/pedizone-mantar-tedavi-once
 import podologistApplication from '../assets/products/pedizone-podolog-uygulama-klinik.jpg'
 
 // Import Intense Repair Cream images
+import mainProductImage from '../assets/pedizone-catlak-topuk-main.jpg'
 import topukKremiMain from '../assets/topuk-kremi-pedizone-irc.jpg'
 import topukKremiIntense from '../assets/topuk-kremi-pedizone-intense.jpg'
 import topukKremi from '../assets/topuk-kremi-pedizone.jpg'
@@ -134,7 +135,7 @@ const ProductDetail = () => {
       id: 'bakim-serumu',
       name: 'PediZone® %15 Urea Intense Repair Cream',
       description: 'Onarıcı Ayak ve Çatlak Topuk Kremi – Profesyonel Podoloji Kullanımı İçin Geliştirilmiş Formül',
-      image: topukKremiMain,
+      image: mainProductImage,
       badge: 'Önerilen',
       features: [
         '%15 Üre - Optimal keratolitik güç',
@@ -279,6 +280,10 @@ const ProductDetail = () => {
             <p style={{color: '#4b5563'}}>
               Özellikle çatlak bölgelere yoğunlaştırılarak günlük kullanımda belirgin iyileşme sağlar.
             </p>
+          </div>
+
+          <div style={{textAlign: 'center', margin: '2.5rem 0'}}>
+            <img src={topukKremiMain} alt="PediZone IRC Ürün Şişesi" style={{maxWidth: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'}} />
           </div>
 
           <div style={{backgroundColor: '#dcfce7', borderLeft: '4px solid #16a34a', padding: '1.5rem', marginTop: '2rem', borderRadius: '8px'}}>
