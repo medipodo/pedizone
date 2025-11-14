@@ -297,10 +297,10 @@ const ProductDetail = () => {
           <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '3rem'}}>Müşteri Deneyimleri</h3>
           <div style={{backgroundColor: '#fffbeb', padding: '1.5rem', borderRadius: '12px', marginBottom: '1.5rem'}}>
             <div style={{display: 'flex', alignItems: 'center', marginBottom: '1rem'}}>
-              <div style={{fontSize: '2rem', fontWeight: 700, color: '#dc2626', marginRight: '1rem'}}>4.8</div>
+              <div style={{fontSize: '2rem', fontWeight: 700, color: '#dc2626', marginRight: '1rem'}}>5.0</div>
               <div>
                 <div style={{color: '#f59e0b', fontSize: '1.25rem'}}>★★★★★</div>
-                <div style={{fontSize: '0.875rem', color: '#6b7280'}}>652 değerlendirme</div>
+                <div style={{fontSize: '0.875rem', color: '#6b7280'}}>137 değerlendirme</div>
               </div>
             </div>
           </div>
@@ -330,11 +330,11 @@ const ProductDetail = () => {
 
             <div style={{backgroundColor: '#fff', padding: '1.5rem', borderRadius: '12px', border: '1px solid #e5e7eb'}}>
               <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: '0.75rem'}}>
-                <div style={{fontWeight: 600, color: '#1f2937'}}>Zeynep D.</div>
-                <div style={{color: '#f59e0b'}}>★★★★☆</div>
+                <div style={{fontWeight: 600, color: '#1f2937'}}>Fatma S.</div>
+                <div style={{color: '#f59e0b'}}>★★★★★</div>
               </div>
               <p style={{color: '#6b7280', fontSize: '0.875rem', marginBottom: '0.5rem', fontStyle: 'italic'}}>
-                "Ürün çok iyi ama biraz pahalı. Yine de kalitesi fiyatını hak ediyor. Ayaklarım çok yumuşadı."
+                "Yıllardır çektiğim çatlak topuk sorunum bu ürün sayesinde çözüldü. Gerçekten etkili ve kaliteli bir ürün. Herkese tavsiye ediyorum!"
               </p>
               <div style={{fontSize: '0.75rem', color: '#9ca3af'}}>3 hafta önce</div>
             </div>
@@ -567,121 +567,45 @@ const ProductDetail = () => {
           </div>
         </div>
 
-        {/* İlgili Ürünler */}
-        <div className="pedizone-container py-8 lg:py-12 bg-gray-50">
-          <h2 className="pedizone-heading text-3xl text-gray-900 mb-8 text-center">
-            Bu Ürünle Birlikte Alınanlar
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* Serum */}
-            <Card className="group hover:shadow-xl transition-all duration-300 cursor-pointer" onClick={() => navigate('/product/ayak-bakimi-serumu')}>
-              <CardContent className="p-6">
-                <div className="aspect-square mb-4 overflow-hidden rounded-lg bg-gray-100">
-                  <img 
-                    src={productSerum} 
-                    alt="PediZone Ayak Bakım Serumu"
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <h3 className="font-semibold text-lg mb-2">PediZone Ayak Bakım Serumu</h3>
-                <p className="text-sm text-gray-600 mb-3">Mantar tedavisi ve önleme</p>
-                <Badge className="bg-green-100 text-green-800">Komple Bakım</Badge>
-              </CardContent>
-            </Card>
-
-            {/* Foam */}
-            <Card className="group hover:shadow-xl transition-all duration-300 cursor-pointer" onClick={() => navigate('/product/ayak-bakimi-kopugu')}>
-              <CardContent className="p-6">
-                <div className="aspect-square mb-4 overflow-hidden rounded-lg bg-gray-100">
-                  <img 
-                    src={productFoam} 
-                    alt="PediZone Ayak Bakım Köpüğü"
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <h3 className="font-semibold text-lg mb-2">PediZone Ayak Bakım Köpüğü</h3>
-                <p className="text-sm text-gray-600 mb-3">Günlük temizlik ve ferahlık</p>
-                <Badge className="bg-blue-100 text-blue-800">Popüler</Badge>
-              </CardContent>
-            </Card>
-
-            {/* Komple Set */}
-            <Card className="group hover:shadow-xl transition-all duration-300 border-2 border-red-200">
-              <CardContent className="p-6">
-                <div className="aspect-square mb-4 overflow-hidden rounded-lg bg-gradient-to-br from-red-50 to-orange-50 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-4xl mb-2">🎁</div>
-                    <div className="font-bold text-red-600">Komple Set</div>
-                  </div>
-                </div>
-                <h3 className="font-semibold text-lg mb-2">PediZone Komple Bakım Seti</h3>
-                <p className="text-sm text-gray-600 mb-3">Serum + Krem + Köpük</p>
-                <Badge className="bg-red-600 text-white">%15 İndirim</Badge>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-
         {/* Satın Alma Bilgileri */}
         <div className="pedizone-container py-8 lg:py-12">
           <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-8 lg:p-12">
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <h2 className="pedizone-heading text-3xl text-gray-900 mb-4">
-                  Nereden Satın Alınır?
-                </h2>
-                <p className="text-gray-700 mb-6 text-lg">
-                  PediZone ürünlerine Türkiye genelindeki yetkili bayilerimizden ve online satış kanallarımızdan ulaşabilirsiniz.
-                </p>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-700">Yetkili podoloji klinikleri</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-700">Seçili eczaneler</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-700">Online satış bayileri</span>
-                  </li>
-                </ul>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    className="bg-red-600 hover:bg-red-700 text-white px-6 py-6 rounded-xl text-lg"
-                    onClick={() => navigate('/bayiler')}
-                  >
-                    <MapPin className="w-5 h-5 mr-2" />
-                    Bayi Bul
-                  </Button>
-                  <Button 
-                    variant="outline"
-                    className="border-2 border-red-600 text-red-600 hover:bg-red-50 px-6 py-6 rounded-xl text-lg"
-                    onClick={() => window.location.href = 'mailto:info@pedizone.com'}
-                  >
-                    <Mail className="w-5 h-5 mr-2" />
-                    İletişime Geç
-                  </Button>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <h3 className="font-bold text-xl mb-4 text-gray-900">Fiyat Bilgisi</h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center pb-3 border-b">
-                    <span className="text-gray-600">Tavsiye Edilen Satış Fiyatı</span>
-                    <span className="font-bold text-2xl text-red-600">₺450-550</span>
-                  </div>
-                  <p className="text-sm text-gray-500">
-                    * Fiyatlar bayiden bayiye değişiklik gösterebilir. Güncel fiyat için lütfen yetkili bayilerimizle iletişime geçin.
-                  </p>
-                  <div className="bg-green-50 p-4 rounded-lg mt-4">
-                    <p className="text-sm text-green-800 font-medium">
-                      💚 Komple set alımlarında %15 indirim fırsatı!
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <h2 className="pedizone-heading text-3xl text-gray-900 mb-4 text-center">
+              Nereden Satın Alınır?
+            </h2>
+            <p className="text-gray-700 mb-6 text-lg text-center max-w-3xl mx-auto">
+              PediZone ürünlerine Türkiye genelindeki yetkili bayilerimizden ve online satış kanallarımızdan ulaşabilirsiniz.
+            </p>
+            <ul className="space-y-3 mb-8 max-w-2xl mx-auto">
+              <li className="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                <span className="text-gray-700">Yetkili podoloji klinikleri</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                <span className="text-gray-700">Seçili eczaneler</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                <span className="text-gray-700">Online satış bayileri</span>
+              </li>
+            </ul>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                className="bg-red-600 hover:bg-red-700 text-white px-6 py-6 rounded-xl text-lg"
+                onClick={() => navigate('/bayiler')}
+              >
+                <MapPin className="w-5 h-5 mr-2" />
+                Bayi Bul
+              </Button>
+              <Button 
+                variant="outline"
+                className="border-2 border-red-600 text-red-600 hover:bg-red-50 px-6 py-6 rounded-xl text-lg"
+                onClick={() => window.location.href = 'mailto:info@pedizone.com'}
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                İletişime Geç
+              </Button>
             </div>
           </div>
         </div>
