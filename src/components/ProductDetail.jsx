@@ -18,13 +18,21 @@ import serumBoxDetail from '../assets/products/pedizone-50ml-serum-kutu-detay.jp
 import treatmentBeforeAfter from '../assets/products/pedizone-mantar-tedavi-oncesi-sonrasi.jpg'
 import podologistApplication from '../assets/products/pedizone-podolog-uygulama-klinik.jpg'
 
+// Import Intense Repair Cream images
+import topukKremiMain from '../assets/topuk-kremi-pedizone-irc.jpg'
+import topukKremiIntense from '../assets/topuk-kremi-pedizone-intense.jpg'
+import topukKremi from '../assets/topuk-kremi-pedizone.jpg'
+import topukKremi2 from '../assets/topuk-kremi-pedizone2.jpg'
+
 const ProductDetail = () => {
   const { productId } = useParams()
   const navigate = useNavigate()
+  const [selectedImage, setSelectedImage] = React.useState(0)
 
   // Sayfa yüklendiğinde scroll pozisyonunu en üste getir
   useEffect(() => {
     window.scrollTo(0, 0)
+    setSelectedImage(0) // Reset selected image when product changes
   }, [productId])
 
   // Product data
@@ -128,7 +136,8 @@ const ProductDetail = () => {
       id: 'bakim-serumu',
       name: 'PediZone® %15 Urea Intense Repair Cream',
       description: 'Onarıcı Ayak ve Çatlak Topuk Kremi – Profesyonel Podoloji Kullanımı İçin Geliştirilmiş Formül',
-      image: productSerum2,
+      image: topukKremiMain,
+      gallery: [topukKremiMain, topukKremiIntense, topukKremi, topukKremi2],
       badge: 'Önerilen',
       features: [
         '%15 Üre - Optimal keratolitik güç',
@@ -139,7 +148,7 @@ const ProductDetail = () => {
       ],
       detailedDescription: (
         <div style={{lineHeight: 1.7}}>
-          <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '1.5rem'}}>🔬 Ürün Tanımı</h3>
+          <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '1.5rem'}}>Ürün Tanımı</h3>
           <p style={{marginBottom: '1rem', color: '#4b5563'}}>
             PediZone® %15 Ureli Intense Repair Cream, podolojik uygulamalar için geliştirilmiş, çatlak topuk ve ileri derecede kurumuş ayak cildi üzerinde yoğun onarım sağlayan profesyonel bakım kremidir.
           </p>
@@ -147,7 +156,7 @@ const ProductDetail = () => {
             %15 üre, bitkisel kompleks ve derin nemlendirici ajanlarla formüle edilen bu özel karışım, hem tedavi sürecini destekler hem de uygulama sonrası iyileşmeyi hızlandırır.
           </p>
 
-          <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '2rem'}}>⭐ Profesyonel Etki Mekanizması</h3>
+          <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '2rem'}}>Profesyonel Etki Mekanizması</h3>
           
           <div style={{marginBottom: '1.5rem'}}>
             <h4 style={{fontSize: '1.125rem', fontWeight: 600, color: '#dc2626', marginBottom: '0.75rem'}}>1. %15 Üre – Keratolitik & Yenileyici Etki</h4>
@@ -184,8 +193,8 @@ const ProductDetail = () => {
             </ul>
           </div>
 
-          <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '2rem'}}>🏥 Podoloji ve Klinik Kullanım İçin İdeal</h3>
-          <p style={{marginBottom: '1rem', color: '#4b5563', fontWeight: 500}}>Bu ürün:</p>
+          <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '2rem'}}>Podoloji ve Klinik Kullanım</h3>
+          <p style={{marginBottom: '1rem', color: '#4b5563', fontWeight: 500}}>Klinik ve profesyonel uygulamalar:</p>
           <ul style={{marginLeft: '1.5rem', marginBottom: '1rem', color: '#4b5563'}}>
             <li style={{marginBottom: '0.5rem'}}>Ortoniksi uygulamaları sonrası topuk ve cilt bütünlüğünü destekler.</li>
             <li style={{marginBottom: '0.5rem'}}>Nasır, çatlak topuk ve hiperkeratoz tedavilerinde onarımı hızlandırır.</li>
@@ -194,7 +203,7 @@ const ProductDetail = () => {
           </ul>
 
           <div style={{backgroundColor: '#fef2f2', border: '2px solid #dc2626', padding: '1.5rem', marginTop: '2rem', marginBottom: '2rem', borderRadius: '12px'}}>
-            <h3 style={{fontSize: '1.25rem', fontWeight: 700, color: '#dc2626', marginBottom: '1rem'}}>🆚 Rakiplerden Farkı Nedir? Neden Pedizone IRC?</h3>
+            <h3 style={{fontSize: '1.25rem', fontWeight: 700, color: '#dc2626', marginBottom: '1rem'}}>Ürün Avantajları</h3>
             <div style={{display: 'grid', gap: '0.5rem'}}>
               <div style={{display: 'flex', alignItems: 'start'}}>
                 <span style={{color: '#16a34a', marginRight: '0.5rem', fontWeight: 'bold'}}>✔</span>
@@ -218,15 +227,12 @@ const ProductDetail = () => {
               </div>
               <div style={{display: 'flex', alignItems: 'start'}}>
                 <span style={{color: '#16a34a', marginRight: '0.5rem', fontWeight: 'bold'}}>✔</span>
-                <span style={{color: '#4b5563'}}>Fotoğraflarla kanıtlanmış öncesi–sonrası etkileri</span>
+                <span style={{color: '#4b5563'}}>Klinik çalışmalarla desteklenen kanıtlanmış sonuçlar</span>
               </div>
             </div>
-            <p style={{marginTop: '1rem', color: '#7c2d12', fontStyle: 'italic', fontSize: '0.875rem'}}>
-              Bunların hepsi bayi ikna sürecinde çok değerli maddeler.
-            </p>
           </div>
 
-          <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '2rem'}}>📌 Kullanım Alanları</h3>
+          <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '2rem'}}>Kullanım Alanları</h3>
           <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '0.75rem', marginBottom: '1.5rem'}}>
             <div style={{backgroundColor: '#f9fafb', padding: '1rem', borderRadius: '8px', border: '1px solid #e5e7eb'}}>
               <span style={{color: '#4b5563', fontWeight: 500}}>• Çatlamış topuk</span>
@@ -248,7 +254,7 @@ const ProductDetail = () => {
             </div>
           </div>
 
-          <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '2rem'}}>🧴 Kullanım Şekli (Profesyonel + Ev Kullanımı)</h3>
+          <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#1f2937', marginBottom: '1rem', marginTop: '2rem'}}>Kullanım Şekli</h3>
           <div style={{marginBottom: '1.5rem'}}>
             <h4 style={{fontSize: '1.125rem', fontWeight: 600, color: '#dc2626', marginBottom: '0.75rem'}}>Profesyonel kullanım:</h4>
             <p style={{color: '#4b5563', marginBottom: '1rem'}}>
@@ -266,7 +272,7 @@ const ProductDetail = () => {
           </div>
 
           <div style={{backgroundColor: '#dcfce7', borderLeft: '4px solid #16a34a', padding: '1.5rem', marginTop: '2rem', borderRadius: '8px'}}>
-            <h3 style={{fontSize: '1.25rem', fontWeight: 700, color: '#15803d', marginBottom: '0.75rem'}}>👣 Podolog Önerisi</h3>
+            <h3 style={{fontSize: '1.25rem', fontWeight: 700, color: '#15803d', marginBottom: '0.75rem'}}>Uzman Görüşü</h3>
             <p style={{margin: 0, color: '#166534', fontStyle: 'italic'}}>
               "%15 üre ve güçlü bitkisel kompleks içeren bu formül, hem çatlak topuklarda hem de yoğun kuruluk vakalarında hızlı sonuç verir. İşlem sonrası etkili bakım ürünü olarak güvenle kullanılabilir."
             </p>
@@ -313,9 +319,10 @@ const ProductDetail = () => {
             {/* Left - Product Image (Sticky) */}
             <div className="lg:col-span-1">
               <div className="lg:sticky lg:top-24 space-y-4">
+                {/* Main Image */}
                 <div className="aspect-square overflow-hidden rounded-2xl bg-white shadow-lg relative">
                   <img 
-                    src={product.image} 
+                    src={product.gallery ? product.gallery[selectedImage] : product.image} 
                     alt={product.name}
                     className="w-full h-full object-cover"
                   />
@@ -327,6 +334,29 @@ const ProductDetail = () => {
                     </div>
                   )}
                 </div>
+                
+                {/* Thumbnail Gallery */}
+                {product.gallery && product.gallery.length > 1 && (
+                  <div className="grid grid-cols-4 gap-2">
+                    {product.gallery.map((img, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setSelectedImage(index)}
+                        className={`aspect-square overflow-hidden rounded-lg border-2 transition-all ${
+                          selectedImage === index 
+                            ? 'border-red-600 shadow-md' 
+                            : 'border-gray-200 hover:border-gray-400'
+                        }`}
+                      >
+                        <img 
+                          src={img} 
+                          alt={`${product.name} - görsel ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
 
