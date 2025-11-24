@@ -1439,7 +1439,10 @@ const HomePage = () => {
           {/* View All Dealers Button */}
           <div className="text-center mt-8">
             <Button
-              onClick={() => navigate('/bayiler')}
+              onClick={() => {
+                navigate('/bayiler')
+                window.scrollTo({ top: 0, behavior: 'instant' })
+              }}
               className="pedizone-button text-lg px-8 py-6"
             >
               Tüm Satış Noktalarını Görüntüle
