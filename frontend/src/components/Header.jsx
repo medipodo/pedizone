@@ -45,7 +45,7 @@ const Header = ({ currentLang = 'tr', setCurrentLang, showBackButton = false }) 
   const nav = navigation[currentLang]
 
   return (
-    <header className="bg-gradient-to-r from-red-600 to-red-700 shadow-lg sticky top-0" style={{zIndex: 9999}}>
+    <header className="bg-gradient-to-r from-red-600 via-red-700 to-red-800 shadow-lg sticky top-0" style={{zIndex: 9999}}>
       <div className="pedizone-container">
         <div className="flex items-center justify-between py-4">
           {/* Logo with Back Button */}
