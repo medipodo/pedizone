@@ -961,7 +961,7 @@ const HomePage = () => {
                   onClick={() => navigate('/product/bakim-serumu')}
                 />
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
