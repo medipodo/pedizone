@@ -4,6 +4,10 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Menu, X, MessageCircle } 
 import { Button } from './ui/button'
 import { Card, CardContent } from './ui/card'
 import { Badge } from './ui/badge'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import 'leaflet/dist/leaflet.css'
+import L from 'leaflet'
+import dealersData from '../data/dealers.json'
 
 // Import images
 import productSerum from '../assets/pedizone-serum-new.jpg'
