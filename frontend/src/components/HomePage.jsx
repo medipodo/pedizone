@@ -1172,6 +1172,83 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Dealers Map Section */}
+      <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
+        <div className="pedizone-container">
+          {/* Section Header */}
+          <div className="text-center mb-8 md:mb-12">
+            <div className="inline-block bg-red-100 text-red-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              SATIŞ NOKTALARI
+            </div>
+            <h2 className="pedizone-heading text-4xl md:text-5xl text-gray-900 mb-4">
+              Bayilerimiz
+            </h2>
+            <p className="pedizone-text text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+              PediZone® ürünlerini alabileceğiniz yetkili satış noktalarımız
+            </p>
+          </div>
+
+          {/* Map Container */}
+          <div className="w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white" style={{ height: '600px' }}>
+            <MapContainer
+              center={[39.0, 35.0]}
+              zoom={6}
+              style={{ height: '100%', width: '100%' }}
+              scrollWheelZoom={true}
+            >
+              <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+              {dealersData.dealers
+                .filter(dealer => dealer.isActive)
+                .map((dealer) => (
+                  <Marker
+                    key={dealer.id}
+                    position={[dealer.lat, dealer.lng]}
+                    icon={redIcon}
+                  >
+                    <Popup>
+                      <div className="p-2">
+                        <h3 className="font-bold text-lg text-red-600 mb-2">
+                          {dealer.name}
+                        </h3>
+                        <p className="text-sm text-gray-700 mb-2">
+                          <strong>{dealer.city}</strong>
+                        </p>
+                        <p className="text-sm text-gray-600 mb-2">
+                          {dealer.address}
+                        </p>
+                        {dealer.phone && (
+                          <p className="text-sm text-gray-600 mb-1">
+                            <strong>Tel:</strong> {dealer.phone}
+                          </p>
+                        )}
+                        {dealer.email && (
+                          <p className="text-sm text-gray-600">
+                            <strong>Email:</strong> {dealer.email}
+                          </p>
+                        )}
+                      </div>
+                    </Popup>
+                  </Marker>
+                ))}
+            </MapContainer>
+          </div>
+
+          {/* View All Dealers Button */}
+          <div className="text-center mt-8">
+            <Button
+              onClick={() => navigate('/bayiler')}
+              className="pedizone-button text-lg px-8 py-6"
+            >
+              Tüm Satış Noktalarını Görüntüle
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-2 sm:py-4 md:py-6 lg:py-8 xl:py-10 bg-white">
         <div className="pedizone-container">
