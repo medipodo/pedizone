@@ -1220,6 +1220,153 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-br from-white via-red-50 to-white relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute top-0 right-0 w-72 h-72 bg-red-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-pink-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+
+        <div className="pedizone-container relative z-10">
+          {/* Section Header */}
+          <motion.div 
+            className="text-center mb-12 md:mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="inline-block bg-gradient-to-r from-red-100 to-pink-100 text-red-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              MÜŞTERİLERİMİZ
+            </div>
+            <h2 className="pedizone-heading text-4xl md:text-5xl text-gray-900 mb-4">
+              Sizden Gelenler
+            </h2>
+            <p className="pedizone-text text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+              Binlerce mutlu müşterimizin deneyimleri
+            </p>
+          </motion.div>
+
+          {/* Testimonials Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Ayşe K.",
+                role: "Öğretmen",
+                content: "Yıllardır ayak mantarı problemi yaşıyordum. PediZone serumu kullanmaya başladıktan 2 hafta sonra ciddi iyileşme gördüm. Artık rahat ayakkabı giyebiliyorum!",
+                rating: 5,
+                city: "Ankara"
+              },
+              {
+                name: "Mehmet Y.",
+                role: "Sporcu",
+                content: "Spor yaptığım için ayak hijyeni çok önemli. Temizleme köpüğünü her gün kullanıyorum, koku ve mantar problemi kalmadı. Kesinlikle tavsiye ederim.",
+                rating: 5,
+                city: "İstanbul"
+              },
+              {
+                name: "Zeynep A.",
+                role: "Hemşire",
+                content: "Sağlık sektöründe çalıştığım için ürün kalitesine çok dikkat ederim. PediZone'un podolog onaylı olması ve etkili formülü beni çok memnun etti.",
+                rating: 5,
+                city: "İzmir"
+              },
+              {
+                name: "Can D.",
+                role: "Mühendis",
+                content: "Çatlak topuk problemim vardı. %15 Urea kremin etkisi muhteşem! Ayaklarım artık çok yumuşak ve sağlıklı görünüyor.",
+                rating: 5,
+                city: "Ankara"
+              },
+              {
+                name: "Elif M.",
+                role: "Öğrenci",
+                content: "Tırnak mantarı için doktor önerisiyle PediZone kullanmaya başladım. 3 haftada büyük fark gördüm. Hem etkili hem de kullanımı çok kolay.",
+                rating: 5,
+                city: "Antalya"
+              },
+              {
+                name: "Ahmet B.",
+                role: "İşletme Sahibi",
+                content: "Günün çoğu ayakta olduğum için ayak sağlığım çok önemli. PediZone ürünlerini kullanmaya başladıktan sonra yorgunluk ve rahatsızlık hissetmiyorum.",
+                rating: 5,
+                city: "Bursa"
+              }
+            ].map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-500 h-full hover:-translate-y-2">
+                  <CardContent className="p-6 space-y-4">
+                    {/* Quote Icon */}
+                    <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center">
+                      <Quote className="w-6 h-6 text-white" />
+                    </div>
+
+                    {/* Rating */}
+                    <div className="flex gap-1">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+
+                    {/* Content */}
+                    <p className="text-gray-700 text-sm leading-relaxed italic">
+                      "{testimonial.content}"
+                    </p>
+
+                    {/* Author */}
+                    <div className="pt-4 border-t border-gray-100">
+                      <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 bg-gradient-to-br from-red-100 to-pink-100 rounded-full flex items-center justify-center text-red-600 font-bold text-lg">
+                          {testimonial.name.charAt(0)}
+                        </div>
+                        <div>
+                          <div className="font-bold text-gray-900">{testimonial.name}</div>
+                          <div className="text-sm text-gray-600">{testimonial.role} • {testimonial.city}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Stats Section */}
+          <motion.div 
+            className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            {[
+              { number: "10,000+", label: "Mutlu Müşteri" },
+              { number: "7+", label: "Satış Noktası" },
+              { number: "3", label: "Ürün Çeşidi" },
+              { number: "100%", label: "Memnuniyet" }
+            ].map((stat, index) => (
+              <motion.div
+                key={index}
+                className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+                whileHover={{ scale: 1.05, y: -5 }}
+              >
+                <div className="text-3xl md:text-4xl font-bold text-red-600 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-sm md:text-base text-gray-600 font-medium">
+                  {stat.label}
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* Dealers Map Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
         <div className="pedizone-container">
