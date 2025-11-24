@@ -253,7 +253,8 @@
     @apply py-6 px-4;
   }
   .pedizone-container {
-    @apply px-4;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .pedizone-card {
     @apply p-6;
