@@ -813,39 +813,72 @@ const HomePage = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="hero-section bg-gradient-to-br from-gray-50 via-white to-red-50 py-6 sm:py-8 md:py-10 lg:py-12 xl:py-14">
-        <div className="pedizone-container">
+      <section id="home" className="hero-section relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-red-50 py-6 sm:py-8 md:py-10 lg:py-12 xl:py-14">
+        {/* Animated background gradient */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-red-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+          <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-red-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+        </div>
+
+        <div className="pedizone-container relative z-10">
           <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 items-center">
             {/* Left Content */}
-            <div className="space-y-3 sm:space-y-4 md:space-y-5">
+            <motion.div 
+              className="space-y-3 sm:space-y-4 md:space-y-5"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
               <div className="space-y-2 sm:space-y-3 md:space-y-4">
-                <Badge className="bg-red-100 text-red-800 px-4 py-2 text-sm font-medium">
-                  {t.hero.badge}
-                </Badge>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                >
+                  <Badge className="bg-red-100 text-red-800 px-4 py-2 text-sm font-medium">
+                    {t.hero.badge}
+                  </Badge>
+                </motion.div>
                 
-                <h1 className="pedizone-heading text-3xl lg:text-4xl xl:text-5xl text-gray-900 leading-tight">
+                <motion.h1 
+                  className="pedizone-heading text-4xl lg:text-5xl xl:text-6xl text-gray-900 leading-tight"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                >
                   {t.hero.title}
-                </h1>
+                </motion.h1>
                 
-                <div className="space-y-2">
-                  <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-red-600">
+                <motion.div 
+                  className="space-y-2"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                >
+                  <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent">
                     {t.hero.brand}
                   </h2>
-                  <p className="pedizone-text text-base lg:text-lg text-gray-600 max-w-2xl">
+                  <p className="pedizone-text text-lg lg:text-xl text-gray-600 max-w-2xl">
                     {t.hero.subtitle}
                   </p>
-                </div>
+                </motion.div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                <Button className="pedizone-button px-6 py-3" onClick={scrollToProducts}>
+              <motion.div 
+                className="flex flex-col sm:flex-row gap-3 pt-2"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+              >
+                <Button className="pedizone-button px-8 py-4 text-lg" onClick={scrollToProducts}>
                   {t.hero.cta1}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-                <Button variant="outline" className="px-6 py-3 border-red-600 text-red-600 hover:bg-red-50">
+                <Button variant="outline" className="px-8 py-4 text-lg border-2 border-red-600 text-red-600 hover:bg-red-50 transition-all duration-300 hover:scale-105">
                   {t.hero.cta2}
                 </Button>
-              </div>
+              </motion.div>
 
               {/* Trust Indicators Compact */}
               <div className="flex flex-wrap justify-center lg:justify-start gap-3 pt-1">
