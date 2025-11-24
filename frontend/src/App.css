@@ -176,7 +176,7 @@
   }
 
   .pedizone-gradient {
-    background: linear-gradient(to right, rgb(220, 38, 38) 0%, rgb(185, 28, 28) 50%, rgb(153, 27, 27) 100%);
+    background: linear-gradient(to right, #dc2626, #b91c1c, #991b1b);
   }
 
   .pedizone-hero-bg {
