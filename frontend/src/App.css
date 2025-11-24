@@ -169,8 +169,10 @@
 
   /* ——— CONTAINER WIDTH FIX ——— */
   .pedizone-container {
-    @apply w-full mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-32;
-    max-width: 1400px;
+    @apply w-full mx-auto;
+    max-width: 1680px;
+    padding-left: clamp(1rem, 5vw, 4rem);
+    padding-right: clamp(1rem, 5vw, 4rem);
   }
 
   .pedizone-gradient {
