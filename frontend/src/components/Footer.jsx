@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-red-600 to-red-700 text-white py-12">
+      <footer className="bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white py-12">
         <div className="pedizone-container">
           <div className="text-center space-y-6">
             <h3 className="text-2xl font-bold">Pedizone®</h3>
