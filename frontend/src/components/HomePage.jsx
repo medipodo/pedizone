@@ -812,109 +812,62 @@ const HomePage = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="hero-section relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-red-50 py-6 sm:py-8 md:py-10 lg:py-12 xl:py-14">
-        {/* Animated background gradient */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-red-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-          <div className="absolute top-0 right-0 w-96 h-96 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-          <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-red-100 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
-        </div>
-
-        <div className="pedizone-container relative z-10">
+      <section id="home" className="hero-section bg-gradient-to-br from-gray-50 via-white to-red-50 py-6 sm:py-8 md:py-10 lg:py-12 xl:py-14">
+        <div className="pedizone-container">
           <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 items-center">
             {/* Left Content */}
-            <motion.div 
-              className="space-y-3 sm:space-y-4 md:space-y-5"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div className="space-y-3 sm:space-y-4 md:space-y-5">
               <div className="space-y-2 sm:space-y-3 md:space-y-4">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 }}
-                >
-                  <Badge className="bg-red-100 text-red-800 px-4 py-2 text-sm font-medium">
-                    {t.hero.badge}
-                  </Badge>
-                </motion.div>
+                <Badge className="bg-red-100 text-red-800 px-4 py-2 text-sm font-medium">
+                  {t.hero.badge}
+                </Badge>
                 
-                <motion.h1 
-                  className="pedizone-heading text-4xl lg:text-5xl xl:text-6xl text-gray-900 leading-tight"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
-                >
+                <h1 className="pedizone-heading text-3xl lg:text-4xl xl:text-5xl text-gray-900 leading-tight">
                   {t.hero.title}
-                </motion.h1>
+                </h1>
                 
-                <motion.div 
-                  className="space-y-2"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 }}
-                >
-                  <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent">
+                <div className="space-y-2">
+                  <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-red-600">
                     {t.hero.brand}
                   </h2>
-                  <p className="pedizone-text text-lg lg:text-xl text-gray-600 max-w-2xl">
+                  <p className="pedizone-text text-base lg:text-lg text-gray-600 max-w-2xl">
                     {t.hero.subtitle}
                   </p>
-                </motion.div>
+                </div>
               </div>
 
-              <motion.div 
-                className="flex flex-col sm:flex-row gap-3 pt-2"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-              >
-                <Button className="pedizone-button px-8 py-4 text-lg" onClick={scrollToProducts}>
+              <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                <Button className="pedizone-button px-6 py-3" onClick={scrollToProducts}>
                   {t.hero.cta1}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-                <Button variant="outline" className="px-8 py-4 text-lg border-2 border-red-600 text-red-600 hover:bg-red-50 transition-all duration-300 hover:scale-105">
+                <Button variant="outline" className="px-6 py-3 border-red-600 text-red-600 hover:bg-red-50">
                   {t.hero.cta2}
                 </Button>
-              </motion.div>
+              </div>
 
               {/* Trust Indicators Compact */}
-              <motion.div 
-                className="flex flex-wrap justify-center lg:justify-start gap-3 pt-1"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-              >
-                <motion.div 
-                  className="flex items-center gap-2 bg-white px-4 py-3 rounded-xl shadow-md border border-gray-100 hover:shadow-xl hover:scale-105 transition-all duration-300"
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+              <div className="flex flex-wrap justify-center lg:justify-start gap-3 pt-1">
+                <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-100">
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 text-green-600" />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-gray-900">Podolog Onaylı</div>
+                    <div className="text-xs font-bold text-gray-900">Podolog Onaylı</div>
                     <div className="text-xs text-gray-600">Uzman Tavsiyesi</div>
                   </div>
-                </motion.div>
-                <motion.div 
-                  className="flex items-center gap-2 bg-white px-4 py-3 rounded-xl shadow-md border border-gray-100 hover:shadow-xl hover:scale-105 transition-all duration-300"
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                    <CheckCircle className="w-5 h-5 text-blue-600" />
+                </div>
+                <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-100">
+                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 text-blue-600" />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-gray-900">Klinik Testli</div>
+                    <div className="text-xs font-bold text-gray-900">Klinik Testli</div>
                     <div className="text-xs text-gray-600">Güvenli Formül</div>
                   </div>
-                </motion.div>
-                <motion.div 
-                  className="flex items-center gap-2 bg-white px-4 py-3 rounded-xl shadow-md border border-gray-100 hover:shadow-xl hover:scale-105 transition-all duration-300"
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center overflow-hidden">
+                </div>
+                <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-100">
+                  <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center overflow-hidden">
                     <img 
                       src="https://customer-assets.emergentagent.com/job_pedizone-polish/artifacts/xlcjr5cu_Ads%C4%B1z%20tasar%C4%B1m%20%2813%29%20%281%29.jpg" 
                       alt="Eczane" 
@@ -922,20 +875,15 @@ const HomePage = () => {
                     />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-gray-900">Seçili Eczanelerde</div>
+                    <div className="text-xs font-bold text-gray-900">Seçili Eczanelerde</div>
                     <div className="text-xs text-gray-600">Güvenli Satış</div>
                   </div>
-                </motion.div>
-              </motion.div>
-            </motion.div>
+                </div>
+              </div>
+            </div>
 
             {/* Right - 3 Products Grid */}
-            <motion.div 
-              className="relative"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
+            <div className="relative">
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3 lg:gap-4">
                 <img 
                   src={productSerum} 
