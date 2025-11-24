@@ -49,7 +49,7 @@ const DealersMap = () => {
     <>
       <Header currentLang={currentLang} setCurrentLang={setCurrentLang} showBackButton={true} />
       
-      <div className="min-h-screen bg-gray-50" style={{position: 'relative', zIndex: 1, paddingTop: '80px'}}>
+      <div className="min-h-screen bg-gray-50" style={{position: 'relative', zIndex: 1}}>
       {/* Header */}
       <div className="bg-gradient-to-r from-red-600 to-red-700 text-white py-16">
         <div className="pedizone-container">
