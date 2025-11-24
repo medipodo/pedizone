@@ -157,7 +157,13 @@
   }
 
   .pedizone-button {
-    @apply bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+    @apply bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-2xl;
+    animation: pulse-subtle 3s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-subtle {
+    0%, 100% { box-shadow: 0 10px 15px -3px rgba(220, 38, 38, 0.3); }
+    50% { box-shadow: 0 20px 25px -5px rgba(220, 38, 38, 0.4); }
   }
 
   .pedizone-button-outline {
