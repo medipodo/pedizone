@@ -12,7 +12,12 @@ export default defineConfig({
     },
   },
   server: {
-    host: true,
-    allowedHosts: ['5173-idjbvhy3m9v8nnrxhghgc-d7dc5b48.manus-asia.computer', '5174-idjbvhy3m9v8nnrxhghgc-d7dc5b48.manus-asia.computer'],
+    host: '0.0.0.0',
+    port: 3000,
+    strictPort: true,
+    hmr: {
+      clientPort: 443,
+      protocol: 'wss'
+    }
   },
 })
