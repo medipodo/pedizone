@@ -51,7 +51,7 @@ const DealersMap = () => {
       
       <div className="min-h-screen bg-gray-50" style={{position: 'relative', zIndex: 1}}>
       {/* Header */}
-      <div className="bg-gradient-to-r from-red-600 to-red-700 text-white py-16">
+      <div className="bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white py-16">
         <div className="pedizone-container">
           <div className="flex items-center justify-center mb-4">
             <MapPin className="w-12 h-12 mr-4" />
