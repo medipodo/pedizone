@@ -881,27 +881,41 @@ const HomePage = () => {
               </motion.div>
 
               {/* Trust Indicators Compact */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-3 pt-1">
-                <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-100">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+              <motion.div 
+                className="flex flex-wrap justify-center lg:justify-start gap-3 pt-1"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+              >
+                <motion.div 
+                  className="flex items-center gap-2 bg-white px-4 py-3 rounded-xl shadow-md border border-gray-100 hover:shadow-xl hover:scale-105 transition-all duration-300"
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                    <CheckCircle className="w-5 h-5 text-green-600" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-gray-900">Podolog Onaylı</div>
+                    <div className="text-sm font-bold text-gray-900">Podolog Onaylı</div>
                     <div className="text-xs text-gray-600">Uzman Tavsiyesi</div>
                   </div>
-                </div>
-                <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-100">
-                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                    <CheckCircle className="w-4 h-4 text-blue-600" />
+                </motion.div>
+                <motion.div 
+                  className="flex items-center gap-2 bg-white px-4 py-3 rounded-xl shadow-md border border-gray-100 hover:shadow-xl hover:scale-105 transition-all duration-300"
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                    <CheckCircle className="w-5 h-5 text-blue-600" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-gray-900">Klinik Testli</div>
+                    <div className="text-sm font-bold text-gray-900">Klinik Testli</div>
                     <div className="text-xs text-gray-600">Güvenli Formül</div>
                   </div>
-                </div>
-                <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-100">
-                  <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center overflow-hidden">
+                </motion.div>
+                <motion.div 
+                  className="flex items-center gap-2 bg-white px-4 py-3 rounded-xl shadow-md border border-gray-100 hover:shadow-xl hover:scale-105 transition-all duration-300"
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center overflow-hidden">
                     <img 
                       src="https://customer-assets.emergentagent.com/job_pedizone-polish/artifacts/xlcjr5cu_Ads%C4%B1z%20tasar%C4%B1m%20%2813%29%20%281%29.jpg" 
                       alt="Eczane" 
@@ -909,11 +923,11 @@ const HomePage = () => {
                     />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-gray-900">Seçili Eczanelerde</div>
+                    <div className="text-sm font-bold text-gray-900">Seçili Eczanelerde</div>
                     <div className="text-xs text-gray-600">Güvenli Satış</div>
                   </div>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </div>
 
             {/* Right - 3 Products Grid */}
