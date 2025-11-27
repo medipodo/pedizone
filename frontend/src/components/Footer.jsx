@@ -18,6 +18,15 @@ const Footer = () => {
               <a href="/#contact" className="text-red-200 hover:text-white transition-colors">İletişim</a>
               <span className="text-red-400">•</span>
               <a 
+                href="https://customer-assets.emergentagent.com/job_pedizone-redesign/artifacts/mmglutdz_Pedizone%20Bro%C5%9F%C3%BCr%20NORMAL%20PDF%20%28300%20x%20210%20mm%29%20%281%29.pdf"
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-red-200 hover:text-white transition-colors font-semibold"
+              >
+                📄 Broşür
+              </a>
+              <span className="text-red-400">•</span>
+              <a 
                 href="https://pedizone.xyz" 
                 target="_blank" 
                 rel="noopener noreferrer"
