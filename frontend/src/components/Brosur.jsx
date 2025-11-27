@@ -51,11 +51,11 @@ const Brosur = () => {
           {/* Back Button */}
           <div className="text-center mt-12">
             <button
-              onClick={() => navigate(-1)}
-              className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-xl font-semibold transition-colors"
+              onClick={() => navigate('/')}
+              className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-xl font-semibold transition-colors shadow-lg hover:shadow-xl"
             >
               <ArrowLeft className="w-5 h-5" />
-              Geri Dön
+              Anasayfaya Dön
             </button>
           </div>
         </div>
