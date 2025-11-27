@@ -74,6 +74,16 @@
       "lat": 36.856421,
       "lng": 30.6091082,
       "isActive": true
+    },
+    {
+      "id": 12,
+      "name": "Kıvanç Eczanesi",
+      "city": "Niğde",
+      "address": "Ahmet Kuddusi, Doğan Baran Cd. No: 72/A, 51700 Bor/Niğde",
+      "phone": "03883130201",
+      "lat": 37.91379585,
+      "lng": 34.56008998,
+      "isActive": true
     }
   ]
 }
