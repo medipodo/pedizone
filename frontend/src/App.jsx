@@ -6,6 +6,7 @@ import PrivacyPolicy from './components/PrivacyPolicy'
 import Certificates from './components/Certificates'
 import DealersMap from './components/DealersMap'
 import Brosur from './components/Brosur'
+import DermatolojikTest from './components/DermatolojikTest'
 import './App.css'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path="/sertifikalar" element={<Certificates />} />
       <Route path="/bayiler" element={<DealersMap />} />
       <Route path="/brosur" element={<Brosur />} />
+      <Route path="/dermatolojik-test" element={<DermatolojikTest />} />
     </Routes>
   )
 }
