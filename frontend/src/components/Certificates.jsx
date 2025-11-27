@@ -132,6 +132,26 @@ const Certificates = () => {
         "Uluslararası standartlarda ürün takibi",
         "Tedarik zinciri verimliliği"
       ]
+    },
+    {
+      id: 7,
+      title: "Dermatolojik Test Raporu - Yama Testi",
+      product: "PediZone Intense Repair Foot Care Cream",
+      institution: "SKINLAB P.S.A.",
+      date: "25.11.2025",
+      type: "Dermatolojik Test",
+      description: "Ürünün cilde iyi tolere edildiği, tahriş edici veya alerjik özellikler göstermediği dermatolojik olarak doğrulanmıştır.",
+      image: dermatologicalTestCover,
+      reportNumber: "14/10/25/D/11",
+      status: "Uygun",
+      highlights: [
+        "Cilde İyi Tolere Edilmiştir",
+        "Tahriş Edici Değildir",
+        "Alerjik Özellik Göstermez",
+        "SKINLAB P.S.A. Tarafından Test Edilmiştir",
+        "Dermatolojik Olarak Bağımsız Test",
+        "Ürün Etiketinde Logo Kullanım İzni"
+      ]
     }
   ]
 
