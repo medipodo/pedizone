@@ -18,9 +18,7 @@ const Footer = () => {
               <a href="/#contact" className="text-red-200 hover:text-white transition-colors">İletişim</a>
               <span className="text-red-400">•</span>
               <a 
-                href="/pedizone-brosur.pdf"
-                target="_blank" 
-                rel="noopener noreferrer"
+                href="/brosur"
                 className="text-red-200 hover:text-white transition-colors font-semibold"
               >
                 📄 Broşür
