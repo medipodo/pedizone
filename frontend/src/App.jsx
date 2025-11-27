@@ -5,6 +5,7 @@ import ProductDetail from './components/ProductDetail'
 import PrivacyPolicy from './components/PrivacyPolicy'
 import Certificates from './components/Certificates'
 import DealersMap from './components/DealersMap'
+import Brosur from './components/Brosur'
 import './App.css'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/sertifikalar" element={<Certificates />} />
       <Route path="/bayiler" element={<DealersMap />} />
+      <Route path="/brosur" element={<Brosur />} />
     </Routes>
   )
 }
