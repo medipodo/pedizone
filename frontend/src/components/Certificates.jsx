@@ -16,7 +16,9 @@ import gs1BarkodSeo from '../assets/documents/pedizone-gs1-barkod-seo.jpg'
 import gs1Sertifika from '../assets/documents/pedizone-gs1-sertifika.jpg'
 import gs1BarcodeCover from '../assets/documents/gs1-barcode-cover.jpeg'
 import img2866Seo from '../assets/documents/pedizone-img-2866-seo.png'
-import dermatologicalTestCover from 'https://customer-assets.emergentagent.com/job_pedizone-redesign/artifacts/6bhbyrco_Ads%C4%B1z%20tasar%C4%B1m%20%2817%29.jpg'
+
+// External images
+const dermatologicalTestCover = 'https://customer-assets.emergentagent.com/job_pedizone-redesign/artifacts/6bhbyrco_Ads%C4%B1z%20tasar%C4%B1m%20%2817%29.jpg'
 
 const Certificates = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null)
