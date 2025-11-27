@@ -166,7 +166,7 @@ const Certificates = () => {
       4: '/pedizione-sertifika-test.jpg',
       5: '/pedizione-sertifika-test-byo.jpg',
       6: '/gs1-membership-licence.jpeg',
-      7: '/dermatolojik-test-raporu.pdf'
+      7: '/dermatolojik-test-sayfa-1.jpg'
     }
     
     const originalImage = originalImages[certificate.id]
