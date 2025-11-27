@@ -166,7 +166,7 @@ const Certificates = () => {
       4: '/pedizione-sertifika-test.jpg',
       5: '/pedizione-sertifika-test-byo.jpg',
       6: '/gs1-membership-licence.jpeg',
-      7: 'https://customer-assets.emergentagent.com/job_pedizone-redesign/artifacts/8ld9v5oz_PediZone%20Intense%20Repair%20Foot%20Care%20Cream.pdf'
+      7: '/dermatolojik-test-raporu.pdf'
     }
     
     const originalImage = originalImages[certificate.id]
