@@ -139,71 +139,78 @@ const DealersMap = () => {
             Tüm Satış Noktalarımız ({dealers.length})
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            <Card>
-              <CardContent className="p-0">
-                <div className="h-[700px] rounded-lg overflow-hidden">
-                  <MapContainer
-                    center={turkeyCenter}
-                    zoom={defaultZoom}
-                    scrollWheelZoom={true}
-                    className="h-full w-full"
-                  >
-                    <TileLayer
-                      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    />
-                    {dealers.map((dealer) => (
-                      <Marker
-                        key={dealer.id}
-                        position={[dealer.lat, dealer.lng]}
-                        icon={redIcon}
-                        eventHandlers={{
-                          click: () => handleDealerClick(dealer),
-                        }}
+            {dealers.map((dealer) => (
+              <Card 
+                key={dealer.id}
+                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer border-2 border-gray-100 hover:border-red-300"
+                onClick={() => {
+                  setSelectedDealer(dealer)
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                }}
+              >
+                <CardContent className="p-6">
+                  {/* Header */}
+                  <div className="flex items-start mb-4">
+                    <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-red-600 transition-colors">
+                      <MapPin className="w-6 h-6 text-red-600 group-hover:text-white transition-colors" />
+                    </div>
+                    <div className="ml-3 flex-1">
+                      <h3 className="font-bold text-lg text-gray-900 group-hover:text-red-600 transition-colors">
+                        {dealer.name}
+                      </h3>
+                      <p className="text-sm font-semibold text-red-600 mt-1">
+                        {dealer.city}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Address */}
+                  <div className="mb-4 pb-4 border-b border-gray-100">
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {dealer.address}
+                    </p>
+                  </div>
+
+                  {/* Contact Info */}
+                  <div className="space-y-2 mb-4">
+                    <div className="flex items-center text-sm text-gray-700">
+                      <Phone className="w-4 h-4 mr-2 text-red-600 flex-shrink-0" />
+                      <a 
+                        href={`tel:${dealer.phone}`} 
+                        className="hover:text-red-600 transition-colors"
+                        onClick={(e) => e.stopPropagation()}
                       >
-                        <Popup>
-                          <div className="p-2 min-w-[250px]">
-                            <h3 className="font-bold text-lg text-red-600 mb-2">
-                              {dealer.name}
-                            </h3>
-                            <p className="text-sm font-semibold text-gray-800 mb-2">
-                              {dealer.city}
-                            </p>
-                            <p className="text-sm text-gray-700 mb-3">
-                              {dealer.address}
-                            </p>
-                            <div className="space-y-2 mb-3">
-                              <div className="flex items-center text-sm text-gray-600">
-                                <Phone className="w-4 h-4 mr-2" />
-                                <a href={`tel:${dealer.phone}`} className="hover:text-red-600">
-                                  {dealer.phone}
-                                </a>
-                              </div>
-                              {dealer.email && (
-                                <div className="flex items-center text-sm text-gray-600">
-                                  <Mail className="w-4 h-4 mr-2" />
-                                  <a href={`mailto:${dealer.email}`} className="hover:text-red-600">
-                                    {dealer.email}
-                                  </a>
-                                </div>
-                              )}
-                            </div>
-                            <Button
-                              onClick={() => openGoogleMaps(dealer.lat, dealer.lng)}
-                              className="w-full bg-red-600 hover:bg-red-700 text-white"
-                              size="sm"
-                            >
-                              <Navigation className="w-4 h-4 mr-2" />
-                              Yol Tarifi Al
-                            </Button>
-                          </div>
-                        </Popup>
-                      </Marker>
-                    ))}
-                  </MapContainer>
-                </div>
-              </CardContent>
-            </Card>
+                        {dealer.phone}
+                      </a>
+                    </div>
+                    {dealer.email && (
+                      <div className="flex items-center text-sm text-gray-700">
+                        <Mail className="w-4 h-4 mr-2 text-red-600 flex-shrink-0" />
+                        <a 
+                          href={`mailto:${dealer.email}`} 
+                          className="hover:text-red-600 transition-colors truncate"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          {dealer.email}
+                        </a>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Action Button */}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      openGoogleMaps(dealer.lat, dealer.lng)
+                    }}
+                    className="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2.5 rounded-lg text-sm font-semibold flex items-center justify-center gap-2 transition-all duration-300 group-hover:shadow-lg"
+                  >
+                    <Navigation className="w-4 h-4" />
+                    Yol Tarifi Al
+                  </button>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
 
