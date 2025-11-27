@@ -156,22 +156,27 @@ const Certificates = () => {
   ]
 
   const openCertificate = (certificate) => {
-    // Orijinal sertifika görselini yeni sekmede aç
-    const originalImages = {
-      1: '/pedizione-sertifika.jpg',
-      2: '/pedizione-sertifikaa.jpg', 
-      3: '/pedizione-sertifika-deney.jpg',
-      4: '/pedizione-sertifika-test.jpg',
-      5: '/pedizione-sertifika-test-byo.jpg',
-      6: '/gs1-membership-licence.jpeg',
-      7: '/dermatolojik-test-sayfa-1.jpg'
-    }
-    
-    const originalImage = originalImages[certificate.id]
-    if (originalImage) {
-      window.open(originalImage, '_blank')
+    // Sertifika ID'ye göre özel sayfa veya direkt görsel aç
+    if (certificate.id === 7) {
+      // Dermatolojik test için özel sayfa
+      window.open('/dermatolojik-test', '_blank')
     } else {
-      setSelectedCertificate(certificate)
+      // Diğer sertifikalar için direkt görsel
+      const originalImages = {
+        1: '/pedizione-sertifika.jpg',
+        2: '/pedizione-sertifikaa.jpg', 
+        3: '/pedizione-sertifika-deney.jpg',
+        4: '/pedizione-sertifika-test.jpg',
+        5: '/pedizione-sertifika-test-byo.jpg',
+        6: '/gs1-membership-licence.jpeg'
+      }
+      
+      const originalImage = originalImages[certificate.id]
+      if (originalImage) {
+        window.open(originalImage, '_blank')
+      } else {
+        setSelectedCertificate(certificate)
+      }
     }
   }
 
