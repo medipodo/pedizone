@@ -66,62 +66,79 @@ const DealersMap = () => {
       </div>
 
       <div className="pedizone-container py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Dealers List */}
-          <div className="lg:col-span-1">
-            <Card className="sticky top-4">
-              <CardContent className="p-6">
-                <h2 className="text-2xl font-bold mb-6 text-red-600">
-                  Satış Noktaları ({dealers.length})
-                </h2>
-                <div className="space-y-4">
-                  {dealers.map((dealer) => (
-                    <div
-                      key={dealer.id}
-                      onClick={() => handleDealerClick(dealer)}
-                      className={`p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 ${
-                        selectedDealer?.id === dealer.id
-                          ? 'border-red-600 bg-red-50'
-                          : 'border-gray-200 hover:border-red-300 hover:bg-gray-50'
-                      }`}
-                    >
-                      <div className="flex items-start">
-                        <MapPin className="w-5 h-5 text-red-600 mt-1 mr-3 flex-shrink-0" />
-                        <div className="flex-1">
-                          <h3 className="font-bold text-lg text-gray-900 mb-1">
-                            {dealer.name}
-                          </h3>
-                          <p className="text-sm text-gray-600 mb-2">
-                            <span className="font-semibold">{dealer.city}</span>
-                          </p>
-                          <p className="text-sm text-gray-700 mb-2">
-                            {dealer.address}
-                          </p>
-                          <div className="flex items-center text-sm text-gray-600 mb-1">
-                            <Phone className="w-4 h-4 mr-2" />
-                            <a href={`tel:${dealer.phone}`} className="hover:text-red-600">
-                              {dealer.phone}
+        {/* Map Section - Top */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900 text-center">
+            Satış Noktalarımız Haritası
+          </h2>
+          <div className="w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white" style={{ height: '600px' }}>
+            <MapContainer
+              center={turkeyCenter}
+              zoom={defaultZoom}
+              scrollWheelZoom={true}
+              style={{ height: '100%', width: '100%' }}
+            >
+              <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+              {dealers.map((dealer) => (
+                <Marker
+                  key={dealer.id}
+                  position={[dealer.lat, dealer.lng]}
+                  icon={redIcon}
+                  eventHandlers={{
+                    click: () => handleDealerClick(dealer),
+                  }}
+                >
+                  <Popup>
+                    <div className="p-2 min-w-[250px]">
+                      <h3 className="font-bold text-lg text-red-600 mb-2">
+                        {dealer.name}
+                      </h3>
+                      <p className="text-sm text-gray-700 mb-2">
+                        <strong>{dealer.city}</strong>
+                      </p>
+                      <p className="text-sm text-gray-600 mb-3">
+                        {dealer.address}
+                      </p>
+                      <div className="space-y-1">
+                        <div className="flex items-center text-sm text-gray-600">
+                          <Phone className="w-4 h-4 mr-2" />
+                          <a href={`tel:${dealer.phone}`} className="hover:text-red-600">
+                            {dealer.phone}
+                          </a>
+                        </div>
+                        {dealer.email && (
+                          <div className="flex items-center text-sm text-gray-600">
+                            <Mail className="w-4 h-4 mr-2" />
+                            <a href={`mailto:${dealer.email}`} className="hover:text-red-600">
+                              {dealer.email}
                             </a>
                           </div>
-                          {dealer.email && (
-                            <div className="flex items-center text-sm text-gray-600">
-                              <Mail className="w-4 h-4 mr-2" />
-                              <a href={`mailto:${dealer.email}`} className="hover:text-red-600">
-                                {dealer.email}
-                              </a>
-                            </div>
-                          )}
-                        </div>
+                        )}
                       </div>
+                      <button
+                        onClick={() => openGoogleMaps(dealer.lat, dealer.lng)}
+                        className="mt-3 w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm flex items-center justify-center gap-2 transition-colors"
+                      >
+                        <Navigation className="w-4 h-4" />
+                        Yol Tarifi Al
+                      </button>
                     </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+                  </Popup>
+                </Marker>
+              ))}
+            </MapContainer>
           </div>
+        </div>
 
-          {/* Map */}
-          <div className="lg:col-span-2">
+        {/* Dealers Grid - Bottom */}
+        <div>
+          <h2 className="text-3xl font-bold mb-8 text-gray-900 text-center">
+            Tüm Satış Noktalarımız ({dealers.length})
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             <Card>
               <CardContent className="p-0">
                 <div className="h-[700px] rounded-lg overflow-hidden">
