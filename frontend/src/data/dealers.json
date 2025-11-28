@@ -33,7 +33,7 @@
       "lng": 32.8159394,
       "isActive": true
     },
-      {
+    {
       "id": 4,
       "name": "Anka Eczanesi",
       "city": "Ankara",
@@ -43,8 +43,18 @@
       "lng": 32.8473816,
       "isActive": true
     },
-        {
+    {
       "id": 5,
+      "name": "Bağlıca Merkez Eczanesi",
+      "city": "Ankara",
+      "address": "Yeni Bağlıca Mah. Bağlıca Bulvarı No 48/CA (Total Benzinlik Karşısı)",
+      "phone": "05396430123",
+      "lat": 39.898341,
+      "lng": 32.648548,
+      "isActive": true
+    },
+    {
+      "id": 6,
       "name": "Damla Eczanesi",
       "city": "Antalya",
       "address": "Şirinyalı Mah. Tekelioğlu Cad. No18/A Medicalpark Hastanesi Karşısı Lara",
@@ -54,8 +64,8 @@
       "lng": 30.746258,
       "isActive": true
     },
-           {
-      "id": 6,
+    {
+      "id": 7,
       "name": "Medpark Konya Tırnak Batması Ayak Sağlığı Merkezi",
       "city": "Konya",
       "address": "Konevi, Sait Paşa Cd No:9/1-2-3-4, 42040 Meram",
@@ -66,13 +76,44 @@
       "isActive": true
     },
     {
-      "id": 7,
+      "id": 8,
+      "name": "Hacer Aslan",
+      "city": "Kocaeli",
+      "address": "Alikahya Fatih, Uğur Mumcu Cd., 41310 İzmit/Kocaeli",
+      "phone": "0507 238 9414",
+      "lat": 40.780046,
+      "lng": 29.99446,
+      "isActive": true
+    },
+    {
+      "id": 9,
       "name": "Yaşare KADER",
       "city": "Antalya",
       "address": "Hurma, 254. Sk. No:11 / B, 07130 Konyaaltı",
       "phone": "0505 215 0028",
       "lat": 36.856421,
       "lng": 30.6091082,
+      "isActive": true
+    },
+    {
+      "id": 10,
+      "name": "Hanife Karataş",
+      "city": "Bursa",
+      "address": "Orhaniye, D200 125-126, 16400 İnegöl",
+      "phone": "0542 617 9865",
+      "lat": 40.092142,
+      "lng": 29.489278,
+      "isActive": true
+    },
+    {
+      "id": 11,
+      "name": "Podolara El ve Ayak Bakım Merkezi",
+      "city": "Bitlis",
+      "address": "Halk Bankası Karşısı, Saray, Cumhuriyet Cd. Kat: 2 No: 2, 13200 Tatvan/Bitlis",
+      "phone": "05427180713",
+      "web": "https://podolara.com/",
+      "lat": 38.49997971,
+      "lng": 42.282908,
       "isActive": true
     },
     {
