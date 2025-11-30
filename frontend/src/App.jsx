@@ -11,6 +11,7 @@ import AyakAnalizi from './components/AyakAnalizi'
 import UrunKremQuiz from './components/UrunKremQuiz'
 import UrunSerumQuiz from './components/UrunSerumQuiz'
 import UrunKopukQuiz from './components/UrunKopukQuiz'
+import UreBlog from './components/UreBlog'
 import './App.css'
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <Route path="/kopuk-quiz" element={<UrunKopukQuiz />} />
       <Route path="/brosur" element={<Brosur />} />
       <Route path="/dermatolojik-test" element={<DermatolojikTest />} />
+      <Route path="/blog/ure-nedir" element={<UreBlog />} />
     </Routes>
   )
 }
