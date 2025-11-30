@@ -46,7 +46,6 @@ const UrunKopukQuiz = () => {
   ];
 
   const getRecommendation = () => {
-    // KURAL 1: Aktif mantar enfeksiyonu belirtileri → Farklı ürün öner
     if (answers.q0 === 'kasinti_kizarik') {
       return {
         title: "💡 Odaklanmanız Gereken Farklı Bir Sorun Olabilir",
@@ -61,7 +60,6 @@ const UrunKopukQuiz = () => {
       };
     }
 
-    // KURAL 2: Tedavi görüyor → Destek ürün olarak öner
     if (answers.q3 === 'evet') {
       return {
         title: "✅ Tedavinize Harika Bir Destek!",
@@ -75,7 +73,6 @@ const UrunKopukQuiz = () => {
       };
     }
 
-    // KURAL 3: Koku/Terleme veya Genel Hijyen → Köpük ideal
     return {
       title: "✅ Günlük Ferahlık İçin İdeal Çözüm!",
       type: "suitable",
@@ -145,7 +142,7 @@ const UrunKopukQuiz = () => {
 
   return (
     <>
-      <style>{\`
+      <style>{`
         .pedizone-quiz-container {
           min-height: 100vh;
           background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
@@ -154,7 +151,6 @@ const UrunKopukQuiz = () => {
           align-items: center;
           padding: 80px 20px 40px;
         }
-
         .pedizone-quiz-card {
           background: white;
           border-radius: 12px;
@@ -163,23 +159,19 @@ const UrunKopukQuiz = () => {
           width: 100%;
           padding: 40px;
         }
-
         .pedizone-quiz-header {
           text-align: center;
           margin-bottom: 30px;
         }
-
         .pedizone-quiz-header h1 {
           color: #333;
           font-size: 28px;
           margin-bottom: 10px;
         }
-
         .pedizone-quiz-header p {
           color: #666;
           font-size: 14px;
         }
-
         .pedizone-quiz-progress-bar {
           width: 100%;
           height: 6px;
@@ -188,13 +180,11 @@ const UrunKopukQuiz = () => {
           margin-bottom: 30px;
           overflow: hidden;
         }
-
         .pedizone-quiz-progress-fill {
           height: 100%;
           background: linear-gradient(90deg, #dc2626 0%, #b91c1c 100%);
           transition: width 0.3s ease;
         }
-
         .pedizone-quiz-question-number {
           color: #dc2626;
           font-size: 12px;
@@ -202,20 +192,17 @@ const UrunKopukQuiz = () => {
           margin-bottom: 10px;
           text-transform: uppercase;
         }
-
         .pedizone-quiz-question-text {
           color: #333;
           font-size: 18px;
           font-weight: 600;
           margin-bottom: 20px;
         }
-
         .pedizone-quiz-options {
           display: flex;
           flex-direction: column;
           gap: 12px;
         }
-
         .pedizone-quiz-option {
           display: flex;
           align-items: center;
@@ -225,17 +212,14 @@ const UrunKopukQuiz = () => {
           cursor: pointer;
           transition: all 0.3s ease;
         }
-
         .pedizone-quiz-option:hover {
           border-color: #dc2626;
           background: #fef2f2;
         }
-
         .pedizone-quiz-option.selected {
           border-color: #dc2626;
           background: #fef2f2;
         }
-
         .pedizone-quiz-option input[type="radio"] {
           margin-right: 15px;
           cursor: pointer;
@@ -243,21 +227,18 @@ const UrunKopukQuiz = () => {
           height: 20px;
           accent-color: #dc2626;
         }
-
         .pedizone-quiz-option label {
           cursor: pointer;
           flex: 1;
           color: #333;
           font-size: 15px;
         }
-
         .pedizone-quiz-buttons {
           display: flex;
           gap: 15px;
           margin-top: 30px;
           justify-content: space-between;
         }
-
         .pedizone-quiz-btn {
           padding: 12px 30px;
           border: none;
@@ -267,61 +248,50 @@ const UrunKopukQuiz = () => {
           cursor: pointer;
           transition: all 0.3s ease;
         }
-
         .pedizone-quiz-btn-prev {
           background: #f3f4f6;
           color: #333;
         }
-
         .pedizone-quiz-btn-prev:hover:not(:disabled) {
           background: #e5e7eb;
         }
-
         .pedizone-quiz-btn-next, .pedizone-quiz-btn-submit {
           background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
           color: white;
           flex: 1;
         }
-
         .pedizone-quiz-btn-next:hover, .pedizone-quiz-btn-submit:hover {
           transform: translateY(-2px);
           box-shadow: 0 5px 20px rgba(220, 38, 38, 0.4);
         }
-
         .pedizone-quiz-btn:disabled {
           opacity: 0.5;
           cursor: not-allowed;
         }
-
         .pedizone-quiz-result {
           text-align: center;
           animation: fadeIn 0.3s ease;
         }
-
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(10px); }
           to { opacity: 1; transform: translateY(0); }
         }
-
         .pedizone-result-icon {
           font-size: 60px;
           margin-bottom: 20px;
         }
-
         .pedizone-result-title {
           color: #333;
           font-size: 24px;
           font-weight: 700;
           margin-bottom: 15px;
         }
-
         .pedizone-result-description {
           color: #666;
           font-size: 15px;
           line-height: 1.6;
           margin-bottom: 30px;
         }
-
         .pedizone-product-recommendation {
           background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
           color: white;
@@ -329,19 +299,16 @@ const UrunKopukQuiz = () => {
           border-radius: 10px;
           margin-bottom: 25px;
         }
-
         .pedizone-product-name {
           font-size: 20px;
           font-weight: 700;
           margin-bottom: 10px;
         }
-
         .pedizone-product-reason {
           font-size: 14px;
           line-height: 1.5;
           white-space: pre-line;
         }
-
         .pedizone-usage-instructions {
           background: #fef2f2;
           border-left: 4px solid #dc2626;
@@ -350,20 +317,17 @@ const UrunKopukQuiz = () => {
           margin-bottom: 25px;
           text-align: left;
         }
-
         .pedizone-usage-title {
           font-size: 16px;
           font-weight: 700;
           color: #333;
           margin-bottom: 10px;
         }
-
         .pedizone-usage-text {
           font-size: 14px;
           color: #666;
           line-height: 1.6;
         }
-
         .pedizone-cta-button {
           display: inline-block;
           background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
@@ -376,12 +340,10 @@ const UrunKopukQuiz = () => {
           margin-bottom: 15px;
           transition: all 0.3s ease;
         }
-
         .pedizone-cta-button:hover {
           transform: translateY(-2px);
           box-shadow: 0 5px 20px rgba(220, 38, 38, 0.4);
         }
-
         .pedizone-restart-button {
           background: #f3f4f6;
           color: #333;
@@ -393,17 +355,15 @@ const UrunKopukQuiz = () => {
           cursor: pointer;
           transition: all 0.3s ease;
         }
-
         .pedizone-restart-button:hover {
           background: #e5e7eb;
         }
-
         @media (max-width: 768px) {
           .pedizone-quiz-card { padding: 25px; }
           .pedizone-quiz-header h1 { font-size: 24px; }
           .pedizone-quiz-question-text { font-size: 16px; }
         }
-      \`}</style>
+      `}</style>
 
       <div className="pedizone-quiz-container">
         <div className="pedizone-quiz-card">
@@ -415,7 +375,7 @@ const UrunKopukQuiz = () => {
               </div>
 
               <div className="pedizone-quiz-progress-bar">
-                <div className="pedizone-quiz-progress-fill" style={{ width: \`\${progress}%\` }}></div>
+                <div className="pedizone-quiz-progress-fill" style={{ width: `${progress}%` }}></div>
               </div>
 
               <div className="pedizone-quiz-question-number">
@@ -429,13 +389,13 @@ const UrunKopukQuiz = () => {
                 {questions[currentQuestion].options.map((option, index) => (
                   <label
                     key={index}
-                    className={\`pedizone-quiz-option \${answers[\`q\${currentQuestion}\`] === option.value ? 'selected' : ''}\`}
+                    className={`pedizone-quiz-option ${answers[`q${currentQuestion}`] === option.value ? 'selected' : ''}`}
                   >
                     <input
                       type="radio"
-                      name={\`q\${currentQuestion}\`}
+                      name={`q${currentQuestion}`}
                       value={option.value}
-                      checked={answers[\`q\${currentQuestion}\`] === option.value}
+                      checked={answers[`q${currentQuestion}`] === option.value}
                       onChange={() => handleOptionChange(currentQuestion, option.value)}
                     />
                     <label>{option.label}</label>
