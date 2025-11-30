@@ -24,6 +24,7 @@ import blogSerumKullanimi from '../assets/pedizone-serum-kullanimi.jpg'
 import blogMedikalAyakBakimi from '../assets/blog/medikal-ayak-bakimi.jpg'
 import blogAyakKokusu from '../assets/blog/ayak-kokusu-blog.jpg'
 import blogAyakHijyeni from '../assets/blog/ayak-hijyeni-blog.jpg'
+import blogUre from '../assets/blog/ure/pedizone üreli krem.jpg'
 
 // Import slide images
 import slide1 from '../assets/slide-1-podolog-new.png'
@@ -274,6 +275,14 @@ const HomePage = () => {
         title: 'PediZone Blog',
         subtitle: 'Ayak sağlığı rehberi ve uzman tavsiyeleri',
         items: [
+          {
+            title: 'Üre Nedir ve Kuru Ciltler İçin Neden Mucizevidir?',
+            excerpt: 'Cildinizin unutulmuş kahramanı üre, dermatolojinin ve özellikle ayak sağlığının gizli kahramanıdır. Kuru, çatlamış ciltler için bilimsel çözüm.',
+            readTime: '10 dakika',
+            tags: ['üre', 'cilt bakımı', 'çatlak topuk', 'nasır tedavisi'],
+            image: blogUre,
+            link: '/blog/ure-nedir'
+          },
           {
             title: 'Medikal Ayak Bakımı Nedir?',
             excerpt: 'Medikal ayak bakımı; hijyenik koşullarda, medikal cihazlar ve profesyonel ürünler kullanılarak podologlar tarafından yapılan, ayak ve tırnak sağlığını korumaya yönelik uygulamalardır.',
