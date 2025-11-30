@@ -52,24 +52,42 @@ const UrunSerumQuiz = () => {
   ];
 
   const getRecommendation = () => {
-    // KURAL 1: Kronik hastalık veya açık yara → Doktora yönlendir
-    if (answers.q2 === 'evet' || answers.q3 === 'evet') {
+    const hasFungalSymptoms = answers.q0 === 'evet' || answers.q1 === 'evet';
+    const hasChronicDisease = answers.q2 === 'evet';
+    const hasOpenWound = answers.q3 === 'evet';
+    const isLongTerm = answers.q4 === 'uzun';
+
+    // KURAL 1: Açık yara var → Kesinlikle doktora yönlendir
+    if (hasOpenWound) {
       return {
-        title: "⚠️ Mutlaka Doktorunuza Danışın!",
+        title: "⚠️ Açık Yara - Lütfen Doktorunuza Danışın!",
         type: "warning",
         icon: "🩺",
-        description: "Diyabet gibi kronik rahatsızlıklarda veya açık yara varlığında ayak enfeksiyonları ciddi riskler taşıyabilir.",
+        description: "Açık yara tespit edildi. Açık yaralar üzerine herhangi bir ürün kullanmak enfeksiyon riskini artırabilir.",
         product: "",
-        reason: "Kendi başınıza tedavi uygulamak yerine bir uzmana görünmeniz kritik önem taşır. Pedizone Antifungal Serum'u kullanmadan önce mutlaka doktorunuza veya podoloğunuza danışarak onay almalısınız.",
+        reason: "Yaranız iyileştikten sonra podologunuza veya doktorunuza danışarak uygun bakım ürünlerini kullanabilirsiniz. Şu anda en önemli olan yaranızın profesyonel takip altında iyileşmesidir.",
         usage: "",
         showCTA: false
       };
     }
 
-    // KURAL 2: Mantar belirtileri var → Serum uygun
-    if (answers.q0 === 'evet' || answers.q1 === 'evet') {
-      const isLongTerm = answers.q4 === 'uzun';
-      
+    // KURAL 2: Mantar belirtileri + Kronik hastalık → Serum + Uyarı
+    if (hasFungalSymptoms && hasChronicDisease) {
+      return {
+        title: "✅ Bu Ürün Size Yardımcı Olabilir - Podolog Onayı Önerilir",
+        type: "suitable",
+        icon: "✨",
+        description: "Belirttiğiniz şikayetler mantar enfeksiyonuna işaret ediyor. Kronik rahatsızlığınız nedeniyle kullanmadan önce mutlaka podologunuza danışın.",
+        product: "Pedizone Antifungal Serum",
+        reason: "Mantar belirtileriyle savaşmak için formüle edilmiştir.\n\n⚠️ ÖNEMLİ: Kronik rahatsızlığınız nedeniyle kullanmadan önce podologunuza danışın." + 
+                (isLongTerm ? "\n\nSorun uzun süredir devam ettiği için podolog takibi şarttır." : ""),
+        usage: "Podolog onayı sonrası günde 2 kez temiz ve kuru tırnak ve parmak aralarına uygulayın.",
+        showCTA: true
+      };
+    }
+
+    // KURAL 3: Mantar belirtileri var (kronik hastalık yok) → Serum
+    if (hasFungalSymptoms) {
       return {
         title: "✅ Bu Ürün Size Yardımcı Olabilir!",
         type: "suitable",
@@ -78,12 +96,12 @@ const UrunSerumQuiz = () => {
         product: "Pedizone Antifungal Serum",
         reason: "Bu belirtilerle savaşmak ve cildin sağlıklı yapısına kavuşmasına destek olmak için formüle edilmiştir." + 
                 (isLongTerm ? "\n\nSorun uzun süredir devam ettiği için, en iyi sonuç için bir podoloğa danışmanızı da tavsiye ederiz." : ""),
-        usage: "Düzenli kullanımda cildinizin daha sağlıklı olduğunu göreceksiniz.",
+        usage: "Günde 2 kez temiz ve kuru tırnak ve parmak aralarınıza uygulayın. Düzenli kullanımda cildinizin daha sağlıklı olduğunu göreceksiniz.",
         showCTA: true
       };
     }
 
-    // KURAL 3: Belirtiler yok → Farklı ürün öner
+    // KURAL 4: Belirtiler yok → Farklı ürün öner
     return {
       title: "💡 Belki Farklı Bir Ürün Daha Uygun Olabilir",
       type: "info",

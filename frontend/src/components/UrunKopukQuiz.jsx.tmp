@@ -53,67 +53,35 @@ const UrunKremQuiz = () => {
   ];
 
   const getRecommendation = () => {
-    const hasOpenWound = answers.q3 === 'evet';
-    const hasChronicDisease = answers.q4 === 'evet';
-    const hasFungalSymptoms = answers.q2 === 'evet';
-
-    // KURAL 1: Açık yara var → Kesinlikle doktora yönlendir
-    if (hasOpenWound) {
+    // KURAL 1: Açık yara veya kronik hastalık → Doktora yönlendir
+    if (answers.q3 === 'evet' || answers.q4 === 'evet') {
       return {
-        title: "⚠️ Açık Yara - Lütfen Doktorunuza Danışın!",
+        title: "⚠️ Öncelikle Doktorunuza Danışın!",
         type: "warning",
         icon: "🩺",
-        description: "Açık yara tespit edildi. Açık yaralar üzerine herhangi bir ürün kullanmak enfeksiyon riskini artırabilir.",
+        description: "Açık yaralar veya diyabet gibi kronik rahatsızlıklar, ayak bakımında profesyonel bir yaklaşım gerektirir.",
         product: "",
-        reason: "Yaranız iyileştikten sonra podologunuza veya doktorunuza danışarak uygun bakım ürünlerini kullanabilirsiniz. Şu anda en önemli olan yaranızın profesyonel takip altında iyileşmesidir.",
+        reason: "Herhangi bir ürün kullanmadan önce mutlaka doktorunuza veya podoloğunuza danışarak onay almalısınız. Sağlığınız bizim için en önemli önceliktir. Onay sonrası ürünlerimiz tedavinize destek olabilir.",
         usage: "",
         showCTA: false
       };
     }
 
-    // KURAL 2: Mantar belirtileri var + Kronik hastalık → 3'lü Set + Uyarı
-    if (hasFungalSymptoms && hasChronicDisease) {
-      return {
-        title: "Komple Bakım Seti + Podolog Önerisi",
-        type: "set",
-        icon: "🎁",
-        description: "Cevaplarınız, cildinizin hem yoğun neme ihtiyaç duyduğunu hem de mantar belirtileri gösterdiğini işaret ediyor. Kronik rahatsızlığınız nedeniyle kullanmadan önce mutlaka podologunuza danışın.",
-        product: "Pedizone 3'lü Bakım Seti: Krem + Serum + Köpük",
-        reason: "Podolog onayı sonrası:\n\n• Antifungal Serum: Enfeksiyon belirtilerini hedefler\n• Intense Repair Krem: Cildi onarır ve nemlendirir\n• Temizleme Köpüğü: Günlük hijyen sağlar\n\n⚠️ ÖNEMLİ: Kronik rahatsızlığınız nedeniyle kullanmadan önce podologunuza danışın.",
-        usage: "Podolog onayı aldıktan sonra düzenli kullanım önerilir.",
-        showCTA: true
-      };
-    }
-
-    // KURAL 3: Mantar belirtileri var (kronik hastalık yok) → 3'lü Set
-    if (hasFungalSymptoms) {
+    // KURAL 2: Mantar belirtileri var → 3'lü Set öner
+    if (answers.q2 === 'evet') {
       return {
         title: "Komple Bakım Seti Sizin İçin İdeal!",
         type: "set",
         icon: "🎁",
-        description: "Cevaplarınız, cildinizin hem yoğun neme ihtiyaç duyduğunu hem de mantar belirtileri gösterdiğini işaret ediyor.",
+        description: "Cevaplarınız, cildinizin hem yoğun neme ihtiyaç duyduğunu hem de mantar belirtileri gösterdiğini işaret ediyor. Bu durumda tek bir ürün yeterli olmayabilir.",
         product: "Pedizone 3'lü Bakım Seti: Krem + Serum + Köpük",
-        reason: "En etkili sonuç için 3'lü Bakım Seti:\n\n• Antifungal Serum: Enfeksiyon belirtilerini (kaşıntı, koku, soyulma) doğrudan hedefler\n• Intense Repair Krem: Cildin kaybettiği nemi geri kazandırır, çatlakları onarır\n• Temizleme Köpüğü: Günlük hijyen sağlayarak sorunun tekrarlamasını önler",
+        reason: "En etkili sonuç için 3'lü Bakım Seti kullanmanızı öneriyoruz:\n\n• Antifungal Serum: Enfeksiyon belirtilerini (kaşıntı, koku, soyulma) doğrudan hedefler.\n• Intense Repair Krem: Cildin kaybettiği nemi geri kazandırır, çatlakları onarır ve antifungal içeriğiyle tedaviyi destekler.\n• Temizleme Köpüğü: Günlük hijyeni sağlayarak sorunun tekrarlamasını önlemeye yardımcı olur.",
         usage: "Bu kombinasyon, sorunu her açıdan ele alarak size tam bir çözüm sunar.",
         showCTA: true
       };
     }
 
-    // KURAL 4: Sadece kuruluk + Kronik hastalık → Krem + Uyarı
-    if (hasChronicDisease) {
-      return {
-        title: "✅ Bu Ürün Size Uygun - Podolog Onayı Önerilir",
-        type: "suitable",
-        icon: "✨",
-        description: "Temel sorununuz yoğun kuruluk ve çatlaklar. Kronik rahatsızlığınız nedeniyle kullanmadan önce podologunuza danışmanızı öneririz.",
-        product: "Pedizone Intense Repair Krem",
-        reason: "Cildinize kaybettiği nemi geri kazandırmak, çatlakları onarmak için ideal bir seçimdir.\n\n⚠️ ÖNEMLİ: Kronik rahatsızlığınız nedeniyle kullanmadan önce podologunuza danışın.",
-        usage: "Podolog onayı aldıktan sonra günde 2 kez düzenli kullanım önerilir.",
-        showCTA: true
-      };
-    }
-
-    // KURAL 5: Sadece kuruluk (normal durum) → Krem
+    // KURAL 3: Sadece kuruluk → Krem uygun
     return {
       title: "✅ Bu Ürün Tam Size Göre!",
       type: "suitable",
@@ -121,7 +89,7 @@ const UrunKremQuiz = () => {
       description: "Cevaplarınız, temel sorununuzun yoğun kuruluk ve çatlaklar olduğunu gösteriyor.",
       product: "Pedizone Intense Repair Krem",
       reason: "Cildinize kaybettiği nemi geri kazandırmak, çatlakları onarmak ve cildin koruyucu bariyerini güçlendirmek için mükemmel bir seçimdir.",
-      usage: "Günde 2 kez düzenli kullanımda ayaklarınızın daha pürüzsüz ve sağlıklı olduğunu göreceksiniz.",
+      usage: "Düzenli kullanımda ayaklarınızın daha pürüzsüz ve sağlıklı olduğunu göreceksiniz.",
       showCTA: true
     };
   };
