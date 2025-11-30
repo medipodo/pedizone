@@ -669,6 +669,7 @@ const HomePage = () => {
               <a href="#products" className="text-white hover:text-red-200 transition-colors">{t.nav.products}</a>
               <a href="#solutions" className="text-white hover:text-red-200 transition-colors">{t.nav.solutions}</a>
               <a href="#about" className="text-white hover:text-red-200 transition-colors">{t.nav.about}</a>
+              <a href="/ayak-analizi" className="text-white hover:text-red-200 transition-colors font-semibold">🎯 Sana Uygun Ürünü Bul</a>
               <a href="/bayiler" className="text-white hover:text-red-200 transition-colors">{t.nav.dealers}</a>
               <a href="/sertifikalar" className="text-white hover:text-red-200 transition-colors">{t.nav.certificates}</a>
               <a href="#contact" className="text-white hover:text-red-200 transition-colors">{t.nav.contact}</a>
@@ -783,6 +784,13 @@ const HomePage = () => {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {t.nav.about}
+                </a>
+                <a 
+                  href="/ayak-analizi" 
+                  className="text-white hover:text-red-200 transition-colors py-2 font-semibold"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  🎯 Sana Uygun Ürünü Bul
                 </a>
                 <a 
                   href="/bayiler" 
