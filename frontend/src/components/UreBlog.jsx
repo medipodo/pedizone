@@ -297,7 +297,7 @@ const UreBlog = () => {
                   Pedizone Intense Repair'i keşfedin ve değişimi kendiniz görün.
                 </p>
                 <button
-                  onClick={() => navigate('/product/intense-repair-cream')}
+                  onClick={() => navigate('/product/bakim-serumu')}
                   className="bg-white text-red-600 px-8 py-3 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
                 >
                   Ürünü İncele
