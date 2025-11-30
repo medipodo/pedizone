@@ -256,6 +256,32 @@ const DealersMap = () => {
           </ul>
         </div>
       </div>
+
+      {/* Ayak Analiz CTA */}
+      <div className="py-16 bg-gradient-to-r from-red-600 via-red-700 to-red-800">
+        <div className="pedizone-container text-center">
+          <div className="mb-6">
+            <span className="text-6xl inline-block animate-bounce">🦶</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Hangi Ürün Size Uygun?
+          </h2>
+          <p className="text-white/90 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+            6 basit soruyla ayak sağlığınızı analiz edin ve podologunuza danışarak size özel PediZone® ürün önerisi alın
+          </p>
+          <a href="/ayak-analizi">
+            <Button 
+              size="lg" 
+              className="bg-white text-red-600 hover:bg-red-50 font-bold text-lg px-8 py-6 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
+            >
+              🎯 Ayaklarınızı Analiz Edin
+            </Button>
+          </a>
+          <p className="text-white/70 text-sm mt-4">
+            ✓ Ücretsiz  ✓ 2 dakika  ✓ Kişiselleştirilmiş sonuç
+          </p>
+        </div>
+      </div>
     </div>
     
     <Footer />
