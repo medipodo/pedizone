@@ -8,6 +8,9 @@ import DealersMap from './components/DealersMap'
 import Brosur from './components/Brosur'
 import DermatolojikTest from './components/DermatolojikTest'
 import AyakAnalizi from './components/AyakAnalizi'
+import UrunKremQuiz from './components/UrunKremQuiz'
+import UrunSerumQuiz from './components/UrunSerumQuiz'
+import UrunKopukQuiz from './components/UrunKopukQuiz'
 import './App.css'
 
 function App() {
@@ -19,6 +22,9 @@ function App() {
       <Route path="/sertifikalar" element={<Certificates />} />
       <Route path="/bayiler" element={<DealersMap />} />
       <Route path="/ayak-analizi" element={<AyakAnalizi />} />
+      <Route path="/krem-quiz" element={<UrunKremQuiz />} />
+      <Route path="/serum-quiz" element={<UrunSerumQuiz />} />
+      <Route path="/kopuk-quiz" element={<UrunKopukQuiz />} />
       <Route path="/brosur" element={<Brosur />} />
       <Route path="/dermatolojik-test" element={<DermatolojikTest />} />
     </Routes>

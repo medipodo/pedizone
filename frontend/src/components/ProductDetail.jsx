@@ -720,14 +720,19 @@ const ProductDetail = () => {
             Bu Ürün Size Uygun mu?
           </h2>
           <p className="text-white/90 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-            6 basit soruyla ayak sağlığınızı analiz edin ve podologunuza danışarak size özel PediZone® ürün önerisi alın
+            Basit sorularla bu ürünün size uygun olup olmadığını öğrenin ve podologunuza danışın
           </p>
-          <a href="/ayak-analizi">
+          <a href={
+            productId === 'bakim-serumu' ? '/krem-quiz' :
+            productId === 'mantar-karsiti-serum' ? '/serum-quiz' :
+            productId === 'temizleme-kopugu' ? '/kopuk-quiz' :
+            '/ayak-analizi'
+          }>
             <Button 
               size="lg" 
               className="bg-white text-red-600 hover:bg-red-50 font-bold text-lg px-8 py-6 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
             >
-              🎯 Ayaklarınızı Analiz Edin
+              🎯 Uygunluk Testini Başlat
             </Button>
           </a>
           <p className="text-white/70 text-sm mt-4">
