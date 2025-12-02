@@ -17,6 +17,7 @@ import gs1Sertifika from '../assets/documents/pedizone-gs1-sertifika.jpg'
 import gs1BarcodeCover from '../assets/documents/gs1-barcode-cover.jpeg'
 import img2866Seo from '../assets/documents/pedizone-img-2866-seo.png'
 import dermatologicalTestCover from '../assets/documents/dermatolojik-test-cover.jpg'
+import markaTescilCover from '../assets/documents/pedizone-register.jpg'
 
 const Certificates = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null)
@@ -152,6 +153,26 @@ const Certificates = () => {
         "Dermatolojik Olarak Bağımsız Test",
         "Ürün Etiketinde Logo Kullanım İzni"
       ]
+    },
+    {
+      id: 8,
+      title: "Marka Tescil Belgesi",
+      product: "PediZone",
+      institution: "Türk Patent ve Marka Kurumu",
+      date: "10.10.2025",
+      type: "Marka Tescil",
+      description: "PediZone markası, Türk Patent ve Marka Kurumu tarafından tescil edilmiş olup, 10 yıl süreyle korunmaktadır.",
+      image: markaTescilCover,
+      reportNumber: "2025 081363",
+      status: "Onaylandı",
+      highlights: [
+        "Marka Sahibi: MEDİPODO MEDİKAL SAĞLIK HİZMETİ SANAYİ VE TİCARET LİMİTED ŞİRKETİ",
+        "Tescil No: 2025 081363",
+        "Tescil Tarihi: 10.10.2025",
+        "Koruma Süresi: 10 Yıl",
+        "Mal/Hizmet Sınıfları: 03, 35",
+        "Türk Patent ve Marka Kurumu Onaylı"
+      ]
     }
   ]
 
@@ -168,7 +189,8 @@ const Certificates = () => {
         3: '/pedizione-sertifika-deney.jpg',
         4: '/pedizione-sertifika-test.jpg',
         5: '/pedizione-sertifika-test-byo.jpg',
-        6: '/gs1-membership-licence.jpeg'
+        6: '/gs1-membership-licence.jpeg',
+        8: '/pedizone-marka-tescil-belgesi.jpg'
       }
       
       const originalImage = originalImages[certificate.id]
