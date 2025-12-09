@@ -5,6 +5,7 @@ import { ArrowRight, Calendar, Clock } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
+import { blogPosts } from '../blog_content';
 
 const Blog = () => {
   return (
