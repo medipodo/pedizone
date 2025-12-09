@@ -4,10 +4,17 @@ import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
+import { blogPosts } from '../blog_content';
 
 const BlogDetail = () => {
   const { slug } = useParams();
   const post = blogPosts.find(p => p.slug === slug);
+  
+  // If post has a component, render it instead
+  if (post && post.component) {
+    const BlogComponent = post.component;
+    return <BlogComponent />;
+  }
 
   useEffect(() => {
     setTimeout(() => {
