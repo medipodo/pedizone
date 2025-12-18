@@ -11,6 +11,7 @@ import Products from './pages/Products';
 import Blog from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
 import About from './pages/About';
+import ProductDetail from './pages/ProductDetail';
 
 import Contact from './pages/Contact';
 
