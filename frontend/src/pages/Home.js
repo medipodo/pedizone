@@ -48,7 +48,7 @@ export default function Home() {
             </div>
             <div className="hidden md:block">
               <img 
-                src="/assets/pedizone-serum-new-bhg1pnig.jpg" 
+                src="/images/products/pedizone-set.webp" 
                 alt="PediZone Ürünleri" 
                 className="rounded-lg shadow-2xl"
               />
